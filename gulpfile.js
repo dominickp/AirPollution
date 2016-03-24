@@ -18,7 +18,7 @@ gulp.task('buildApp', function(){
         ])
         //.pipe(browserify())
         .pipe(concat('app.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
@@ -30,7 +30,7 @@ gulp.task('buildVendor', function(){
             'bower_components/**/*.min.js'])
         //.pipe(debug())
         .pipe(concat('vendors.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('dist'));
 });
 
