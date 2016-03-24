@@ -6,14 +6,19 @@ var Server = require('karma').Server;
 var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
+var browserify = require('gulp-browserify');
 
 
 // *******************************************
 
 gulp.task('buildApp', function(){
-    return gulp.src('src/js/**/*.js')
+    return gulp.src([
+        'src/js/man.js',
+        'src/js/main.js',
+        ])
+        //.pipe(browserify())
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
@@ -23,8 +28,7 @@ gulp.task('buildVendor', function(){
             'bower_components/jquery/dist/jquery.min.js',
             '!bower_components/jquery/dist/*.slim.min.js',
             'bower_components/**/*.min.js'])
-        .pipe(debug())
-
+        //.pipe(debug())
         .pipe(concat('vendors.js'))
         //.pipe(uglify())
         .pipe(gulp.dest('dist'));
@@ -76,6 +80,7 @@ gulp.task('connect', function(){
 
 gulp.task('watch', function(){
     gulp.watch('src/js/**/*.js', ['buildApp']);
+    gulp.watch('src/tests/**/*.js', ['test']);
     gulp.watch('src/css/**/*.css', ['buildCSS']);
     gulp.watch('src/**/*.html', ['moveHTML']);
 });
