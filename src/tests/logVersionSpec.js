@@ -1,7 +1,7 @@
 
 describe('logVersion', function(){
 
-    it("should get the version", function(){
+    it("should get the version of underscore", function(){
         var logUnderscoreVersion = require('../js/logVersion');
 
         var version = logUnderscoreVersion();
