@@ -10,21 +10,22 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['browserify', 'jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/jquery/dist/jquery.min.js',
-      'bower_components/**/*.min.js',
-      'src/js/man.js',
-      'src/js/main.js',
-      'src/js/**/*.js',
-      'src/js/**/*.js',
-        'src/**/*.html',
       'src/tests/**/*.js'
     ],
 
+
+    preprocessors: {
+      'src/tests/**/*.js': [ 'browserify' ]
+    },
+
+    browserify: {
+      debug: true
+    },
 
     // list of files to exclude
     exclude: [

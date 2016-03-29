@@ -7,7 +7,6 @@ var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
 var browserify = require('browserify');
-
 var gutil = require('gulp-util');
 var tap = require('gulp-tap');
 var source = require('vinyl-source-stream');
@@ -18,35 +17,7 @@ var globby = require('globby');
 var reactify = require('reactify');
 
 
-
-
-// *******************************************
-//
-//gulp.task('buildApp', function(){
-//    return gulp.src([
-//        'src/js/man.js',
-//        'src/js/main.js',
-//        ])
-//        //.pipe(browserify())
-//        .pipe(concat('app.js'))
-//        .pipe(uglify())
-//        .pipe(gulp.dest('dist'))
-//        .pipe(connect.reload());
-//});
-//
-//gulp.task('buildVendor', function(){
-//    return gulp.src([
-//            'bower_components/jquery/dist/jquery.min.js',
-//            '!bower_components/jquery/dist/*.slim.min.js',
-//            'bower_components/**/*.min.js'])
-//        //.pipe(debug())
-//        .pipe(concat('vendors.js'))
-//        .pipe(uglify())
-//        .pipe(gulp.dest('dist'));
-//});
-
-
-gulp.task('javascript', function () {
+gulp.task('buildJavascript', function () {
     // gulp expects tasks to return a stream, so we create one here.
     var bundledStream = through();
 
@@ -102,7 +73,7 @@ gulp.task('moveHTML', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['javascript', 'buildCSS', 'moveHTML']);
+gulp.task('build', ['buildJavascript', 'buildCSS', 'moveHTML']);
 
 // **********************************
 
@@ -131,7 +102,7 @@ gulp.task('connect', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch('src/js/**/*.js', ['javascript']);
+    gulp.watch('src/js/**/*.js', ['buildJavascript']);
     gulp.watch('src/tests/**/*.js', ['test']);
     gulp.watch('src/css/**/*.css', ['buildCSS']);
     gulp.watch('src/**/*.html', ['moveHTML']);

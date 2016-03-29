@@ -1,6 +1,5 @@
-console.log("src/js/main.js");
-//var man = new Man("Tom");
-//console.log(man.greet());
+var logUnderscoreVersion = require('./logVersion');
 
-var logUnderscoreVersion = require('./browserify_test');
+console.log("src/js/main.js");
+
 logUnderscoreVersion();
