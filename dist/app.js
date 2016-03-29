@@ -1,1 +1,0 @@
-console.log("src/js/man.js");var Man=function(n){this.name=n,this.greet=function(){return"Hello "+this.name}};console.log("src/js/main.js");var man=new Man("Tom");console.log(man.greet());

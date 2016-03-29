@@ -6,6 +6,7 @@
 - Clone this repo and navigate to the repo directory in terminal
 - Install gulp globally (npm install -g gulp)
 - Install bower globally (npm install -g bower)
+- (npm install -g browserify)
 
 You should be able to run "gulp". Navigate to http://localhost:8080/ in your browser.
 
