@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
     "globby": "^4.0.0",
     "gulp-buffer": "0.0.2",
     "gulp-concat": "^2.6.0",
