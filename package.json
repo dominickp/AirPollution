@@ -53,7 +53,8 @@
     "watchify": "^3.7.0"
   },
   "browserify-shim": {
-    "jquery": "$"
+    "jquery": "$",
+    "d3": "global:d3"
   },
   "browserify": {
     "transform": [

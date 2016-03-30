@@ -57,6 +57,18 @@ gulp.task('buildJavascript', function () {
     return bundledStream;
 });
 
+gulp.task('buildVendor', function(){
+    return gulp.src([
+            'bower_components/jquery/dist/jquery.min.js',
+            '!bower_components/jquery/dist/*.slim.min.js',
+            'bower_components/**/*.min.js'])
+        //.pipe(debug())
+        .pipe(concat('vendors.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
+
+
 gulp.task('buildCSS', function(){
     return gulp.src([
             'bower_components/bootstrap/dist/css/bootstrap.css',
@@ -73,7 +85,7 @@ gulp.task('moveHTML', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['buildJavascript', 'buildCSS', 'moveHTML']);
+gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML']);
 
 // **********************************
 
