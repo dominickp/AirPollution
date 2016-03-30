@@ -8,6 +8,7 @@
 - Install bower globally (npm install -g bower)
 - Install browserify globally (npm install -g browserify)
 - Install local dependencies (npm install)
+- Run bower (bower install)
 
 You should be able to run "gulp". Navigate to http://localhost:8080/ in your browser.
 

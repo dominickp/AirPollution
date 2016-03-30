@@ -6,3 +6,5 @@ console.log("src/js/main.js");
 logUnderscoreVersion();
 
 console.log(d3);
+
+console.log("hello world");
