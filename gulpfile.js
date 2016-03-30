@@ -33,7 +33,8 @@ gulp.task('buildJavascript', function () {
         .pipe(uglify())
         .on('error', gutil.log)
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./dist/js/'));
+        .pipe(gulp.dest('./dist/js/'))
+        .pipe(connect.reload());
 
     // "globby" replaces the normal "gulp.src" as Browserify
     // creates it's own readable stream.
