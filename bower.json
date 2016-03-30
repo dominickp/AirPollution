@@ -1,0 +1,27 @@
+{
+  "name": "air-pollution",
+  "description": "",
+  "main": "src/js/main.js",
+  "authors": [
+    "Dominick Peluso <peluso.dominick@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dominickp/AirPollution",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^3.5.16",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2"
+  }
+}
