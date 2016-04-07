@@ -24,7 +24,7 @@ var dataProcessor = function(service) {
 
         dataset.forEach(function(city){
             city["PM2.5"] = +city["PM2.5"];
-            city["PM10"] = +city["PM10"];
+            city.PM10 = +city.PM10;
             city["PM 2.5"] = +city["PM 2.5"];
         });
 
