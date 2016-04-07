@@ -6,6 +6,11 @@ var $ = require("jquery");
 var typeahead = require("typeahead.js-browserify");
 typeahead.loadjQueryPlugin();
 
+var Service = require('./service');
+var DataProcessing = require('./dataProcessing');
+
+
+
 var airVis = require('./vis/1_air.js');
 
 // Sanity check
@@ -19,9 +24,13 @@ console.log("jquery", $);
 console.log("bloodhound", Bloodhound);
 
 
-var createVisualization = function(error, worldBankData, cityPmData){
-    console.log("worldBankData", worldBankData);
-    console.log("cityPmData", cityPmData);
+
+var onDataLoad = function(error, worldBankData, cityPmData){
+
+    var service = new Service();
+    var dataProcessing = new DataProcessing(service);
+    dataProcessing.process("worldBankData", worldBankData);
+    dataProcessing.process("cityPmData", cityPmData);
 
     var substringMatcher = function(strs) {
         return function findMatches(q, cb) {
@@ -45,12 +54,8 @@ var createVisualization = function(error, worldBankData, cityPmData){
         };
     };
 
-    var cities = [];
 
-    cityPmData.forEach(function(city){
-        cities.push(city["City/station"]);
-    });
-
+    var cities = service.cities;
 
 
     $('#city-selector.typeahead').typeahead({
@@ -67,7 +72,7 @@ var createVisualization = function(error, worldBankData, cityPmData){
 q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
     .defer(d3.csv, "data/aap_pm_database_may2014.xls - cities.csv")
-    .await(createVisualization);
+    .await(onDataLoad);
 
 var engine = new Bloodhound({
     local: ['dog', 'pig', 'moose'],
