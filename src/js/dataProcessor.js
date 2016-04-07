@@ -23,9 +23,8 @@ var dataProcessor = function(service) {
     model.processPmCitiesDataset = function(dataset){
 
         dataset.forEach(function(city){
-            city["PM2.5"] = +city["PM2.5"];
-            city.PM10 = +city.PM10;
-            city["PM 2.5"] = +city["PM 2.5"];
+            city["pm2.5Mean"] = +city["pm2.5Mean"];
+            city.pm10Mean = +city.pm10Mean;
         });
 
         return dataset;
@@ -40,7 +39,7 @@ var dataProcessor = function(service) {
         var cities = [];
 
         cityPmData.forEach(function(city){
-            cities.push(city["City/station"]);
+            cities.push(city.city);
         });
 
         return cities;

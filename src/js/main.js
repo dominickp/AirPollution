@@ -39,5 +39,5 @@ var createView = function(){
 // Kick everything off
 q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
-    .defer(d3.csv, "data/aap_pm_database_may2014.xls - cities.csv")
+    .defer(d3.csv, "data/WHO_pm_database_clean.csv")
     .await(initialDataLoad);
