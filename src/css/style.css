@@ -1,3 +1,15 @@
 h1 {
     color: blue;
 }
+
+#preloader-container{
+    position: absolute;
+    background-color: #FFF;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#preloader-image {
+    margin-top: 150px;
+}

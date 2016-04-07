@@ -6,6 +6,7 @@ typeahead.loadjQueryPlugin();
 var Service = require('./service');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
+var Preloader = require('./view/preloader');
 
 // Start the service
 var service = new Service();
@@ -30,6 +31,9 @@ var initialDataLoad = function(error, worldBankData, cityPmData){
 var createView = function(){
     var cityPicker = new CityPicker(service);
     cityPicker.render();
+
+    var preloader = new Preloader();
+    preloader.remove();
 };
 
 // Kick everything off
