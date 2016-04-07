@@ -92,7 +92,13 @@ gulp.task('moveData', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML', 'moveData']);
+gulp.task('moveImage', function(){
+    return gulp.src(['src/img/*'])
+        .pipe(gulp.dest('dist/img'))
+        .pipe(connect.reload());
+});
+
+gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML', 'moveData', 'moveImage']);
 
 // **********************************
 
@@ -125,6 +131,7 @@ gulp.task('watch', function(){
     gulp.watch('src/tests/**/*.js', ['test']);
     gulp.watch('src/css/*.css', ['buildCSS']);
     gulp.watch('src/data/*', ['moveData']);
+    gulp.watch('src/img/*', ['moveImage']);
     gulp.watch('src/**/*.html', ['moveHTML']);
 });
 
