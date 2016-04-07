@@ -86,7 +86,13 @@ gulp.task('moveHTML', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML']);
+gulp.task('moveData', function(){
+    return gulp.src(['src/data/*'])
+        .pipe(gulp.dest('dist/data'))
+        .pipe(connect.reload());
+});
+
+gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML', 'moveData']);
 
 // **********************************
 
@@ -117,7 +123,8 @@ gulp.task('connect', function(){
 gulp.task('watch', function(){
     gulp.watch('src/js/**/*.js', ['buildJavascript', 'test']);
     gulp.watch('src/tests/**/*.js', ['test']);
-    gulp.watch('src/css/**/*.css', ['buildCSS']);
+    gulp.watch('src/css/*.css', ['buildCSS']);
+    gulp.watch('src/data/*', ['moveData']);
     gulp.watch('src/**/*.html', ['moveHTML']);
 });
 
