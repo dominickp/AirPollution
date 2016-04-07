@@ -35,7 +35,11 @@ var cityPicker = function(service) {
             {
                 name: 'states',
                 source: model.substringMatcher(service.cities)
-            });
+            }).on('typeahead:selected', function(event, datum) {
+            // on selected
+            var selectedCity = datum;
+            service.setSelectedCity(selectedCity);
+        });
     };
 
 };

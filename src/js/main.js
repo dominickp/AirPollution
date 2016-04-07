@@ -7,6 +7,7 @@ var Service = require('./service');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
 var Preloader = require('./view/preloader');
+var AirVisualization = require('./vis/1_air.js');
 
 // Start the service
 var service = new Service();
@@ -25,6 +26,9 @@ var initialDataLoad = function(error, worldBankData, cityPmData){
     dataProcessing.process("cityPmData", cityPmData);
 
     createView();
+
+    // Load vis 1
+    var airVisualization = new AirVisualization("#vis-1-container", service);
 
 };
 
