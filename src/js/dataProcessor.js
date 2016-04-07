@@ -2,10 +2,10 @@
 var dataProcessor = function(service) {
 
     var model = this;
-
-
+    
     model.process = function(name, dataset){
         var processedDataset;
+
         if(name === "worldBankData"){
             processedDataset = model.processWorldBankPm25Dataset(dataset);
             service.addOriginalDataset(name, processedDataset);
@@ -21,6 +21,12 @@ var dataProcessor = function(service) {
     };
 
     model.processPmCitiesDataset = function(dataset){
+
+        dataset.forEach(function(city){
+            city["PM2.5"] = +city["PM2.5"];
+            city["PM10"] = +city["PM10"];
+            city["PM 2.5"] = +city["PM 2.5"];
+        });
 
         return dataset;
     };

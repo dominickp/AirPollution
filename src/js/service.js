@@ -10,7 +10,7 @@ var service = function() {
     model.active_datasets = {};
 
     model.addOriginalDataset = function(name, dataset){
-        console.log("Dataset '"+name+"' added to Service");
+        console.log("Dataset '"+name+"' added to Service", dataset);
         model.original_datasets[name] = dataset;
     };
 
