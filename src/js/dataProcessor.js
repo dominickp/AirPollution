@@ -2,7 +2,7 @@
 var dataProcessor = function(service) {
 
     var model = this;
-    
+
     model.process = function(name, dataset){
         var processedDataset;
 

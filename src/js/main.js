@@ -1,4 +1,3 @@
-var logUnderscoreVersion = require('./logVersion');
 var d3 = require("d3");
 var q = require("d3-queue");
 var typeahead = require("typeahead.js-browserify");
@@ -13,7 +12,6 @@ var service = new Service();
 
 // Sanity check
 console.log("src/js/main.js");
-logUnderscoreVersion();
 
 // Test libraries are being required properly
 console.log('d3',d3);
@@ -34,6 +32,7 @@ var createView = function(){
     cityPicker.render();
 };
 
+// Kick everything off
 q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
     .defer(d3.csv, "data/aap_pm_database_may2014.xls - cities.csv")
