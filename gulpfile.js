@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minifycss = require('gulp-minify-css');
+//var minifycss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var Server = require('karma').Server;
 var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
@@ -75,7 +76,7 @@ gulp.task('buildCSS', function(){
             'bower_components/bootstrap/dist/css/bootstrap.css',
             'src/css/**/*.css'])
         .pipe(concat('styles.css'))
-        .pipe(minifycss())
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
