@@ -35,6 +35,12 @@ var airVisualization = function(container_selector, service) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // Start axis
+    model.axis_element = model.svg.append("g")
+        .attr("class", "x-axis axis")
+        .attr("transform", "translate(0," + height + ")");
+
+
 
     model.buildGaugeBackground = function(){
         // Draw the linear gauge body
@@ -77,13 +83,9 @@ var airVisualization = function(container_selector, service) {
             model.buildGaugeBackground();
         }
 
-        // Add axis
-        model.svg.append("g")
-            .attr("class", "x-axis axis")
-            .attr("transform", "translate(0," + height + ")");
 
         model.xAxis.scale(model.x);
-        model.svg.select(".x-axis").call(model.xAxis);
+        model.svg.select(".x-axis").transition().duration(1500).call(model.xAxis);
 
         // Only append the safe level line once
         if(typeof(model.safe_level) === 'undefined'){
@@ -96,48 +98,11 @@ var airVisualization = function(container_selector, service) {
                 .attr("fill", "blue");
         }
 
-
-
-        // Update (set the dynamic properties of the elements)
+        // Update safe level line
         model.safe_level
             .transition()
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
-
-
-
-
-        //console.log(model.x(50));
-
-
-
-        // Add circles to line
-        //var circle = svg.selectAll("circle")
-        //    .data(data);
-        //
-        //// Enter (initialize the newly added elements)
-        //circle.enter()
-        //    .append("circle")
-        //    .attr("fill", "darkgreen")
-        //    .attr("class", "d3-tip point")
-        //    .on('mouseover', tip.show)
-        //    .on('mouseout', tip.hide)
-        //    .on('click', function(d){showEdition(d)});
-        //
-        //// Update (set the dynamic properties of the elements)
-        //circle
-        //    .transition()
-        //    .duration(800)
-        //    .attr("cx", function(d) { return x(d["YEAR"]); })
-        //    .attr("cy", function(d) { return y(d[selected_y_axis_property]); })
-        //    .attr("r", 5);
-        //
-        //// Exit
-        //circle
-        //    .exit()
-        //    .transition()
-        //    .duration(800)
-        //    .remove();
 
     };
 
