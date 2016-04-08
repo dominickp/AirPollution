@@ -72,12 +72,12 @@ var deathVisualization = function (container_selector, service) {
             ,
             {
                 name: "Long",
-                "amount": 11
+                amount: 11
             }
         ];
 
         model.curData = [];
-        var c10 = d3.scale.category10();
+        var colorScale = d3.scale.category20();
 
         var picturesPline = 20;
         var WidthPerImage = width / picturesPline;
@@ -93,7 +93,7 @@ var deathVisualization = function (container_selector, service) {
             model.pollutionData.forEach(function (d) {
 
                 for (var i = 0; i < d.amount; i++) {
-                    model.curData[c] = ({index: i, disease: d.name, myname: d.id + "-" + c, group: d.id});
+                    model.curData[c] = ({index: c, disease: d.name, myname: 1 + "-" + c, group: 1});
                     c++;
                 }
 
@@ -116,6 +116,7 @@ var deathVisualization = function (container_selector, service) {
         model.createUpdate = function () {
 
 
+            console.log(model.curData);
             model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
                     return d.myname
                 })
@@ -139,7 +140,7 @@ var deathVisualization = function (container_selector, service) {
                 })
                 .attr("y", function (d) {
                     if (prevgroup != d.group) {
-                        if (prevgroup == "Air pollution")
+                        if (prevgroup == 1)
                             linesTotal += 0.5;
 
                         linesTotal += Math.ceil(count / picturesPline);
@@ -150,7 +151,7 @@ var deathVisualization = function (container_selector, service) {
                     return (Math.floor(d.index / picturesPline) + linesTotal) * (WidthPerImage);
                 })
                 .style("fill", function (d) {
-                    return c10(d.group);
+                    return colorScale(d.group);
                 })
                 .attr("class", "vis2_wrapper")
                 .attr("width", 0)
@@ -160,15 +161,19 @@ var deathVisualization = function (container_selector, service) {
                     this.appendChild(imported_node.cloneNode(true));
                 })
                 .on("click", function (d) {
-                    if (d.group == 'Air pollution') {
-                        model.setDataZoom();
-                        model.createUpdate();
+                    if (d.group == 1) {
+
+                        if (model.global) {
+                            model.setDataZoom();
+                            model.createUpdate();
+                        }
+                        else {
+                            model.setDataGlobal();
+                            model.createUpdate();
+                        }
 
                     }
-                    else {
-                        model.setDataGlobal();
-                        model.createUpdate();
-                    }
+
                 })
                 .on("mouseover", function (d) {
                     if (d.group == 1) {
@@ -178,7 +183,7 @@ var deathVisualization = function (container_selector, service) {
                 .on("mouseout", function (d) {
                     if (d.group == 1) {
                         d3.select(this).attr("r", 5.5).style("fill", function (d) {
-                            return c10(d.disease);
+                            return colorScale(d.disease);
                         }).style('cursor', 'default');
                     }
                 })
@@ -195,10 +200,39 @@ var deathVisualization = function (container_selector, service) {
                     return d.myname
                 })
                 .style("fill", function (d) {
-                    return c10(d.disease);
+                    return colorScale(d.disease);
                 });
 
-            // TODO: set labels
+            // set labels
+            if (model.global) {
+
+                if (model.labels == null) {
+                    model.labels = model.svg.append("g");
+                    var lines = 1;
+                    model.globalData.forEach(function (d) {
+
+                        var y = (lines + ( Math.ceil(d.amount / picturesPline) / 2)) * (WidthPerImage) + 10;
+
+                        model.labels.append("text")
+                            .attr("x", width + 10)
+                            .attr("y", y)
+                            .text(d.name)
+                            .style("text-anchor", "begin");
+
+
+                        lines += Math.ceil(d.amount / picturesPline);
+                        if (d.id == 1)
+                            lines += 0.5;
+
+
+                    });
+                }
+            }
+
+
+            // TODO: set tooltip
+
+            // TODO: set legend
 
 
         };
