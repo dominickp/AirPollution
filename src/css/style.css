@@ -13,3 +13,9 @@ h1 {
 #preloader-image {
     margin-top: 150px;
 }
+
+.domain {
+    fill: none;
+    stroke: none;
+    stroke-width: 1;
+}

@@ -7,6 +7,7 @@ var Service = require('./service');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
 var Preloader = require('./view/preloader');
+var AirVisualization = require('./vis/1_air.js');
 
 // Start the service
 var service = new Service();
@@ -26,6 +27,9 @@ var initialDataLoad = function(error, worldBankData, cityPmData){
 
     createView();
 
+    // Load vis 1
+    var airVisualization = new AirVisualization("#vis-1-container", service);
+
 };
 
 var createView = function(){
@@ -39,5 +43,5 @@ var createView = function(){
 // Kick everything off
 q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
-    .defer(d3.csv, "data/aap_pm_database_may2014.xls - cities.csv")
+    .defer(d3.csv, "data/WHO_pm_database_clean.csv")
     .await(initialDataLoad);
