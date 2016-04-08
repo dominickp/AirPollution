@@ -37,18 +37,39 @@ var airVisualization = function(container_selector, service) {
 
 
         // Draw the linear gauge body
+        var gradient = model.svg.append("defs")
+            .append("linearGradient")
+            .attr("id", "gradient")
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0")
+            .attr("spreadMethod", "pad");
+
+        gradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#FFF")
+            .attr("stop-opacity", 1);
+
+        gradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#c00")
+            .attr("stop-opacity", 1);
+
+
         model.linear_guage_body = model.svg.append("rect")
-            .attr("x", 10)
-            .attr("y", 10)
+            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit]})))
             .attr("height", 50)
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit]})));
+            .style("fill", "url(#gradient)")
+            .attr("stroke", "black");
+
 
         model.safe_level = model.svg.append("rect")
             .attr("x", model.x(model.safe_10_level))
-            .attr("y", 10)
+            .attr("y", 0)
             .attr("height", 60)
             .attr("width", 2)
-            .attr("fill", "red");
+            .attr("fill", "blue");
 
         console.log(model.x(model.safe_10_level));
 
