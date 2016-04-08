@@ -1,4 +1,5 @@
 var d3 = require("d3");
+var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
 
@@ -123,6 +124,15 @@ var airVisualization = function(container_selector, service) {
         //    .duration(800)
         //    .remove();
 
+    }();
+
+    model.unitSelectionListener = function(){
+        //$("#unit-selection-container .radio label input").click(function () {
+        //    if ($(this).is(':checked')) {
+        //    }
+        //    alert("Allot Thai Gayo Bhai");
+        //
+        //});
     }();
 
 
