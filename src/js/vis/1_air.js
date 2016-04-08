@@ -12,9 +12,8 @@ var airVisualization = function(container_selector, service) {
     model.data = service.getActiveDataset(target_dataset_key);
 
 
-    model.selected_unit = "pm2.5Mean";
-    model.safe_25_level = 10;
-    model.safe_10_level = 25;
+    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
+
 
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
 
@@ -59,7 +58,7 @@ var airVisualization = function(container_selector, service) {
             .attr("stop-opacity", 1);
 
         model.linear_guage_body = model.svg.append("rect")
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit];})))
+            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit.key];})))
             .attr("height", 50)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
@@ -67,9 +66,10 @@ var airVisualization = function(container_selector, service) {
 
     model.updateVis = function(){
 
+
         model.x.domain([
-            d3.min(model.data, function(d) {return d[model.selected_unit];}),
-            d3.max(model.data, function(d) {return d[model.selected_unit];})
+            d3.min(model.data, function(d) {return d[model.selected_unit.key];}),
+            d3.max(model.data, function(d) {return d[model.selected_unit.key];})
         ]);
 
         model.buildGaugeBackground();
@@ -85,7 +85,7 @@ var airVisualization = function(container_selector, service) {
         if(typeof(model.safe_level) === 'undefined'){
             // WHO Safe Level Line
             model.safe_level = model.svg.append("rect")
-                .attr("x", model.x(model.safe_10_level))
+                .attr("x", model.x(model.selected_unit.safe_level))
                 .attr("y", 0)
                 .attr("height", 60)
                 .attr("width", 2)
@@ -96,9 +96,10 @@ var airVisualization = function(container_selector, service) {
         model.safe_level
             .transition()
             .duration(800)
-            .attr("x", model.x(model.safe_10_level));
+            .attr("x", model.x(model.selected_unit.safe_level));
 
-        console.log(model.x(model.safe_10_level));
+        //console.log(model.selected_unit.safe_level);
+        console.log(model.x(model.selected_unit.safe_level));
 
 
         //console.log(model.x(50));
@@ -148,9 +149,9 @@ var airVisualization = function(container_selector, service) {
                 console.log("click", this.value);
 
                 if(this.value === "unit-pm10"){
-                    model.selected_unit = "pm10Mean";
+                    model.selected_unit = {key:"pm10Mean", safe_level:25};
                 } else {
-                    model.selected_unit = "pm2.5Mean";
+                    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
                 }
 
                 model.updateVis();
