@@ -8,6 +8,8 @@ var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
 var Preloader = require('./view/preloader');
 var AirVisualization = require('./vis/1_air.js');
+var DeathVisualization = require('./vis/2_death.js');
+var ActionVisualization = require('./vis/3_action.js');
 
 // Start the service
 var service = new Service();
@@ -16,23 +18,30 @@ var service = new Service();
 console.log("src/js/main.js");
 
 // Test libraries are being required properly
-console.log('d3',d3);
+console.log('d3', d3);
 console.log('d3-queue', q);
 
-var initialDataLoad = function(error, worldBankData, cityPmData){
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
     dataProcessing.process("cityPmData", cityPmData);
-
+    dataProcessing.process("mapTopoJson", mapTopoJson);
     createView();
 
     // Load vis 1
     var airVisualization = new AirVisualization("#vis-1-container", service);
 
+    // Load vis 2
+    var deathVisualization = new DeathVisualization("#vis-2-container", service);
+
+
+    // Load vis 3
+    var actionVisualization = new ActionVisualization("#vis-3-container", service);
+
 };
 
-var createView = function(){
+var createView = function () {
     var cityPicker = new CityPicker(service);
     cityPicker.render();
 
@@ -44,4 +53,5 @@ var createView = function(){
 q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
     .defer(d3.csv, "data/WHO_pm_database_clean.csv")
+    .defer(d3.json, "data/world-110m.json")
     .await(initialDataLoad);

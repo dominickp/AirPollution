@@ -9,7 +9,7 @@ var airVisualization = function(container_selector, service) {
 
     var target_dataset_key = 'cityPmData';
 
-    model.data = service.getActiveDataset(target_dataset_key);
+    model.globalData = service.getActiveDataset(target_dataset_key);
 
 
     model.selected_unit = "pm2.5Mean";
@@ -58,7 +58,7 @@ var airVisualization = function(container_selector, service) {
             .attr("stop-opacity", 1);
 
         model.linear_guage_body = model.svg.append("rect")
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit];})))
+            .attr("width", model.x(d3.max(model.globalData, function(d) {return d[model.selected_unit];})))
             .attr("height", 50)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
@@ -67,8 +67,8 @@ var airVisualization = function(container_selector, service) {
     model.update = function(){
 
         model.x.domain([
-            d3.min(model.data, function(d) {return d[model.selected_unit];}),
-            d3.max(model.data, function(d) {return d[model.selected_unit];})
+            d3.min(model.globalData, function(d) {return d[model.selected_unit];}),
+            d3.max(model.globalData, function(d) {return d[model.selected_unit];})
         ]);
 
         model.buildGaugeBackground();
