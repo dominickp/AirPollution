@@ -72,8 +72,12 @@ var airVisualization = function(container_selector, service) {
             d3.max(model.data, function(d) {return d[model.selected_unit.key];})
         ]);
 
-        model.buildGaugeBackground();
+        // Only build the backround guage once
+        if(typeof(model.linear_guage_body) === 'undefined'){
+            model.buildGaugeBackground();
+        }
 
+        // Add axis
         model.svg.append("g")
             .attr("class", "x-axis axis")
             .attr("transform", "translate(0," + height + ")");
@@ -81,7 +85,7 @@ var airVisualization = function(container_selector, service) {
         model.xAxis.scale(model.x);
         model.svg.select(".x-axis").call(model.xAxis);
 
-        
+        // Only append the safe level line once
         if(typeof(model.safe_level) === 'undefined'){
             // WHO Safe Level Line
             model.safe_level = model.svg.append("rect")
@@ -92,14 +96,15 @@ var airVisualization = function(container_selector, service) {
                 .attr("fill", "blue");
         }
 
+
+
         // Update (set the dynamic properties of the elements)
         model.safe_level
             .transition()
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
 
-        //console.log(model.selected_unit.safe_level);
-        console.log(model.x(model.selected_unit.safe_level));
+
 
 
         //console.log(model.x(50));
@@ -137,29 +142,17 @@ var airVisualization = function(container_selector, service) {
     };
 
     model.unitSelectionListener = function(){
-        //$("#unit-selection-container .radio label input").click(function () {
-        //    if ($(this).is(':checked')) {
-        //    }
-        //    alert("Allot Thai Gayo Bhai");
-        //
-        //});
-
         $(document).ready(function() {
             $('#unit-selection-container .radio label input').click(function () {
-                console.log("click", this.value);
 
                 if(this.value === "unit-pm10"){
                     model.selected_unit = {key:"pm10Mean", safe_level:25};
                 } else {
                     model.selected_unit = {key:"pm2.5Mean", safe_level:10};
                 }
-
                 model.updateVis();
 
             });
-
-            //$('#unit-selection-container .radio label').html("hello");
-
         });
     }();
 
