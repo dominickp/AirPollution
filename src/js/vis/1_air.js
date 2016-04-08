@@ -36,6 +36,7 @@ var airVisualization = function(container_selector, service) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
     model.buildGaugeBackground = function(){
         // Draw the linear gauge body
         var gradient = model.svg.append("defs")
@@ -64,7 +65,7 @@ var airVisualization = function(container_selector, service) {
             .attr("stroke", "grey");
     };
 
-    model.update = function(){
+    model.updateVis = function(){
 
         model.x.domain([
             d3.min(model.globalData, function(d) {return d[model.selected_unit];}),
@@ -80,14 +81,22 @@ var airVisualization = function(container_selector, service) {
         model.xAxis.scale(model.x);
         model.svg.select(".x-axis").call(model.xAxis);
 
+        
+        if(typeof(model.safe_level) === 'undefined'){
+            // WHO Safe Level Line
+            model.safe_level = model.svg.append("rect")
+                .attr("x", model.x(model.safe_10_level))
+                .attr("y", 0)
+                .attr("height", 60)
+                .attr("width", 2)
+                .attr("fill", "blue");
+        }
 
-        // WHO Safe Level Line
-        model.safe_level = model.svg.append("rect")
-            .attr("x", model.x(model.safe_10_level))
-            .attr("y", 0)
-            .attr("height", 60)
-            .attr("width", 2)
-            .attr("fill", "blue");
+        // Update (set the dynamic properties of the elements)
+        model.safe_level
+            .transition()
+            .duration(800)
+            .attr("x", model.x(model.safe_10_level));
 
         console.log(model.x(model.safe_10_level));
 
@@ -124,7 +133,7 @@ var airVisualization = function(container_selector, service) {
         //    .duration(800)
         //    .remove();
 
-    }();
+    };
 
     model.unitSelectionListener = function(){
         //$("#unit-selection-container .radio label input").click(function () {
@@ -133,8 +142,29 @@ var airVisualization = function(container_selector, service) {
         //    alert("Allot Thai Gayo Bhai");
         //
         //});
+
+        $(document).ready(function() {
+            $('#unit-selection-container .radio label input').click(function () {
+                console.log("click", this.value);
+
+                if(this.value === "unit-pm10"){
+                    model.selected_unit = "pm10Mean";
+                } else {
+                    model.selected_unit = "pm2.5Mean";
+                }
+
+                model.updateVis();
+
+            });
+
+            //$('#unit-selection-container .radio label').html("hello");
+
+        });
     }();
 
+
+    // On constructor
+    model.updateVis();
 
 
 

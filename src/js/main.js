@@ -1,5 +1,6 @@
 var d3 = require("d3");
 var q = require("d3-queue");
+var topojson = require('topojson');
 //var typeahead = require("typeahead.js-browserify");
 //typeahead.loadjQueryPlugin();
 
@@ -20,6 +21,7 @@ console.log("src/js/main.js");
 // Test libraries are being required properly
 console.log('d3', d3);
 console.log('d3-queue', q);
+console.log('topojson', topojson);
 
 var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson) {
 
