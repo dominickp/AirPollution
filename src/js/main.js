@@ -1,7 +1,7 @@
 var d3 = require("d3");
 var q = require("d3-queue");
-var typeahead = require("typeahead.js-browserify");
-typeahead.loadjQueryPlugin();
+//var typeahead = require("typeahead.js-browserify");
+//typeahead.loadjQueryPlugin();
 
 var Service = require('./service');
 var DataProcessing = require('./dataProcessor');
