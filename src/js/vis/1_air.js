@@ -1,3 +1,5 @@
+var d3 = require("d3");
+
 console.log("src/js/vis/1_air.js");
 
 var airVisualization = function(container_selector, service) {
@@ -13,29 +15,27 @@ var airVisualization = function(container_selector, service) {
     model.safe_25_level = 10;
     model.safe_10_level = 25;
 
-    var margin = {top: 40, right: 40, bottom: 60, left: 60};
+    var margin = {top: 40, right: 20, bottom: 60, left: 20};
 
-    var width = 600 - margin.left - margin.right,
-        height = 300 - margin.top - margin.bottom;
+    var width = 400 - margin.left - margin.right,
+        height = 150 - margin.top - margin.bottom;
 
     // Initialize axis and scales
     model.x = d3.scale.linear()
         .range([0, width]);
 
+    model.xAxis = d3.svg.axis()
+        .scale(model.x)
+        .orient("bottom");
+
+    // Start SVG
     model.svg = d3.select(container_selector).append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    model.update = function(){
-
-        model.x.domain([
-            d3.min(model.data, function(d) {return d[model.selected_unit]}),
-            d3.max(model.data, function(d) {return d[model.selected_unit]})
-        ]);
-
-
+    model.buildGaugeBackground = function(){
         // Draw the linear gauge body
         var gradient = model.svg.append("defs")
             .append("linearGradient")
@@ -56,14 +56,31 @@ var airVisualization = function(container_selector, service) {
             .attr("stop-color", "#c00")
             .attr("stop-opacity", 1);
 
-
         model.linear_guage_body = model.svg.append("rect")
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit]})))
+            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit];})))
             .attr("height", 50)
             .style("fill", "url(#gradient)")
-            .attr("stroke", "black");
+            .attr("stroke", "grey");
+    };
+
+    model.update = function(){
+
+        model.x.domain([
+            d3.min(model.data, function(d) {return d[model.selected_unit];}),
+            d3.max(model.data, function(d) {return d[model.selected_unit];})
+        ]);
+
+        model.buildGaugeBackground();
+
+        model.svg.append("g")
+            .attr("class", "x-axis axis")
+            .attr("transform", "translate(0," + height + ")");
+
+        model.xAxis.scale(model.x);
+        model.svg.select(".x-axis").call(model.xAxis);
 
 
+        // WHO Safe Level Line
         model.safe_level = model.svg.append("rect")
             .attr("x", model.x(model.safe_10_level))
             .attr("y", 0)
@@ -107,6 +124,7 @@ var airVisualization = function(container_selector, service) {
         //    .remove();
 
     }();
+
 
 
 
