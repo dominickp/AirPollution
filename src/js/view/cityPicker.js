@@ -1,5 +1,8 @@
 var $ = require("jquery");
 
+var typeahead = require("typeahead.js-browserify");
+typeahead.loadjQueryPlugin();
+
 var cityPicker = function(service) {
 
     var model = this;
