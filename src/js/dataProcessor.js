@@ -1,28 +1,32 @@
-
-var dataProcessor = function(service) {
+var dataProcessor = function (service) {
 
     var model = this;
 
-    model.process = function(name, dataset){
+    model.process = function (name, dataset) {
         var processedDataset;
 
-        if(name === "worldBankData"){
+        if (name === "worldBankData") {
             processedDataset = model.processWorldBankPm25Dataset(dataset);
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
-        } else if(name === "cityPmData"){
+        } else if (name === "cityPmData") {
             processedDataset = model.processPmCitiesDataset(dataset);
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
             service.cities = model.getCities(processedDataset);
-        } else {
-            throw new Error("Dataset name '"+name+"' has no defined data processing function.");
+        } else if (name === "mapTopoJson") {
+            // set does not need to be parsed in any way, but has to be added to service.
+            service.addOriginalDataset(name, dataset);
+            service.addActiveDataset(name, dataset);
+        }
+        else {
+            throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
     };
 
-    model.processPmCitiesDataset = function(dataset){
+    model.processPmCitiesDataset = function (dataset) {
 
-        dataset.forEach(function(city){
+        dataset.forEach(function (city) {
             city["pm2.5Mean"] = +city["pm2.5Mean"];
             city.pm10Mean = +city.pm10Mean;
         });
@@ -30,15 +34,15 @@ var dataProcessor = function(service) {
         return dataset;
     };
 
-    model.processWorldBankPm25Dataset = function(dataset){
+    model.processWorldBankPm25Dataset = function (dataset) {
 
         return dataset;
     };
 
-    model.getCities = function(cityPmData){
+    model.getCities = function (cityPmData) {
         var cities = [];
 
-        cityPmData.forEach(function(city){
+        cityPmData.forEach(function (city) {
             cities.push(city.city);
         });
 
