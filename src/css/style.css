@@ -2,7 +2,7 @@ h1 {
     color: blue;
 }
 
-#preloader-container{
+#preloader-container {
     position: absolute;
     background-color: #FFF;
     z-index: 99;
@@ -10,6 +10,7 @@ h1 {
     height: 100%;
     text-align: center;
 }
+
 #preloader-image {
     margin-top: 150px;
 }
@@ -18,4 +19,64 @@ h1 {
     fill: none;
     stroke: none;
     stroke-width: 1;
+}
+
+.pulsate {
+    fill: red;
+    -webkit-animation: pulsate 5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate 5s ease-out;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation: pulsate 5s ease-out;
+    -ms-animation-iteration-count: infinite;
+    animation: pulsate 5s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@-moz-keyframes pulsate {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@-ms-keyframes pulsate {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.2;
+    }
 }
