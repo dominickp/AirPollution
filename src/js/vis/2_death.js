@@ -1,12 +1,11 @@
 var d3 = require("d3");
-var $ = require("jquery");
 
 console.log("src/js/vis/2_death.js");
 
 var deathVisualization = function (container_selector, service) {
 
     var model = this;
-
+    model.service = service;
     var svg_name = "/img/death.svg";
 
     // Import svg file as xml.
@@ -18,7 +17,7 @@ var deathVisualization = function (container_selector, service) {
         var margin = {top: 40, right: 90, bottom: 60, left: 20};
 
         var width = 800 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+            height = 500 - margin.top - margin.bottom;
 
 
         // init svg
@@ -28,6 +27,7 @@ var deathVisualization = function (container_selector, service) {
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+        // init sample data
         model.globalData = [
             {
                 name: "Air pollution",
@@ -68,8 +68,7 @@ var deathVisualization = function (container_selector, service) {
             {
                 name: "???",
                 amount: 11
-            }
-            ,
+            },
             {
                 name: "Long",
                 amount: 11
@@ -87,6 +86,7 @@ var deathVisualization = function (container_selector, service) {
         model.boxes = model.svg.append("g");
 
 
+        // set data to data zoomed in on air pollution
         model.setDataZoom = function () {
             model.global = false;
             var c = 0;
@@ -100,25 +100,28 @@ var deathVisualization = function (container_selector, service) {
 
             });
         };
+
+        // set data globally
         model.setDataGlobal = function () {
             model.global = true;
             model.curData = [];
             model.globalData.forEach(function (d) {
 
-                for (var i = 0; i < d.amount; i++)
+                for (var i = 0; i < d.amount; i++) {
                     model.curData.push({index: i, disease: d.name, myname: d.id + "-" + i, group: d.id});
+                }
+
 
             });
         };
 
         model.setDataGlobal();
 
+        // update visualization
         model.createUpdate = function () {
 
-
-            console.log(model.curData);
             model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                    return d.myname
+                    return d.myname;
                 })
                 .exit()
                 .transition()
@@ -133,15 +136,17 @@ var deathVisualization = function (container_selector, service) {
             var count = 0;
 
             model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                return d.myname
+                return d.myname;
             }).enter().append("svg")
                 .attr("x", function (d) {
                     return (d.index * (WidthPerImage)) % width;
                 })
                 .attr("y", function (d) {
-                    if (prevgroup != d.group) {
-                        if (prevgroup == 1)
+                    if (prevgroup !== d.group) {
+                        if (prevgroup === 1) {
                             linesTotal += 0.5;
+                        }
+
 
                         linesTotal += Math.ceil(count / picturesPline);
                         prevgroup = d.group;
@@ -161,7 +166,7 @@ var deathVisualization = function (container_selector, service) {
                     this.appendChild(imported_node.cloneNode(true));
                 })
                 .on("click", function (d) {
-                    if (d.group == 1) {
+                    if (d.group === 1) {
 
                         if (model.global) {
                             model.setDataZoom();
@@ -176,12 +181,12 @@ var deathVisualization = function (container_selector, service) {
 
                 })
                 .on("mouseover", function (d) {
-                    if (d.group == 1) {
+                    if (d.group === 1) {
                         d3.select(this).style("fill", "gray").style('cursor', 'pointer');
                     }
                 })
                 .on("mouseout", function (d) {
-                    if (d.group == 1) {
+                    if (d.group === 1) {
                         d3.select(this).attr("r", 5.5).style("fill", function (d) {
                             return colorScale(d.disease);
                         }).style('cursor', 'default');
@@ -197,7 +202,7 @@ var deathVisualization = function (container_selector, service) {
 
             // update
             model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                    return d.myname
+                    return d.myname;
                 })
                 .style("fill", function (d) {
                     return colorScale(d.disease);
@@ -206,7 +211,7 @@ var deathVisualization = function (container_selector, service) {
             // set labels
             if (model.global) {
 
-                if (model.labels == null) {
+                if (!model.labels) {
                     model.labels = model.svg.append("g");
                     var lines = 1;
                     model.globalData.forEach(function (d) {
@@ -221,8 +226,9 @@ var deathVisualization = function (container_selector, service) {
 
 
                         lines += Math.ceil(d.amount / picturesPline);
-                        if (d.id == 1)
+                        if (d.id === 1) {
                             lines += 0.5;
+                        }
 
 
                     });
@@ -233,6 +239,8 @@ var deathVisualization = function (container_selector, service) {
             // TODO: set tooltip
 
             // TODO: set legend
+
+            // TODO: show deaths by region
 
 
         };
