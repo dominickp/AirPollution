@@ -1,16 +1,17 @@
 var d3 = require("d3");
-var $ = require("jquery");
 var topojson = require("topojson");
+
 console.log("src/js/vis/3_action.js");
 
 var actionVisualization = function (container_selector, service) {
 
     var model = this;
-    model.city = service.getSelectedCity;
+    model.service = service;
     model.topo = service.getActiveDataset("mapTopoJson");
 
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
 
+    // init data
     var width = 960,
         height = 500,
         radius = 240,
@@ -31,12 +32,15 @@ var actionVisualization = function (container_selector, service) {
             rotate[0] = d3.event.x;
             rotate[1] = -d3.event.y;
 
-            if (rotate[1] > 50)
+            // limit y axis to make it easier to navigate
+            if (rotate[1] > 50) {
                 rotate[1] = 50;
-            if (rotate[1] < -50)
-                rotate[1] = -50;
+            }
 
-            console.log(rotate);
+            if (rotate[1] < -50) {
+                rotate[1] = -50;
+            }
+
             projection.rotate(rotate);
             path = d3.geo.path().projection(projection);
             model.land.selectAll("path").attr("d", path);
@@ -53,8 +57,7 @@ var actionVisualization = function (container_selector, service) {
     model.water = model.svg.append("g");
     model.land = model.svg.append("g");
 
-    // initVisualization
-
+    // set backgroun
     var globe = {type: "Sphere"};
 
     model.water.append("path")
@@ -63,27 +66,44 @@ var actionVisualization = function (container_selector, service) {
         .attr("d", path);
 
 
+    // set land
     model.land.selectAll("path")
         .data(topojson.feature(model.topo, model.topo.objects.countries).features)
         .enter().append("path")
         .attr("d", path)
         .attr("class", "feature");
 
+    //model.locator = new google.maps.Geocoder();
 
+
+    // set city
     model.update = function () {
 
-        // show city
+        var cityString = model.service.getSelectedCity();
 
-        // TODO use google to get lat/lon
+        if (cityString === null || cityString === "") {
+            cityString = "Boston";
+        }
+
+
+        //model.locator.geocode({address: cityString}, function (results, status) {
+        //        // If that was successful
+        //        if (status == google.maps.GeocoderStatus.OK) {
+
+        //var p = results[0].geometry.location;
+        //var city = {type: "Point", coordinates: [p.lng(), p.lat()]};
+
         var city = {type: "Point", coordinates: [-98.35, 39.50]};
 
 
         projection.rotate([-city.coordinates[0], -city.coordinates[1]]);
         rotate = projection.rotate();
-        if (rotate[1] > 50)
+        if (rotate[1] > 50) {
             rotate[1] = 50;
-        if (rotate[1] < -50)
+        }
+        if (rotate[1] < -50) {
             rotate[1] = -50;
+        }
         projection.rotate(rotate);
 
         path = d3.geo.path().projection(projection);
@@ -92,7 +112,7 @@ var actionVisualization = function (container_selector, service) {
         path = d3.geo.path().projection(projection);
         model.land.selectAll("path").attr("d", path);
 
-        if (model.point != null) {
+        if (model.point !== null) {
             model.svg.selectAll(".pin").remove();
         }
 
@@ -103,6 +123,17 @@ var actionVisualization = function (container_selector, service) {
             .transition()
             .duration(500)
             .attr("d", path.pointRadius(5));
+
+        //
+        //    }
+        //    // ====== catch error ======
+        //    else {
+        //        console.log("ERROR-CODE: " + status + ". On search: " + cityString);
+        //    }
+        //}
+        //)
+        //;
+
 
     };
 
