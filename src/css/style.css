@@ -81,7 +81,11 @@ h1 {
     }
 }
 
-.grab {
+.dragstart {
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing;
+}
+.dragend {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
 }

@@ -47,6 +47,12 @@ var actionVisualization = function (container_selector, service) {
                 projection.rotate(model.rotate);
                 path = d3.geo.path().projection(projection);
                 model.land.selectAll("path").attr("d", path);
+            })
+            .on("dragstart", function () {
+                model.svg.attr("class", "dragstart");
+            })
+            .on("dragend", function () {
+                model.svg.attr("class", "dragend");
             });
 
         // init SVG
@@ -55,7 +61,7 @@ var actionVisualization = function (container_selector, service) {
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-            .attr("class", "grab")
+            .attr("class", "dragend")
             .call(model.drag);
 
         model.water = model.svg.append("g");
