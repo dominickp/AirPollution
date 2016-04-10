@@ -57,3 +57,11 @@ q.queue()
     .defer(d3.csv, "data/WHO_pm_database_clean.csv")
     .defer(d3.json, "data/world-110m.json")
     .await(initialDataLoad);
+
+/* Google maps api example usage, for marius */
+var GoogleMapsLoader = require('google-maps'); // only for common js environments
+
+GoogleMapsLoader.load(function(google) {
+    var gm = new google.maps.Map(document.getElementById('map-example'));
+    console.log("google maps api", gm);
+});
