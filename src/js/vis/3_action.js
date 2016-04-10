@@ -15,8 +15,9 @@ var actionVisualization = function (container_selector, service) {
         // init data
         var width = 960,
             height = 500,
-            radius = 240,
-            rotate = [0, 0, 0];
+            radius = 240;
+
+        model.rotate = [0, 0, 0];
 
         var projection = d3.geo.orthographic()
             .scale(radius)
@@ -27,22 +28,23 @@ var actionVisualization = function (container_selector, service) {
 
         model.drag = d3.behavior.drag()
             .origin(function () {
-                return {x: rotate[0], y: -rotate[1]};
+                model.transition = false;
+                return {x: model.rotate[0], y: -model.rotate[1]};
             })
             .on("drag", function () {
-                rotate[0] = d3.event.x;
-                rotate[1] = -d3.event.y;
+                model.rotate[0] = d3.event.x;
+                model.rotate[1] = -d3.event.y;
 
                 // limit y axis to make it easier to navigate
-                if (rotate[1] > 50) {
-                    rotate[1] = 50;
+                if (model.rotate[1] > 50) {
+                    model.rotate[1] = 50;
                 }
 
-                if (rotate[1] < -50) {
-                    rotate[1] = -50;
+                if (model.rotate[1] < -50) {
+                    model.rotate[1] = -50;
                 }
 
-                projection.rotate(rotate);
+                projection.rotate(model.rotate);
                 path = d3.geo.path().projection(projection);
                 model.land.selectAll("path").attr("d", path);
             });
@@ -53,6 +55,7 @@ var actionVisualization = function (container_selector, service) {
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .attr("class", "grab")
             .call(model.drag);
 
         model.water = model.svg.append("g");
@@ -81,43 +84,44 @@ var actionVisualization = function (container_selector, service) {
         //
 
 
-        model.rotate = function (oldrotate, rotate) {
-            console.log(oldrotate);
-            console.log(rotate);
+        model.startRotate = function () {
+
 
             var velocity = 1;
 
             d3.timer(function () {
 
 
-                var y = Math.abs(rotate[0] - oldrotate[0]);
-                var x = Math.abs(rotate[1] - oldrotate[1]);
-
-                if (x < (velocity * 2) - 0.1 && y < (velocity * 2) - 0.1)
+                if (model.transition === false)
                     return;
+
+                var y = Math.abs(model.rotate[0] - model.oldrotate[0]);
+                var x = Math.abs(model.rotate[1] - model.oldrotate[1]);
+
+                if (x < (velocity * 2) - 0.1 && y < (velocity * 2) - 0.1) {
+                    model.transition = false;
+                    return;
+                }
 
                 if (x > (velocity * 2)) {
 
-                    if (rotate[1] > oldrotate[1]) {
-                        oldrotate[1] += velocity;
+                    if (model.rotate[1] > model.oldrotate[1]) {
+                        model.oldrotate[1] += velocity;
                     }
-                    else if (rotate[1] < oldrotate[1]) {
-                        oldrotate[1] -= velocity;
+                    else if (model.rotate[1] < model.oldrotate[1]) {
+                        model.oldrotate[1] -= velocity;
                     }
                 }
                 if (y > (velocity * 2)) {
-                    if (rotate[0] > oldrotate[0]) {
-                        oldrotate[0] += velocity;
+                    if (model.rotate[0] > model.oldrotate[0]) {
+                        model.oldrotate[0] += velocity;
                     }
-                    else if (rotate[0] < oldrotate[0]) {
-                        oldrotate[0] -= velocity;
+                    else if (model.rotate[0] < model.oldrotate[0]) {
+                        model.oldrotate[0] -= velocity;
                     }
                 }
 
-
-                console.log(oldrotate);
-                console.log(rotate);
-                projection.rotate(oldrotate);
+                projection.rotate(model.oldrotate);
                 path = d3.geo.path().projection(projection);
                 model.land.selectAll("path").attr("d", path);
 
@@ -157,18 +161,22 @@ var actionVisualization = function (container_selector, service) {
                             .attr("class", "pin pulsate");
 
 
-                        var oldrotate = rotate;
+                        model.oldrotate = model.rotate;
 
                         projection.rotate([-city.coordinates[0], -city.coordinates[1]]);
-                        rotate = projection.rotate();
-                        if (rotate[1] > 50) {
-                            rotate[1] = 50;
+                        model.rotate = projection.rotate();
+                        if (model.rotate[1] > 50) {
+                            model.rotate[1] = 50;
                         }
-                        if (rotate[1] < -50) {
-                            rotate[1] = -50;
+                        if (model.rotate[1] < -50) {
+                            model.rotate[1] = -50;
                         }
 
-                        model.rotate(oldrotate, rotate);
+                        if (!model.transition) {
+
+                            model.startRotate(model.oldrotate, model.rotate);
+                        }
+                        model.transition = true;
 
 
                     }
