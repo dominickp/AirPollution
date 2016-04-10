@@ -1,0 +1,18 @@
+Id,Cause,percent-deaths,Deaths per 100000
+1,Outdoor air pollution,4.69,37
+2,Ischaemic heart disease,11.35,89
+3,Stroke,10.1,79
+4,Chronic obstructive pulmonary disease,5.1,40
+5,Lower respiratory infections,5.36,42
+6,Lung cancers,2.68,21
+7,HIV/AIDS,2.75,22
+8,Diarrhoeal diseases,2.68,21
+9,Diabetes mellitus,2.68,21
+10,Road injury,2.25,18
+11,Hypertensive heart disease,2.04,16
+12,Malaria,1.1,9
+NAN,Ischaemic heart disease,1.9,15
+NAN,Stroke,1.9,15
+NAN,Chronic obstructive pulmonary disease,0.51,4
+NAN,Lung cancers,0.26,2
+NAN,Lower respiratory infections,0.13,1
