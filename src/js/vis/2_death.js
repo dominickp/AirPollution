@@ -6,7 +6,7 @@ var deathVisualization = function (container_selector, service) {
 
     var model = this;
     model.service = service;
-    var svg_name = "/img/death.svg";
+    var svg_name = "img/death.svg";
 
     // Import svg file as xml.
     d3.xml(svg_name, function (xml) {
