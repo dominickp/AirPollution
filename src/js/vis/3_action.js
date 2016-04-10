@@ -1,5 +1,6 @@
 var d3 = require("d3");
 var topojson = require("topojson");
+var GoogleMapsLoader = require('google-maps');
 
 console.log("src/js/vis/3_action.js");
 
@@ -73,8 +74,6 @@ var actionVisualization = function (container_selector, service) {
         .attr("d", path)
         .attr("class", "feature");
 
-    //model.locator = new google.maps.Geocoder();
-
 
     // set city
     model.update = function () {
@@ -82,62 +81,63 @@ var actionVisualization = function (container_selector, service) {
         var cityString = model.service.getSelectedCity();
 
         if (cityString === null || cityString === "") {
-            cityString = "Boston";
+            cityString = "Amsterdam";
+            console.log("City String empty. Used " + cityString + " as default.")
         }
 
 
-        //model.locator.geocode({address: cityString}, function (results, status) {
-        //        // If that was successful
-        //        if (status == google.maps.GeocoderStatus.OK) {
+        model.locator.geocode({address: cityString}, function (results, status) {
+                // If that was successful
+                if (status == google.maps.GeocoderStatus.OK) {
 
-        //var p = results[0].geometry.location;
-        //var city = {type: "Point", coordinates: [p.lng(), p.lat()]};
-
-        var city = {type: "Point", coordinates: [-98.35, 39.50]};
+                    var p = results[0].geometry.location;
+                    var city = {type: "Point", coordinates: [p.lng(), p.lat()]};
 
 
-        projection.rotate([-city.coordinates[0], -city.coordinates[1]]);
-        rotate = projection.rotate();
-        if (rotate[1] > 50) {
-            rotate[1] = 50;
-        }
-        if (rotate[1] < -50) {
-            rotate[1] = -50;
-        }
-        projection.rotate(rotate);
+                    projection.rotate([-city.coordinates[0], -city.coordinates[1]]);
+                    rotate = projection.rotate();
+                    if (rotate[1] > 50) {
+                        rotate[1] = 50;
+                    }
+                    if (rotate[1] < -50) {
+                        rotate[1] = -50;
+                    }
+                    projection.rotate(rotate);
 
-        path = d3.geo.path().projection(projection);
-        model.svg.selectAll("path").attr("d", path);
+                    path = d3.geo.path().projection(projection);
+                    model.svg.selectAll("path").attr("d", path);
 
-        path = d3.geo.path().projection(projection);
-        model.land.selectAll("path").attr("d", path);
+                    path = d3.geo.path().projection(projection);
+                    model.land.selectAll("path").attr("d", path);
 
-        if (model.point !== null) {
-            model.svg.selectAll(".pin").remove();
-        }
+                    if (model.point !== null) {
+                        model.svg.selectAll(".pin").remove();
+                    }
 
-        model.point = model.land.append("path")
-            .datum(city)
-            .attr("d", path.pointRadius(0))
-            .attr("class", "pin pulsate")
-            .transition()
-            .duration(500)
-            .attr("d", path.pointRadius(5));
+                    model.point = model.land.append("path")
+                        .datum(city)
+                        .attr("d", path.pointRadius(0))
+                        .attr("class", "pin pulsate")
+                        .transition()
+                        .duration(500)
+                        .attr("d", path.pointRadius(5));
 
-        //
-        //    }
-        //    // ====== catch error ======
-        //    else {
-        //        console.log("ERROR-CODE: " + status + ". On search: " + cityString);
-        //    }
-        //}
-        //)
-        //;
+
+                }
+                // ====== catch error ======
+                else {
+                    console.log("ERROR-CODE: " + status + ". On search: " + cityString);
+                }
+            }
+        );
 
 
     };
 
-    model.update();
+    GoogleMapsLoader.load(function (google) {
+        model.locator = new google.maps.Geocoder();
+        model.update();
+    });
 
 
 };

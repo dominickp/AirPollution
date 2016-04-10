@@ -19,9 +19,39 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, dataset);
             service.addActiveDataset(name, dataset);
         }
+        else if (name === "deathData") {
+            processedDataset = model.processDeathDataset(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else {
             throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
+    };
+    model.processDeathDataset = function (dataset) {
+
+
+        var global = [];
+        var zoom = [];
+        dataset.forEach(function (cause) {
+
+            var name = cause.Cause;
+            var amount = +cause["Deaths per 100000"];
+            var id = cause.Id;
+
+            if (isNaN(id)) {
+                zoom.push({name: name, amount: amount});
+            }
+            else {
+                global.push({name: name, amount: amount, id: +id});
+            }
+        });
+
+        global.sort(function (a, b) {
+            return b.amount - a.amount;
+        });
+
+        return {global: global, zoom: zoom};
     };
 
     model.processPmCitiesDataset = function (dataset) {

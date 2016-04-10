@@ -15,9 +15,9 @@ var deathVisualization = function (container_selector, service) {
         var imported_node = document.importNode(xml.documentElement, true);
 
         var margin = {top: 40, right: 90, bottom: 60, left: 20};
-
-        var width = 800 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+        var textmargin = 100;
+        var width = 900 - margin.left - margin.right,
+            height = 700 - margin.top - margin.bottom;
 
 
         // init svg
@@ -28,73 +28,35 @@ var deathVisualization = function (container_selector, service) {
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // init sample data
-        model.globalData = [
-            {
-                name: "Air pollution",
-                amount: 55,
-                id: 1
-            },
-            {
-                name: "Stroke",
-                amount: 25,
-                id: 2
-            },
-            {
-                name: "Lung Cancer",
-                amount: 15,
-                id: 3
-            },
-            {
-                name: "Cancer",
-                amount: 11,
-                id: 4
+        model.globalData = model.service.getActiveDataset("deathData").global;
+        model.pollutionData = model.service.getActiveDataset("deathData").zoom;
 
-            }
-        ];
+        width -= textmargin;
+        model.boxes = model.svg.append("g").attr("width", width);
 
-        model.pollutionData = [
-            {
-                name: "Stroke",
-                amount: 11
-            },
-            {
-                name: "Lung Cancer",
-                amount: 11
-            },
-            {
-                name: "COPD",
-                amount: 11
-            },
-            {
-                name: "???",
-                amount: 11
-            },
-            {
-                name: "Long",
-                amount: 11
-            }
-        ];
 
         model.curData = [];
         var colorScale = d3.scale.category20();
-
-        var picturesPline = 20;
+        var picturesPline = 30;
         var WidthPerImage = width / picturesPline;
         var img_height = WidthPerImage * 1.8;
         var img_width = WidthPerImage * 1.8;
-
-        model.boxes = model.svg.append("g");
 
 
         // set data to data zoomed in on air pollution
         model.setDataZoom = function () {
             model.global = false;
-            var c = 0;
+            var index = 0;
             model.pollutionData.forEach(function (d) {
 
                 for (var i = 0; i < d.amount; i++) {
-                    model.curData[c] = ({index: c, disease: d.name, myname: 1 + "-" + c, group: 1});
-                    c++;
+                    model.curData[model.startAir + index] = ({
+                        index: index,
+                        disease: d.name,
+                        myname: 1 + "-" + index,
+                        group: 1
+                    });
+                    index++;
                 }
 
 
@@ -106,6 +68,10 @@ var deathVisualization = function (container_selector, service) {
             model.global = true;
             model.curData = [];
             model.globalData.forEach(function (d) {
+
+                if (d.id === 1) {
+                    model.startAir = model.curData.length;
+                }
 
                 for (var i = 0; i < d.amount; i++) {
                     model.curData.push({index: i, disease: d.name, myname: d.id + "-" + i, group: d.id});
@@ -143,11 +109,7 @@ var deathVisualization = function (container_selector, service) {
                 })
                 .attr("y", function (d) {
                     if (prevgroup !== d.group) {
-                        if (prevgroup === 1) {
-                            linesTotal += 0.5;
-                        }
-
-
+                        linesTotal += 0.5;
                         linesTotal += Math.ceil(count / picturesPline);
                         prevgroup = d.group;
                         count = 0;
@@ -216,22 +178,27 @@ var deathVisualization = function (container_selector, service) {
                     var lines = 1;
                     model.globalData.forEach(function (d) {
 
-                        var y = (lines + ( Math.ceil(d.amount / picturesPline) / 2)) * (WidthPerImage) + 10;
+                            var y = (lines + ( Math.ceil(d.amount / picturesPline) / 2)) * (WidthPerImage) + 10;
 
-                        model.labels.append("text")
-                            .attr("x", width + 10)
-                            .attr("y", y)
-                            .text(d.name)
-                            .style("text-anchor", "begin");
+                            model.labels.append("text")
+                                .attr("x", width + 10)
+                                .attr("y", y)
+                                .text(d.name)
+                                .style("fill", function () {
+                                    if (d.id === 1) {
+                                        return "red";
+                                    }
+                                    return "black";
+                                })
+                                .style("text-anchor", "begin");
 
 
-                        lines += Math.ceil(d.amount / picturesPline);
-                        if (d.id === 1) {
+                            lines += Math.ceil(d.amount / picturesPline);
                             lines += 0.5;
+
+
                         }
-
-
-                    });
+                    );
                 }
             }
 

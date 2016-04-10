@@ -23,12 +23,13 @@ console.log('d3', d3);
 console.log('d3-queue', q);
 console.log('topojson', topojson);
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
     dataProcessing.process("cityPmData", cityPmData);
     dataProcessing.process("mapTopoJson", mapTopoJson);
+    dataProcessing.process("deathData", deathData);
     createView();
 
     // Load vis 1
@@ -56,12 +57,6 @@ q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
     .defer(d3.csv, "data/WHO_pm_database_clean.csv")
     .defer(d3.json, "data/world-110m.json")
+    .defer(d3.csv, "data/WHO_death_data_clean.csv")
     .await(initialDataLoad);
 
-/* Google maps api example usage, for marius */
-var GoogleMapsLoader = require('google-maps'); // only for common js environments
-
-GoogleMapsLoader.load(function(google) {
-    var gm = new google.maps.Map(document.getElementById('map-example'));
-    console.log("google maps api", gm);
-});
