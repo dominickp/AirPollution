@@ -1,6 +1,3 @@
-h1 {
-    color: blue;
-}
 
 #preloader-container {
     position: absolute;
@@ -19,6 +16,10 @@ h1 {
     fill: none;
     stroke: none;
     stroke-width: 1;
+}
+
+.next{
+    margin-top: 10px;
 }
 
 .pulsate {
@@ -85,7 +86,77 @@ h1 {
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing;
 }
+
 .dragend {
     cursor: -webkit-grab;
     cursor: -moz-grab;
+}
+
+.header {
+
+    /* http://metro.co.uk/2014/04/02/saharan-dust-prompts-very-high-air-pollution-warning-4685906/ */
+    background-image: url("https://metrouk2.files.wordpress.com/2014/04/ad131317904air-pollution-ha.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    min-height: 70vh;
+}
+
+.container {
+    padding-bottom: 40px;
+}
+
+.header > p {
+    text-align: center;
+    font-size: 13px;
+}
+
+.header > .title > h1, .header > .title > h3, .header > p, .header > .title > p {
+
+    width: 50%;
+    margin: auto;
+}
+
+.title {
+    padding-top: 10%;
+}
+
+.image-info {
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: auto;
+    text-align: right;
+    width: 100px;
+    margin-top: -280px;
+
+}
+
+body, html {
+    font-family: 'Signika', sans-serif;
+    min-width: 679px;
+    margin: 0;
+    padding: 0;
+}
+
+.introduction {
+    min-height: 50vh;
+}
+
+.part {
+    min-height: 100vh;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#vis-3-container {
+    margin-left: -125px;
+}
+
+.heading{
+    padding-bottom: 30px;
 }

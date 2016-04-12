@@ -12,12 +12,12 @@ var deathVisualization = function (container_selector, service) {
     d3.xml(svg_name, function (xml) {
 
         // Take xml as nodes.
-        var imported_node = document.importNode(xml.documentElement, true);
+        model.imported_node = document.importNode(xml.documentElement, true);
 
-        var margin = {top: 40, right: 90, bottom: 60, left: 20};
+        var margin = {top: 5, right: 90, bottom: 5, left: 20};
         var textmargin = 100;
         var width = 900 - margin.left - margin.right,
-            height = 700 - margin.top - margin.bottom;
+            height = 630 - margin.top - margin.bottom;
 
 
         // init svg
@@ -32,15 +32,16 @@ var deathVisualization = function (container_selector, service) {
         model.pollutionData = model.service.getActiveDataset("deathData").zoom;
 
         width -= textmargin;
-        model.boxes = model.svg.append("g").attr("width", width);
+        model.width = width;
+        model.boxes = model.svg.append("g").attr("width", model.width);
 
 
         model.curData = [];
-        var colorScale = d3.scale.category20();
-        var picturesPline = 30;
-        var WidthPerImage = width / picturesPline;
-        var img_height = WidthPerImage * 1.8;
-        var img_width = WidthPerImage * 1.8;
+        model.colorScale = d3.scale.category20();
+        model.picturesPline = 30;
+        model.WidthPerImage = model.width / model.picturesPline;
+        model.img_height = model.WidthPerImage * 1.8;
+        model.img_width = model.WidthPerImage * 1.8;
 
 
         // set data to data zoomed in on air pollution
@@ -83,140 +84,171 @@ var deathVisualization = function (container_selector, service) {
 
         model.setDataGlobal();
 
-        // update visualization
-        model.createUpdate = function () {
+        //model.createUpdate();
 
-            model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                    return d.myname;
-                })
-                .exit()
-                .transition()
-                .attr("y", 3000)
-                .transition()
-                .remove();
+        // set labels
+        if (model.global) {
 
+            if (!model.labels) {
+                model.labels = model.svg.append("g");
+                var lines = 1;
+                model.globalData.forEach(function (d) {
 
-            // create
-            var linesTotal = 1;
-            var prevgroup = "";
-            var count = 0;
+                        var y = (lines + ( Math.ceil(d.amount / model.picturesPline) / 2)) * (model.WidthPerImage) + 10;
 
-            model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                return d.myname;
-            }).enter().append("svg")
-                .attr("x", function (d) {
-                    return (d.index * (WidthPerImage)) % width;
-                })
-                .attr("y", function (d) {
-                    if (prevgroup !== d.group) {
-                        linesTotal += 0.5;
-                        linesTotal += Math.ceil(count / picturesPline);
-                        prevgroup = d.group;
-                        count = 0;
-                    }
-                    count++;
-                    return (Math.floor(d.index / picturesPline) + linesTotal) * (WidthPerImage);
-                })
-                .style("fill", function (d) {
-                    return colorScale(d.group);
-                })
-                .attr("class", "vis2_wrapper")
-                .attr("width", 0)
-                .attr("height", 0)
-                .each(function () {
-                    // Clone and append xml node to each data binded element.
-                    this.appendChild(imported_node.cloneNode(true));
-                })
-                .on("click", function (d) {
-                    if (d.group === 1) {
+                        model.labels.append("text")
+                            .attr("x", model.width + 10)
+                            .attr("y", y)
+                            .text(d.name)
+                            .style("fill", function () {
+                                if (d.id === 1) {
+                                    return "red";
+                                }
+                                return "black";
+                            })
+                            .style("text-anchor", "begin")
+                            .on("click", function () {
+                                if (d.id === 1) {
 
-                        if (model.global) {
-                            model.setDataZoom();
-                            model.createUpdate();
-                        }
-                        else {
-                            model.setDataGlobal();
-                            model.createUpdate();
-                        }
-
-                    }
-
-                })
-                .on("mouseover", function (d) {
-                    if (d.group === 1) {
-                        d3.select(this).style("fill", "gray").style('cursor', 'pointer');
-                    }
-                })
-                .on("mouseout", function (d) {
-                    if (d.group === 1) {
-                        d3.select(this).attr("r", 5.5).style("fill", function (d) {
-                            return colorScale(d.disease);
-                        }).style('cursor', 'default');
-                    }
-                })
-                .transition()
-                .delay(function (d) {
-                    return d.index * 85;
-                })
-                .attr("width", img_width)
-                .attr("height", img_height);
-
-
-            // update
-            model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
-                    return d.myname;
-                })
-                .style("fill", function (d) {
-                    return colorScale(d.disease);
-                });
-
-            // set labels
-            if (model.global) {
-
-                if (!model.labels) {
-                    model.labels = model.svg.append("g");
-                    var lines = 1;
-                    model.globalData.forEach(function (d) {
-
-                            var y = (lines + ( Math.ceil(d.amount / picturesPline) / 2)) * (WidthPerImage) + 10;
-
-                            model.labels.append("text")
-                                .attr("x", width + 10)
-                                .attr("y", y)
-                                .text(d.name)
-                                .style("fill", function () {
-                                    if (d.id === 1) {
-                                        return "red";
+                                    if (model.global) {
+                                        model.setDataZoom();
+                                        model.createUpdate();
                                     }
-                                    return "black";
-                                })
-                                .style("text-anchor", "begin");
+                                    else {
+                                        model.setDataGlobal();
+                                        model.createUpdate();
+                                    }
+
+                                }
+
+                            })
+                            .on("mouseover", function () {
+                                if (d.id === 1) {
+                                    d3.select(this).style("fill", "gray").style('cursor', 'pointer');
+                                }
+                            })
+                            .on("mouseout", function () {
+                                if (d.id === 1) {
+                                    d3.select(this).attr("r", 5.5).style("fill", "red")
+                                        .style('cursor', 'default');
+                                }
+                            });
 
 
-                            lines += Math.ceil(d.amount / picturesPline);
-                            lines += 0.5;
+                        lines += Math.ceil(d.amount / model.picturesPline);
+                        lines += 0.5;
 
 
-                        }
-                    );
-                }
+                    }
+                );
             }
-
-
-            // TODO: set tooltip
-
-            // TODO: set legend
-
-            // TODO: show deaths by region
-
-
-        };
-
-
-        model.createUpdate();
+        }
 
 
     });
+
+
+    // update visualization
+    model.createUpdate = function () {
+
+        model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
+                return d.myname;
+            })
+            .exit()
+            .transition()
+            .attr("y", 3000)
+            .transition()
+            .remove();
+
+
+        // create
+        var linesTotal = 1;
+        var prevgroup = "";
+        var count = 0;
+
+        model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
+            return d.myname;
+        }).enter().append("svg")
+            .attr("x", function (d) {
+                return (d.index * (model.WidthPerImage)) % model.width;
+            })
+            .attr("y", function (d) {
+                if (prevgroup !== d.group) {
+                    linesTotal += 0.5;
+                    linesTotal += Math.ceil(count / model.picturesPline);
+                    prevgroup = d.group;
+                    count = 0;
+                }
+                count++;
+                return (Math.floor(d.index / model.picturesPline) + linesTotal) * (model.WidthPerImage);
+            })
+            .style("fill", function (d) {
+                return model.colorScale(d.group);
+            })
+            .attr("class", "vis2_wrapper")
+            .attr("width", 0)
+            .attr("height", 0)
+            .each(function () {
+                // Clone and append xml node to each data binded element.
+                this.appendChild(model.imported_node.cloneNode(true));
+            })
+            .on("click", function (d) {
+                if (d.group === 1) {
+
+                    if (model.global) {
+                        model.setDataZoom();
+                        model.createUpdate();
+                    }
+                    else {
+                        model.setDataGlobal();
+                        model.createUpdate();
+                    }
+
+                }
+
+            })
+            .on("mouseover", function (d) {
+                if (d.group === 1) {
+                    d3.select(this).style("fill", "gray").style('cursor', 'pointer');
+                }
+            })
+            .on("mouseout", function (d) {
+                if (d.group === 1) {
+                    d3.select(this).attr("r", 5.5).style("fill", function (d) {
+                        return model.colorScale(d.disease);
+                    }).style('cursor', 'default');
+                }
+            })
+            .transition()
+            .delay(function (d) {
+                return d.index * 85;
+            })
+            .attr("width", model.img_width)
+            .attr("height", model.img_height);
+
+
+        // update
+        model.boxes.selectAll(".vis2_wrapper").data(model.curData, function (d) {
+                return d.myname;
+            })
+            .style("fill", function (d) {
+                return model.colorScale(d.disease);
+            });
+
+
+        // TODO: set tooltip
+
+        // TODO: set legend
+
+        // TODO: show deaths by region
+
+
+    };
+
+    model.reset = function () {
+        model.boxes.remove();
+        model.boxes = model.svg.append("g").attr("width", model.width);
+    };
 
 };
 

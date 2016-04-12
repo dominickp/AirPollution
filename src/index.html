@@ -4,72 +4,187 @@
     <meta charset="UTF-8">
     <title>D3 Project</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="preloader-container">
     <img id="preloader-image" src="img/balls.gif">
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Final Project!</h1>
-        </div>
-        <div class="col-md-12">
-            <p>
-                Hey there. See the console!! CS171!
-                <br><br>
-                HI GUYS! This is my cool feature.
-            </p>
-        </div>
+<div class="header">
+
+    <p>
+        CS171 - Free Radicals
+    </p>
+    <div class="title">
+        <h1>Ambient (outdoor air pollution)
+            in both cities and rural areas was estimated to cause 3.7 million premature deaths worldwide in 2012.</h1>
+        <h3>"Some 88% of those premature deaths occurred in low- and middle-income countries,
+            and the greatest number in the WHO Western Pacific and South-East Asia regions."</h3><br>
+        <p>- World Health Organization</p>
     </div>
 
-    <div class="row">
-        <div class="col-sm-12">
-            <h2>Act 1: Air</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2" id="unit-selection-container">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="unit-pm25" value="unit-pm25" checked>
-                    PM 2.5
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="unit-pm10" value="unit-pm10">
-                    PM 10
-                </label>
-            </div>
-        </div>
-        <div class="col-sm-10">
-            <div class="col-md-12 text-left">
-                <div class="form-group">
-                    <label for="city-selector">Your city: </label>
-                    <input id="city-selector" class="typeahead form-control" type="text" placeholder="Enter your city">
-                </div>
-                </div>
-            <div class="col-md-12" id="vis-1-container">
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Act 2: Death</h2>
-            <div id="vis-2-container"></div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Act 3: Action</h2>
-            <div id="vis-3-container"></div>
-        </div>
-    </div>
 </div>
 
+<div class="container">
+    <div id="introduction" class="introduction">
+        <row>
+            <div class="col-sm-12">
+                <h2> Introduction</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur vulputate egestas sapien a pharetra.
+                    Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
+                    Quisque vitae augue id magna ullamcorper malesuada id non quam.
+                    Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
+                    In erat ipsum, interdum id quam quis, tincidunt suscipit urna.
+                    Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
+                    ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
+                    Praesent augue erat, pretium quis congue quis, tempus at tortor.
+                    Quisque pretium laoreet orci eu ultricies. Morbi dictum vulputate dolor, nec dignissim sapien
+                    sodales
+                    vitae.
+                    Morbi egestas libero et aliquam tincidunt. Pellentesque ornare luctus tincidunt.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nullam risus neque, rutrum eu dolor congue, congue placerat justo.
+                    Maecenas sit amet ullamcorper felis. Proin condimentum, lorem ut vehicula mattis, ipsum elit finibus
+                    odio,
+                    ultricies posuere nulla metus non ante. Nunc aliquet eros in massa venenatis condimentum.
+                    Morbi ullamcorper lacus eu urna tincidunt lacinia. Nam tortor mi, mollis maximus venenatis lobortis,
+                    accumsan ut elit. Nunc in mi sed mauris fringilla facilisis.
+                    Mauris at turpis a felis condimentum maximus ac pulvinar purus.
+                    Quisque sit amet elit purus. Ut dolor nisi, placerat et tempus at,
+                    euismod sit amet elit. Sed finibus faucibus ultricies. Nam tincidunt,
+                    tellus vel fermentum commodo, sem ante ornare tortor,
+                    nec vehicula nisi nisl ultricies mauris. Suspendisse sit amet felis a velit commodo congue ac ac
+                    quam.
+                    Praesent blandit ut tellus id efficitur. Sed aliquet rhoncus dolor, vel cursus tellus varius sed.
+                    Suspendisse finibus tortor non risus vestibulum elementum.
+                </p>
+                <div class="col-sm-6 col-sm-offset-3  text-center">
+                    <h4>How does air pollution affect your city?</h4>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input id="city-selector" class="typeahead form-control" type="text"
+                                   placeholder="Enter your city">
+                            <input type="button" class="btn btn-info next" value="Check">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </row>
+    </div>
+
+    <div id="p1" class="part hidden">
+        <row>
+            <div class="col-sm-12">
+                <h2>Act 1: Air</h2>
+            </div>
+            <div class="col-sm-2" id="unit-selection-container">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="unit-pm25" value="unit-pm25" checked>
+                        PM 2.5
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="unit-pm10" value="unit-pm10">
+                        PM 10
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div class="col-md-12" id="vis-1-container">
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-info next">Next</button>
+            </div>
+        </row>
+    </div>
+    <div id="p2" class="part hidden">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Act 2: Death</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur vulputate egestas sapien a pharetra.
+                    Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
+                    Quisque vitae augue id magna ullamcorper malesuada id non quam.
+                    Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
+                    In erat ipsum, interdum id quam quis, tincidunt suscipit urna.
+                    Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
+                    ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
+                    Praesent augue erat, pretium quis congue quis, tempus at tortor.
+                    Quisque pretium laoreet orci eu ultricies. Morbi dictum vulputate dolor, nec dignissim sapien
+                    sodales vitae.
+                    Morbi egestas libero et aliquam tincidunt. Pellentesque ornare luctus tincidunt.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nullam risus neque, rutrum eu dolor congue, congue placerat justo.
+                    Maecenas sit amet ullamcorper felis. Proin condimentum, lorem ut vehicula mattis, ipsum elit finibus
+                    odio,
+                    ultricies posuere nulla metus non ante. Nunc aliquet eros in massa venenatis condimentum.
+                    Morbi ullamcorper lacus eu urna tincidunt lacinia. Nam tortor mi, mollis maximus venenatis lobortis,
+                    accumsan ut elit. Nunc in mi sed mauris fringilla facilisis.
+                    Mauris at turpis a felis condimentum maximus ac pulvinar purus.
+                    Quisque sit amet elit purus. Ut dolor nisi, placerat et tempus at,
+                    euismod sit amet elit. Sed finibus faucibus ultricies. Nam tincidunt,
+                    tellus vel fermentum commodo, sem ante ornare tortor,
+                    nec vehicula nisi nisl ultricies mauris. Suspendisse sit amet felis a velit commodo congue ac ac
+                    quam.
+                    Praesent blandit ut tellus id efficitur. Sed aliquet rhoncus dolor, vel cursus tellus varius sed.
+                    Suspendisse finibus tortor non risus vestibulum elementum.
+                </p>
+                <div id="vis-2-container"></div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-info next">Next</button>
+        </div>
+    </div>
+    <div id="p3" class="part hidden">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Act 3: Action</h2>
+                <h3 class="text-center heading">
+                    What can you do?
+                </h3>
+                <div class="col-md-8 col-lg-7">
+                    <div id="vis-3-container"></div>
+                </div>
+                <div class="col-md-4 col-lg-5">
+                    <div class="col-sm-6 col-md-12">
+                        <h4>Protection</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur vulputate egestas sapien a pharetra.
+                            Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
+                            Quisque vitae augue id magna ullamcorper malesuada id non quam.
+                            Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
+                            In erat ipsum, interdum id quam quis, tincidunt suscipit urna.
+                            Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
+                            ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
+                            Praesent augue erat, pretium quis congue quis, tempus at tortor.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <h4>Prevention</h4>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Curabitur vulputate egestas sapien a pharetra.
+                            Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
+                            Quisque vitae augue id magna ullamcorper malesuada id non quam.
+                            Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
+                            In erat ipsum, interdum id quam quis, tincidunt suscipit urna.
+                            Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
+                            ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
+                            Praesent augue erat, pretium quis congue quis, tempus at tortor.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
 </body>

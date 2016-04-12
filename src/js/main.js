@@ -1,10 +1,12 @@
 var d3 = require("d3");
 var q = require("d3-queue");
 var topojson = require('topojson');
+var $ = require("jquery");
 //var typeahead = require("typeahead.js-browserify");
 //typeahead.loadjQueryPlugin();
 
 var Service = require('./service');
+var WebController = require('./webController');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
 var Preloader = require('./view/preloader');
@@ -15,6 +17,8 @@ var ActionVisualization = require('./vis/3_action.js');
 // Start the service
 var service = new Service();
 
+var webController = new WebController(3);
+
 // Sanity check
 console.log("src/js/main.js");
 
@@ -22,6 +26,7 @@ console.log("src/js/main.js");
 console.log('d3', d3);
 console.log('d3-queue', q);
 console.log('topojson', topojson);
+
 
 var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData) {
 
@@ -37,10 +42,52 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     // Load vis 2
     var deathVisualization = new DeathVisualization("#vis-2-container", service);
-
+    // do action "deathVisualization.createUpdate" when act 2 is shown.
+    webController.setAction(2, deathVisualization.createUpdate);
 
     // Load vis 3
     var actionVisualization = new ActionVisualization("#vis-3-container", service);
+    // do action "actionVisualization.update" when act 3 is shown.
+    webController.setAction(3, actionVisualization.update);
+
+    // get all "next" buttons
+    var buttons = document.getElementsByClassName("next");
+
+    // give them the on-click action
+    if (buttons) {
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = webController.next;
+        }
+
+        buttons[0].onclick = function () {
+
+            // TODO reset to get new data
+            console.log("TODO: Reset vis1");
+
+            // Reset vis2
+            deathVisualization.reset();
+
+            // reset buttons and hide visualizations
+            webController.reset();
+
+            // show vis 1
+            webController.next();
+        };
+
+        // remove buttons after click (act2, act3)
+        webController.setAction(2, function () {
+            $(buttons[1]).addClass("hidden");
+        });
+        webController.setAction(3, function () {
+            $(buttons[2]).addClass("hidden");
+        });
+    }
+
+    //// uncomment to show all visualizations on load. (used while developing)
+    //for (var i = 0; i < 3; i++) {
+    //    webController.nextNoScroll();
+    //}
+
 
 };
 
