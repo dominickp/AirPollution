@@ -42,10 +42,10 @@ var cityPicker = function(service) {
             // on selected
             var selectedCity = datum;
 
-            //console.log("trying1",selectedCity);
-            console.log("trying",service.getCityData(selectedCity));
-
             service.addOtherCity(service.getCityData(selectedCity));
+
+            // Clear old value
+            $('#other-city-selector.typeahead').typeahead('val','');
 
         });
     };
