@@ -20,6 +20,8 @@ var airVisualization = function(container_selector, service) {
     var width = 400 - margin.left - margin.right,
         height = 150 - margin.top - margin.bottom;
 
+    var gauge_height = 50;
+
     // Helper functions
     model.buildGaugeBackground = function(){
         // Draw the linear gauge body
@@ -42,9 +44,9 @@ var airVisualization = function(container_selector, service) {
             .attr("stop-color", "#c00")
             .attr("stop-opacity", 1);
 
-        model.linear_guage_body = model.svg.append("rect")
+        model.linear_guage_body = model.lines.append("rect")
             .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit.key];})))
-            .attr("height", 50)
+            .attr("height", gauge_height)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
     };
@@ -64,6 +66,9 @@ var airVisualization = function(container_selector, service) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // g group for all of the chart elements
+    model.lines = model.svg.append("g");
+
     // Start axis
     model.axis_element = model.svg.append("g")
         .attr("class", "x-axis axis")
@@ -72,20 +77,29 @@ var airVisualization = function(container_selector, service) {
     model.buildGaugeBackground();
 
     // Set up these lines in advance
-    model.selected_city = model.svg.append("rect")
+
+    // Selected city
+    model.selected_city = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", 60)
+        .attr("height", (gauge_height+10))
         .attr("width", 2)
         .attr("fill", "red");
 
     // WHO Safe Level Line
-    model.safe_level = model.svg.append("rect")
+    model.safe_level = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", 60)
+        .attr("height", (gauge_height+30))
         .attr("width", 2)
         .attr("fill", "blue");
+        // Add label
+    model.safe_level_text = model.lines.append("text")
+        .attr("class", "gauge-line-label")
+        .attr("x", 0)
+        .attr("y", (gauge_height+40))
+        .style("text-anchor", "middle")
+        .text("WHO Safe Level");
 
 
     model.updateVis = function(){
@@ -109,6 +123,11 @@ var airVisualization = function(container_selector, service) {
 
         // Update safe level line
         model.safe_level
+            .transition()
+            .duration(800)
+            .attr("x", model.x(model.selected_unit.safe_level));
+        // Update safe level text
+        model.safe_level_text
             .transition()
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
