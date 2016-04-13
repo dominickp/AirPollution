@@ -21,6 +21,7 @@ var airVisualization = function(container_selector, service) {
         height = 150 - margin.top - margin.bottom;
 
     var gauge_height = 50;
+    var gauge_label_spacing = 10;
 
     // Helper functions
     model.buildGaugeBackground = function(){
@@ -82,22 +83,29 @@ var airVisualization = function(container_selector, service) {
     model.selected_city = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height+10))
+        .attr("height", (gauge_height+(gauge_label_spacing*4)))
         .attr("width", 2)
         .attr("fill", "red");
+    // Add label
+    model.selected_city_text = model.lines.append("text")
+        .attr("class", "gauge-line-label")
+        .attr("x", 0)
+        .attr("y", (gauge_height+(gauge_label_spacing*5)))
+        .style("text-anchor", "middle")
+        .text("");
 
     // WHO Safe Level Line
     model.safe_level = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height+30))
+        .attr("height", (gauge_height+(gauge_label_spacing*3)))
         .attr("width", 2)
         .attr("fill", "blue");
         // Add label
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height+40))
+        .attr("y", (gauge_height+(gauge_label_spacing*4)))
         .style("text-anchor", "middle")
         .text("WHO Safe Level");
 
@@ -143,6 +151,14 @@ var airVisualization = function(container_selector, service) {
                 .transition()
                 .duration(800)
                 .attr("x", model.x(model.active_city_data[model.selected_unit.key]));
+
+
+            // Update safe level text
+            model.selected_city_text
+                .transition()
+                .duration(800)
+                .attr("x", model.x(model.active_city_data[model.selected_unit.key]))
+                .text(model.active_city_data.city);
 
         }
 
