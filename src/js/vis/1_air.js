@@ -11,15 +11,11 @@ var airVisualization = function(container_selector, service) {
 
     model.data = service.getActiveDataset(target_dataset_key);
 
-
     model.selected_unit = {key:"pm2.5Mean", safe_level:10};
 
-
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
-
     var width = 400 - margin.left - margin.right,
         height = 150 - margin.top - margin.bottom;
-
     var gauge_height = 50;
     var gauge_label_spacing = 10;
 
@@ -124,10 +120,8 @@ var airVisualization = function(container_selector, service) {
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
 
-
         model.xAxis.scale(model.x);
         model.svg.select(".x-axis").transition().duration(1500).call(model.xAxis);
-
 
         // Update safe level line
         model.safe_level
@@ -140,7 +134,6 @@ var airVisualization = function(container_selector, service) {
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
 
-
         if(service.getSelectedCity() !== ""){
 
             // Update selected city
@@ -152,7 +145,6 @@ var airVisualization = function(container_selector, service) {
                 .duration(800)
                 .attr("x", model.x(model.active_city_data[model.selected_unit.key]));
 
-
             // Update safe level text
             model.selected_city_text
                 .transition()
@@ -161,7 +153,6 @@ var airVisualization = function(container_selector, service) {
                 .text(model.active_city_data.city);
 
         }
-
 
     };
 
@@ -180,12 +171,9 @@ var airVisualization = function(container_selector, service) {
         });
     }();
 
-
     // On constructor
     model.updateVis();
-
-
-
+    
 };
 
 module.exports = airVisualization;
