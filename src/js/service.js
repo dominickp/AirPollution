@@ -11,9 +11,14 @@ var service = function() {
 
     model.selected_city = '';
 
+    model.visualizations = {};
+
     model.setSelectedCity = function(city){
-        console.log("Selected city: "+city); // Update vis
         model.selected_city = city;
+
+        console.log("Selected city: "+city);
+        // Update vis
+        model.visualizations.vis1.updateVis();
     };
 
     model.getSelectedCity = function(){
@@ -35,6 +40,15 @@ var service = function() {
 
     model.getActiveDataset = function(name){
         return model.active_datasets[name];
+    };
+
+    model.addVisualization = function(name, visualization){
+        model.visualizations[name] = visualization;
+        console.log("Visualization '"+name+"' registered with the service.");
+    };
+
+    model.getVisualization = function(name){
+        return model.visualizations[name];
     };
 
 };
