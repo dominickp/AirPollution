@@ -15,7 +15,7 @@ var airVisualization = function(container_selector, service, prepopulatedCityNam
 
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
     var width = 400 - margin.left - margin.right,
-        height = 150 - margin.top - margin.bottom;
+        height = 170 - margin.top - margin.bottom;
     var gauge_height = 50;
     var gauge_label_spacing = 10;
 
