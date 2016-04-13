@@ -19,6 +19,8 @@ var airVisualization = function(container_selector, service) {
     var gauge_height = 50;
     var gauge_label_spacing = 10;
 
+    model.other_cities = [];
+
     // Helper functions
     model.buildGaugeBackground = function(){
         // Draw the linear gauge body
@@ -170,10 +172,24 @@ var airVisualization = function(container_selector, service) {
             });
         });
     }();
+    model.otherCitySelectionListener = function(){
+        $(document).ready(function() {
+            $('#unit-selection-container .radio label input').click(function () {
+
+                if(this.value === "unit-pm10"){
+                    model.selected_unit = {key:"pm10Mean", safe_level:25};
+                } else {
+                    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
+                }
+                model.updateVis();
+
+            });
+        });
+    }();
 
     // On constructor
     model.updateVis();
-    
+
 };
 
 module.exports = airVisualization;
