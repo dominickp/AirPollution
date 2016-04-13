@@ -20,8 +20,8 @@ var cityPicker = function(service) {
             // iterate through the pool of strings and for any string that
             // contains the substring `q`, add it to the `matches` array
             $.each(strs, function(i, str) {
-                if (substringRegex.test(str)) {
-                    matches.push(str);
+                if (substringRegex.test(str.city) || substringRegex.test(str.country)) {
+                    matches.push(str.city);
                 }
             });
 
