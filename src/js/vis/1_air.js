@@ -3,7 +3,7 @@ var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
 
-var airVisualization = function(container_selector, service) {
+var airVisualization = function(container_selector, service, prepopulatedCityNames) {
 
     var model = this;
 
@@ -55,6 +55,13 @@ var airVisualization = function(container_selector, service) {
 
         other_cities.forEach(function(cityData, index){
             $("#other-selected-cities").append('<li class="list-group-item" data-index="'+cityData.index+'">'+cityData.city+'</li>');
+        });
+    };
+    model.prepopulateCities = function(citiesArray){
+        var cityData;
+        citiesArray.forEach(function(cityName){
+            cityData = service.getCityData(cityName);
+            service.addOtherCity(cityData);
         });
     };
 
