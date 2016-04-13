@@ -104,6 +104,32 @@ var airVisualization = function(container_selector, service) {
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
 
+
+        if(service.getSelectedCity() !== ""){
+
+            // Update selected city
+            model.active_city_data = service.getSelectedCityData();
+
+            // Only append the selected line once
+            if(typeof(model.selected_city) === 'undefined') {
+
+                model.selected_city = model.svg.append("rect")
+                    .attr("x", model.x(model.active_city_data[model.selected_unit.key]))
+                    .attr("y", 0)
+                    .attr("height", 60)
+                    .attr("width", 2)
+                    .attr("fill", "red");
+            }
+
+            // Update safe level line
+            model.selected_city
+                .transition()
+                .duration(800)
+                .attr("x", model.x(model.active_city_data[model.selected_unit.key]));
+
+        }
+
+
     };
 
     model.unitSelectionListener = function(){

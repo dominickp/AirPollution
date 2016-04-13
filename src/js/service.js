@@ -25,6 +25,20 @@ var service = function() {
         return model.selected_city;
     };
 
+    model.getSelectedCityData = function(){
+
+        var dataset = model.getActiveDataset("cityPmData");
+        var foundCityData;
+
+        dataset.forEach(function(cityData){
+            if(cityData.city === model.getSelectedCity()){
+                foundCityData = cityData;
+            }
+        });
+
+        return foundCityData;
+    };
+
     model.addOriginalDataset = function(name, dataset){
         console.log("Dataset '"+name+"' added to Service", dataset);
         model.original_datasets[name] = dataset;
