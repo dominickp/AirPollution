@@ -10,6 +10,7 @@ var Service = require('./service');
 var WebController = require('./webController');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
+var Vis1CityPicker = require('./view/vis1CityPicker');
 var Preloader = require('./view/preloader');
 var AirVisualization = require('./vis/1_air.js');
 var DeathVisualization = require('./vis/2_death.js');
@@ -96,6 +97,9 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 var createView = function () {
     var cityPicker = new CityPicker(service);
     cityPicker.render();
+
+    var vis1CityPicker = new Vis1CityPicker(service);
+    vis1CityPicker.render();
 
     var preloader = new Preloader();
     preloader.remove();

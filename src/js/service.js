@@ -11,6 +11,8 @@ var service = function() {
 
     model.selected_city = '';
 
+    model.other_cities = [];
+
     model.visualizations = {};
 
     model.setSelectedCity = function(city){
@@ -23,6 +25,40 @@ var service = function() {
 
     model.getSelectedCity = function(){
         return model.selected_city;
+    };
+
+    model.getCityData = function(name){
+
+        var dataset = model.getActiveDataset("cityPmData");
+        var foundCityData;
+
+        dataset.forEach(function(cityData){
+            if(cityData.city === name){
+                foundCityData = cityData;
+            }
+        });
+
+        return foundCityData;
+    };
+
+    model.addOtherCity = function(cityData){
+        model.other_cities.push(cityData);
+
+        console.log("Other city added: "+cityData.city);
+        // Update vis
+        model.visualizations.vis1.updateVis();
+    };
+
+    model.getOtherCity = function(index){
+        return model.other_cities[index];
+    };
+
+    model.getOtherCities = function(){
+        return model.other_cities;
+    };
+
+    model.removeOtherCity = function(index){
+        model.other_cities = model.other_cities.splice(index,1);
     };
 
     model.getSelectedCityData = function(){

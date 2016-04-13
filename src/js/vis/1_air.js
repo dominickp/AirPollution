@@ -49,6 +49,14 @@ var airVisualization = function(container_selector, service) {
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
     };
+    model.updateOtherCitiesView = function(){
+        $("#other-selected-cities").html("");
+        var other_cities = service.getOtherCities();
+
+        other_cities.forEach(function(cityData, index){
+            $("#other-selected-cities").append('<li class="list-group-item" data-index="'+cityData.index+'">'+cityData.city+'</li>');
+        });
+    };
 
     // Initialize axis and scales
     model.x = d3.scale.linear()
@@ -156,6 +164,9 @@ var airVisualization = function(container_selector, service) {
 
         }
 
+        // Update other cities view
+        model.updateOtherCitiesView();
+
     };
 
     model.unitSelectionListener = function(){
@@ -172,20 +183,20 @@ var airVisualization = function(container_selector, service) {
             });
         });
     }();
-    model.otherCitySelectionListener = function(){
-        $(document).ready(function() {
-            $('#unit-selection-container .radio label input').click(function () {
-
-                if(this.value === "unit-pm10"){
-                    model.selected_unit = {key:"pm10Mean", safe_level:25};
-                } else {
-                    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
-                }
-                model.updateVis();
-
-            });
-        });
-    }();
+    //model.otherCitySelectionListener = function(){
+    //    $(document).ready(function() {
+    //        $('#unit-selection-container .radio label input').click(function () {
+    //
+    //            if(this.value === "unit-pm10"){
+    //                model.selected_unit = {key:"pm10Mean", safe_level:25};
+    //            } else {
+    //                model.selected_unit = {key:"pm2.5Mean", safe_level:10};
+    //            }
+    //            model.updateVis();
+    //
+    //        });
+    //    });
+    //}();
 
     // On constructor
     model.updateVis();
