@@ -75,6 +75,7 @@ var airVisualization = function(container_selector, service) {
 
     // g group for all of the chart elements
     model.lines = model.svg.append("g");
+    model.other_city_g = model.svg.append("g");
 
     // Start axis
     model.axis_element = model.svg.append("g")
@@ -118,6 +119,8 @@ var airVisualization = function(container_selector, service) {
 
     model.updateVis = function(){
 
+        model.other_cities = service.getOtherCities();
+
         model.x.domain([
             d3.min(model.data, function(d) {return d[model.selected_unit.key];}),
             d3.max(model.data, function(d) {return d[model.selected_unit.key];})
@@ -129,6 +132,41 @@ var airVisualization = function(container_selector, service) {
             .attr("height", 50)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
+
+
+        // Data join
+        model.other_city_lines = model.other_city_g.selectAll("rect")
+            .data(model.other_cities);
+        model.other_city_labels = model.other_city_g.selectAll("text")
+            .data(model.other_cities);
+
+        // Enter
+        model.other_city_lines.enter().append("rect")
+            .attr("x", function(d){
+                return model.x(d[model.selected_unit.key])
+            })
+            .attr("y", 0)
+            .attr("height", function(d, index){
+                return (gauge_height+(gauge_label_spacing*(index+4)))
+            })
+            .attr("width", 2)
+            .attr("fill", "green");
+        model.other_city_labels.enter().append("text")
+            .attr("class", "gauge-line-label")
+            .attr("x", function(d){
+                return model.x(d[model.selected_unit.key])
+            })
+            .attr("y", function(d, index){
+                return (gauge_height+(gauge_label_spacing*(index+5)))
+            })
+            .style("text-anchor", "middle")
+            .text(function(d){return d.city});
+
+
+
+
+
+
 
         model.xAxis.scale(model.x);
         model.svg.select(".x-axis").transition().duration(1500).call(model.xAxis);
