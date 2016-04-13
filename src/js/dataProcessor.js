@@ -37,13 +37,14 @@ var dataProcessor = function (service) {
 
             var name = cause.Cause;
             var amount = +cause["Deaths per 100000"];
+            var percent = +cause["percent-deaths"];
             var id = cause.Id;
 
             if (isNaN(id)) {
                 zoom.push({name: name, amount: amount});
             }
             else {
-                global.push({name: name, amount: amount, id: +id});
+                global.push({name: name, amount: amount, id: +id, percent: percent});
             }
         });
 

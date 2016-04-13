@@ -1,4 +1,5 @@
 var d3 = require("d3");
+var d3tip = require('d3-tip')(d3);
 
 console.log("src/js/vis/2_death.js");
 
@@ -14,17 +15,42 @@ var deathVisualization = function (container_selector, service) {
         // Take xml as nodes.
         model.imported_node = document.importNode(xml.documentElement, true);
 
-        var margin = {top: 5, right: 90, bottom: 5, left: 20};
+        var margin = {top: 20, right: 200, bottom: 5, left: 0};
         var textmargin = 100;
-        var width = 900 - margin.left - margin.right,
-            height = 630 - margin.top - margin.bottom;
-
+        var width = 1000 - margin.left - margin.right,
+            height = 670 - margin.top - margin.bottom;
 
         // init svg
         model.svg = d3.select(container_selector).append("svg")
             .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
+            .attr("height", height + margin.top + margin.bottom);
+
+        /* Initialize tooltip */
+        model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+            return "This icon is equal to 100.000 deaths due to " + d.disease + "<br>" + d.suffix;
+        });
+
+        model.labeltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+            console.log(d);
+            if (d.id === 1) {
+
+                if (model.global) {
+                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                }
+                return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
+
+            }
+            return d.percent + "% of all deaths are caused by " + d.name;
+        });
+
+        /* Invoke the tip in the context of your visualization */
+        model.svg.call(model.iconTip);
+
+
+        model.legend = model.svg.append("g");
+
+
+        model.svg = model.svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // init sample data
@@ -55,7 +81,8 @@ var deathVisualization = function (container_selector, service) {
                         index: index,
                         disease: d.name,
                         myname: 1 + "-" + index,
-                        group: 1
+                        group: 1,
+                        suffix: "Click to reset breakdown"
                     });
                     index++;
                 }
@@ -75,7 +102,25 @@ var deathVisualization = function (container_selector, service) {
                 }
 
                 for (var i = 0; i < d.amount; i++) {
-                    model.curData.push({index: i, disease: d.name, myname: d.id + "-" + i, group: d.id});
+                    if (d.id === 1) {
+                        model.curData.push({
+                            index: i,
+                            disease: d.name,
+                            myname: d.id + "-" + i,
+                            group: d.id,
+                            suffix: "Click for a detailed breakdown"
+                        });
+                    }
+                    else {
+                        model.curData.push({
+                            index: i,
+                            disease: d.name,
+                            myname: d.id + "-" + i,
+                            group: d.id,
+                            suffix: ""
+                        });
+                    }
+
                 }
 
 
@@ -90,59 +135,82 @@ var deathVisualization = function (container_selector, service) {
         if (model.global) {
 
             if (!model.labels) {
-                model.labels = model.svg.append("g");
-                var lines = 1;
-                model.globalData.forEach(function (d) {
+                model.labels = model.svg.append("g").call(model.labeltip);
+                var lines = 1.5;
 
-                        var y = (lines + ( Math.ceil(d.amount / model.picturesPline) / 2)) * (model.WidthPerImage) + 10;
+                model.labels.selectAll("text").data(model.globalData).enter().append("text")
+                    .attr("x", model.width + 10)
+                    .attr("y", function (d) {
+                        if (d.id === 1) {
+                            lines += 0.5;
+                        }
 
-                        model.labels.append("text")
-                            .attr("x", model.width + 10)
-                            .attr("y", y)
-                            .text(d.name)
-                            .style("fill", function () {
-                                if (d.id === 1) {
-                                    return "red";
-                                }
-                                return "black";
-                            })
-                            .style("text-anchor", "begin")
-                            .on("click", function () {
-                                if (d.id === 1) {
-
-                                    if (model.global) {
-                                        model.setDataZoom();
-                                        model.createUpdate();
-                                    }
-                                    else {
-                                        model.setDataGlobal();
-                                        model.createUpdate();
-                                    }
-
-                                }
-
-                            })
-                            .on("mouseover", function () {
-                                if (d.id === 1) {
-                                    d3.select(this).style("fill", "gray").style('cursor', 'pointer');
-                                }
-                            })
-                            .on("mouseout", function () {
-                                if (d.id === 1) {
-                                    d3.select(this).attr("r", 5.5).style("fill", "red")
-                                        .style('cursor', 'default');
-                                }
-                            });
-
+                        var y = (lines + ( Math.ceil(d.amount / model.picturesPline) ) / 2) * (model.WidthPerImage) + 10;
 
                         lines += Math.ceil(d.amount / model.picturesPline);
                         lines += 0.5;
+                        // bigger border around air pollution
+                        if (d.id === 1) {
+                            lines += 0.5;
+                        }
 
+                        return y;
+                    })
+                    .text(function (d) {
+                        return "(" + d.percent + "%) " + d.name;
+                    })
+                    .style("fill", function (d) {
+                        if (d.id === 1) {
+                            return "red";
+                        }
+                        return "black";
+                    })
+                    .style("text-anchor", "begin")
+                    .on("click", function (d) {
+                        if (d.id === 1) {
 
-                    }
-                );
+                            if (model.global) {
+                                model.setDataZoom();
+                                model.createUpdate();
+                            }
+                            else {
+                                model.setDataGlobal();
+                                model.createUpdate();
+                            }
+
+                        }
+
+                    })
+                    .on('mouseover', function (d) {
+                        model.labeltip.show(d);
+                        if (d.id === 1) {
+                            d3.select(this).style('cursor', 'pointer');
+                        }
+                    })
+                    .on('mouseout', function (d) {
+                        model.labeltip.hide(d);
+                    });
+
             }
         }
+
+        // set legend
+
+        model.legend.append("svg")
+            .attr("x", 0)
+            .attr("y", 10)
+            .attr("width", model.img_width)
+            .attr("height", model.img_height)
+            .each(function () {
+                // Clone and append xml node to each data binded element.
+                this.appendChild(model.imported_node.cloneNode(true));
+            });
+        model.legend.append("text")
+            .attr("x", model.img_width)
+            .attr("y", 10 + (model.img_height / 2))
+            .attr("width", 100)
+            .attr("fill", "red")
+            .text("100.000 deaths");
 
 
     });
@@ -174,6 +242,12 @@ var deathVisualization = function (container_selector, service) {
             })
             .attr("y", function (d) {
                 if (prevgroup !== d.group) {
+
+                    // bigger border around air pollution
+                    if (prevgroup === 1 || d.group === 1) {
+                        linesTotal += 0.5;
+                    }
+
                     linesTotal += 0.5;
                     linesTotal += Math.ceil(count / model.picturesPline);
                     prevgroup = d.group;
@@ -207,18 +281,13 @@ var deathVisualization = function (container_selector, service) {
                 }
 
             })
-            .on("mouseover", function (d) {
+            .on('mouseover', function (d) {
+                model.iconTip.show(d);
                 if (d.group === 1) {
-                    d3.select(this).style("fill", "gray").style('cursor', 'pointer');
+                    d3.select(this).style('cursor', 'pointer');
                 }
             })
-            .on("mouseout", function (d) {
-                if (d.group === 1) {
-                    d3.select(this).attr("r", 5.5).style("fill", function (d) {
-                        return model.colorScale(d.disease);
-                    }).style('cursor', 'default');
-                }
-            })
+            .on('mouseout', model.iconTip.hide)
             .transition()
             .delay(function (d) {
                 return d.index * 85;
@@ -238,7 +307,6 @@ var deathVisualization = function (container_selector, service) {
 
         // TODO: set tooltip
 
-        // TODO: set legend
 
         // TODO: show deaths by region
 
