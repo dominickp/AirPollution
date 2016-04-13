@@ -4,6 +4,7 @@ var topojson = require('topojson');
 var $ = require("jquery");
 //var typeahead = require("typeahead.js-browserify");
 //typeahead.loadjQueryPlugin();
+var d3tip = require('d3-tip')(d3);
 
 var Service = require('./service');
 var WebController = require('./webController');
@@ -26,6 +27,7 @@ console.log("src/js/main.js");
 console.log('d3', d3);
 console.log('d3-queue', q);
 console.log('topojson', topojson);
+console.log('d3-tip', d3tip);
 
 
 var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData) {
