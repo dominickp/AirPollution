@@ -14,17 +14,20 @@ var deathVisualization = function (container_selector, service) {
         // Take xml as nodes.
         model.imported_node = document.importNode(xml.documentElement, true);
 
-        var margin = {top: 5, right: 90, bottom: 5, left: 20};
+        var margin = {top: 20, right: 90, bottom: 5, left: 0};
         var textmargin = 100;
         var width = 900 - margin.left - margin.right,
-            height = 630 - margin.top - margin.bottom;
+            height = 670 - margin.top - margin.bottom;
 
 
         // init svg
         model.svg = d3.select(container_selector).append("svg")
             .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
+            .attr("height", height + margin.top + margin.bottom);
+
+        model.legend = model.svg.append("g");
+
+        model.svg = model.svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // init sample data
@@ -91,10 +94,15 @@ var deathVisualization = function (container_selector, service) {
 
             if (!model.labels) {
                 model.labels = model.svg.append("g");
-                var lines = 1;
+                var lines = 1.5;
                 model.globalData.forEach(function (d) {
 
-                        var y = (lines + ( Math.ceil(d.amount / model.picturesPline) / 2)) * (model.WidthPerImage) + 10;
+                        // bigger border around air pollution
+                        if (d.id === 1) {
+                            lines += 0.5;
+                        }
+
+                        var y = (lines + ( Math.ceil(d.amount / model.picturesPline) ) / 2) * (model.WidthPerImage) + 10;
 
                         model.labels.append("text")
                             .attr("x", model.width + 10)
@@ -137,12 +145,33 @@ var deathVisualization = function (container_selector, service) {
 
                         lines += Math.ceil(d.amount / model.picturesPline);
                         lines += 0.5;
+                        // bigger border around air pollution
+                        if (d.id === 1) {
+                            lines += 0.5;
+                        }
 
 
                     }
                 );
             }
         }
+
+        // set legend
+        model.legend.append("svg")
+            .attr("x", 0)
+            .attr("y", 10)
+            .attr("width", model.img_width)
+            .attr("height", model.img_height)
+            .each(function () {
+                // Clone and append xml node to each data binded element.
+                this.appendChild(model.imported_node.cloneNode(true));
+            });
+        model.legend.append("text")
+            .attr("x", model.img_width)
+            .attr("y", 10 + (model.img_height / 2))
+            .attr("width", 100)
+            .attr("fill", "red")
+            .text("100.000 deaths");
 
 
     });
@@ -174,6 +203,12 @@ var deathVisualization = function (container_selector, service) {
             })
             .attr("y", function (d) {
                 if (prevgroup !== d.group) {
+
+                    // bigger border around air pollution
+                    if (prevgroup === 1 || d.group === 1) {
+                        linesTotal += 0.5;
+                    }
+
                     linesTotal += 0.5;
                     linesTotal += Math.ceil(count / model.picturesPline);
                     prevgroup = d.group;
