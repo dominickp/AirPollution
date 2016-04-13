@@ -162,6 +162,21 @@ var airVisualization = function(container_selector, service) {
             .style("text-anchor", "middle")
             .text(function(d){return d.city});
 
+        // Enter + update
+        model.other_city_lines
+            .transition()
+            .duration(800)
+            .attr("x", function(d){
+            return model.x(d[model.selected_unit.key])
+        });
+
+        model.other_city_labels
+            .transition()
+            .duration(800)
+            .attr("x", function(d){
+                return model.x(d[model.selected_unit.key])
+            });
+
 
 
 
