@@ -74,7 +74,7 @@ var dataProcessor = function (service) {
         var cities = [];
 
         cityPmData.forEach(function (city) {
-            cities.push(city.city);
+            cities.push({city:city.city, country:city.country});
         });
 
         return cities;

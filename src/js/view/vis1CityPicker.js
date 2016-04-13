@@ -30,7 +30,7 @@ var cityPicker = function(service) {
     };
 
     model.render = function(){
-        $('#city-selector.typeahead').typeahead({
+        $('#other-city-selector.typeahead').typeahead({
                 hint: true,
                 highlight: true,
                 minLength: 1
@@ -41,7 +41,12 @@ var cityPicker = function(service) {
             }).on('typeahead:selected', function(event, datum) {
             // on selected
             var selectedCity = datum;
-            service.setSelectedCity(selectedCity);
+
+            service.addOtherCity(service.getCityData(selectedCity));
+
+            // Clear old value
+            $('#other-city-selector.typeahead').typeahead('val','');
+
         });
     };
 
