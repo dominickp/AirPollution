@@ -19,6 +19,7 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "d3-queue": "^2.0.3",
+    "d3-tip": "^0.6.7",
     "google-maps": "^3.2.1",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
