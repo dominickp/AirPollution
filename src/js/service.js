@@ -42,6 +42,25 @@ var service = function() {
     };
 
     model.addOtherCity = function(cityData){
+
+        // Check to see if it's already a selected city
+        var exists = false;
+        // Check other cities
+        model.getOtherCities().forEach(function(existingCityData){
+            if(cityData === existingCityData){
+                exists = true;
+            }
+        });
+
+        // Check selected city
+        if(model.getSelectedCityData() === cityData){
+            exists = true;
+        }
+
+        if(exists === true){
+            return false;
+        }
+
         model.other_cities.push(cityData);
 
         console.log("Other city added: "+cityData.city);
