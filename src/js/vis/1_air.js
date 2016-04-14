@@ -1,4 +1,5 @@
 var d3 = require("d3");
+var d3tip = require('d3-tip')(d3);
 var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
@@ -129,6 +130,16 @@ var airVisualization = function(container_selector, service) {
 
     model.updateVis = function(){
 
+        /* Initialize tooltip */
+        var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([50, 0])
+            .html(function(d) {
+                return '<small>' + d.country + '</small>';
+            });
+        /* Invoke the tip in the context of your visualization */
+        model.svg.call(tip);
+
         model.other_cities = service.getOtherCities();
 
         model.x.domain([
@@ -168,7 +179,9 @@ var airVisualization = function(container_selector, service) {
                 return (gauge_height+(gauge_label_spacing*(index+5)))
             })
             .style("text-anchor", "middle")
-            .text(function(d){return d.city});
+            .text(function(d){return d.city})
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
 
         // Enter + update
         model.other_city_lines
