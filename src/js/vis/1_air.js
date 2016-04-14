@@ -156,9 +156,7 @@ var airVisualization = function(container_selector, service) {
                 return model.x(d[model.selected_unit.key])
             })
             .attr("y", 0)
-            .attr("height", function(d, index){
-                return (gauge_height+(gauge_label_spacing*(index+4)))
-            })
+            .attr("height", 0)
             .attr("width", 2)
             .attr("fill", "green");
         model.other_city_labels.enter().append("text")
@@ -177,8 +175,11 @@ var airVisualization = function(container_selector, service) {
             .transition()
             .duration(800)
             .attr("x", function(d){
-            return model.x(d[model.selected_unit.key])
-        });
+                return model.x(d[model.selected_unit.key])
+            })
+            .attr("height", function(d, index){
+                return (gauge_height+(gauge_label_spacing*(index+4)))
+            });
 
         model.other_city_labels
             .transition()
