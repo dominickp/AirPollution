@@ -41,7 +41,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     createView();
 
     // Load vis 1
-    var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Tokyo'];
+    var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Peshwar'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
     service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
 

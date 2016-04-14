@@ -1,4 +1,5 @@
 var d3 = require("d3");
+var d3tip = require('d3-tip')(d3);
 var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
@@ -83,6 +84,22 @@ var airVisualization = function(container_selector, service) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
+    /* Initialize tooltip */
+    model.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([10, 0])
+        .direction('s')
+        .html(function(d) {
+            var string = 'Country: ' + d.country + '</br>' +
+                'PM2.5: '+d['pm2.5Mean'] + '</br>' +
+                'PM10: '+ d.pm10Mean;
+
+            return string;
+        });
+    /* Invoke the tip in the context of your visualization */
+    model.svg.call(model.tip);
+
     // g group for all of the chart elements
     model.lines = model.svg.append("g");
     model.other_city_g = model.svg.append("g");
@@ -146,47 +163,50 @@ var airVisualization = function(container_selector, service) {
 
         // Data join
         model.other_city_lines = model.other_city_g.selectAll("rect")
-            .data(model.other_cities);
+            .data(model.other_cities, function(d){return d.city;});
         model.other_city_labels = model.other_city_g.selectAll("text")
-            .data(model.other_cities);
+            .data(model.other_cities, function(d){return d.city;});
 
         // Enter
         model.other_city_lines.enter().append("rect")
             .attr("x", function(d){
-                return model.x(d[model.selected_unit.key])
+                return model.x(d[model.selected_unit.key]);
             })
             .attr("y", 0)
-            .attr("height", function(d, index){
-                return (gauge_height+(gauge_label_spacing*(index+4)))
-            })
+            .attr("height", 0)
             .attr("width", 2)
             .attr("fill", "green");
         model.other_city_labels.enter().append("text")
             .attr("class", "gauge-line-label")
             .attr("x", function(d){
-                return model.x(d[model.selected_unit.key])
+                return model.x(d[model.selected_unit.key]);
             })
             .attr("y", function(d, index){
-                return (gauge_height+(gauge_label_spacing*(index+5)))
+                return (gauge_height+(gauge_label_spacing*(index+5)));
             })
             .style("text-anchor", "middle")
-            .text(function(d){return d.city});
+            .text(function(d){return d.city;})
+            .on('mouseover', model.tip.show)
+            .on('mouseout', model.tip.hide);
 
         // Enter + update
         model.other_city_lines
             .transition()
             .duration(800)
             .attr("x", function(d){
-            return model.x(d[model.selected_unit.key])
-        });
+                return model.x(d[model.selected_unit.key]);
+            })
+            .attr("height", function(d, index){
+                return (gauge_height+(gauge_label_spacing*(index+4)));
+            });
 
         model.other_city_labels
             .transition()
             .duration(800)
             .attr("x", function(d){
-                return model.x(d[model.selected_unit.key])
+                return model.x(d[model.selected_unit.key]);
             })
-            .text(function(d){return d.city});
+            .text(function(d){return d.city;});
 
         // Exit
         model.other_city_lines.exit().remove();
@@ -226,7 +246,6 @@ var airVisualization = function(container_selector, service) {
                 .duration(800)
                 .attr("x", model.x(model.active_city_data[model.selected_unit.key]))
                 .text(model.active_city_data.city);
-
         }
 
         // Update other cities view

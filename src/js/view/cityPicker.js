@@ -21,7 +21,7 @@ var cityPicker = function(service) {
             // contains the substring `q`, add it to the `matches` array
             $.each(strs, function(i, str) {
                 if (substringRegex.test(str.city) || substringRegex.test(str.country)) {
-                    matches.push(str.city);
+                    matches.push(str);
                 }
             });
 
@@ -33,15 +33,28 @@ var cityPicker = function(service) {
         $('#city-selector.typeahead').typeahead({
                 hint: true,
                 highlight: true,
-                minLength: 1
+                minLength: 1,
+
             },
             {
                 name: 'states',
-                source: model.substringMatcher(service.cities)
+                source: model.substringMatcher(service.cities),
+                display: function(loc){
+                    return loc.city + ', ' + loc.country;
+                },
+
+                templates: {
+                    empty: [
+                        '<div class="empty-message">',
+                        'Location not available',
+                        '</div>'
+                    ].join('\n'),
+                    //suggestion: '<div><strong>{{value}}</strong> – {{year}}</div>'
+                }
             }).on('typeahead:selected', function(event, datum) {
             // on selected
             var selectedCity = datum;
-            service.setSelectedCity(selectedCity);
+            service.setSelectedCity(selectedCity.city);
         });
     };
 
