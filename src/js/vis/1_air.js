@@ -3,7 +3,7 @@ var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
 
-var airVisualization = function(container_selector, service, prepopulatedCityNames) {
+var airVisualization = function(container_selector, service) {
 
     var model = this;
 
@@ -54,7 +54,10 @@ var airVisualization = function(container_selector, service, prepopulatedCityNam
         var other_cities = service.getOtherCities();
 
         other_cities.forEach(function(cityData, index){
-            $("#other-selected-cities").append('<li class="list-group-item" data-index="'+cityData.index+'">'+cityData.city+'</li>');
+            $("#other-selected-cities").append('<li class="list-group-item">' +
+                cityData.city +
+                '<button  data-index="'+index+'" class="remove-other-city btn btn-danger btn-xs pull-right">&times;</button>' +
+                '</li>');
         });
     };
     model.prepopulateCities = function(citiesArray){
@@ -182,10 +185,12 @@ var airVisualization = function(container_selector, service, prepopulatedCityNam
             .duration(800)
             .attr("x", function(d){
                 return model.x(d[model.selected_unit.key])
-            });
+            })
+            .text(function(d){return d.city});
 
-
-
+        // Exit
+        model.other_city_lines.exit().remove();
+        model.other_city_labels.exit().remove();
 
 
 
@@ -243,20 +248,14 @@ var airVisualization = function(container_selector, service, prepopulatedCityNam
             });
         });
     }();
-    //model.otherCitySelectionListener = function(){
-    //    $(document).ready(function() {
-    //        $('#unit-selection-container .radio label input').click(function () {
-    //
-    //            if(this.value === "unit-pm10"){
-    //                model.selected_unit = {key:"pm10Mean", safe_level:25};
-    //            } else {
-    //                model.selected_unit = {key:"pm2.5Mean", safe_level:10};
-    //            }
-    //            model.updateVis();
-    //
-    //        });
-    //    });
-    //}();
+    model.otherCityRemovalListener = function(){
+        $(document).ready(function() {
+            $("#other-selected-cities").on("click", ".remove-other-city", function() {
+                var index = $(this).attr("data-index");
+                service.removeOtherCity(index);
+            });
+        });
+    }();
 
     // On constructor
     model.updateVis();
