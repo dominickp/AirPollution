@@ -146,9 +146,9 @@ var airVisualization = function(container_selector, service) {
 
         // Data join
         model.other_city_lines = model.other_city_g.selectAll("rect")
-            .data(model.other_cities);
+            .data(model.other_cities, function(d){return d.city;});
         model.other_city_labels = model.other_city_g.selectAll("text")
-            .data(model.other_cities);
+            .data(model.other_cities, function(d){return d.city;})
 
         // Enter
         model.other_city_lines.enter().append("rect")
