@@ -40,7 +40,7 @@ var cityPicker = function(service) {
                 name: 'states',
                 source: model.substringMatcher(service.cities),
                 display: function(loc){
-                    return loc.city + ', ' + loc.country
+                    return loc.city + ', ' + loc.country;
                 },
 
                 templates: {
