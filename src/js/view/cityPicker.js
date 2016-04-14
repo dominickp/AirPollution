@@ -33,11 +33,21 @@ var cityPicker = function(service) {
         $('#city-selector.typeahead').typeahead({
                 hint: true,
                 highlight: true,
-                minLength: 1
+                minLength: 1,
+
             },
             {
                 name: 'states',
-                source: model.substringMatcher(service.cities)
+                source: model.substringMatcher(service.cities),
+
+                templates: {
+                    empty: [
+                        '<div class="empty-message">',
+                        'Location not available',
+                        '</div>'
+                    ].join('\n'),
+                    //suggestion: '<div><strong>{{value}}</strong> – {{year}}</div>'
+                }
             }).on('typeahead:selected', function(event, datum) {
             // on selected
             var selectedCity = datum;
