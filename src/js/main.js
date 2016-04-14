@@ -41,7 +41,9 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     createView();
 
     // Load vis 1
+    var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Tokyo'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
+    service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
 
     // Load vis 2
     var deathVisualization = new DeathVisualization("#vis-2-container", service);

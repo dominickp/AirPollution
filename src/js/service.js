@@ -58,7 +58,9 @@ var service = function() {
     };
 
     model.removeOtherCity = function(index){
-        model.other_cities = model.other_cities.splice(index,1);
+        model.other_cities.splice(index,1);
+        // Update vis
+        model.visualizations.vis1.updateVis();
     };
 
     model.getSelectedCityData = function(){
