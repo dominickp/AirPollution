@@ -63,11 +63,11 @@
                 </p>
                 <div class="col-sm-12 text-center">
                     <h4>How does air pollution affect your city?</h4>
-                        <div class="form-group col-sm-6 col-sm-offset-3">
-                            <input id="city-selector" class="typeahead form-control" type="text"
-                                   placeholder="Enter your city">
-                            <input type="button" class="btn btn-info next" value="Check">
-                        </div>
+                    <div class="form-group col-sm-6 col-sm-offset-3">
+                        <input id="city-selector" class="typeahead form-control" type="text"
+                               placeholder="Enter your city">
+                        <input type="button" class="btn btn-info next" value="Check">
+                    </div>
                 </div>
             </div>
         </row>
@@ -101,14 +101,40 @@
 
                 </ul>
                 <form>
-                    <input type="text" class="form-control typeahead" id="other-city-selector" placeholder="Add another city">
+                    <input type="text" class="form-control typeahead" id="other-city-selector"
+                           placeholder="Add another city">
                     <!--<button type="button" class="btn btn-primary">+</button>-->
                 </form>
             </div>
-            <div class="col-sm-12 text-center">
-                <button class="btn btn-info next">Next</button>
-            </div>
+
         </row>
+        <row>
+            <div class="col-sm-12">
+                <div class="h2">Beijing</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur vulputate egestas sapien a pharetra.
+                    Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
+                    Quisque vitae augue id magna ullamcorper malesuada id non quam.
+                    Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-1">
+                <input id="next_button" type="button" class="btn btn-info" value="Play">
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <div id="vis-1-beijing">
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-2">
+                <div class="panel panel-default panel-body hidden" id="beijing-message">
+                </div>
+            </div>
+
+        </row>
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-info next">Next</button>
+        </div>
     </div>
     <div id="p2" class="part hidden">
         <div class="row">

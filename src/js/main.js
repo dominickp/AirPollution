@@ -13,6 +13,7 @@ var CityPicker = require('./view/cityPicker');
 var Vis1CityPicker = require('./view/vis1CityPicker');
 var Preloader = require('./view/preloader');
 var AirVisualization = require('./vis/1_air.js');
+var BeijingVisualization = require('./vis/1_beijing.js');
 var DeathVisualization = require('./vis/2_death.js');
 var ActionVisualization = require('./vis/3_action.js');
 
@@ -31,19 +32,24 @@ console.log('topojson', topojson);
 console.log('d3-tip', d3tip);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
     dataProcessing.process("cityPmData", cityPmData);
     dataProcessing.process("mapTopoJson", mapTopoJson);
     dataProcessing.process("deathData", deathData);
+    dataProcessing.process("beijingData", beijingData);
     createView();
 
     // Load vis 1
     var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Peshwar'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
     service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
+
+    // Load beijing
+    var beijingVisualization = new BeijingVisualization("#vis-1-beijing", service);
+    webController.setAction(1, beijingVisualization.update);
 
     // Load vis 2
     var deathVisualization = new DeathVisualization("#vis-2-container", service);
@@ -65,9 +71,6 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         }
 
         buttons[0].onclick = function () {
-
-            // TODO reset to get new data
-            console.log("TODO: Reset vis1");
 
             // Reset vis2
             deathVisualization.reset();
@@ -113,5 +116,6 @@ q.queue()
     .defer(d3.csv, "data/WHO_pm_database_clean.csv")
     .defer(d3.json, "data/world-110m.json")
     .defer(d3.csv, "data/WHO_death_data_clean.csv")
+    .defer(d3.csv, "data/beijing-data-2015.csv")
     .await(initialDataLoad);
 

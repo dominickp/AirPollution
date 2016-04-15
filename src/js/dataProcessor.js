@@ -24,10 +24,34 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
         }
+        else if (name === "beijingData") {
+            processedDataset = model.processBeijingData(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else {
             throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
     };
+
+    model.processBeijingData = function (dataset) {
+
+        var values = [];
+        dataset.forEach(function (time) {
+
+            var timestamp = Date.parse(time.date + " " + time.time);
+            if (isNaN(timestamp)) {
+                console.log("NAN:" + (time.date + " " + time.time));
+            }
+            else {
+                values.push({time: timestamp, pm25: +time.concentration});
+            }
+
+        });
+        return values;
+
+    };
+
     model.processDeathDataset = function (dataset) {
 
 
@@ -74,7 +98,7 @@ var dataProcessor = function (service) {
         var cities = [];
 
         cityPmData.forEach(function (city) {
-            cities.push({city:city.city, country:city.country});
+            cities.push({city: city.city, country: city.country});
         });
 
         return cities;
