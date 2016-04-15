@@ -4,7 +4,7 @@ var $ = require("jquery");
 
 console.log("src/js/vis/1_air.js");
 
-var airVisualization = function(container_selector, service) {
+var airVisualization = function (container_selector, service) {
 
     var model = this;
 
@@ -12,7 +12,7 @@ var airVisualization = function(container_selector, service) {
 
     model.data = service.getActiveDataset(target_dataset_key);
 
-    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
+    model.selected_unit = {key: "pm2.5Mean", safe_level: 10};
 
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
     var width = 400 - margin.left - margin.right,
@@ -23,7 +23,7 @@ var airVisualization = function(container_selector, service) {
     model.other_cities = [];
 
     // Helper functions
-    model.buildGaugeBackground = function(){
+    model.buildGaugeBackground = function () {
         // Draw the linear gauge body
         var gradient = model.svg.append("defs")
             .append("linearGradient")
@@ -45,25 +45,29 @@ var airVisualization = function(container_selector, service) {
             .attr("stop-opacity", 1);
 
         model.linear_guage_body = model.lines.append("rect")
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit.key];})))
+            .attr("width", model.x(d3.max(model.data, function (d) {
+                return d[model.selected_unit.key];
+            })))
             .attr("height", gauge_height)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
     };
-    model.updateOtherCitiesView = function(){
+    model.updateOtherCitiesView = function () {
         $("#other-selected-cities").html("");
         var other_cities = service.getOtherCities();
 
-        other_cities.forEach(function(cityData, index){
+        other_cities.forEach(function (cityData, index) {
             $("#other-selected-cities").append('<li class="list-group-item">' +
                 cityData.city +
-                '<button  data-index="'+index+'" class="remove-other-city btn btn-danger btn-xs pull-right">&times;</button>' +
+                ", " +
+                cityData.country +
+                '<button  data-index="' + index + '" class="remove-other-city btn btn-danger btn-xs pull-right">&times;</button>' +
                 '</li>');
         });
     };
-    model.prepopulateCities = function(citiesArray){
+    model.prepopulateCities = function (citiesArray) {
         var cityData;
-        citiesArray.forEach(function(cityName){
+        citiesArray.forEach(function (cityName) {
             cityData = service.getCityData(cityName);
             service.addOtherCity(cityData);
         });
@@ -90,15 +94,28 @@ var airVisualization = function(container_selector, service) {
         .attr('class', 'd3-tip')
         .offset([10, 0])
         .direction('s')
-        .html(function(d) {
+        .html(function (d) {
             var string = 'Country: ' + d.country + '</br>' +
-                'PM2.5: '+d['pm2.5Mean'] + '</br>' +
-                'PM10: '+ d.pm10Mean;
+                'PM2.5: ' + d['pm2.5Mean'] + '</br>' +
+                'PM10: ' + d.pm10Mean;
 
             return string;
         });
+
+    /* Initialize tooltip */
+    model.tip2 = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([10, 0])
+        .direction('s')
+        .html(function () {
+            var string = 'aaa';
+
+            return string;
+        });
+
     /* Invoke the tip in the context of your visualization */
     model.svg.call(model.tip);
+    model.svg.call(model.tip2);
 
     // g group for all of the chart elements
     model.lines = model.svg.append("g");
@@ -117,14 +134,14 @@ var airVisualization = function(container_selector, service) {
     model.selected_city = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height+(gauge_label_spacing*4)))
+        .attr("height", (gauge_height + (gauge_label_spacing * 4)))
         .attr("width", 2)
         .attr("fill", "red");
     // Add label
     model.selected_city_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height+(gauge_label_spacing*5)))
+        .attr("y", (gauge_height + (gauge_label_spacing * 5)))
         .style("text-anchor", "middle")
         .text("");
 
@@ -132,30 +149,36 @@ var airVisualization = function(container_selector, service) {
     model.safe_level = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height+(gauge_label_spacing*3)))
+        .attr("height", (gauge_height + (gauge_label_spacing * 3)))
         .attr("width", 2)
         .attr("fill", "blue");
-        // Add label
+    // Add label
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height+(gauge_label_spacing*4)))
+        .attr("y", (gauge_height + (gauge_label_spacing * 4)))
         .style("text-anchor", "middle")
         .text("WHO Safe Level");
 
 
-    model.updateVis = function(){
+    model.updateVis = function () {
 
         model.other_cities = service.getOtherCities();
 
         model.x.domain([
-            d3.min(model.data, function(d) {return d[model.selected_unit.key];}),
-            d3.max(model.data, function(d) {return d[model.selected_unit.key];})
+            d3.min(model.data, function (d) {
+                return d[model.selected_unit.key];
+            }),
+            d3.max(model.data, function (d) {
+                return d[model.selected_unit.key];
+            })
         ]);
 
         // Update guage body every time
         model.linear_guage_body
-            .attr("width", model.x(d3.max(model.data, function(d) {return d[model.selected_unit.key];})))
+            .attr("width", model.x(d3.max(model.data, function (d) {
+                return d[model.selected_unit.key];
+            })))
             .attr("height", 50)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
@@ -163,56 +186,70 @@ var airVisualization = function(container_selector, service) {
 
         // Data join
         model.other_city_lines = model.other_city_g.selectAll("rect")
-            .data(model.other_cities, function(d){return d.city;});
+            .data(model.other_cities, function (d) {
+                return d.city + " " + d.country;
+            });
         model.other_city_labels = model.other_city_g.selectAll("text")
-            .data(model.other_cities, function(d){return d.city;});
+            .data(model.other_cities, function (d) {
+                return d.city + " " + d.country;
+            });
 
         // Enter
         model.other_city_lines.enter().append("rect")
-            .attr("x", function(d){
+            .attr("x", function (d) {
                 return model.x(d[model.selected_unit.key]);
             })
             .attr("y", 0)
             .attr("height", 0)
             .attr("width", 2)
-            .attr("fill", "green");
+            .attr("fill", "green")
+            .on('mouseover', model.tip.show)
+            .on('mouseout', model.tip.hide);
+
         model.other_city_labels.enter().append("text")
             .attr("class", "gauge-line-label")
-            .attr("x", function(d){
+            .attr("x", function (d) {
                 return model.x(d[model.selected_unit.key]);
             })
-            .attr("y", function(d, index){
-                return (gauge_height+(gauge_label_spacing*(index+5)));
+            .attr("y", function (d, index) {
+                return (gauge_height + (gauge_label_spacing * (index + 5)));
             })
             .style("text-anchor", "middle")
-            .text(function(d){return d.city;})
+            .text(function (d) {
+                return d.city;
+            })
             .on('mouseover', model.tip.show)
             .on('mouseout', model.tip.hide);
 
         // Enter + update
-        model.other_city_lines
-            .transition()
-            .duration(800)
-            .attr("x", function(d){
-                return model.x(d[model.selected_unit.key]);
-            })
-            .attr("height", function(d, index){
-                return (gauge_height+(gauge_label_spacing*(index+4)));
-            });
+
 
         model.other_city_labels
             .transition()
             .duration(800)
-            .attr("x", function(d){
+            .attr("x", function (d) {
                 return model.x(d[model.selected_unit.key]);
             })
-            .text(function(d){return d.city;});
+            .text(function (d) {
+                return d.city;
+            })
+            .attr("y", function (d, index) {
+                return (gauge_height + (gauge_label_spacing * (index + 5)));
+            });
+
+        model.other_city_lines
+            .transition()
+            .duration(800)
+            .attr("x", function (d) {
+                return model.x(d[model.selected_unit.key]);
+            })
+            .attr("height", function (d, index) {
+                return (gauge_height + (gauge_label_spacing * (index + 4)));
+            });
 
         // Exit
         model.other_city_lines.exit().remove();
         model.other_city_labels.exit().remove();
-
-
 
 
         model.xAxis.scale(model.x);
@@ -223,13 +260,14 @@ var airVisualization = function(container_selector, service) {
             .transition()
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
+
         // Update safe level text
         model.safe_level_text
             .transition()
             .duration(800)
             .attr("x", model.x(model.selected_unit.safe_level));
 
-        if(service.getSelectedCity() !== ""){
+        if (service.getSelectedCity()) {
 
             // Update selected city
             model.active_city_data = service.getSelectedCityData();
@@ -253,23 +291,23 @@ var airVisualization = function(container_selector, service) {
 
     };
 
-    model.unitSelectionListener = function(){
-        $(document).ready(function() {
+    model.unitSelectionListener = function () {
+        $(document).ready(function () {
             $('#unit-selection-container .radio label input').click(function () {
 
-                if(this.value === "unit-pm10"){
-                    model.selected_unit = {key:"pm10Mean", safe_level:25};
+                if (this.value === "unit-pm10") {
+                    model.selected_unit = {key: "pm10Mean", safe_level: 25};
                 } else {
-                    model.selected_unit = {key:"pm2.5Mean", safe_level:10};
+                    model.selected_unit = {key: "pm2.5Mean", safe_level: 10};
                 }
                 model.updateVis();
 
             });
         });
     }();
-    model.otherCityRemovalListener = function(){
-        $(document).ready(function() {
-            $("#other-selected-cities").on("click", ".remove-other-city", function() {
+    model.otherCityRemovalListener = function () {
+        $(document).ready(function () {
+            $("#other-selected-cities").on("click", ".remove-other-city", function () {
                 var index = $(this).attr("data-index");
                 service.removeOtherCity(index);
             });

@@ -3,11 +3,11 @@ var $ = require("jquery");
 var typeahead = require("typeahead.js-browserify");
 typeahead.loadjQueryPlugin();
 
-var cityPicker = function(service) {
+var cityPicker = function (service) {
 
     var model = this;
 
-    model.substringMatcher = function(strs) {
+    model.substringMatcher = function (strs) {
         return function findMatches(q, cb) {
             var matches, substringRegex;
 
@@ -19,8 +19,8 @@ var cityPicker = function(service) {
 
             // iterate through the pool of strings and for any string that
             // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function(i, str) {
-                if (substringRegex.test(str.city) || substringRegex.test(str.country)) {
+            $.each(strs, function (i, str) {
+                if (substringRegex.test(str.city + ", " + str.country)) {
                     matches.push(str);
                 }
             });
@@ -29,7 +29,7 @@ var cityPicker = function(service) {
         };
     };
 
-    model.render = function(){
+    model.render = function () {
         $('#city-selector.typeahead').typeahead({
                 hint: true,
                 highlight: true,
@@ -38,8 +38,8 @@ var cityPicker = function(service) {
             },
             {
                 name: 'states',
-                source: model.substringMatcher(service.cities),
-                display: function(loc){
+                source: model.substringMatcher(service.getActiveDataset("cityPmData")),
+                display: function (loc) {
                     return loc.city + ', ' + loc.country;
                 },
 
@@ -51,10 +51,11 @@ var cityPicker = function(service) {
                     ].join('\n'),
                     //suggestion: '<div><strong>{{value}}</strong> – {{year}}</div>'
                 }
-            }).on('typeahead:selected', function(event, datum) {
+            }).on('typeahead:selected', function (event, datum) {
             // on selected
             var selectedCity = datum;
-            service.setSelectedCity(selectedCity.city);
+            console.log(selectedCity);
+            service.setSelectedCity(selectedCity);
         });
     };
 
