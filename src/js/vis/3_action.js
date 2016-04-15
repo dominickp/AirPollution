@@ -154,12 +154,17 @@ var actionVisualization = function (container_selector, service) {
 // set city
         model.update = function () {
 
-            var cityString = model.service.getSelectedCity();
-
-            if (cityString === null || cityString === "") {
+            var cityString = model.service.getSelectedCityData();
+            
+            if (cityString === null) {
                 cityString = "Amsterdam";
                 console.log("City String empty. Used " + cityString + " as default.");
             }
+            else {
+                cityString = (cityString.city + ", " + cityString.country);
+            }
+
+            console.log(cityString);
 
 
             model.locator.geocode({address: cityString}, function (results, status) {
