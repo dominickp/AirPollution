@@ -102,17 +102,7 @@ var airVisualization = function (container_selector, service) {
             return string;
         });
 
-    /* Initialize tooltip */
-    model.tip2 = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([10, 0])
-        .direction('s')
-        .html(function () {
-            var string = 'aaa';
-
-            return string;
-        });
-
+    
     /* Invoke the tip in the context of your visualization */
     model.svg.call(model.tip);
     model.svg.call(model.tip2);
