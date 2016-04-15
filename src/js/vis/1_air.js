@@ -102,10 +102,9 @@ var airVisualization = function (container_selector, service) {
             return string;
         });
 
-    
+
     /* Invoke the tip in the context of your visualization */
     model.svg.call(model.tip);
-    model.svg.call(model.tip2);
 
     // g group for all of the chart elements
     model.lines = model.svg.append("g");

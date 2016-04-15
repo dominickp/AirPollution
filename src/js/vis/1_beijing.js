@@ -11,7 +11,7 @@ var beijingVis = function (container_selector, service) {
 
     var data = model.service.getActiveDataset("beijingData");
 
-    model.tooltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+    model.tooltip = d3.tip().attr('class', 'd3-tip').html(function () {
         return "Click";
     });
 
@@ -69,7 +69,7 @@ var beijingVis = function (container_selector, service) {
     model.message = model.svg.append("g");
 
 
-    var path = model.svg.append("path")
+    model.svg.append("path")
         .datum(data)
         .attr("class", "area")
         .attr("d", area)
@@ -110,7 +110,6 @@ var beijingVis = function (container_selector, service) {
 
     model.update = function () {
 
-        var cityValue = [model.service.getSelectedCityData()];
 
         model.vals = [];
 
@@ -149,7 +148,7 @@ var beijingVis = function (container_selector, service) {
     model.next = function () {
 
 
-        if (model.messages.length == model.cur) {
+        if (model.messages.length === model.cur) {
 
             $("#next_button").addClass("hidden");
             model.rect.transition()
