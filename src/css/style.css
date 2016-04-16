@@ -120,6 +120,10 @@
     margin: auto;
 }
 
+.btn-default {
+    color: white;
+}
+
 .title {
     padding-top: 10%;
 }
@@ -141,13 +145,13 @@ body, html {
     padding: 0;
 }
 
-.introduction {
-    min-height: 50vh;
-}
+/*.introduction {*/
+/*min-height: 50vh;*/
+/*}*/
 
-.part {
-    min-height: 100vh;
-}
+/*.part {*/
+/*min-height: 100vh;*/
+/*}*/
 
 .hidden {
     visibility: hidden;
@@ -192,4 +196,32 @@ body, html {
 
 .container, body, html {
     position: relative;
+}
+
+.start {
+    background-color: transparent;
+}
+
+#introduction, #p2 {
+    background-color: #f5f5f5;
+}
+
+#p3 {
+    min-height: 98vh;
+}
+
+.next-banner {
+    padding: 10px;
+    text-align: right;
+    background-color: brown;
+}
+
+.left{
+    text-align: left;
+}
+
+.next-banner > .next {
+    background-color: transparent;
+    color: white;
+    padding: 10px 100px;
 }

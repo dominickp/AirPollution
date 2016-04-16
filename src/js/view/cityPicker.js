@@ -54,8 +54,17 @@ var cityPicker = function (service) {
             }).on('typeahead:selected', function (event, datum) {
             // on selected
             var selectedCity = datum;
-            console.log(selectedCity);
+
+
+            $("#city_choice_name").text(selectedCity.city + ", " + selectedCity.country);
+            $("#city_choice").removeClass("hidden");
             service.setSelectedCity(selectedCity);
+        });
+
+
+        $('#city-selector').blur(function () {
+
+            $('#city-selector.typeahead').typeahead('val', '');
         });
     };
 

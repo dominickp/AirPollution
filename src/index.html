@@ -12,24 +12,75 @@
 </div>
 <div class="header">
 
-    <p>
+    <div class="next-banner left">
         CS171 - Free Radicals
-    </p>
+    </div>
     <div class="title">
         <h2>Death in the Air</h2>
         <h4>Ambient (outdoor air pollution)
             in both cities and rural areas was estimated to cause 3.7 million premature deaths worldwide in 2012.</h4>
         <br>
         <p>- World Health Organization</p>
+
+        <div class="text-center">
+            <a class="btn btn-default start" href="#introduction">Learn More</a>
+        </div>
     </div>
 
 
 </div>
 
-<div class="container">
-    <div id="introduction" class="introduction">
+<div class="facts">
+    <div class="container">
+        <div class="row">
+            <br>
+            <div class="col-sm-12 col-md-4 ">
+                <div class="panel panel-default panel-body fact">
+                    <div class="text-center">
+                        <img class="icon" src="img/health.png" alt="Health"/>
+                    </div>
+                    Air pollution is a major environmental risk to health. By reducing air pollution levels,
+                    countries
+                    can reduce the burden of disease from stroke, heart disease, lung cancer, and both chronic
+                    and
+                    acute
+                    respiratory diseases, including asthma.
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="panel panel-default panel-body fact">
+                    <div class="text-center">
+                        <img class="icon" src="img/money.png" alt="Money"/>
+                    </div>
+                    Some 88% of premature deaths caused by air pollution occurred in low- and middle-income
+                    countries,
+                    and the greatest number in the WHO Western Pacific and South-East Asia regions.
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="panel panel-default panel-body fact">
+                    <div class="text-center">
+                        <img class="icon" src="img/climate.png" alt="Climate"/>
+                    </div>
+                    Reducing outdoor air pollution also reduces emissions of CO2 and short-lived climate
+                    pollutants
+                    such
+                    as black carbon particles and methane, thus contributing to the near- and long-term
+                    mitigation
+                    of
+                    climate change.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div id="introduction" class="introduction">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
+
                 <div class="col-md-4">
 
                     <h2> Introduction</h2>
@@ -87,48 +138,21 @@
                     <div class="form-group col-sm-6 col-sm-offset-3">
                         <input id="city-selector" class="typeahead form-control" type="text"
                                placeholder="Enter your city">
-                        <input type="button" class="btn btn-info next" value="Check">
+                        <p id="city_choice" class="hidden"> City picked: <span id="city_choice_name"></span></p>
                     </div>
+
                 </div>
-                <div class="col-sm-12 col-md-4 ">
-                    <div class="panel panel-default panel-body fact">
-                        <div class="text-center">
-                            <img class="icon" src="img/health.png" alt="Health"/>
-                        </div>
-                        Air pollution is a major environmental risk to health. By reducing air pollution levels,
-                        countries
-                        can reduce the burden of disease from stroke, heart disease, lung cancer, and both chronic and
-                        acute
-                        respiratory diseases, including asthma.
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="panel panel-default panel-body fact">
-                        <div class="text-center">
-                            <img class="icon" src="img/money.png" alt="Money"/>
-                        </div>
-                        Some 88% of premature deaths caused by air pollution occurred in low- and middle-income
-                        countries,
-                        and the greatest number in the WHO Western Pacific and South-East Asia regions.
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="panel panel-default panel-body fact">
-                        <div class="text-center">
-                            <img class="icon" src="img/climate.png" alt="Climate"/>
-                        </div>
-                        Reducing outdoor air pollution also reduces emissions of CO2 and short-lived climate pollutants
-                        such
-                        as black carbon particles and methane, thus contributing to the near- and long-term mitigation
-                        of
-                        climate change.
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
+    <div class="next-banner">
+        <input type="button" class="btn btn-default next" value="Check">
+    </div>
+</div>
 
-    <div id="p1" class="part hidden">
+<div id="p1" class="part hidden">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h2>Act 1: Air</h2>
@@ -178,12 +202,16 @@
                 <div id="vis-1-beijing">
                 </div>
             </div>
-            <div class="col-sm-12 text-center">
-                <button class="btn btn-info next">Next</button>
-            </div>
         </div>
     </div>
-    <div id="p2" class="part hidden">
+    <div class="next-banner">
+        <button class="btn btn-default next">Next</button>
+    </div>
+
+
+</div>
+<div id="p2" class="part hidden">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Act 2: Death</h2>
@@ -203,11 +231,14 @@
                 <div id="vis-2-container"></div>
             </div>
         </div>
-        <div class="form-group text-center">
-            <button class="btn btn-info next">Next</button>
-        </div>
     </div>
-    <div id="p3" class="part hidden">
+    <div class="next-banner">
+        <button class="btn btn-default next">Next</button>
+    </div>
+
+</div>
+<div id="p3" class="part hidden">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Act 3: Action</h2>
@@ -246,8 +277,8 @@
 
             </div>
         </div>
-
     </div>
+
 </div>
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>

@@ -59,7 +59,6 @@ var introCityPicker = function (service, vis) {
         });
 
         $('#intro-country').blur(function () {
-            console.log("A");
             var arr = service.getActiveDataset("overtimeData").countries;
             $.each(arr, function (str) {
                 str.tempActive = false;

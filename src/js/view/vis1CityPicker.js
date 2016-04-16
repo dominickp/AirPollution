@@ -53,7 +53,10 @@ var cityPicker = function (service) {
 
         });
     };
+    $('#other-city-selector').blur(function () {
 
+        $('#other-city-selector.typeahead').typeahead('val', '');
+    });
 };
 
 module.exports = cityPicker;
