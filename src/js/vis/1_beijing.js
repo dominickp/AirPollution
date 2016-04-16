@@ -143,15 +143,16 @@ var beijingVis = function (container_selector, service) {
     model.messages = [
         {
             message: ["1Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem", " ultricies eu."],
-            date: new Date(2015, 2, 2)
+            date: Date.parse("2/2/15")
+
         },
         {
             message: ["2Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate", " egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
-            date: new Date(2015, 5, 5)
+            date: Date.parse("5/20/15")
         },
         {
             message: ["3Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
-            date: new Date(2015, 8, 8)
+            date: Date.parse("8/18/15")
         }];
 
     model.bisectDate = d3.bisector(function (d) {
