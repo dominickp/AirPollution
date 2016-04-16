@@ -147,8 +147,9 @@ var yearlyVis = function (container_selector, service) {
         var index = model.labelData.indexOf(d);
         if (index === -1) {
             model.labelData.push(d);
-            model.update();
+
         }
+        model.update();
 
     };
 

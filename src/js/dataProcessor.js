@@ -56,7 +56,7 @@ var dataProcessor = function (service) {
                 if (isNaN(d[years[i]])) {
 
                     d[years[i]] = "-";
-                    
+
                     if (i > 0 && i < years.length - 1) {
 
                         var avg = (d[years[i - 1]] + (+d[years[i + 1]])) / 2;
