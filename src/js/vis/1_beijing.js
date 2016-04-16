@@ -16,9 +16,9 @@ var beijingVis = function (container_selector, service) {
     });
 
 
-    var margin = {top: 5, right: 20, bottom: 100, left: 100};
-    var width = 800 - margin.left - margin.right,
-        height = 300 - margin.top - margin.bottom;
+    var margin = {top: 5, right: 20, bottom: 200, left: 100};
+    var width = 850 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
 
     // init svg
     model.svg = d3.select(container_selector).append("svg")
@@ -118,7 +118,7 @@ var beijingVis = function (container_selector, service) {
         $("#next_button").val("Play");
         $("#next_button").removeClass("hidden");
         model.message.selectAll("line").remove();
-
+        model.message.selectAll("text").remove();
 
         model.rect.attr("x", 0)
             .attr("y", 0)
@@ -132,15 +132,15 @@ var beijingVis = function (container_selector, service) {
 
     model.messages = [
         {
-            message: "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate egestas sapien a pharetra. Vivamus gravida pharetra elit, non malesuada sem ultricies eu.",
+            message: ["1Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem", " ultricies eu."],
             date: new Date(2015, 2, 2)
         },
         {
-            message: "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate egestas sapien a pharetra. Vivamus gravida pharetra elit, non malesuada sem ultricies eu.",
+            message: ["2Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate", " egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
             date: new Date(2015, 5, 5)
         },
         {
-            message: "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate egestas sapien a pharetra. Vivamus gravida pharetra elit, non malesuada sem ultricies eu.",
+            message: ["3Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
             date: new Date(2015, 8, 8)
         }];
 
@@ -168,37 +168,45 @@ var beijingVis = function (container_selector, service) {
 
         model.message.selectAll("line").data(model.vals).enter().append("line")
             .attr("x1", function (d) {
-                return dateScale(d.date) - 5;
+                return dateScale(d.date) - 1;
             })
-            .attr("y1", 0)
+            .attr("y1", height)
             .attr("x2", function (d) {
-                return dateScale(d.date) - 5;
+                return dateScale(d.date) - 1;
             })
-            .attr("y2", 0)
-            .style("stroke", "#31B0D5")
-            .on('mouseover', model.tooltip.show)
-            .on('mouseout', model.tooltip.hide)
-            .on('click', function (d) {
-                if ($("#beijing-message").hasClass("hidden")) {
-                    $("#beijing-message").removeClass("hidden");
-                    $("#beijing-message").text(d.message);
-                }
-                else {
-                    if ($("#beijing-message").text() === d.message) {
-                        $("#beijing-message").addClass("hidden");
-                    }
-                    else {
-                        $("#beijing-message").text(d.message);
-                    }
-                }
-
-
-            })
+            .attr("y2", height)
+            .style("stroke", "gray")
             .transition()
             .delay(1000)
             .duration(1000)
-            .attr("y2", height)
-            .style("stroke-width", 10);
+            .attr("y2", height + 100)
+            .style("stroke-width", 1);
+
+        model.message.selectAll("text").data(model.vals).enter().append("text")
+            .attr("x", function (d) {
+                return dateScale(d.date) - 1;
+            })
+            .attr("y", height + 110)
+            .text("")
+            .style("text-anchor", "end")
+            .each(function (d) {
+
+                var model = d3.select(this);
+
+                model.selectAll("tspan")
+                    .data(d.message)
+                    .enter()
+                    .append("tspan")
+                    .attr("x", dateScale(d.date) - 1)
+                    .attr("dy", 15)
+                    .text("")
+                    .transition()
+                    .delay(1900)
+                    .text(function (d) {
+                        return d;
+                    });
+            });
+
 
         model.cur++;
     };
