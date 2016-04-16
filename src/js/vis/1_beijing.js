@@ -227,18 +227,18 @@ var beijingVis = function (container_selector, service) {
 
             $("#next_button").addClass("hidden");
             model.rect.transition()
-                .duration(1000)
+                .duration(500)
                 .attr("x", width);
 
             model.selection.transition()
-                .duration(1000).attr("width", width);
+                .duration(500).attr("width", width);
             return;
 
         }
 
         $("#next_button").val("Continue");
         model.rect.transition()
-            .duration(1000)
+            .duration(500)
             .attr("x", dateScale(model.messages[model.cur].date));
 
         model.vals.push(model.messages[model.cur]);
@@ -255,8 +255,8 @@ var beijingVis = function (container_selector, service) {
             .attr("y2", height)
             .style("stroke", "gray")
             .transition()
-            .delay(1000)
-            .duration(1000)
+            .delay(500)
+            .duration(200)
             .attr("y2", height + 30)
             .style("stroke-width", 1);
 
@@ -279,7 +279,7 @@ var beijingVis = function (container_selector, service) {
                     .attr("dy", 15)
                     .text("")
                     .transition()
-                    .delay(1900)
+                    .delay(700)
                     .text(function (d) {
                         return d;
                     });
