@@ -1,11 +1,13 @@
 var $ = require("jquery");
-
-var WebController = function (pages) {
+//var sweetAlert = require("sweetalert");
+var WebController = function (pages, service) {
     var model = this;
 
     model.page = 1;
     model.amount = pages;
     model.actions = [];
+
+    model.service = service;
 
     model.next = function () {
 
@@ -13,6 +15,13 @@ var WebController = function (pages) {
             return;
         }
 
+        if (model.page === 1) {
+            if (model.service.getSelectedCityData() === null) {
+                //sweetAlert("Oops...", "Something went wrong!", "error");
+                return;
+            }
+
+        }
 
         var page = $("#p" + model.page);
         page.removeClass("hidden");

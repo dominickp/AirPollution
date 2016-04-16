@@ -21,7 +21,7 @@ var YearVisualization = require('./vis/intro_year.js');
 // Start the service
 var service = new Service();
 
-var webController = new WebController(3);
+var webController = new WebController(3, service);
 
 // Sanity check
 console.log("src/js/main.js");

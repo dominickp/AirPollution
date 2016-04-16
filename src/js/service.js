@@ -8,7 +8,7 @@ var service = function () {
 
     model.active_datasets = {};
 
-    model.selected_city = '';
+    model.selected_city = null;
 
     model.other_cities = [];
 
@@ -22,6 +22,9 @@ var service = function () {
     };
 
     model.getSelectedCity = function () {
+        if (model.selected_city === null)
+            return null;
+
         return model.selected_city.city;
     };
 

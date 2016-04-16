@@ -156,13 +156,9 @@ var actionVisualization = function (container_selector, service) {
 
             var cityString = model.service.getSelectedCityData();
 
-            if (cityString === null) {
-                cityString = "Amsterdam";
-                console.log("City String empty. Used " + cityString + " as default.");
-            }
-            else {
-                cityString = (cityString.city + ", " + cityString.country);
-            }
+
+            cityString = (cityString.city + ", " + cityString.country);
+
 
             console.log(cityString);
 
