@@ -29,9 +29,73 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
         }
+        else if (name === "overtimeData") {
+            processedDataset = model.processYearlyData(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else {
             throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
+    };
+
+    model.processYearlyData = function (dataset) {
+        var countries = [];
+        var combined = [];
+
+        var lowest = 9000001;
+        var highest = 0;
+
+        var years = [1990, 1995, 2000, 2005, 2010, 2011, 2013];
+        dataset.forEach(function (d) {
+
+            var vals = [];
+            for (var i = 0; i < years.length; i++) {
+                d[years[i]] = +d[years[i]];
+
+                if (isNaN(d[years[i]])) {
+
+                    d[years[i]] = "-";
+                    
+                    if (i > 0 && i < years.length - 1) {
+
+                        var avg = (d[years[i - 1]] + (+d[years[i + 1]])) / 2;
+
+                        if (isNaN(avg)) {
+                            return;
+                        }
+                        vals.push({year: years[i], val: avg});
+                    }
+                    else {
+                        return;
+                    }
+
+
+                }
+                else {
+                    if (d[years[i]] > highest) {
+                        highest = d[years[i]];
+                    }
+                    if (d[years[i]] < lowest) {
+                        lowest = d[years[i]];
+                    }
+
+                    vals.push({year: years[i], val: d[years[i]]});
+                }
+            }
+            d.active = false;
+            d.tempActive = false;
+            d.vals = vals;
+            //County Name
+            if (d.Type === "Country") {
+                countries.push(d);
+            }
+            else {
+                combined.push(d);
+            }
+        });
+
+        return {countries: countries, combined: combined, yearrange: [1990, 2013], valuerange: [lowest, highest]};
     };
 
     model.processBeijingData = function (dataset) {
@@ -68,8 +132,6 @@ var dataProcessor = function (service) {
 
         // add rest
         values.push({time: curday, pm25: sum / count});
-
-        console.log(values);
         return values;
 
     };

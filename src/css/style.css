@@ -183,3 +183,9 @@ body, html {
 .fact {
     height: 250px;
 }
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}

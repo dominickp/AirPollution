@@ -10,13 +10,14 @@ var Service = require('./service');
 var WebController = require('./webController');
 var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
+var IntroCityPicker = require('./view/introCityPicker');
 var Vis1CityPicker = require('./view/vis1CityPicker');
 var Preloader = require('./view/preloader');
 var AirVisualization = require('./vis/1_air.js');
 var BeijingVisualization = require('./vis/1_beijing.js');
 var DeathVisualization = require('./vis/2_death.js');
 var ActionVisualization = require('./vis/3_action.js');
-
+var YearVisualization = require('./vis/intro_year.js');
 // Start the service
 var service = new Service();
 
@@ -32,7 +33,7 @@ console.log('topojson', topojson);
 console.log('d3-tip', d3tip);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -40,7 +41,15 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     dataProcessing.process("mapTopoJson", mapTopoJson);
     dataProcessing.process("deathData", deathData);
     dataProcessing.process("beijingData", beijingData);
+    dataProcessing.process("overtimeData", overtimeData);
     createView();
+
+
+    // load introduction
+    var yearVis = new YearVisualization("#vis-intro-container", service);
+
+    var introCityPicker = new IntroCityPicker(service, yearVis);
+    introCityPicker.render();
 
     // Load vis 1
     var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Peshwar'];
@@ -117,5 +126,6 @@ q.queue()
     .defer(d3.json, "data/world-110m.json")
     .defer(d3.csv, "data/WHO_death_data_clean.csv")
     .defer(d3.csv, "data/beijing-data-2015.csv")
+    .defer(d3.csv, "data/World Bank pm2.5 over time.csv")
     .await(initialDataLoad);
 
