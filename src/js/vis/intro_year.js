@@ -110,7 +110,7 @@ var yearlyVis = function (container_selector, service) {
         .style('opacity', 0.2)
 
         .on('mouseover', function (d) {
-            d3.select(this).style('stroke', 'blue').style('opacity', 1).style('cursor', 'pointer');
+            d3.select(this).style('stroke', 'brown').style('opacity', 1).style('cursor', 'pointer');
             model.tooltip.show(d);
         })
         .on('mouseout', function (d) {
@@ -119,7 +119,7 @@ var yearlyVis = function (container_selector, service) {
                 d3.select(this).style('stroke', 'gray').style('opacity', 0.2);
                 return;
             }
-            d3.select(this).style('stroke', 'blue').style('opacity', 1);
+            d3.select(this).style('stroke', 'brown').style('opacity', 1);
 
 
         })
@@ -166,7 +166,7 @@ var yearlyVis = function (container_selector, service) {
             })
             .enter().append("text")
             .attr("x", width)
-            .style('fill', 'blue')
+            .style('fill', 'brown')
             .attr("y", function (d) {
                 console.log(d);
                 return y(d["vals"][6].val);
@@ -202,7 +202,7 @@ var yearlyVis = function (container_selector, service) {
                 if (!d.active && !d.tempActive) {
                     return "gray";
                 }
-                return "blue";
+                return "brown";
             })
             .style('opacity', function (d) {
                 if (!d.active && !d.tempActive) {
