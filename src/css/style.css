@@ -18,7 +18,7 @@
     stroke-width: 1;
 }
 
-.next{
+.next {
     margin-top: 10px;
 }
 
@@ -157,7 +157,7 @@ body, html {
     margin-left: -125px;
 }
 
-.heading{
+.heading {
     padding-bottom: 30px;
 }
 
@@ -174,4 +174,12 @@ body, html {
 
 .x-axis path {
     display: none;
+}
+
+.icon {
+    width: 80px;
+}
+
+.fact {
+    height: 250px;
 }
