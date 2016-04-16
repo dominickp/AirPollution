@@ -1,6 +1,6 @@
 var d3 = require("d3");
 var $ = require("jquery");
-var d3tip = require('d3-tip')(d3);
+
 
 console.log("src/js/vis/1_beijing.js");
 
@@ -11,23 +11,19 @@ var beijingVis = function (container_selector, service) {
 
     var data = model.service.getActiveDataset("beijingData");
 
-    model.tooltip = d3.tip().attr('class', 'd3-tip').html(function () {
-        return "Click";
-    });
 
-
-    var margin = {top: 5, right: 20, bottom: 200, left: 100};
-    var width = 850 - margin.left - margin.right,
+    var margin = {top: 5, right: 150, bottom: 200, left: 100};
+    var width = 950 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     // init svg
-    model.svg = d3.select(container_selector).append("svg")
+    model.svgPad = d3.select(container_selector).append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
+        .attr("height", height + margin.top + margin.bottom);
+
+    model.svg = model.svgPad.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    model.svg.call(model.tooltip);
 
     var dateRange = d3.extent(data, function (d) {
         return d.time;
@@ -97,7 +93,6 @@ var beijingVis = function (container_selector, service) {
         .html("(PM 2.5)")
         .attr("class", "axis-label y-axis");
 
-    model.front = model.svg.append("g");
 
     model.rect = model.svg.append("rect")
         .attr("x", 0)
@@ -105,6 +100,8 @@ var beijingVis = function (container_selector, service) {
         .attr("width", width)
         .attr("height", height)
         .attr("fill", "white");
+
+    model.front = model.svg.append("g");
 
     model.vals = [];
 
@@ -120,6 +117,12 @@ var beijingVis = function (container_selector, service) {
         model.message.selectAll("line").remove();
         model.message.selectAll("text").remove();
 
+        if (model.selection) {
+            model.selection.remove();
+        }
+        if (model.focus) {
+            model.focus.remove();
+        }
         model.rect.attr("x", 0)
             .attr("y", 0)
             .attr("width", width)
@@ -129,7 +132,6 @@ var beijingVis = function (container_selector, service) {
     };
 
     model.cur = 0;
-
     model.messages = [
         {
             message: ["1Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem", " ultricies eu."],
@@ -148,12 +150,79 @@ var beijingVis = function (container_selector, service) {
     model.next = function () {
 
 
+        if (model.cur === 0) {
+
+            model.focus = model.front.append("g")
+                .style("display", "none");
+
+
+            model.focus.append("rect")
+                .attr("class", "AreaTooltip")
+                .attr("width", 1)
+                .attr("height", height);
+
+            model.focus.append("text")
+                .attr("class", "AreaTooltipDate");
+
+            model.focus.append("text")
+                .attr("class", "AreaTooltipPopulation");
+
+
+            model.selection = model.front.append("rect")
+                .attr("width", 0)
+                .attr("height", height)
+                .style("fill", "none")
+                .style("pointer-events", "all")
+                .on("mouseover", function () {
+                    model.focus.style("display", null);
+                })
+                .on("mouseout", function () {
+                    model.focus.style("display", "none");
+                })
+                .on("mousemove", mousemove);
+
+            var bisectDate = d3.bisector(function (d) {
+                return d.time;
+            }).left;
+
+
+            function mousemove() {
+                var x0 = dateScale.invert(d3.mouse(this)[0]),
+                    i = bisectDate(data, x0, 1),
+                    d0 = data[i - 1],
+                    d1 = data[i];
+
+                if (!d0 || !d1)
+                    return;
+
+                var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
+                model.focus.select("rect.AreaTooltip")
+                    .attr("transform",
+                        "translate(" + dateScale(d.time) + "," +
+                        0 + ")");
+
+                model.focus.select("text.AreaTooltipDate")
+                    .attr("transform",
+                        "translate(" + (dateScale(d.time) + 10) + "," +
+                        (height / 5 + 10) + ")")
+                    .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
+
+                model.focus.select("text.AreaTooltipPopulation")
+                    .attr("transform",
+                        "translate(" + (dateScale(d.time) + 10) + "," +
+                        height / 5 + ")")
+                    .html(Math.round(d.pm25));
+            }
+        }
         if (model.messages.length === model.cur) {
 
             $("#next_button").addClass("hidden");
             model.rect.transition()
                 .duration(1000)
                 .attr("x", width);
+
+            model.selection.transition()
+                .duration(1000).attr("width", width);
             return;
 
         }
@@ -207,13 +276,16 @@ var beijingVis = function (container_selector, service) {
                     });
             });
 
+        model.selection.transition()
+            .duration(1000).attr("width", dateScale(model.messages[model.cur].date));
 
         model.cur++;
     };
 
-    // "next_button"
-
+    // "next button"
     $("#next_button").click(model.next);
+
+
 };
 
 module.exports = beijingVis;
