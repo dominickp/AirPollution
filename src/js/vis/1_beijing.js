@@ -12,7 +12,7 @@ var beijingVis = function (container_selector, service) {
     var data = model.service.getActiveDataset("beijingData");
 
 
-    var margin = {top: 5, right: 150, bottom: 200, left: 100};
+    var margin = {top: 0, right: 150, bottom: 200, left: 100};
     var width = 950 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
@@ -39,7 +39,7 @@ var beijingVis = function (container_selector, service) {
     });
 
     var pmScale = d3.scale.linear()
-        .domain([pmRange[1], pmRange[0]])
+        .domain([pmRange[1] + 100, pmRange[0]])
         .range([0, height]);
 
     var xAxis = d3.svg.axis()
@@ -50,7 +50,8 @@ var beijingVis = function (container_selector, service) {
 
     var yAxis = d3.svg.axis()
         .scale(pmScale)
-        .orient("left");
+        .orient("left")
+        .ticks(6);
 
 
     var area = d3.svg.area()
@@ -93,7 +94,6 @@ var beijingVis = function (container_selector, service) {
         .html("(PM 2.5)")
         .attr("class", "axis-label y-axis");
 
-
     model.rect = model.svg.append("rect")
         .attr("x", 0)
         .attr("y", 0)
@@ -101,7 +101,9 @@ var beijingVis = function (container_selector, service) {
         .attr("height", height)
         .attr("fill", "white");
 
+
     model.front = model.svg.append("g");
+
 
     model.vals = [];
 
@@ -146,6 +148,38 @@ var beijingVis = function (container_selector, service) {
             date: new Date(2015, 8, 8)
         }];
 
+    model.bisectDate = d3.bisector(function (d) {
+        return d.time;
+    }).left;
+
+    model.mousemove = function () {
+        var x0 = dateScale.invert(d3.mouse(this)[0]),
+            i = model.bisectDate(data, x0, 1),
+            d0 = data[i - 1],
+            d1 = data[i];
+
+        if (!d0 || !d1) {
+            return;
+        }
+
+        var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
+        model.focus.select("rect.AreaTooltip")
+            .attr("transform",
+                "translate(" + dateScale(d.time) + "," +
+                0 + ")");
+
+        model.focus.select("text.AreaTooltipDate")
+            .attr("transform",
+                "translate(" + (dateScale(d.time) + 10) + "," +
+                (height / 5 + 10) + ")")
+            .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
+
+        model.focus.select("text.AreaTooltipPopulation")
+            .attr("transform",
+                "translate(" + (dateScale(d.time) + 10) + "," +
+                height / 5 + ")")
+            .html(Math.round(d.pm25));
+    };
 
     model.next = function () {
 
@@ -179,42 +213,11 @@ var beijingVis = function (container_selector, service) {
                 .on("mouseout", function () {
                     model.focus.style("display", "none");
                 })
-                .on("mousemove", mousemove);
-
-            var bisectDate = d3.bisector(function (d) {
-                return d.time;
-            }).left;
+                .on("mousemove", model.mousemove);
 
 
-            function mousemove() {
-                var x0 = dateScale.invert(d3.mouse(this)[0]),
-                    i = bisectDate(data, x0, 1),
-                    d0 = data[i - 1],
-                    d1 = data[i];
-
-                if (!d0 || !d1)
-                    return;
-
-                var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
-                model.focus.select("rect.AreaTooltip")
-                    .attr("transform",
-                        "translate(" + dateScale(d.time) + "," +
-                        0 + ")");
-
-                model.focus.select("text.AreaTooltipDate")
-                    .attr("transform",
-                        "translate(" + (dateScale(d.time) + 10) + "," +
-                        (height / 5 + 10) + ")")
-                    .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
-
-                model.focus.select("text.AreaTooltipPopulation")
-                    .attr("transform",
-                        "translate(" + (dateScale(d.time) + 10) + "," +
-                        height / 5 + ")")
-                    .html(Math.round(d.pm25));
-            }
         }
-        if (model.messages.length === model.cur) {
+        else if (model.messages.length === model.cur) {
 
             $("#next_button").addClass("hidden");
             model.rect.transition()

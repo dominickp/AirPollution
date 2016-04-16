@@ -1,5 +1,5 @@
 var d3 = require("d3");
-var d3tip = require('d3-tip')(d3);
+require('d3-tip')(d3);
 
 console.log("src/js/vis/2_death.js");
 
@@ -63,7 +63,21 @@ var deathVisualization = function (container_selector, service) {
 
 
         model.curData = [];
-        model.colorScale = d3.scale.category20();
+        model.colorScale = d3.scale.category20().range(
+            [
+                "#A9E569",
+                "#A8ADE7",
+                "#6ED28E",
+                "#E493BB",
+                "brown",
+                "#DBBF5C",
+                "#79C3DC",
+                "#E19A5D",
+                "#A0ABCA",
+                "#93B27D",
+                "#B690BC",
+                "#D47E54"
+            ]);
         model.picturesPline = 30;
         model.WidthPerImage = model.width / model.picturesPline;
         model.img_height = model.WidthPerImage * 1.8;
@@ -161,7 +175,7 @@ var deathVisualization = function (container_selector, service) {
                     })
                     .style("fill", function (d) {
                         if (d.id === 1) {
-                            return "red";
+                            return "#A52A2A";
                         }
                         return "black";
                     })
@@ -209,7 +223,7 @@ var deathVisualization = function (container_selector, service) {
             .attr("x", model.img_width)
             .attr("y", 10 + (model.img_height / 2))
             .attr("width", 100)
-            .attr("fill", "red")
+            .attr("fill", "#oA52A2A")
             .text("100.000 deaths");
 
 
