@@ -12,7 +12,7 @@ var beijingVis = function (container_selector, service) {
     var data = model.service.getActiveDataset("beijingData");
 
 
-    var margin = {top: 0, right: 150, bottom: 200, left: 100};
+    var margin = {top: 20, right: 150, bottom: 200, left: 100};
     var width = 950 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
@@ -45,7 +45,7 @@ var beijingVis = function (container_selector, service) {
     var xAxis = d3.svg.axis()
         .scale(dateScale)
         .orient("bottom")
-        .tickFormat(d3.time.format("%B %Y"));
+        .tickFormat(d3.time.format("%b"));
 
 
     var yAxis = d3.svg.axis()
@@ -73,21 +73,6 @@ var beijingVis = function (container_selector, service) {
         .attr("fill", "brown");
 
 
-    model.svg.append("g")
-        .attr("class", "axis x-axis")
-        .attr("transform", "translate(0," + (height) + ")")
-        .call(xAxis)
-        .selectAll("text")
-        .attr("transform", function () {
-            return "rotate(-40)translate(-40,-5)";
-        });
-
-
-    model.svg.append("g")
-        .attr("class", "axis y-axis")
-        .attr("transform", "translate(" + 0 + ",0)")
-        .call(yAxis);
-
     model.svg.append("text")
         .attr("x", -90)
         .attr("y", height / 2)
@@ -101,6 +86,27 @@ var beijingVis = function (container_selector, service) {
         .attr("height", height)
         .attr("fill", "white");
 
+
+    var axis = model.svg.append("g")
+        .attr("class", "axis x-axis")
+        .attr("transform", "translate(0,0)")
+        .call(xAxis);
+
+    axis.selectAll("text")
+        .attr("transform", function () {
+            return "translate(0,-25)";
+        });
+
+    axis.selectAll("line")
+        .attr("transform", function () {
+            return "translate(0,-6)";
+        });
+
+
+    model.svg.append("g")
+        .attr("class", "axis y-axis")
+        .attr("transform", "translate(" + 0 + ",0)")
+        .call(yAxis);
 
     model.front = model.svg.append("g");
 
@@ -251,14 +257,14 @@ var beijingVis = function (container_selector, service) {
             .transition()
             .delay(1000)
             .duration(1000)
-            .attr("y2", height + 100)
+            .attr("y2", height + 30)
             .style("stroke-width", 1);
 
         model.message.selectAll("text").data(model.vals).enter().append("text")
             .attr("x", function (d) {
                 return dateScale(d.date) - 1;
             })
-            .attr("y", height + 110)
+            .attr("y", height + 40)
             .text("")
             .style("text-anchor", "end")
             .each(function (d) {

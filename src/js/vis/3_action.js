@@ -82,7 +82,7 @@ var actionVisualization = function (container_selector, service) {
 
         model.water.append("path")
             .datum(globe)
-            .style("fill", "#98E0FF")
+            .style("fill", "#81B4C9")
             .attr("d", path);
 
 
@@ -155,7 +155,7 @@ var actionVisualization = function (container_selector, service) {
         model.update = function () {
 
             var cityString = model.service.getSelectedCityData();
-            
+
             if (cityString === null) {
                 cityString = "Amsterdam";
                 console.log("City String empty. Used " + cityString + " as default.");

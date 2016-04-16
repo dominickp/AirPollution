@@ -114,7 +114,7 @@
     font-size: 13px;
 }
 
-.header > .title > h1, .header > .title > h3, .header > p, .header > .title > p {
+.header > .title > h2, .header > .title > h4, .header > p, .header > .title > p {
 
     width: 50%;
     margin: auto;
@@ -161,3 +161,17 @@ body, html {
     padding-bottom: 30px;
 }
 
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x-axis path {
+    display: none;
+}
