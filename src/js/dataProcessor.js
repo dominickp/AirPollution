@@ -37,17 +37,39 @@ var dataProcessor = function (service) {
     model.processBeijingData = function (dataset) {
 
         var values = [];
+
+        var sum = 0;
+        var count = 0;
+        var curday = null;
         dataset.forEach(function (time) {
 
-            var timestamp = Date.parse(time.date + " " + time.time);
-            if (isNaN(timestamp)) {
-                console.log("NAN:" + (time.date + " " + time.time));
+            var timestamp = Date.parse(time.date);
+
+            if (curday === null) {
+                sum = +time.concentration;
+                count = 1;
+                curday = timestamp;
+            }
+            else if (timestamp === curday) {
+                sum += +time.concentration;
+                count++;
+                curday = timestamp;
             }
             else {
-                values.push({time: timestamp, pm25: +time.concentration});
+                values.push({time: curday, pm25: sum / count});
+                sum = +time.concentration;
+                count = 1;
+                curday = timestamp;
+
             }
 
+
         });
+
+        // add rest
+        values.push({time: curday, pm25: sum / count});
+
+        console.log(values);
         return values;
 
     };
