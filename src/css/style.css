@@ -189,3 +189,7 @@ body, html {
     stroke: steelblue;
     stroke-width: 2px;
 }
+
+.container, body, html {
+    position: relative;
+}
