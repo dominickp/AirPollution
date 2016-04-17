@@ -241,30 +241,39 @@ var allCountries = function (container_selector, service) {
             });
 
         // set cities in country lines
+        var lowest = 9001;
+        var highest = 0;
 
         values.forEach(function (d) {
 
             model.others.append("line")
-                .attr("x1", x(d[xVar]) + radius / 2)
+                .attr("x1", x(d[xVar]))
                 .attr("y1", d.lineY)
-                .attr("x2", x(d[xVar]) + radius / 2)
+                .attr("x2", x(d[xVar]))
                 .attr("y2", height + 15)
                 .style("stroke", "black")
                 .style("stroke-width", 1);
 
+            if (x(d[xVar]) > highest) {
+                highest = x(d[xVar]);
+            }
+            if (x(d[xVar]) < lowest) {
+                lowest = x(d[xVar]);
+            }
+
         });
 
         model.others.append("line")
-            .attr("x1", 0)
+            .attr("x1", lowest)
             .attr("y1", height + 15)
-            .attr("x2", width)
+            .attr("x2", highest)
             .attr("y2", height + 15)
             .style("stroke", "black")
             .style("stroke-width", 1);
 
         model.cityline.append("text")
             .attr("class", "label")
-            .attr("x", width / 2)
+            .attr("x", (highest + lowest) / 2)
             .attr("y", height + 25)
             .style("text-anchor", "middle")
             .style("fill", "black")
