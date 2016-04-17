@@ -1,5 +1,5 @@
 var $ = require("jquery");
-//var sweetAlert = require("sweetalert");
+var sweetAlert = require("sweetalert");
 var WebController = function (pages, service) {
     var model = this;
 
@@ -17,7 +17,7 @@ var WebController = function (pages, service) {
 
         if (model.page === 1) {
             if (model.service.getSelectedCityData() === null) {
-                //sweetAlert("Oops...", "Something went wrong!", "error");
+                sweetAlert("Oops...", "You need to enter a city before you can continue.", "error");
                 return;
             }
 
