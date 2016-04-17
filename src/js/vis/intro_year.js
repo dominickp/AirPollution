@@ -135,7 +135,6 @@ var yearlyVis = function (container_selector, service) {
 
                 var index = model.labelData.indexOf(d);
                 if (index > -1) {
-                    console.log(index);
                     model.labelData.splice(index, 1);
                     model.update();
                 }
@@ -150,7 +149,6 @@ var yearlyVis = function (container_selector, service) {
             if (d.active) {
                 var index = model.labelData.indexOf(d);
                 if (index > -1) {
-                    console.log(index);
                     model.labelData.splice(index, 1);
                 }
             }
@@ -196,7 +194,6 @@ var yearlyVis = function (container_selector, service) {
                 return 'gray';
             })
             .attr("y", function (d) {
-                console.log(d);
                 return y(d["vals"][6].val);
             })
             .text(function (d) {

@@ -17,6 +17,7 @@ var AirVisualization = require('./vis/1_air.js');
 var BeijingVisualization = require('./vis/1_beijing.js');
 var DeathVisualization = require('./vis/2_death.js');
 var ActionVisualization = require('./vis/3_action.js');
+var NumbersVisualization = require('./vis/1_behind_numbers.js');
 var YearVisualization = require('./vis/intro_year.js');
 // Start the service
 var service = new Service();
@@ -33,7 +34,7 @@ console.log('topojson', topojson);
 console.log('d3-tip', d3tip);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -42,6 +43,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     dataProcessing.process("deathData", deathData);
     dataProcessing.process("beijingData", beijingData);
     dataProcessing.process("overtimeData", overtimeData);
+    dataProcessing.process("metrics", metrics);
     createView();
 
 
@@ -60,10 +62,15 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     var beijingVisualization = new BeijingVisualization("#vis-1-beijing", service);
     webController.setAction(1, beijingVisualization.update);
 
+    // Load Numbers
+    var numberVis = new NumbersVisualization(["#vis-1-numbers_1", "#vis-1-numbers_2", "#vis-1-numbers_3", "#vis-1-numbers_4", "#vis-1-numbers_5", "#vis-1-numbers_6"], service);
+
+
     // Load vis 2
     var deathVisualization = new DeathVisualization("#vis-2-container", service);
     // do action "deathVisualization.createUpdate" when act 2 is shown.
     webController.setAction(2, deathVisualization.createUpdate);
+
 
     // Load vis 3
     var actionVisualization = new ActionVisualization("#vis-3-container", service);
@@ -100,10 +107,48 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         });
     }
 
-    //// uncomment to show all visualizations on load. (used while developing)
-    //for (var i = 0; i < 3; i++) {
-    //    webController.nextNoScroll();
-    //}
+    // set text hover behind numbers
+    $("#hover1").mouseover(function () {
+        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 0);
+    });
+    $("#hover1").mouseout(numberVis.reset);
+
+    $("#hover2").mouseover(function () {
+        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 1);
+    });
+    $("#hover2").mouseout(numberVis.reset);
+
+    $("#hover3").mouseover(function () {
+        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 2);
+    });
+    $("#hover3").mouseout(numberVis.reset);
+
+    $("#hover4").mouseover(function () {
+        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 3);
+    });
+    $("#hover4").mouseout(numberVis.reset);
+
+    $("#hover5").mouseover(function () {
+        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 4);
+    });
+    $("#hover5").mouseout(numberVis.reset);
+
+    $("#hover6").mouseover(function () {
+        numberVis.swap(5);
+
+        numberVis.setActiveArray(
+            [
+                "Central Europe and the Baltics",
+                "East Asia & Pacific (all income levels)",
+                "Latin America & Caribbean (all income levels)",
+                "Europe & Central Asia (developing only)",
+                "European Union"],
+            5);
+    });
+    $("#hover6").mouseout(function () {
+        numberVis.swap(5);
+        numberVis.reset();
+    });
 
 
 };
@@ -127,5 +172,6 @@ q.queue()
     .defer(d3.csv, "data/WHO_death_data_clean.csv")
     .defer(d3.csv, "data/beijing-data-2015.csv")
     .defer(d3.csv, "data/World Bank pm2.5 over time.csv")
+    .defer(d3.csv, "data/World Bank six key metrics.csv")
     .await(initialDataLoad);
 

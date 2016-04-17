@@ -34,9 +34,65 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
         }
+        else if (name === "metrics") {
+            processedDataset = model.processMetrics(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else {
             throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
+    };
+
+    model.processMetrics = function (dataset) {
+
+        // INPUT"
+        //Country Name,
+        // Country Code,
+        // Type,
+        // Electricity production from coal sources (% of total),
+        // Forest area (% of land area),
+        // Pump price for gasoline (US$ per liter),
+        // "Gross enrolment ratio, tertiary, both sexes (%)",
+        // Average precipitation in depth (mm per year),
+        // "Life expectancy at birth, total (years)"
+
+        var values = {
+            countries: [],
+            aggregate: []
+        };
+
+        dataset.forEach(function (d) {
+            var newValue = {};
+
+            newValue.name = d["Country Name"];
+            newValue.code = d["Country Code"];
+            newValue.type = d["Type"];
+
+            newValue.electricity = +d["Electricity production from coal sources (% of total)"];
+            newValue.forest = +d["Forest area (% of land area)"];
+            newValue.gasoline = +d["Pump price for gasoline (US$ per liter)"];
+            newValue.education = +d["Gross enrolment ratio, tertiary, both sexes (%)"];
+            newValue.life = +d["Life expectancy at birth, total (years)"];
+            newValue.precipitation = +d["Average precipitation in depth (mm per year)"];
+            newValue.pm = +d["PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)"];
+
+            if (isNaN(newValue.pm)) {
+                return;
+            }
+
+            if (newValue.type === "Country") {
+                values.countries.push(newValue);
+            }
+            else {
+                values.aggregate.push(newValue);
+            }
+        });
+
+
+        return values;
+
+
     };
 
     model.processYearlyData = function (dataset) {

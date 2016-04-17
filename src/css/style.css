@@ -219,7 +219,8 @@ body, html {
     text-align: right;
     background-color: brown;
 }
-.next-banner > span > a{
+
+.next-banner > span > a {
     color: white;
 }
 
@@ -233,6 +234,23 @@ body, html {
     padding: 10px 100px;
 }
 
-.processImg{
+.processImg {
     width: 50%;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contenttop {
+    position: relative;
+    min-height: 100px;
+}
+
+.label {
+    font-size: 10px;
+    text-anchor: middle;
+    opacity: 0.5;
 }
