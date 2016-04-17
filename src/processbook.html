@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">
+
+    <div class="next-banner ">
+        <span class="left"><a href="/">CS171 - Free Radicals</a></span>
+        <span><a href="/processbook.html">ProcessBook</a></span>
+    </div>
+    <div class="title">
+
+        <h2>Death in the Air</h2>
+        <h2>Process Book</h2>
+
+        <h4>Synopsis: An exploration of air pollution, its health impacts, and what can be done
+            about it.</h4>
+
+        <h4>Code: <a
+                href="https://github.com/free-radicals/AirPollution">https://github.com/free-radicals/AirPollution</a>
+        </h4>
+
+
+        <h4>Free Radicals - Craig Houston, Dominick Peluso & Marius de Vogel</h4>
+        <br>
+    </div>
+
+
+</div>
+
+<div class="part ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Overview and Motivation</h2>
+                <p>
+                    <b>Overview</b><br>
+                    Our project will guide people on an exploration of air pollution starting in their home city and
+                    expanding to include analysis at the national and international level. This we hope will provide our
+                    readers with an engaging tool to inform themselves about how air pollution varies around the world,
+                    what are the health impacts, and what can be done about it.<br><br><br>
+
+
+                    <b>Background</b><br>
+                    In 2013 air pollution was responsible for an estimated 5.5 million deaths, making it the 4th highest
+                    ranking risk factor for death globally. People in every country of the world are impacted by air
+                    pollution but it is challenging to convey the scale of the problem in a way that is universally
+                    relevant and compelling.<br><br>
+
+                    We decided to put the reader at the center of journey beginning right in their home city, so they
+                    can explore the topic of air pollution around the world from a starting point they can relate to. In
+                    this way we hope to better engage our readers, to make them stop and think about the air we all
+                    breathe, and to take action to reduce the damaging health effects and loss of human potential caused
+                    by dirty air.<br><br><br>
+
+
+                    <b>Motivation</b><br>
+                    Some of our team members have had the misfortune of living in cities where the air pollution is
+                    extremely bad and found it hard to convey how unhealthy the air can be to people who have only lived
+                    in cities with relatively clean air. On more than one occasion we have been asked “is the air in
+                    Beijing worse than Mexico City?”.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+
+</div>
+<div class="part darkBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Related Work</h2>
+                <p>
+
+                    The idea for using Horizontal bars to represent air pollution came partially from the website
+                    Hipmunk, which uses the same approach display flight information. The idea of using position for
+                    your most important metric, and the elegance of the Hipmunk visual encoding was further reinforced a
+                    <a href="https://www.youtube.com/watch?v=R-oiKt7bUU8">lecture</a> titled “Designing Data
+                    Visualization given by Noah Iliinsky at LinkedIn (see video at 37:00)
+
+                    <img class="thumbnail processImg" src="img/related1.png" alt="Iliinsky1"/>
+
+
+                </p>
+                <p>
+
+                    The excellent data visualization documentary The Fallen of World War II (http://www.fallen.io/ww2/ )
+                    was an inspiration for how to represent the imapct of human loss from air pollution in an engaging
+                    and impactful way.
+
+
+                    <img class="thumbnail processImg" src="img/related3.png" alt="fallenIO"/>
+
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+
+<div class="part">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Existing EPA options for visualizing data
+                </h2>
+                <p>
+                    EPA includes four basic visualization methods: <br>
+
+
+                </p>
+                <p>
+                    AQI Plot
+                    <img class="thumbnail processImg" src="img/option1.png" alt="AQI"/>
+                </p>
+                <p>
+                    Tile Plot
+                    <img class="thumbnail processImg" src="img/option2.png" alt="Tile"/>
+                </p>
+                <p>
+                    Concentration Plot
+                    <img class="thumbnail processImg" src="img/option3.png" alt="Concentration1"/>
+                </p>
+                <p>
+                    Concentration Map
+                    <img class="thumbnail processImg" src="img/option4.png" alt="Concentration2"/>
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+
+<div class="part darkBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Project Objectives</h2>
+                <p>
+                    <b>Make</b> readers stop and think about the air they breathe.<br>
+                    Encourage readers who benefit from relatively clean air to <b>reflect</b> on the value of
+                    environmental
+                    protection measures they may be taking for granted.<br>
+                    Build <b>awareness</b> and <b>empathy</b> for those who have to breathe highly polluted air every
+                    day.<br>
+                    <b>Educate</b> readers about what they can do to project themselves from the negative health impacts
+                    of
+                    breathing polluted air.<br>
+                    <b>Compel</b> readers to take <b>action</b> and adopt habits that can help reduce the air pollution
+                    problem.<br>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Questions
+                </h2>
+                <p>
+                    <b>How polluted is the air in my city?</b><br>
+                    In absolute terms, the concentration of pollutants in any given city is not very revealing. We think
+                    readers will be much more engaged and interested if they can compare relative pollution between
+                    their own city and others. We think giving the readers this context of a place they know first, will
+                    make comparisons more impactful.<br><br>
+
+                    <b>How polluted is the air in my country compared to others?</b><br>
+                    This is a natural extension of the question above and by layering this new information on top of the
+                    previous city level comparison we build a stronger sense of context.<br><br>
+
+                    <b>Is air pollution really that big of a problem?</b><br>
+                    Act 2: Death, will really bring home to the reader the true human cost of air pollution through the
+                    lives lost every year.<br><br>
+
+                    <b>What is it like to live in a city with bad air?</b><br>
+                    Our section “A year in the life of Beijing’s air” will take readers through a year of pollution,
+                    highlighting the impact it has on the daily lives of its residents.<br><br>
+
+                    <b>What causes air pollution?</b><br>
+                    Our section “Behind the numbers: factors contributing to pollution” will invite readers to explore
+                    this question. This will be supported by additional text and links to air pollution studies.<br><br>
+
+                    <b>What can I do about air pollution?</b><br>
+                    Act 3: Action, will inform the reader about what they can do to a) protect themselves from the
+                    impacts of air pollution and b) what actions they can take to reduce the problem.<br><br>
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part darkBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Data</h2>
+                <p>
+                    <b>Data cleaning April 7<br>
+                        WHO Particulate matter dataset</b><br><br>
+
+                    The cleaned WHO particulate matter dataset consists of the data channels shown below. For each we
+                    provide details of any data wrangling performed.<br><br>
+
+                    <b>Region:</b><br>
+                    No changes.<br><br>
+
+                    <b> Subregion:</b><br>
+                    No changes.<br><br>
+
+                    <b>Coutry:</b><br>
+                    Modified country names for Tanzania(id 16), Bolivia (18, 19), Venezuela(99, 100)<br><br>
+
+                    <b>City:</b><br>
+                    A number of names had unnecessary parenthesis or additional location information such as “urban”,
+                    “rural”, “district” which was removed. All suspicious names were checked against the google city
+                    name API to check for compatibility and altered if a sutable match was not found.<br><br>
+
+                    The following city names were modified: Buchanan (2), Sanniquelle (3), Baeu Bassin-Rose Hill (4),
+                    Flacq (5), Cape Town (9), Pretoria (11), Tshwane (13), Vaal Priority (14 - deleted), Clarendon (85),
+                    Puerto la Cruz (99), Chalk River (188), Al Ain (660), Brussels (778), Jirkov (787), Annemasse (846).
+                    Lens (851), Frankfurt Oder (912 - deleted) , Frankfurt (913), Kempten (927), Haifa (979), Heftzibah
+                    (980), Karmei Yosef (981), Kibbutz Erez (982), Kibbutz Sde Yo’av (983), Alicante (1139), Castellon
+                    de la Plana (1148), Elche (1151), Pamplona (1170), San Sebastian (1173), Dawki (1262), Male (1364),
+                    Hong Kong (1426), Belait (1545), Brunei-Maura (1546), Temburong (1547), All Japanese cities had
+                    extraneous leading text removed form city name.<br><br>
+
+
+                    Example of data file name checking with google api<br>
+                    <img class="thumbnail processImg" src="img/data1.png" alt="maps api"/>
+                    <br><br>
+
+
+                    <b> StationId:</b><br>
+                    A unique numerical station number was added for each entry in both the original and cleaned data
+                    files. This identifier will allow the reader to go back to the original file and check the value of
+                    all removed data parameters for any given entry, should this be of interest.<br><br>
+
+                    <b> pp10Mean:</b><br>
+                    Renamed in camelCase.<br><br>
+
+                    <b>pm10Year:</b><br>
+                    Renamed in camelCase. For any entry which contained a range of dates (e.g. 2009-2001), the later
+                    date was used so that only a single value appears. This only occurred for station id’s 665 and 1296.<br><br>
+
+                    <b>pm10Converted:</b><br>
+                    New column indicating “Yes” if the pm10 value was converted from pm2.5 data. In total there were 454
+                    records which matched this criteria.<br><br>
+
+                    <b>pm10ConvertedNote:</b><br>
+                    The channel shows a key which can be looked up to tell what type of data conversion was applied.<br><br>
+
+                    <b>pm10ConvertedAlert:</b><br>
+                    In this column we add warning text to be displayed in a tooltip for any pm10 data that was converted
+                    from pm2.5 measurements: “This PM10 value has been derived from a PM2.5 measurement, therefore
+                    caution is advised when interpreting this result.”<br><br>
+
+                    <b>pm2.5Mean:</b><br>
+                    Renamed in camelCase.<br><br>
+
+                    <b> pm2.5Year:</b><br>
+                    Renamed in camelCase.<br><br>
+
+                    <b>pm2.5Converted:</b><br>
+                    New column indicating “Yes” if the pm2.5 value was converted from pm10 data. In total there were 720
+                    records which matched this criteria.<br><br>
+
+                    <b>pm2.5ConvertedNote:</b><br>
+                    The channel shows a key which can be looked up to tell what type of data conversion was applied.<br><br>
+
+                    <b>pm2.5ConvertedAlert:</b><br>
+                    In this column we add warning text to be displayed in a tooltip for any pm2.5 data that was
+                    converted from pm10 measurements: “This PM2.5 value has been derived from a PM10 measurement,
+                    therefore caution is advised when interpreting this result.”<br><br>
+
+                    <b>temporalCoverage:</b><br>
+                    Renamed in camelCase.<br><br>
+
+                    <b>dataCoverageAlert:</b><br>
+                    Here we add a warning whenever the temporal coverage is indicated to be below 75%: “This station has
+                    low data coverage (<75%), therefore the annual mean pollution level may not be an accurate
+                    representation of the annual conditions.”<br><br>
+
+
+                    In addition, the value NA was inserted where no data was available:
+                    PM10 (98 entries), pm10Year (552 entries), pm2.5 (7 entries), pm2.5Year (728 entries).<br><br>
+
+                </p>
+                <br>
+                <p>
+                    <b>Data cleaning April 10<br>
+                        20 Leading Causes of Death</b><br><br>
+
+                    The Causes of Death data was already structured and cleaned by the WHO organization. We only
+                    modified the data by adding information of air pollution. There were two tables; the data of 2000
+                    and 2012. The 2000 data was dropped completely.<br><br>
+
+                    <b> Rank</b><br>
+                    Removed.<br><br>
+
+                    <b> Cause</b><br>
+                    No changes.<br><br>
+
+                    <b>Deaths</b><br>
+                    Removed.<br><br>
+
+
+                    <b> Deaths per 100.000</b><br>
+                    Because the 3.7 million deaths caused by air pollution are diagnosed as other diseases (source),
+                    those deaths had to be removed from the totals of the individual diseases to prevent duplicate
+                    deaths. The removed counts were added as separate rows with air pollution as their parent. Because
+                    of this, it is possible to zoom into the air pollution numbers.<br><br>
+
+                    <b>% Deaths</b><br>
+                    After the total deaths (Deaths per 100.000) were recalculated, the percentages were updated to keep
+                    the data consistent.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Exploratory Data Analysis</h2>
+                <p>
+                    Behind the Numbers:<br>
+                    We performed an initial check to see which country level metrics available from the World Bank would
+                    offer interesting insights for the user. We used Tableau as a tool to perform this analysis because
+                    it makes it easy to perform rapid testing of chart results before we jump into coding. An exerpt
+                    from the Tableau analysis is shown below:<br>
+                    <img class="thumbnail processImg" src="img/analysis1.png" alt="Tableau"/>
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part darkBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Design Evolution</h2>
+                <p>
+
+                    <b>introduction</b><br><br>
+                    TODO
+
+
+                </p>
+                <p>
+                    <b> Act 1: Air</b><br><br>
+
+                    TODO
+
+                </p>
+
+                <p>
+                    <b> Act 1: beijing</b><br><br>
+
+                    TODO
+
+                </p>
+
+
+                <p>
+                    <b> Act 2: Death development</b><br><br>
+
+                    We first had the problem of how to show external svg files with d3. After some research we were able
+                    to show skeletons based on the amount of deaths.<br>
+                    Because these skeletons consist of quite some whitespace, hovering and clicking on them was not as
+                    easy as it looks. This white space also made it less obvious what the border of each group
+                    was.<br><br>
+                    <img class="thumbnail processImg" src="img/redesign1.png" alt="skeletons"/>
+
+                    We changed the skeletons to show coffins instead. This made the visualization easier to understand
+                    by glancing at it.
+                    <img class="thumbnail processImg" src="img/redesign2.png" alt="koffins"/>
+
+                </p>
+
+                <p>
+                    <b>Act 3: Act development</b><br><br>
+
+                    At first, we build a flat world map, where you would be zoomed in into the selected city.
+                    When we noticed this could cause trouble with cities in the middle of big countries, we added a
+                    topojson file which also showed all regions. this file was 9mb.<br><br>
+
+                    Old testversion:
+                    <a href="http://mariusdv.nl/tests/mapzoom/">http://mariusdv.nl/tests/mapzoom/ </a><br><br>
+
+                    We later changed the design to a globe and reverted back to the old topojson file.
+                    This globe was automatically turned to center your city. After some more brainstorming, we decided
+                    that it would be pretty to show your city as a pulsing marker, but also let the globe auto-rotate.
+                    which is our current version.
+
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Implementation</h2>
+                <p>
+                    <b>Build Automation and Project Bootstrapping</b><br>
+
+                    We decided that we wanted to try our best to follow modern Javascript development best-practices.
+                    This included bootstrapping our project with build automation tools and test integration. Before we
+                    could start that process, we chose to host our project on GitHub. GitHub will not only host our web
+                    page but will also handle all version control. We started a new repository at this location:
+                    <a href="https://github.com/dominickp/AirPollution">https://github.com/dominickp/AirPollution</a>
+                    <br><br>
+
+                    All of these technologies use Node.js to run, which is a Javascript runtime that runs on a local
+                    computer. Node has a package manager called NPM. Within NPM, we initialized the project, allowing us
+                    to add project dependencies. We first added Gulp, which is a task-runner for Node. Once Gulp was in
+                    the repo, we configured it to run JShint, Karma, Jasmine, a CSS minifier, a JS uglifier, Browserify,
+                    and live-reload server.<br><br>
+
+                    JShint is a linter that will alert us if we write any Javascript code that is non-standard or
+                    error-prone. Karma is a test runner which is configured to run Jasmine tests, used for providing
+                    test coverage in our code. We use gulp to move the source copy of our HTML file to the /dist/
+                    directory of our repo. At the same time, we copy all CSS into the /dist/ repo, minifying it at the
+                    same time to reduce the overall payload. Similarly, our Javascript is bundled up in Browserify,
+                    minified, then copied over to /dist/, where the HTML file references it locally. Browserify is nice
+                    because it allows us to make our code modular, so we don’t have to cram all of our logic in a single
+                    file.<br><br>
+
+                    Lastly, the live-reload server allows us to navigate to http://localhost:8080/ to see the current
+                    copy of our application. If any changes are made, this page automatically refreshes. Additionally,
+                    Gulp repeats most processes when any code changes occur, so if we introduce a bug in the code it
+                    will be caught by JShint or Karma and would show in the live-reload server instantly.<br><br>
+
+                    Now we can easily write quality Javascript code with a lot of tools on our side ensuring we see
+                    mistakes being introduced as soon as they happen. All of this (once configured) can be activated
+                    easily by typing “gulp” from the project directory:
+                    <img class="thumbnail processImg" src="img/implementation1.png" alt="gulp"/>
+
+                </p>
+                <p>
+                    <b>Introduction</b><br>
+
+                    TODO: Explain Vis.
+
+                </p>
+                <p>
+                    <b>Act 1: Air</b><br>
+                    TODO: Explain Vis.
+
+                </p>
+                <p>
+                    <b>Act 1: Beijing</b><br>
+                    TODO: Explain Vis.
+
+                </p>
+                <p>
+                    <b>Act 2</b><br>
+
+                    TODO: Explain Vis.
+                </p>
+                <p>
+                    <b>Act 3</b><br>
+
+                    TODO: Explain Vis.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="next-banner">
+    </div>
+</div>
+<div class="part darkBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Evaluation</h2>
+                <p>
+                    What did you learn about the data by using your visualizations? How did you answer your questions?
+                    How well does your visualization work, and how could you further improve it?
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

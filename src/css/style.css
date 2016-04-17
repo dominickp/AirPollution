@@ -210,18 +210,29 @@ body, html {
     min-height: 98vh;
 }
 
+.darkBackground {
+    background-color: #f5f5f5;
+}
+
 .next-banner {
     padding: 10px;
     text-align: right;
     background-color: brown;
 }
+.next-banner > span > a{
+    color: white;
+}
 
-.left{
-    text-align: left;
+.left {
+    float: left;
 }
 
 .next-banner > .next {
     background-color: transparent;
     color: white;
     padding: 10px 100px;
+}
+
+.processImg{
+    width: 50%;
 }
