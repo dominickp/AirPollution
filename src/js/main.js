@@ -79,7 +79,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     // get all "next" buttons
     var buttons = document.getElementsByClassName("next");
-
+    var text = document.getElementsByClassName("text");
     // give them the on-click action
     if (buttons) {
         for (var i = 0; i < buttons.length; i++) {
@@ -101,9 +101,12 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         // remove buttons after click (act2, act3)
         webController.setAction(2, function () {
             $(buttons[1]).addClass("hidden");
+            $(text[1]).addClass("hidden");
         });
         webController.setAction(3, function () {
             $(buttons[2]).addClass("hidden");
+            $(text[2]).addClass("hidden");
+
         });
     }
 

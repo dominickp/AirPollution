@@ -62,6 +62,15 @@ var WebController = function (pages, service) {
 
         });
 
+        $(".text").each(function () {
+
+            console.log(this);
+            if ($(this).hasClass("hidden")) {
+                $(this).removeClass("hidden");
+            }
+
+        });
+
 
         model.page = 1;
     };

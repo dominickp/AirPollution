@@ -228,9 +228,9 @@ body, html {
     float: left;
 }
 
-.next-banner > .next {
-    background-color: transparent;
-    color: white;
+.next-banner > .next, .next-banner > .text {
+    background-color: white;
+    color: brown;
     padding: 10px 100px;
 }
 
@@ -253,4 +253,11 @@ body, html {
     font-size: 10px;
     text-anchor: middle;
     opacity: 0.5;
+}
+
+.text {
+    background-color: transparent !important;
+    color: white !important;
+    margin: 0;
+
 }
