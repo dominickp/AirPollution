@@ -19,6 +19,7 @@ var DeathVisualization = require('./vis/2_death.js');
 var ActionVisualization = require('./vis/3_action.js');
 var NumbersVisualization = require('./vis/1_behind_numbers.js');
 var YearVisualization = require('./vis/intro_year.js');
+var AllCountryVisualization = require('./vis/1_all_countries.js');
 // Start the service
 var service = new Service();
 
@@ -57,6 +58,10 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Peshwar'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
     service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
+
+    // Load show all vis
+    var allCitiesView = new AllCountryVisualization("#vis-1-all", service);
+    webController.setAction(1, allCitiesView.update);
 
     // Load beijing
     var beijingVisualization = new BeijingVisualization("#vis-1-beijing", service);
