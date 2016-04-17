@@ -10,8 +10,8 @@
 <div class="header">
 
     <div class="next-banner ">
-        <span class="left"><a href="/">CS171 - Free Radicals</a></span>
-        <span><a href="/processbook.html">ProcessBook</a></span>
+        <span class="left"><a href="index.html">CS171 - Free Radicals</a></span>
+        <span><a href="processbook.html">ProcessBook</a></span>
     </div>
     <div class="title">
 
@@ -221,6 +221,159 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Data</h2>
+
+                <h3>Datasets</h3>
+                <b>Act 1: Air</b><br><br>
+
+                The central visualization for Act 1 shows air pollution data for various cities and countries using
+                horizontal bars layered out in a stacked gantt chart style. All of the data for this visualization is
+                contained in the following WHO data file:<br><br>
+
+
+                <table class="table">
+                    <tr>
+                        <td>Data</td>
+                        <td>Ambient (outdoor) air pollution in cities database 2014.</td>
+                    <tr>
+                        <td>Source</td>
+                        <td>World Health Organization.</td>
+                    </tr>
+                    <tr>
+                        <td>Format</td>
+                        <td>.xls</td>
+                    </tr>
+                    <tr>
+                        <td>Parameters</td>
+                        <td>Annual average particulate matter concentrations (PM2.5, PM10).</td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>
+                            This file contains detailed particulate matter data for over 1500 cities around the world
+                            and
+                            will supply the core information for Act 1.
+                        </td>
+                    </tr>
+
+                </table>
+
+
+                The main air pollution visualization will be followed by three subsections which allow the reader to
+                explore more details about air pollution: <br><br>
+
+                “A year in the life of Beijing’s air”<br>
+                “Behind the numbers: factors contributing to pollution”,<br><br><br>
+
+
+                The following data sources will be used to deliver these subsections:<br><br>
+
+                <b>A year in the life of Beijing’s air</b>
+                <table class="table">
+                    <tr>
+                        <td>Data</td>
+                        <td>High resolution pollution time series</td>
+                    <tr>
+                        <td>Source</td>
+                        <td>US embassy Beijing</td>
+                    </tr>
+                    <tr>
+                        <td>Format</td>
+                        <td>.xls</td>
+                    </tr>
+                    <tr>
+                        <td>Parameters</td>
+                        <td> Hourly PM2.5 data</td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>
+                            While the annual average PM2.5 data supplied by the WHO is useful for
+                            broad city and country comparisons, it does not tell the full story about the day to day air
+                            pollution
+                            issues that people face, especially in very polluted cities. This data will help us tell the
+                            stories of
+                            air pollution over a year in Beijing and Delhi, focusing on the extreme pollution events
+                            which are all
+                            too common and especially dangerous to our health.
+                        </td>
+                    </tr>
+
+                </table>
+
+                <b>Behind the numbers: factors contributing to air pollution</b>
+                <table class="table">
+                    <tr>
+                        <td>Data</td>
+                        <td><b> Multiple country level metrics which add context to the pollution problem: </b><br>
+                            Energy production from coal, by country <br>
+                            Fossil fuel energy consumption by country <br>
+                            Population density by country <br>
+                            Forested area, % of land area <br>
+                            Renewable energy consumption <br>
+                            Urban population (% of total) <br>
+                            Population in urban agglomerations of more than 1 million (% of total population) <br>
+                            Pump price for gasoline (US$ per liter) <br>
+                            Gross enrolment ratio, tertiary, both sexes (%) <br>
+                        </td>
+                    <tr>
+                        <td>Source</td>
+                        <td>World Bank</td>
+                    </tr>
+                    <tr>
+                        <td>Format</td>
+                        <td>.xls</td>
+                    </tr>
+
+                </table>
+
+
+                <b>Act 2: Death</b><br><br>
+
+                In Act 2 we focus the reader's attention on the human impact of the air pollution see in Act 1. The
+                central visualization will show deaths from air pollution around the world, and compare this with other
+                causes of death. The source for this data is again the WHO:<br>
+
+                <table class="table">
+                    <tr>
+                        <td>Data</td>
+                        <td> Global health estimates: Deaths by cause, age and sex
+                            (20 Leading Causes of Death)
+                        </td>
+                    <tr>
+                        <td>Source</td>
+                        <td> World Health Organization.</td>
+                    </tr>
+                    <tr>
+                        <td>Format</td>
+                        <td>.xls</td>
+                    </tr>
+                    <tr>
+                        <td>Parameters</td>
+                        <td> Rank, cause, percent of total annual deaths, deaths per 100,000.</td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>
+                            The data here is supplied as part of the comprehensive Global Burden of Disease study and
+                            contains
+                            detailed breakdowns of deaths by cause. There is too much information here to present
+                            everything, so we
+                            will focus on the top 20 causes of death, plus a few other notable causes that are familiar
+                            with readers
+                            but may not be in the top 20.
+                        </td>
+                    </tr>
+
+                </table>
+
+
+                <b>Act 3: Action</b><br><br>
+                In the final act we bring the reader back to think about their home town and what they can do to both
+                protect their health from air pollution, and what actions can be taken to help reduce the problem. No
+                data visualizations are proposed for this section, but information from the Environmental
+                Protection Agency and other sources of advice on air pollution will be used.
+
+                <h3>Scraping</h3>
                 <p>
                     <b>Data cleaning April 7<br>
                         WHO Particulate matter dataset</b><br><br>
@@ -341,7 +494,9 @@
                     After the total deaths (Deaths per 100.000) were recalculated, the percentages were updated to keep
                     the data consistent.
                 </p>
-
+                <h1>
+                    TODO: SCRAPING WORLD BANK DATA
+                </h1>
 
             </div>
         </div>
@@ -396,11 +551,17 @@
                     TODO
 
                 </p>
+                <p>
+                    <b> Act 1: Behind the numbers</b><br><br>
+
+                    TODO
+
+                </p>
 
 
                 <p>
                     <b> Act 2: Death development</b><br><br>
-
+                    <img class="thumbnail processImg" src="img/design_draw1.png" alt="drawing1"/>
                     We first had the problem of how to show external svg files with d3. After some research we were able
                     to show skeletons based on the amount of deaths.<br>
                     Because these skeletons consist of quite some whitespace, hovering and clicking on them was not as
@@ -416,13 +577,14 @@
 
                 <p>
                     <b>Act 3: Act development</b><br><br>
-
+                    <img class="thumbnail processImg" src="img/design_draw2.png" alt="world1"/>
                     At first, we build a flat world map, where you would be zoomed in into the selected city.
                     When we noticed this could cause trouble with cities in the middle of big countries, we added a
                     topojson file which also showed all regions. this file was 9mb.<br><br>
 
                     Old testversion:
-                    <a href="http://mariusdv.nl/tests/mapzoom/">http://mariusdv.nl/tests/mapzoom/ </a><br><br>
+                    <a href="http://mariusdv.nl/tests/mapzoom/">http://mariusdv.nl/tests/mapzoom/ </a> (slow
+                    load)<br><br>
 
                     We later changed the design to a globe and reverted back to the old topojson file.
                     This globe was automatically turned to center your city. After some more brainstorming, we decided
@@ -450,7 +612,7 @@
                     This included bootstrapping our project with build automation tools and test integration. Before we
                     could start that process, we chose to host our project on GitHub. GitHub will not only host our web
                     page but will also handle all version control. We started a new repository at this location:
-                    <a href="https://github.com/dominickp/AirPollution">https://github.com/dominickp/AirPollution</a>
+                    <a href="https://github.com/free-radicals/AirPollution">https://github.com/free-radicals/AirPollution</a>
                     <br><br>
 
                     All of these technologies use Node.js to run, which is a Javascript runtime that runs on a local
@@ -496,6 +658,11 @@
 
                 </p>
                 <p>
+                    <b>Act 1: Behind the Numbers</b><br>
+                    TODO: Explain Vis.
+
+                </p>
+                <p>
                     <b>Act 2</b><br>
 
                     TODO: Explain Vis.
@@ -518,10 +685,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Evaluation</h2>
-                <p>
-                    What did you learn about the data by using your visualizations? How did you answer your questions?
+                <h3>
+                    TODO: What did you learn about the data by using your visualizations? How did you answer your
+                    questions?
                     How well does your visualization work, and how could you further improve it?
-                </p>
+                </h3>
 
 
             </div>
