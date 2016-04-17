@@ -21,11 +21,17 @@ var yearlyVis = function (container_selector, service) {
         // var years = [1990, 1995, 2000, 2005, 2010, 2011, 2013];
         String += d["Country Name"] + "<br>";
         if ((d["2013"] - d["1990"]) > 0) {
-            String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "%";
+            String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
+
         }
         else {
-            String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "%";
+            String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
+
         }
+        if (!d.active) {
+            String += "Click to pin";
+        }
+
 
         return String;
     });
