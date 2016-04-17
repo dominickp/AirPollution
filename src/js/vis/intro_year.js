@@ -20,13 +20,12 @@ var yearlyVis = function (container_selector, service) {
         var String = "";
         // var years = [1990, 1995, 2000, 2005, 2010, 2011, 2013];
         String += d["Country Name"] + "<br>";
-        String += "1990: " + d["1990"] + "<br>";
-        String += "1995: " + d["1995"] + "<br>";
-        String += "2000: " + d["2000"] + "<br>";
-        String += "2005: " + d["2005"] + "<br>";
-        String += "2010: " + d["2010"] + "<br>";
-        String += "2011: " + d["2011"] + "<br>";
-        String += "2013: " + d["2013"] + "<br>";
+        if ((d["2013"] - d["1990"]) > 0) {
+            String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "%";
+        }
+        else {
+            String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "%";
+        }
 
         return String;
     });
@@ -43,7 +42,7 @@ var yearlyVis = function (container_selector, service) {
     model.line = model.svg.append("g");
     model.lines = model.svg.append("g");
     model.labels = model.svg.append("g");
-    var x = d3.scale.linear()
+    var x = d3.time.scale()
         .range([0, width]);
 
     var y = d3.scale.linear()
@@ -57,7 +56,7 @@ var yearlyVis = function (container_selector, service) {
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .ticks(10)
+        .tickValues([1990, 1995, 2000, 2005, 2010, 2013])
         .tickFormat(d3.format(""));
 
     var yAxis = d3.svg.axis()
@@ -112,11 +111,28 @@ var yearlyVis = function (container_selector, service) {
         .on('mouseover', function (d) {
             d3.select(this).style('stroke', 'brown').style('opacity', 1).style('cursor', 'pointer');
             model.tooltip.show(d);
+            if (!d.active) {
+                var index = model.labelData.indexOf(d);
+                if (index === -1) {
+                    model.labelData.push(d);
+                    model.updateLabel();
+                }
+
+            }
+
         })
         .on('mouseout', function (d) {
             model.tooltip.hide(d);
+
             if (!d.active && !d.tempActive) {
                 d3.select(this).style('stroke', 'gray').style('opacity', 0.2);
+
+                var index = model.labelData.indexOf(d);
+                if (index > -1) {
+                    console.log(index);
+                    model.labelData.splice(index, 1);
+                    model.update();
+                }
                 return;
             }
             d3.select(this).style('stroke', 'brown').style('opacity', 1);
@@ -133,7 +149,10 @@ var yearlyVis = function (container_selector, service) {
                 }
             }
             else {
-                model.labelData.push(d);
+                var index = model.labelData.indexOf(d);
+                if (index === -1) {
+                    model.labelData.push(d);
+                }
             }
             d.active = !d.active;
             model.update();
@@ -153,9 +172,7 @@ var yearlyVis = function (container_selector, service) {
 
     };
 
-    model.update = function () {
-
-
+    model.updateLabel = function () {
         // labels
         model.labels.selectAll("text").data(model.labelData, function (d) {
             return d["Country Name"];
@@ -166,7 +183,12 @@ var yearlyVis = function (container_selector, service) {
             })
             .enter().append("text")
             .attr("x", width)
-            .style('fill', 'brown')
+            .style('fill', function (d) {
+                if (d.active) {
+                    return 'brown';
+                }
+                return 'gray';
+            })
             .attr("y", function (d) {
                 console.log(d);
                 return y(d["vals"][6].val);
@@ -194,6 +216,23 @@ var yearlyVis = function (container_selector, service) {
                 d.active = !d.active;
                 model.update();
             });
+
+        //update
+        model.labels.selectAll("text").data(model.labelData, function (d) {
+                return d["Country Name"];
+            })
+            .style('fill', function (d) {
+                if (d.active) {
+                    return 'brown';
+                }
+                return 'gray';
+            });
+    };
+
+    model.update = function () {
+
+        model.updateLabel();
+
 
         // lines
         model.lines.selectAll("path").data(model.countries)
