@@ -275,12 +275,7 @@ var behindNumbers = function (container_selectors, service) {
             .attr("cy", -50)
             .remove();
 
-        //model.values[raster].text
-        //    .selectAll("text").data(model.values[raster].data, function (d) {
-        //    return d.name;
-        //}).exit()
-        //    .remove();
-        //
+
         model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
                 return d.name;
             })
@@ -297,22 +292,6 @@ var behindNumbers = function (container_selectors, service) {
                 return d.name;
             }).attr("class", "label")
             .style("opacity", 0);
-        //
-        //
-        //model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
-        //        return d.name;
-        //    })
-        //    .attr("x", function (d) {
-        //        return model.values[raster].x(d[lookup[p].key]);
-        //    })
-        //    .attr("y", function (d) {
-        //        return model.values[raster].y(d[lookup[lookup.length - 1].key])
-        //            - 10;
-        //    })
-        //    .html(function (d) {
-        //        return d.name;
-        //    })
-        //    .style("opacity", 0);
 
 
         model.values[raster].svg
