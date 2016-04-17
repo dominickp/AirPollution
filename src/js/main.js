@@ -5,6 +5,7 @@ var $ = require("jquery");
 //var typeahead = require("typeahead.js-browserify");
 //typeahead.loadjQueryPlugin();
 var d3tip = require('d3-tip')(d3);
+var sweetalert = require('sweetalert');
 
 var Service = require('./service');
 var WebController = require('./webController');
@@ -33,6 +34,7 @@ console.log('d3', d3);
 console.log('d3-queue', q);
 console.log('topojson', topojson);
 console.log('d3-tip', d3tip);
+console.log('sweetalert', sweetalert);
 
 
 var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics) {

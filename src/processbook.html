@@ -585,12 +585,14 @@
 
 
                 </p>
-                <p>
+                <div>
                     <b> Act 1: Air</b><br><br>
 
-                    TODO
+                    <p>
+                        We found several issues with our original design. Labelling the countries turned out to be very tricky since they would easily overlap. For example, if you lived in a country which had a similar PM 2.5 level to the WHO safe level, the labels would overlap. We overcame this by extending the line by 10px based on the index value of the city, which allowed each city added to be longer than the last. This helped but it extended the vertical height of the chart greatly.
+                    </p>
 
-                </p>
+                </div>
 
                 <p>
                     <b> Act 1: beijing</b><br><br>
@@ -697,7 +699,12 @@
                 </p>
                 <p>
                     <b>Act 1: Air</b><br>
-                    TODO: Explain Vis.
+                    <p>
+                        Creating this visualization was pretty simple after a bit of exploration. In D3, each datum is a vertical line which is placed on the x coordinate with a simple scale. The tricky part was treating each line differently. Obviously, the user's home city should display differently from the "additional" cities they add to the chart. Given that we handled the current city within our Service object, it meant that we needed to have two sets of data in the chart. This worked, but meant I had to duplicate code more than I liked.
+                    </p>
+                    <p>
+                        The chart also required an additional city selector, which meant we had to use typeahead.js again, like we did in the introduction. Because the view and logic code was not decoupled, we had to duplicate the CityPicker class, tweaking it slightly. I wasn't concerned about this duplication at the time, but we discovered that we really had to add the country to the typeahead suggestions for instances like "London, CA" and "London, UK", both showing as "London". Fixing this was more troublesome because it had to be fixed in two places instead of one.
+                    </p>
 
                 </p>
                 <p>
