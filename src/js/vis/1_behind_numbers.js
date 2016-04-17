@@ -122,7 +122,9 @@ var behindNumbers = function (container_selectors, service) {
 
         points
             .selectAll("circle")
-            .data(data)
+            .data(data, function (d) {
+                return d.name;
+            })
             .enter()
             .append("circle")
             .attr("cx", function (d) {
@@ -143,7 +145,9 @@ var behindNumbers = function (container_selectors, service) {
                 model.reset();
             });
 
-        text.selectAll("text").data(data)
+        text.selectAll("text").data(data, function (d) {
+                return d.name;
+            })
             .enter()
             .append("text")
             .attr("x", function (d) {
@@ -176,7 +180,9 @@ var behindNumbers = function (container_selectors, service) {
         for (var i = 0; i < container_selectors.length; i++) {
             model.values[i].svg
                 .selectAll("circle")
-                .data(model.values[i].data)
+                .data(model.values[i].data, function (d) {
+                    return d.name;
+                })
                 .each(function (d) {
                     if (d.name === name) {
                         d3.select(this).attr("fill", "brown")
@@ -184,7 +190,9 @@ var behindNumbers = function (container_selectors, service) {
                     }
                 });
 
-            model.values[i].text.selectAll("text").data(model.values[i].data)
+            model.values[i].text.selectAll("text").data(model.values[i].data, function (d) {
+                    return d.name;
+                })
                 .each(function (d) {
                     if (d.name === name) {
                         d3.select(this).style("opacity", null);
@@ -198,7 +206,9 @@ var behindNumbers = function (container_selectors, service) {
         model.active++;
         model.values[raster].svg
             .selectAll("circle")
-            .data(model.values[raster].data)
+            .data(model.values[raster].data, function (d) {
+                return d.name;
+            })
             .each(function (d) {
                 if (d.name === name) {
                     d3.select(this).attr("fill", "brown")
@@ -207,7 +217,9 @@ var behindNumbers = function (container_selectors, service) {
             });
 
         // add label
-        model.values[raster].text.selectAll("text").data(model.values[raster].data)
+        model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
+                return d.name;
+            })
             .each(function (d) {
                 if (d.name === name) {
                     d3.select(this).style("opacity", null);
@@ -220,11 +232,15 @@ var behindNumbers = function (container_selectors, service) {
         for (var i = 0; i < container_selectors.length; i++) {
             model.values[i].svg
                 .selectAll("circle")
-                .data(model.values[i].data)
+                .data(model.values[i].data, function (d) {
+                    return d.name;
+                })
                 .attr("fill", "lightblue")
                 .style("opacity", 0.3);
 
-            model.values[i].text.selectAll("text").data(model.values[i].data)
+            model.values[i].text.selectAll("text").data(model.values[i].data, function (d) {
+                    return d.name;
+                })
                 .style("opacity", 0);
 
         }
@@ -234,14 +250,23 @@ var behindNumbers = function (container_selectors, service) {
         model.active = 0;
     };
 
+
     model.swap = function (raster) {
+
+        model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
+                return d.name;
+            })
+            .style("opacity", 0);
+
         var tmp = model.values[raster].data;
         model.values[raster].data = model.values[raster].spareData;
         model.values[raster].spareData = tmp;
 
         model.values[raster].svg
             .selectAll("circle")
-            .data(model.values[raster].data)
+            .data(model.values[raster].data, function (d) {
+                return d.name;
+            })
             .exit()
             .transition()
             .delay(function (d, i) {
@@ -250,13 +275,15 @@ var behindNumbers = function (container_selectors, service) {
             .attr("cy", -50)
             .remove();
 
-        model.values[raster].text
-            .selectAll("text")
-            .data(model.values[raster].data)
-            .exit()
-            .remove();
-
-        text.selectAll("text").data(model.values[raster].data)
+        //model.values[raster].text
+        //    .selectAll("text").data(model.values[raster].data, function (d) {
+        //    return d.name;
+        //}).exit()
+        //    .remove();
+        //
+        model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
+                return d.name;
+            })
             .enter()
             .append("text")
             .attr("x", function (d) {
@@ -270,17 +297,29 @@ var behindNumbers = function (container_selectors, service) {
                 return d.name;
             }).attr("class", "label")
             .style("opacity", 0);
-
-
-        text.selectAll("text").data(model.values[raster].data)
-            .html(function (d) {
-                return d.name;
-            });
+        //
+        //
+        //model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
+        //        return d.name;
+        //    })
+        //    .attr("x", function (d) {
+        //        return model.values[raster].x(d[lookup[p].key]);
+        //    })
+        //    .attr("y", function (d) {
+        //        return model.values[raster].y(d[lookup[lookup.length - 1].key])
+        //            - 10;
+        //    })
+        //    .html(function (d) {
+        //        return d.name;
+        //    })
+        //    .style("opacity", 0);
 
 
         model.values[raster].svg
             .selectAll("circle")
-            .data(model.values[raster].data)
+            .data(model.values[raster].data, function (d) {
+                return d.name;
+            })
             .enter()
             .append("circle")
             .attr("cx", function (d) {
@@ -308,7 +347,9 @@ var behindNumbers = function (container_selectors, service) {
 
         model.values[raster].svg
             .selectAll("circle")
-            .data(model.values[raster].data)
+            .data(model.values[raster].data, function (d) {
+                return d.name;
+            })
 
             .attr("cx", function (d) {
                 return model.values[raster].x(d[lookup[raster].key]);
