@@ -160,8 +160,24 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         numberVis.reset();
     });
 
+    // if true
+
+    var city = getURLParameter("city");
+    var country = getURLParameter("country");
+    if (city && country) {
+        service.setCityCountry(city, country);
+
+        if (service.getSelectedCity() !== null) {
+            webController.skiptolast();
+        }
+    }
+
 
 };
+
+function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+}
 
 var createView = function () {
     var cityPicker = new CityPicker(service);

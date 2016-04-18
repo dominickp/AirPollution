@@ -134,9 +134,11 @@ var allCountries = function (container_selector, service) {
 
     force.start();
 
+    model.stop = null;
+
     function tick(e) {
 
-        if (model.service.getSelectedCity() !== null) {
+        if (model.stop !== null) {
             force.stop();
         }
 
@@ -232,7 +234,7 @@ var allCountries = function (container_selector, service) {
                 if (d.country === city.country) {
 
                     d.lineY = d3.select(this).attr("cy");
-                    if (d.lineY > 0){
+                    if (d.lineY > 0) {
                         values.push(d);
                     }
 
@@ -281,6 +283,8 @@ var allCountries = function (container_selector, service) {
         $("#cityName").text(city.city + ", " + city.country);
         $("#percent").text((better / total * 100).toFixed(2));
 
+        model.stop = true;
+        
     };
 
 

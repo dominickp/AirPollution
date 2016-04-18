@@ -17,16 +17,29 @@ var service = function () {
     model.setSelectedCity = function (city) {
         model.selected_city = city;
 
+        console.log(city);
+
         // Update vis
         model.visualizations.vis1.updateVis();
     };
 
     model.getSelectedCity = function () {
-        if (model.selected_city === null){
+        if (model.selected_city === null) {
             return null;
         }
 
         return model.selected_city.city;
+    };
+
+    model.setCityCountry = function (name, country) {
+        var dataset = model.getActiveDataset("cityPmData");
+
+
+        dataset.forEach(function (cityData) {
+            if (cityData.city == name && cityData.country == country) {
+                model.setSelectedCity(cityData);
+            }
+        });
     };
 
     model.getCityData = function (name) {
