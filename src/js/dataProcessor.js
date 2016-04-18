@@ -67,7 +67,7 @@ var dataProcessor = function (service) {
 
             newValue.name = d["Country Name"];
             newValue.code = d["Country Code"];
-            newValue.type = d["Type"];
+            newValue.type = d.Type;
 
             newValue.electricity = +d["Electricity production from coal sources (% of total)"];
             newValue.forest = +d["Forest area (% of land area)"];

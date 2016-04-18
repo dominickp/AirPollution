@@ -22,8 +22,9 @@ var service = function () {
     };
 
     model.getSelectedCity = function () {
-        if (model.selected_city === null)
+        if (model.selected_city === null){
             return null;
+        }
 
         return model.selected_city.city;
     };
