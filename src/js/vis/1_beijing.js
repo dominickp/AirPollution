@@ -267,7 +267,7 @@ var beijingVis = function (container_selector, service) {
             })
             .attr("y", height + 40)
             .attr("width", 60)
-            .attr("heigth", 60)
+            .attr("height", 100)
             .html(function (d) {
 
                 return d.message;
