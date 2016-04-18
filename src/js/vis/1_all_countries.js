@@ -284,8 +284,12 @@ var allCountries = function (container_selector, service) {
         $("#percent").text((better / total * 100).toFixed(2));
 
         model.stop = true;
-        
+
     };
+
+    setTimeout(function () {
+        model.stop;
+    }, 4000);
 
 
 };
