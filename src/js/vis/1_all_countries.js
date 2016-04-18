@@ -288,8 +288,8 @@ var allCountries = function (container_selector, service) {
     };
 
     setTimeout(function () {
-        model.stop;
-    }, 4000);
+        model.stop = true;
+    }, 10000);
 
 
 };
