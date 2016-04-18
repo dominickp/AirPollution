@@ -74,7 +74,7 @@ var yearlyVis = function (container_selector, service) {
             return x(+d.year);
         })
         .y(function (d) {
-            return y(d["val"]);
+            return y(d.val);
         });
 
 
@@ -146,14 +146,16 @@ var yearlyVis = function (container_selector, service) {
         })
         .on('click', function (d) {
 
+            var index;
+
             if (d.active) {
-                var index = model.labelData.indexOf(d);
+                index = model.labelData.indexOf(d);
                 if (index > -1) {
                     model.labelData.splice(index, 1);
                 }
             }
             else {
-                var index = model.labelData.indexOf(d);
+                index = model.labelData.indexOf(d);
                 if (index === -1) {
                     model.labelData.push(d);
                 }
@@ -194,7 +196,7 @@ var yearlyVis = function (container_selector, service) {
                 return 'gray';
             })
             .attr("y", function (d) {
-                return y(d["vals"][6].val);
+                return y(d.vals[6].val);
             })
             .text(function (d) {
                 return d["Country Name"];
