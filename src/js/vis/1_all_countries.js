@@ -328,7 +328,7 @@ var allCountries = function (container_selector, service) {
         // model.stop = true;
 
     };
-    
+
 
 };
 
