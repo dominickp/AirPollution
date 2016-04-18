@@ -106,7 +106,7 @@ var allCountries = function (container_selector, service) {
         .style("fill", function (d) {
             return d.color;
         })
-        .style("opacity", 0.2)
+        .style("opacity", 0.3)
         .attr("stroke", "gray")
         .attr("stroke-width", 1)
         .on('mouseover', model.iconTip.show)
@@ -232,7 +232,7 @@ var allCountries = function (container_selector, service) {
 
                 if (d.region === group) {
 
-                    d3.select(this).style("opacity", 0.5)
+                    d3.select(this).style("opacity", 0.7)
                         .style("fill", function (d) {
                             return d.color;
                         });
@@ -263,7 +263,7 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
-                d3.select(this).style("opacity", 0.1)
+                d3.select(this).style("opacity", 0.3)
                     .style("fill", function (d) {
                         return 'gray';
                     });
@@ -280,7 +280,7 @@ var allCountries = function (container_selector, service) {
                         values.push(d);
                     }
 
-                    d3.select(this).style("opacity", 0.5)
+                    d3.select(this).style("opacity", 0.7)
                         .style("fill", 'red');
 
                     if (d.city === city.city) {
@@ -328,11 +328,7 @@ var allCountries = function (container_selector, service) {
         // model.stop = true;
 
     };
-
-    setTimeout(function () {
-        model.stop = true;
-    }, 10000);
-
+    
 
 };
 
