@@ -9,13 +9,13 @@ var behindNumbers = function (container_selectors, service) {
 
     // Lookup table
     var lookup = [
-        {key: "life", name: "Life expectancy in years"},
-        {key: "precipitation", name: "Annual precipitation in depth(mm)"},
-        {key: "forest", name: "Forest area (% of land area)"},
-        {key: "electricity", name: "Electricity production from coal"},
-        {key: "gasoline", name: "Pump price for gasoline"},
-        {key: "education", name: "Enrolment ratio tertiary education"},
-        {key: "pm", name: "PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)"}];
+        {key: "life", name: "Life expectancy at birth (years)"},
+        {key: "precipitation", name: "Annual precipitation (mm)"},
+        {key: "forest", name: "Forest area (% of land)"},
+        {key: "electricity", name: "Elec. production from coal (% total)"},
+        {key: "gasoline", name: "Pump price for gasoline (USD/l)"},
+        {key: "education", name: "Enrollment ratio tertiary education (%)"},
+        {key: "pm", name: "PM2.5 air pollution, mean annual exposure ( μg/m3)"}];
 
     /* Initialize tooltip */
     model.tooltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
