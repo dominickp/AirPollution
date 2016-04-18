@@ -142,16 +142,16 @@ var beijingVis = function (container_selector, service) {
     model.cur = 0;
     model.messages = [
         {
-            message: ["1Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem", " ultricies eu."],
+            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div>Here is a <strong>paragraph</strong> that requires <em>word wrap</em></div></body>',
             date: Date.parse("2/2/15")
 
         },
         {
-            message: ["2Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate", " egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
+            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div>Here is a <strong>paragraph</strong> that requires <em>word wrap</em></div></body>',
             date: Date.parse("5/20/15")
         },
         {
-            message: ["3Lorem ipsum dolor sit amet,", " consectetur adipiscing elit. ", "Curabitur vulputate ", "egestas sapien a pharetra.", " Vivamus gravida pharetra elit,", " non malesuada sem ", "ultricies eu."],
+            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div>Here is a <strong>paragraph</strong> that requires <em>word wrap</em></div></body>',
             date: Date.parse("8/18/15")
         }];
 
@@ -261,29 +261,17 @@ var beijingVis = function (container_selector, service) {
             .attr("y2", height + 30)
             .style("stroke-width", 1);
 
-        model.message.selectAll("text").data(model.vals).enter().append("text")
+        model.message.selectAll("foreignObject").data(model.vals).enter().append("foreignObject")
             .attr("x", function (d) {
                 return dateScale(d.date) - 1;
             })
             .attr("y", height + 40)
-            .text("")
-            .style("text-anchor", "end")
-            .each(function (d) {
+            .attr("width", 60)
+            .attr("heigth", 60)
+            .html(function (d) {
 
-                var model = d3.select(this);
+                return d.message;
 
-                model.selectAll("tspan")
-                    .data(d.message)
-                    .enter()
-                    .append("tspan")
-                    .attr("x", dateScale(d.date) - 1)
-                    .attr("dy", 15)
-                    .text("")
-                    .transition()
-                    .delay(700)
-                    .text(function (d) {
-                        return d;
-                    });
             });
 
         model.selection.transition()
