@@ -530,9 +530,28 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Tasks</h2>
-                <h3>
-                    TODO
-                </h3>
+                <p>
+                    <b>Filter: </b> The initial view presented to the reader will show pollution data filtered for their
+                    city of choice.<br>
+                    <b>Navigate:</b> After the reader sees information about his city, the visualization zooms out to
+                    show information about the whole country. Additionally, when the user clicks on a country, they will
+                    be presented with the underlying city level detail.<br>
+                    <b>Select:</b> The reader will be able select additional countries to add to the visualization. This
+                    will provide the flexibility for the user to choose which country comparisons are most relevant or
+                    interesting.<br>
+                    <b>Sort:</b> The bar chart with the countries can be sorted based on PM2.5 or PM10.<br>
+                    <b>Determine Range: </b>The visual encoding we have chosen uses bars to represent the range of
+                    pollution for each country. We think this is an important metric and therefore it is presented using
+                    the very effective position encoding.<br>
+                    <b>Coordinate:</b> The city that is picked when you enter the page is the main focus of all
+                    visualizations. It is the city that will be explored in the beginning, the country that will be used
+                    to compare to well known polluters and the city that will be the main focus on the map.<br>
+                    <b>Coordinate:</b> In the section “Behind the numbers: factors contributing to pollution” readers
+                    will be able to explore coordinated scatter plots showing PM2.5 vs 9 different metrics such as %
+                    fossil fuel use, % forestry in country. We also plan to include functionality for simultaneous
+                    highlighting and filtering.<br>
+
+                </p>
 
 
             </div>
@@ -546,9 +565,51 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Must Have Features</h2>
-                <h3>
-                    TODO
-                </h3>
+                <p>
+                    <b>Act 1: Air.</b><br>
+
+                    - Selectable city with a text input using Typeahead.js<br>
+                    - Allow the user to put in their home city to filter the data to their city.<br>
+                    - Show PM2.5 value of selected city on a scale from 0-300(?)<br>
+                    - Show a line with the limit of the WHO Safe level<br>
+                    - Show PM2.5 value of well known places like New Delhi as comparison<br>
+                    - Switch between PM2.5 and PM10 value.<br>
+                    - Auto-populated commentary based on city selection<br>
+                    - Display facts based on the city date, like “twice as much pollution than the average cities in the
+                    US”.<br>
+                    - Add and remove additional cities also using Typeahead.js<br>
+                    - This will give the viewer the ability to compare their city data to others<br>
+
+                    <br><br>
+                    <b> A year in the life of Beijing’s air.</b><br>
+
+                    - One year time series of Beijing PM2.5 data with interactive narration.<br>
+                    - Chart will be presented in a multi-step chronological sequence, stopping at each key event to
+                    explain to the user the main points. This will provide a tacit tutorial while giving the reader the
+                    ability to move forward and backwards to the key events.
+                    <br><br>
+                    <b> Behind the numbers: factors contributing to pollution</b><br>
+
+                    - Small multiples charts showing PM2.5 scatter plot correlations with 6 key metrics<br>
+                    - Coordinated views with highlight ability.
+
+                    <br><br>
+                    <b> Act 2: Death</b><br>
+
+                    - Show different causes of mortality in a chart (well known causes like aids or malaria).
+                    - Animate the chart with human-icons (Inspiration: http://www.fallen.io/ww2/).
+                    - Zoom in to show how air pollution consists of deaths of different diseases.
+                    - Show percentages
+                    - A tooltip on hover to explain skeleton
+                    - A legend to show what a skeleton means
+
+                    <br><br>
+                    <b>Act 3: Action</b><br>
+
+                    - Pulsing marker to show the viewer’s city on a map.<br>
+                    - Auto rotating map.<br>
+                    - Summary & city specific data.<br>
+                </p>
 
 
             </div>
@@ -562,9 +623,46 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Optional Features</h2>
-                <h3>
-                    TODO
-                </h3>
+                <p>
+                    <b>Introductory visualization</b><br>
+                    - Add lines of all countries with air pollution data over time.<br>
+                    - Be able to pin countries down.<br>
+                    - Be able to search for countries using a search box.<br>
+                    - Be able to highlight countries based on text-hovers in the text in the introduction.<br>
+                    <br><br>
+                    <b> Act 1: Air</b><br>
+
+                    - A manual zoom to check differences when multiple lines are close to each other.<br>
+                    - Add small stories for well known polluting countries.<br>
+                    <br><br>
+                    <b>Shining a light on pollution: the value of measurements</b><br>
+                    - Bar chart showing number of air measurement stations by country.<br>
+                    <br><br>
+                    <b> Behind the numbers: factors contributing to pollution</b><br>
+                    - Coordinated views with brushing ability.<br>
+                    - Add trend lines to the scatterplots.<br>
+                    <br><br>
+                    <b>All city 1D scatterplot</b><br>
+                    - A visualization showing all data points<br>
+                    - Highlight selected city and the other cities we have data from, from the same country.<br>
+                    - Hover over selected regions to highlight them.<br>
+                    - Click to separate different regions in different charts.<br>
+
+                    <br><br>
+                    <b>Act 2: Death</b><br>
+                    - split the visualization into two parts: one with the amount of deaths of air pollution as coffins,
+                    and one as a bar chart comparing it to different causes.<br>
+                    <br><br>
+                    <b> Act 3: Action</b><br>
+                    - Animate the globe by loading all data points.<br>
+                    <br><br>
+                    <b> Other</b><br>
+                    - A time-line in the process book, which shows different stages of development.<br>
+                    - Add a timelapse video of polluted air as background image.<br>
+                    - Be able to link and share to your city summary.<br>
+
+
+                </p>
 
 
             </div>
@@ -581,15 +679,23 @@
                 <p>
 
                     <b>introduction</b><br><br>
-                    TODO
-
+                    While working on different parts of the project,
+                    we thought it would be a smart idea to add some interactivity in the introduction, to spark interest
+                    early. While discussing what to make, an idea came up for showing all country data.
+                    We added the country data of multiple years to show that air pollution is still an important issue
+                    today.
 
                 </p>
                 <div>
                     <b> Act 1: Air</b><br><br>
 
                     <p>
-                        We found several issues with our original design. Labelling the countries turned out to be very tricky since they would easily overlap. For example, if you lived in a country which had a similar PM 2.5 level to the WHO safe level, the labels would overlap. We overcame this by extending the line by 10px based on the index value of the city, which allowed each city added to be longer than the last. This helped but it extended the vertical height of the chart greatly.
+                        We found several issues with our original design. Labelling the countries turned out to be very
+                        tricky since they would easily overlap. For example, if you lived in a country which had a
+                        similar PM 2.5 level to the WHO safe level, the labels would overlap. We overcame this by
+                        extending the line by 10px based on the index value of the city, which allowed each city added
+                        to be longer than the last. This helped but it extended the vertical height of the chart
+                        greatly.
                     </p>
 
                 </div>
@@ -597,13 +703,26 @@
                 <p>
                     <b> Act 1: beijing</b><br><br>
 
-                    TODO
+                    The beijing visualization has not changed during development, other then a technical change:
+                    We went from 'text' elements to 'Foreign Objects' to be able to style and link inside the bullet
+                    points.
 
                 </p>
-                <p>
-                    <b> Act 1: Behind the numbers</b><br><br>
 
-                    TODO
+                <p>
+                    <b> Act 1: All cities</b><br><br>
+
+                    One of us found an article of the NYT <a
+                        href="http://www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html?_r=0">here</a>,
+                    and thought something like it would be a
+                    great addition to the project, to show the data of all cities at once. It started with a few
+                    drawings.
+                    <br>
+                    <img class="thumbnail processImg" src="img/act_1_all.png" alt="drawingcities"/>
+                    <br>
+                    which were translated into a first draft design.
+                    <br>
+                    <img class="thumbnail processImg" src="img/allcities_1.png" alt="allcities1"/>
 
                 </p>
 
@@ -699,12 +818,27 @@
                 </p>
                 <p>
                     <b>Act 1: Air</b><br>
-                    <p>
-                        Creating this visualization was pretty simple after a bit of exploration. In D3, each datum is a vertical line which is placed on the x coordinate with a simple scale. The tricky part was treating each line differently. Obviously, the user's home city should display differently from the "additional" cities they add to the chart. Given that we handled the current city within our Service object, it meant that we needed to have two sets of data in the chart. This worked, but meant I had to duplicate code more than I liked.
-                    </p>
-                    <p>
-                        The chart also required an additional city selector, which meant we had to use typeahead.js again, like we did in the introduction. Because the view and logic code was not decoupled, we had to duplicate the CityPicker class, tweaking it slightly. I wasn't concerned about this duplication at the time, but we discovered that we really had to add the country to the typeahead suggestions for instances like "London, CA" and "London, UK", both showing as "London". Fixing this was more troublesome because it had to be fixed in two places instead of one.
-                    </p>
+                <p>
+                    Creating this visualization was pretty simple after a bit of exploration. In D3, each datum is a
+                    vertical line which is placed on the x coordinate with a simple scale. The tricky part was treating
+                    each line differently. Obviously, the user's home city should display differently from the
+                    "additional" cities they add to the chart. Given that we handled the current city within our Service
+                    object, it meant that we needed to have two sets of data in the chart. This worked, but meant I had
+                    to duplicate code more than I liked.
+                </p>
+                <p>
+                    The chart also required an additional city selector, which meant we had to use typeahead.js again,
+                    like we did in the introduction. Because the view and logic code was not decoupled, we had to
+                    duplicate the CityPicker class, tweaking it slightly. I wasn't concerned about this duplication at
+                    the time, but we discovered that we really had to add the country to the typeahead suggestions for
+                    instances like "London, CA" and "London, UK", both showing as "London". Fixing this was more
+                    troublesome because it had to be fixed in two places instead of one.
+                </p>
+
+                </p>
+                <p>
+                    <b>Act 1: All cities</b><br>
+                    TODO: Explain Vis.
 
                 </p>
                 <p>

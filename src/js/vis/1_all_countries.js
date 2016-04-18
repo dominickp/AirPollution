@@ -24,9 +24,9 @@ var allCountries = function (container_selector, service) {
     var margin = {top: 20, right: 20, bottom: 100, left: 100};
     var width = 950 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
-    var radius = 6;
+    var radius = 4;
     var padding = 8;
-    var radius2 = 3;
+    var radius2 = 10;
     // init svg
     model.svgPad = d3.select(container_selector).append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -51,6 +51,9 @@ var allCountries = function (container_selector, service) {
 
 
     var svg = model.svg;
+
+    var who = svg.append("g");
+    svg = svg.append("g");
 
 
     var force = d3.layout.force()
@@ -103,6 +106,7 @@ var allCountries = function (container_selector, service) {
         .style("fill", function (d) {
             return d.color;
         })
+        .style("opacity", 0.2)
         .attr("stroke", "gray")
         .attr("stroke-width", 1)
         .on('mouseover', model.iconTip.show)
@@ -120,7 +124,13 @@ var allCountries = function (container_selector, service) {
         .attr("x", width - 18)
         .attr("width", 18)
         .attr("height", 18)
-        .style("fill", color);
+        .style("fill", color)
+        .on("mouseover", function (d) {
+            model.show(d);
+        })
+        .on("mouseout", function () {
+            model.update();
+        });
 
     legend.append("text")
         .attr("x", width - 24)
@@ -129,6 +139,12 @@ var allCountries = function (container_selector, service) {
         .style("text-anchor", "end")
         .text(function (d) {
             return d;
+        })
+        .on("mouseover", function (d) {
+            model.show(d);
+        })
+        .on("mouseout", function () {
+            model.update();
         });
 
 
@@ -188,22 +204,43 @@ var allCountries = function (container_selector, service) {
         };
     }
 
-    var who = svg.append("g");
+
     who.append("line")
-        .attr("x1", x(15))
+        .attr("x1", x(10))
         .attr("y1", 0)
-        .attr("x2", x(15))
+        .attr("x2", x(10))
         .attr("y2", height)
         .style("stroke", "black")
         .style("stroke-width", 2);
 
     who.append("text")
         .attr("class", "label")
-        .attr("x", x(15))
+        .attr("x", x(10))
         .attr("y", -10)
         .style("text-anchor", "middle")
         .text("WHO SAFE VALUE");
 
+
+    model.show = function (group) {
+        node.data(data)
+            .each(function (d) {
+
+                d3.select(this).style("opacity", 0.1)
+                    .style("fill", function (d) {
+                        return 'gray';
+                    });
+
+                if (d.region === group) {
+
+                    d3.select(this).style("opacity", 0.5)
+                        .style("fill", function (d) {
+                            return d.color;
+                        });
+
+
+                }
+            });
+    };
 
     model.update = function () {
 
@@ -226,6 +263,11 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
+                d3.select(this).style("opacity", 0.1)
+                    .style("fill", function (d) {
+                        return 'gray';
+                    });
+
                 if (d[xVar] > city[xVar]) {
 
                     better++;
@@ -238,6 +280,14 @@ var allCountries = function (container_selector, service) {
                         values.push(d);
                     }
 
+                    d3.select(this).style("opacity", 0.5)
+                        .style("fill", 'red');
+
+                    if (d.city === city.city) {
+                        d3.select(this).style("opacity", 1)
+                            .style("fill", 'brown');
+                    }
+
                 }
             });
 
@@ -246,14 +296,6 @@ var allCountries = function (container_selector, service) {
         var highest = 0;
 
         values.forEach(function (d) {
-
-            model.others.append("line")
-                .attr("x1", x(d[xVar]))
-                .attr("y1", d.lineY)
-                .attr("x2", x(d[xVar]))
-                .attr("y2", height + 15)
-                .style("stroke", "black")
-                .style("stroke-width", 1);
 
             if (x(d[xVar]) > highest) {
                 highest = x(d[xVar]);
@@ -266,16 +308,16 @@ var allCountries = function (container_selector, service) {
 
         model.others.append("line")
             .attr("x1", lowest)
-            .attr("y1", height + 15)
+            .attr("y1", height + 55)
             .attr("x2", highest)
-            .attr("y2", height + 15)
+            .attr("y2", height + 55)
             .style("stroke", "black")
             .style("stroke-width", 1);
 
         model.cityline.append("text")
             .attr("class", "label")
             .attr("x", (highest + lowest) / 2)
-            .attr("y", height + 25)
+            .attr("y", height + 65)
             .style("text-anchor", "middle")
             .style("fill", "black")
             .text(city.country);
@@ -283,7 +325,7 @@ var allCountries = function (container_selector, service) {
         $("#cityName").text(city.city + ", " + city.country);
         $("#percent").text((better / total * 100).toFixed(2));
 
-        model.stop = true;
+        // model.stop = true;
 
     };
 
