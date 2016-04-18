@@ -12,12 +12,12 @@ var allCountries = function (container_selector, service) {
     var data = model.service.getActiveDataset("cityPmData");
     var xVar = "pm2.5Mean";
     data = data.filter(function (d) {
-        return !(isNaN(d[xVar]) || isNaN(d[xVar]))
+        return !(isNaN(d[xVar]) || isNaN(d[xVar]));
     });
 
     model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
         console.log(d);
-        return d["city"] + ", " + d["country"] + "<br>PM2.5: " + d[xVar]
+        return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
     });
 
 
@@ -97,7 +97,7 @@ var allCountries = function (container_selector, service) {
         .attr("cx", function (d) {
             return x(d[xVar]);
         })
-        .attr("cy", function (d) {
+        .attr("cy", function () {
             return y(height / 2);
         })
         .style("fill", function (d) {
@@ -215,7 +215,7 @@ var allCountries = function (container_selector, service) {
         var city = model.service.getSelectedCityData();
 
 
-        var y = 0;
+        //var y = 0;
         var values = [];
 
         var total = 0;
@@ -231,11 +231,10 @@ var allCountries = function (container_selector, service) {
                 total++;
                 if (d.country === city.country) {
 
-
                     d.lineY = d3.select(this).attr("cy");
-                    if (d.lineY > 0)
+                    if (d.lineY > 0){
                         values.push(d);
-
+                    }
 
                 }
             });
@@ -282,7 +281,7 @@ var allCountries = function (container_selector, service) {
         $("#cityName").text(city.city + ", " + city.country);
         $("#percent").text((better / total * 100).toFixed(2));
 
-    }
+    };
 
 
 };
