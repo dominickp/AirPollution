@@ -123,7 +123,7 @@ var beijingVis = function (container_selector, service) {
         $("#next_button").val("Play");
         $("#next_button").removeClass("hidden");
         model.message.selectAll("line").remove();
-        model.message.selectAll("text").remove();
+        model.message.selectAll("foreignObject").remove();
 
         if (model.selection) {
             model.selection.remove();
