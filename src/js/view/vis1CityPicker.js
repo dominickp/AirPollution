@@ -37,6 +37,7 @@ var cityPicker = function (service) {
             },
             {
                 name: 'states',
+                limit:15,
                 display: function (loc) {
                     return loc.city + ', ' + loc.country;
                 },
