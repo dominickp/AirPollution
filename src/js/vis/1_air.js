@@ -79,7 +79,7 @@ var airVisualization = function (container_selector, service) {
 
     model.xAxis = d3.svg.axis()
         .scale(model.x)
-        .orient("bottom");
+        .orient("top");
 
     // Start SVG
     model.svg = d3.select(container_selector).append("svg")
@@ -113,7 +113,7 @@ var airVisualization = function (container_selector, service) {
     // Start axis
     model.axis_element = model.svg.append("g")
         .attr("class", "x-axis axis")
-        .attr("transform", "translate(0," + height + ")");
+        .attr("transform", "translate(0,0)");
 
     model.buildGaugeBackground();
 
