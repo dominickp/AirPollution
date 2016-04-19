@@ -39,6 +39,7 @@ var cityPicker = function (service) {
             {
                 name: 'states',
                 source: model.substringMatcher(service.getActiveDataset("cityPmData")),
+                limit: 15,
                 display: function (loc) {
                     return loc.city + ', ' + loc.country;
                 },

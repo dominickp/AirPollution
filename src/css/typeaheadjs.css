@@ -91,3 +91,8 @@ span.twitter-typeahead {
 .input-group.input-group-lg span.twitter-typeahead .tt-dropdown-menu {
     top: 46px !important;
 }
+
+.twitter-typeahead .tt-menu {
+    max-height: 150px;
+    overflow-y: auto;
+}
