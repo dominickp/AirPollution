@@ -36,7 +36,7 @@ var service = function () {
 
 
         dataset.forEach(function (cityData) {
-            if (cityData.city == name && cityData.country == country) {
+            if (cityData.city === name && cityData.country === country) {
                 model.setSelectedCity(cityData);
             }
         });
