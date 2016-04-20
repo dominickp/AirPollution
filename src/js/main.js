@@ -119,22 +119,22 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     // set text hover behind numbers
     $("#hover1").mouseover(function () {
-        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 0);
+        numberVis.setActiveArray(["Iceland", "Switzerland", "Spain", "Italy", "France", "Sweden", "Norway", "Luxembourg", "Netherlands", "Austria", "United Kingdom", "Ireland"], 0);
     });
     $("#hover1").mouseout(numberVis.reset);
 
     $("#hover2").mouseover(function () {
-        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 1);
+        numberVis.setActiveArray(["Swaziland", "Mozambique", "Zimbabwe", "Angola", "Central African Republic", "Somalia", "Equatorial Guinea", "Malawi"], 0);
     });
     $("#hover2").mouseout(numberVis.reset);
 
     $("#hover3").mouseover(function () {
-        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 2);
+        numberVis.setActiveArray(["Qatar", "United Arab Emirates", "Bahrain", "Kuwait", "Saudi Arabia", "Oman"], 0);
     });
     $("#hover3").mouseout(numberVis.reset);
 
     $("#hover4").mouseover(function () {
-        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 3);
+        numberVis.setActiveArray(["China"], 0);
     });
     $("#hover4").mouseout(numberVis.reset);
 

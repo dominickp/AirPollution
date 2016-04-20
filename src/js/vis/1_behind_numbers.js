@@ -33,8 +33,8 @@ var behindNumbers = function (container_selectors, service) {
         model.countries = model.service.getActiveDataset("metrics").countries;
         model.other = model.service.getActiveDataset("metrics").aggregate;
         var margin = {top: 0, right: 5, bottom: 30, left: 33};
-        var width = 200 - margin.left - margin.right,
-            height = 200 - margin.top - margin.bottom;
+        var width = 275 - margin.left - margin.right,
+            height = 275 - margin.top - margin.bottom;
 
 
         // init svg
