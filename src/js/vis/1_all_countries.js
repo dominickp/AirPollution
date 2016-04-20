@@ -305,7 +305,7 @@ var allCountries = function (container_selector, service) {
 
         var total = 0;
         var better = 0;
-        
+
         node.data(data)
             .each(function (d) {
 
@@ -390,8 +390,15 @@ var allCountries = function (container_selector, service) {
             .style("fill", "black")
             .text(model.city.country);
 
-        $("#cityName").text(model.city.city + ", " + model.city.country);
-        $("#percent").text((better / total * 100).toFixed(2));
+        var c = model.city.city + ", " + model.city.country;
+        var perc = (better / total * 100);
+
+        if (perc >= 50) {
+            $("#percentCompared").text("The air in " + c + " is better than the air in " + perc.toFixed(2) + "% of all other recorded cities.");
+        }
+        else {
+            $("#percentCompared").text("The air in " + c + " is worse than the air in " + (100 - perc).toFixed(2) + "% of all other recorded cities.");
+        }
 
         // model.stop = true;
 

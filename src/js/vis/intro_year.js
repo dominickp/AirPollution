@@ -22,11 +22,11 @@ var yearlyVis = function (container_selector, service) {
         // var years = [1990, 1995, 2000, 2005, 2010, 2011, 2013];
         String += d["Country Name"] + "<br>";
         if ((d["2013"] - d["1990"]) > 0) {
-            String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
+            String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
             model.tooltip.style("background", "rgba(171, 30, 30, 0.8)");
         }
         else {
-            String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
+            String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
             model.tooltip.style("background", "rgba(30, 171, 34, 0.8)");
         }
 
