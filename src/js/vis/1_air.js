@@ -140,7 +140,7 @@ var airVisualization = function (container_selector, service) {
         .attr("y", 0)
         .attr("height", (gauge_height + (gauge_label_spacing * 3)))
         .attr("width", 2)
-        .attr("fill", "blue");
+        .attr("fill", "black");
     // Add label
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
