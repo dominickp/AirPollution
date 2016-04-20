@@ -167,8 +167,16 @@ var allCountries = function (container_selector, service) {
                 return d.x;
             })
             .attr("cy", function (d) {
+                if (model.city && model.city.city === d.city && model.city.country === d.country) {
+                    var x = d.x;
+                    var y = d.y;
+                    model.citydot.attr("cx", x).attr("cy", y);
+
+                }
                 return d.y;
             });
+
+
     }
 
 
@@ -247,11 +255,14 @@ var allCountries = function (container_selector, service) {
         if (model.cityline) {
             model.cityline.remove();
             model.others.remove();
+
+            if (model.citydot)
+                model.citydot.remove();
         }
         model.others = svg.append("g");
         model.cityline = svg.append("g");
 
-        var city = model.service.getSelectedCityData();
+        model.city = model.service.getSelectedCityData();
 
 
         //var y = 0;
@@ -263,33 +274,50 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
-                d3.select(this).style("opacity", 0.3)
-                    .style("fill", function (d) {
-                        return 'gray';
-                    });
+                    d3.select(this).style("opacity", 0.3)
+                        .style("fill", function (d) {
+                            return 'gray';
+                        });
 
-                if (d[xVar] > city[xVar]) {
+                    if (d[xVar] > model.city[xVar]) {
 
-                    better++;
-                }
-                total++;
-                if (d.country === city.country) {
-
-                    d.lineY = d3.select(this).attr("cy");
-                    if (d.lineY > 0) {
-                        values.push(d);
+                        better++;
                     }
+                    total++;
+                    if (d.country === model.city.country) {
 
-                    d3.select(this).style("opacity", 0.7)
-                        .style("fill", 'red');
+                        d.lineY = d3.select(this).attr("cy");
+                        d.lineX = d3.select(this).attr("cx");
+                        if (d.lineY > 0) {
+                            values.push(d);
+                        }
 
-                    if (d.city === city.city) {
-                        d3.select(this).style("opacity", 1)
-                            .style("fill", 'brown');
+                        d3.select(this).style("opacity", 0.7)
+                            .style("fill", 'orange');
+
+                        if (d.city === model.city.city) {
+                            d3.select(this).style("opacity", 0.3)
+                                .style("fill", 'gray');
+
+                            model.citydot = svg.append("circle")
+                                .attr("class", "pulsate dot")
+                                .attr("r", radius)
+                                .attr("cx", d.lineX)
+                                .attr("cy", d.lineY)
+                                .style("fill", 'brown')
+                                .attr("stroke", "gray")
+                                .attr("stroke-width", 1)
+                                .on('mouseover', function () {
+                                    model.iconTip.show(d)
+                                })
+                                .on('mouseout', function () {
+                                    model.iconTip.hide(d)
+                                });
+
+                        }
                     }
-
                 }
-            });
+            );
 
         // set cities in country lines
         var lowest = 9001;
@@ -320,9 +348,9 @@ var allCountries = function (container_selector, service) {
             .attr("y", height + 65)
             .style("text-anchor", "middle")
             .style("fill", "black")
-            .text(city.country);
+            .text(model.city.country);
 
-        $("#cityName").text(city.city + ", " + city.country);
+        $("#cityName").text(model.city.city + ", " + model.city.country);
         $("#percent").text((better / total * 100).toFixed(2));
 
         // model.stop = true;
