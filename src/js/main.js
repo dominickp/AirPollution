@@ -139,11 +139,18 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     $("#hover4").mouseout(numberVis.reset);
 
     $("#hover5").mouseover(function () {
-        numberVis.setActiveArray(["China", "South Asia", "India", "Israel"], 4);
+        numberVis.setActiveArray(["Egypt, Arab Rep.", "Pakistan", "Cabo Verde", "Bahrain", "Iraq", "Saudi Arabia", "Iran", "Niger", "Mali", "Turkmenistan", "Mauritania", "Kuwait", "United Arab Emirates", "Yemen, Rep.", "Qatar"], 1);
     });
     $("#hover5").mouseout(numberVis.reset);
 
     $("#hover6").mouseover(function () {
+        numberVis.setActiveArray(["Burkina Faso"], 1);
+        numberVis.setActiveArray(["Burkina Faso"], 2);
+
+    });
+    $("#hover6").mouseout(numberVis.reset);
+
+    $("#hover7").mouseover(function () {
         numberVis.swap(5);
 
         numberVis.setActiveArray(
@@ -155,7 +162,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
                 "European Union"],
             5);
     });
-    $("#hover6").mouseout(function () {
+    $("#hover7").mouseout(function () {
         numberVis.swap(5);
         numberVis.reset();
     });
