@@ -191,7 +191,7 @@ var airVisualization = function (container_selector, service) {
             .attr("y", 0)
             .attr("height", 0)
             .attr("width", 2)
-            .attr("fill", "green")
+            .attr("fill", "#666666")
             .on('mouseover', model.tip.show)
             .on('mouseout', model.tip.hide);
 
