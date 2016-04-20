@@ -16,8 +16,11 @@ var allCountries = function (container_selector, service) {
     });
 
     model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-        console.log(d);
         return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
+    });
+
+    model.legendtip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+        return "Click to pin";
     });
 
 
@@ -36,6 +39,7 @@ var allCountries = function (container_selector, service) {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     model.svg.call(model.iconTip);
+    model.svg.call(model.legendtip);
 
     var x = d3.scale.linear()
         .range([0, width]);
@@ -125,25 +129,56 @@ var allCountries = function (container_selector, service) {
         .attr("width", 18)
         .attr("height", 18)
         .style("fill", color)
+        .style('cursor', 'pointer')
         .on("mouseover", function (d) {
+            model.legendtip.show(d);
             model.show(d);
         })
-        .on("mouseout", function () {
+        .on("mouseout", function (d) {
+            model.legendtip.hide(d);
             model.update();
+        })
+        .on("click", function (d) {
+
+
+            var index = model.pinned.indexOf(d);
+
+            if (index > -1) {
+                model.pinned.splice(index, 1);
+            }
+            else {
+                model.pinned.push(d);
+            }
         });
 
+    model.pinned = [];
     legend.append("text")
         .attr("x", width - 24)
         .attr("y", 9)
+        .style('cursor', 'pointer')
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text(function (d) {
             return d;
         })
         .on("mouseover", function (d) {
+            model.legendtip.show(d);
             model.show(d);
         })
-        .on("mouseout", function () {
+        .on("click", function (d) {
+
+
+            var index = model.pinned.indexOf(d);
+
+            if (index > -1) {
+                model.pinned.splice(index, 1);
+            }
+            else {
+                model.pinned.push(d);
+            }
+        })
+        .on("mouseout", function (d) {
+            model.legendtip.hide(d);
             model.update();
         });
 
@@ -270,12 +305,17 @@ var allCountries = function (container_selector, service) {
 
         var total = 0;
         var better = 0;
-
+        
         node.data(data)
             .each(function (d) {
 
                     d3.select(this).style("opacity", 0.3)
                         .style("fill", function (d) {
+
+                            if (model.pinned.indexOf(d.region) > -1) {
+                                d3.select(this).style("opacity", 0.7);
+                                return d.color;
+                            }
                             return 'gray';
                         });
 
@@ -293,7 +333,7 @@ var allCountries = function (container_selector, service) {
                         }
 
                         d3.select(this).style("opacity", 0.7)
-                            .style("fill", 'orange');
+                            .style("fill", 'black');
 
                         if (d.city === model.city.city) {
                             d3.select(this).style("opacity", 0.3)
