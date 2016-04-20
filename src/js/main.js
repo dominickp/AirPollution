@@ -167,8 +167,8 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         numberVis.reset();
     });
 
-    // if true
 
+    // sharable link goes directly to the summary
     var city = getURLParameter("city");
     var country = getURLParameter("country");
     if (city && country) {
