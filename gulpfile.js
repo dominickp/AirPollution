@@ -70,6 +70,13 @@ gulp.task('buildVendor', function(){
         .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('buildFonts', function(){
+    return gulp.src([
+            'bower_components/bootstrap/dist/fonts/*'
+    ])
+        .pipe(gulp.dest('dist/fonts'));
+});
+
 
 gulp.task('buildCSS', function(){
     return gulp.src([
@@ -99,7 +106,7 @@ gulp.task('moveImage', function(){
         .pipe(connect.reload());
 });
 
-gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML', 'moveData', 'moveImage']);
+gulp.task('build', ['buildJavascript', 'buildVendor', 'buildCSS', 'moveHTML', 'buildFonts', 'moveData', 'moveImage']);
 
 // **********************************
 
