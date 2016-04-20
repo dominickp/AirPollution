@@ -1,5 +1,6 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
+var $ = require("jquery");
 
 console.log("src/js/vis/intro_year.js");
 
@@ -22,12 +23,13 @@ var yearlyVis = function (container_selector, service) {
         String += d["Country Name"] + "<br>";
         if ((d["2013"] - d["1990"]) > 0) {
             String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
-
+            model.tooltip.style("background", "rgba(171, 30, 30, 0.8)");
         }
         else {
             String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "%" + "<br>";
-
+            model.tooltip.style("background", "rgba(30, 171, 34, 0.8)");
         }
+
         if (!d.active) {
             String += "Click to pin";
         }
@@ -35,6 +37,7 @@ var yearlyVis = function (container_selector, service) {
 
         return String;
     });
+
 
     // init svg
     model.svg = d3.select(container_selector).append("svg")
