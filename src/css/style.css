@@ -261,3 +261,14 @@ body, html {
     margin: 0;
 
 }
+
+.action {
+    color: brown;
+    font-weight: bold;
+
+}
+
+.action:hover {
+    color: brown;
+
+}
