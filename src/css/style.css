@@ -141,7 +141,7 @@
 }
 
 body, html {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     min-width: 679px;
     margin: 0;
     padding: 0;
