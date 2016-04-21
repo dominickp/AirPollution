@@ -226,8 +226,8 @@ body, html {
 .next-banner.lol-wut {
     text-align: left !important;
     color: #FFF;
-
     padding-bottom: 100px;
+    min-height: 20px;
 }
 
 .next-banner a {
@@ -268,8 +268,8 @@ body, html {
 .text {
     background-color: transparent !important;
     color: white !important;
-    margin: 0;
-
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
 
 .action {
@@ -288,5 +288,10 @@ body, html {
 }
 
 .no-padding{
-    padding:0;
+    padding:0 !important;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
 }
