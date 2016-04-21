@@ -119,6 +119,7 @@ var airVisualization = function (container_selector, service) {
 
     // g group for all of the chart elements
     model.lines = model.svg.append("g");
+    model.active_city_g = model.svg.append("g");
     model.other_city_g = model.svg.append("g");
 
     // Start axis
@@ -127,25 +128,6 @@ var airVisualization = function (container_selector, service) {
         .attr("transform", "translate(0,0)");
 
     model.buildGaugeBackground();
-
-    // Set up these lines in advance
-
-    // Selected city
-    model.selected_city = model.lines.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("height", (gauge_height + (gauge_label_spacing * 1)))
-        .attr("width", 2)
-        .attr("fill", "red");
-    // Add label
-    model.selected_city_text = model.lines.append("text")
-        .attr("class", "gauge-line-label")
-        .attr("x", 0)
-        .attr("y", (gauge_height + (gauge_label_spacing * 2)))
-        .style("text-anchor", "middle")
-        .text("")
-        .on('mouseover', model.tip_selected_city.show)
-        .on('mouseout', model.tip_selected_city.hide);
 
     // WHO Safe Level Line
     model.safe_level = model.lines.append("rect")
@@ -166,6 +148,7 @@ var airVisualization = function (container_selector, service) {
     model.updateVis = function () {
 
         model.other_cities = service.getOtherCities();
+
 
         model.x.domain([
             d3.min(model.data, function (d) {
@@ -272,20 +255,73 @@ var airVisualization = function (container_selector, service) {
         if (service.getSelectedCity()) {
 
             // Update selected city
-            model.active_city_data = service.getSelectedCityData();
+            model.active_city_data = [service.getSelectedCityData()];
 
-            // Update safe level line
-            model.selected_city
-                .transition()
-                .duration(800)
-                .attr("x", model.x(model.active_city_data[model.selected_unit.key]));
+            // Data join
+            model.selected_city = model.active_city_g.selectAll("rect")
+                .data(model.active_city_data, function (d) {
+                    return d.city + " " + d.country;
+                });
+            model.selected_city_text = model.active_city_g.selectAll("text")
+                .data(model.active_city_data, function (d) {
+                    return d.city + " " + d.country;
+                });
 
-            // Update safe level text
+            // Enter
+            model.selected_city.enter().append("rect")
+                .attr("x", function (d) {
+                    return model.x(d[model.selected_unit.key]);
+                })
+                .attr("y", 0)
+                .attr("height", 0)
+                .attr("width", 2)
+                .attr("fill", "red")
+                .on('mouseover', model.tip.show)
+                .on('mouseout', model.tip.hide);
+
+            model.selected_city_text.enter().append("text")
+                .attr("class", "gauge-line-label")
+                .attr("x", function (d) {
+                    return model.x(d[model.selected_unit.key]);
+                })
+                .attr("y", function (d, index) {
+                    return (gauge_height + (gauge_label_spacing * (index + 3)));
+                })
+                .style("text-anchor", "middle")
+                .text(function (d) {
+                    return d.city;
+                })
+                .on('mouseover', model.tip.show)
+                .on('mouseout', model.tip.hide);
+
+            // Update
             model.selected_city_text
                 .transition()
                 .duration(800)
-                .attr("x", model.x(model.active_city_data[model.selected_unit.key]))
-                .text(model.active_city_data.city);
+                .attr("x", function (d) {
+                    return model.x(d[model.selected_unit.key]);
+                })
+                .text(function (d) {
+                    return d.city;
+                })
+                .attr("y", function (d, index) {
+                    return (gauge_height + (gauge_label_spacing * (index + 3)));
+                });
+
+            model.selected_city
+                .transition()
+                .duration(800)
+                .attr("x", function (d) {
+                    return model.x(d[model.selected_unit.key]);
+                })
+                .attr("height", function (d, index) {
+                    return (gauge_height + (gauge_label_spacing * (index + 2)));
+                });
+
+            // Exit
+            model.selected_city.exit().remove();
+            model.selected_city_text.exit().remove();
+
         }
 
         // Update other cities view
