@@ -268,11 +268,6 @@ var behindNumbers = function (container_selectors, service) {
                 return d.name;
             })
             .exit()
-            .transition()
-            .delay(function (d, i) {
-                return i * 3;
-            })
-            .attr("cy", -50)
             .remove();
 
 
@@ -304,7 +299,9 @@ var behindNumbers = function (container_selectors, service) {
             .attr("cx", function (d) {
                 return model.values[raster].x(d[lookup[raster].key]);
             })
-            .attr("cy", -50)
+            .attr("cy", function (d) {
+                return model.values[raster].y(d[lookup[lookup.length - 1].key]);
+            })
             .style("opacity", 0.3)
             .attr("r", 4)
             .attr("fill", "lightblue")
@@ -315,14 +312,8 @@ var behindNumbers = function (container_selectors, service) {
             .on("mouseout", function (d) {
                 model.tooltip.hide(d);
                 model.reset();
-            })
-            .transition()
-            .delay(function (d, i) {
-                return i * 3;
-            })
-            .attr("cy", function (d) {
-                return model.values[raster].y(d[lookup[lookup.length - 1].key]);
             });
+
 
         model.values[raster].svg
             .selectAll("circle")
