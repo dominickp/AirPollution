@@ -215,16 +215,7 @@ var behindNumbers = function (container_selectors, service) {
                         .style("opacity", 1);
                 }
             });
-
-        // add label
-        model.values[raster].text.selectAll("text").data(model.values[raster].data, function (d) {
-                return d.name;
-            })
-            .each(function (d) {
-                if (d.name === name) {
-                    d3.select(this).style("opacity", null);
-                }
-            });
+        
 
     };
 
