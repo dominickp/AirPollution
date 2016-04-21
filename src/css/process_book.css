@@ -12,3 +12,10 @@
 img.headshot{
     max-width:80px;
 }
+
+.lead-question{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-bottom: 5px;
+    font-size:18px;
+    padding-top: 8px;
+}
