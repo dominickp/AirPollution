@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div class="next-banner">
+        <span class="left"><a href="index.html">CS171 - Free Radicals</a></span>
+        <span><a href="processbook.html">ProcessBook</a></span>
+    </div>
+
+    <div class="jumbotron" id="hero-sun">
+        <div class="container">
+            <h1>Process Book</h1>
+            <p>The steps we took to develop our solution.<i class="fa fa-github" aria-hidden="true"></i></p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="pb_index.html" class="list-group-item">
+                    Overview
+                </a>
+                <a href="pb_data.html" class="list-group-item active">Data</a>
+                <a href="pb_functionality.html" class="list-group-item">Functionality</a>
+                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item">Vestibulum at eros</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-9">
+
+            <h2>Data</h2>
+
+            <h3>Datasets</h3>
+            <h4>Act 1: Air</h4>
+
+            <p>
+                The central visualization for Act 1 shows air pollution data for various cities and countries using
+            horizontal bars layered out in a stacked gantt chart style. All of the data for this visualization is
+            contained in the following WHO data file:
+            </p>
+
+            <table class="table table-bordered">
+                <tr>
+                    <td>Data</td>
+                    <td>Ambient (outdoor) air pollution in cities database 2014.</td>
+                <tr>
+                    <td>Source</td>
+                    <td>World Health Organization.</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>.xls</td>
+                </tr>
+                <tr>
+                    <td>Parameters</td>
+                    <td>Annual average particulate matter concentrations (PM2.5, PM10).</td>
+                </tr>
+                <tr>
+                    <td>Notes</td>
+                    <td>
+                        This file contains detailed particulate matter data for over 1500 cities around the world
+                        and
+                        will supply the core information for Act 1.
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <p>The main air pollution visualization will be followed by three subsections which allow the reader to
+            explore more details about air pollution:</p>
+
+            <ul>
+                <li><i>A year in the life of Beijing's air</i></li>
+                <li><i>Behind the numbers: factors contributing to pollution</i></li>
+            </ul>
+
+            <p>The following data sources will be used to deliver these subsections:</p>
+
+            <h5>A year in the life of Beijing’s air</h5>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Data</td>
+                    <td>High resolution pollution time series</td>
+                <tr>
+                    <td>Source</td>
+                    <td>US embassy Beijing</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>.xls</td>
+                </tr>
+                <tr>
+                    <td>Parameters</td>
+                    <td> Hourly PM2.5 data</td>
+                </tr>
+                <tr>
+                    <td>Notes</td>
+                    <td>
+                        While the annual average PM2.5 data supplied by the WHO is useful for
+                        broad city and country comparisons, it does not tell the full story about the day to day air
+                        pollution
+                        issues that people face, especially in very polluted cities. This data will help us tell the
+                        stories of
+                        air pollution over a year in Beijing and Delhi, focusing on the extreme pollution events
+                        which are all
+                        too common and especially dangerous to our health.
+                    </td>
+                </tr>
+
+            </table>
+
+            <h5>Behind the numbers: factors contributing to air pollution</h5>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Data</td>
+                    <td>
+                        Multiple country level metrics which add context to the pollution problem:
+                        <ul>
+                            <li>Energy production from coal, by country</li>
+                            <li>Fossil fuel energy consumption by country</li>
+                            <li>Population density by country</li>
+                            <li>Forested area, % of land area</li>
+                            <li>Renewable energy consumption</li>
+                            <li>Urban population (% of total)</li>
+                            <li>Population in urban agglomerations of more than 1 million (% of total population)</li>
+                            <li>Pump price for gasoline (US$ per liter)</li>
+                            <li>Gross enrolment ratio, tertiary, both sexes (%)</li>
+                        </ul>
+
+                    </td>
+                <tr>
+                    <td>Source</td>
+                    <td>World Bank</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>.xls</td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+            <h4>Act 2: Death</h4>
+
+            <p>In Act 2 we focus the reader's attention on the human impact of the air pollution see in Act 1. The
+            central visualization will show deaths from air pollution around the world, and compare this with other
+            causes of death. The source for this data is again the WHO:</p>
+
+            <table class="table table-bordered">
+                <tr>
+                    <td>Data</td>
+                    <td> Global health estimates: Deaths by cause, age and sex
+                        (20 Leading Causes of Death)
+                    </td>
+                <tr>
+                    <td>Source</td>
+                    <td> World Health Organization.</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>.xls</td>
+                </tr>
+                <tr>
+                    <td>Parameters</td>
+                    <td> Rank, cause, percent of total annual deaths, deaths per 100,000.</td>
+                </tr>
+                <tr>
+                    <td>Notes</td>
+                    <td>
+                        The data here is supplied as part of the comprehensive Global Burden of Disease study and
+                        contains
+                        detailed breakdowns of deaths by cause. There is too much information here to present
+                        everything, so we
+                        will focus on the top 20 causes of death, plus a few other notable causes that are familiar
+                        with readers
+                        but may not be in the top 20.
+                    </td>
+                </tr>
+
+            </table>
+
+            <hr>
+
+            <h4>Act 3: Action</h4>
+            <p>In the final act we bring the reader back to think about their home town and what they can do to both
+            protect their health from air pollution, and what actions can be taken to help reduce the problem. No
+            data visualizations are proposed for this section, but information from the Environmental
+            Protection Agency and other sources of advice on air pollution will be used.</p>
+
+
+            <h3>Data Cleansing</h3>
+
+            <h4>WHO Particulate matter dataset <span class="badge">April 7th</span> </h4>
+
+            <p>The cleaned WHO particulate matter dataset consists of the data channels shown below. For each we
+            provide details of any data wrangling performed.</p>
+
+            <p>
+                <strong>Region:</strong><br>
+                No changes.
+            </p>
+            <p>
+                <strong> Subregion:</strong><br>
+                No changes.
+            </p>
+            <p>
+                <strong>Coutry:</strong><br>
+                Modified country names for Tanzania(id 16), Bolivia (18, 19), Venezuela(99, 100)
+            </p>
+            <p>
+                <strong>City:</strong><br>
+                A number of names had unnecessary parenthesis or additional location information such as “urban”,
+                “rural”, “district” which was removed. All suspicious names were checked against the google city
+                name API to check for compatibility and altered if a sutable match was not found.
+            </p>
+            <div class="col-sm-6 col-md-6 pull-right">
+                <div class="thumbnail">
+                    <img src="img/data1.png" alt="maps api">
+                    <div class="caption">
+                        <p>Example of data cleansing with Google API</p>
+                    </div>
+                </div>
+            </div>
+            <p>
+                The following city names were modified: Buchanan (2), Sanniquelle (3), Baeu Bassin-Rose Hill (4),
+                Flacq (5), Cape Town (9), Pretoria (11), Tshwane (13), Vaal Priority (14 - deleted), Clarendon (85),
+                Puerto la Cruz (99), Chalk River (188), Al Ain (660), Brussels (778), Jirkov (787), Annemasse (846).
+                Lens (851), Frankfurt Oder (912 - deleted) , Frankfurt (913), Kempten (927), Haifa (979), Heftzibah
+                (980), Karmei Yosef (981), Kibbutz Erez (982), Kibbutz Sde Yo’av (983), Alicante (1139), Castellon
+                de la Plana (1148), Elche (1151), Pamplona (1170), San Sebastian (1173), Dawki (1262), Male (1364),
+                Hong Kong (1426), Belait (1545), Brunei-Maura (1546), Temburong (1547), All Japanese cities had
+                extraneous leading text removed form city name.
+            </p>
+            <p>
+                <strong> StationId:</strong><br>
+                A unique numerical station number was added for each entry in both the original and cleaned data
+                files. This identifier will allow the reader to go back to the original file and check the value of
+                all removed data parameters for any given entry, should this be of interest.
+            </p>
+            <p>
+                <strong> pp10Mean:</strong><br>
+                Renamed in camelCase.
+            </p>
+            <p>
+            <strong>pm10Year:</strong><br>
+                Renamed in camelCase. For any entry which contained a range of dates (e.g. 2009-2001), the later
+                date was used so that only a single value appears. This only occurred for station id’s 665 and 1296.
+            </p>
+            <p>
+                <strong>pm10Converted:</strong><br>
+                New column indicating “Yes” if the pm10 value was converted from pm2.5 data. In total there were 454
+                records which matched this criteria.
+            </p>
+            <p>
+                <strong>pm10ConvertedNote:</strong><br>
+                The channel shows a key which can be looked up to tell what type of data conversion was applied.
+            </p>
+            <p>
+                <strong>pm10ConvertedAlert:</strong><br>
+                In this column we add warning text to be displayed in a tooltip for any pm10 data that was converted
+                from pm2.5 measurements: “This PM10 value has been derived from a PM2.5 measurement, therefore
+                caution is advised when interpreting this result.”
+            </p>
+            <p>
+                <strong>pm2.5Mean:</strong><br>
+                Renamed in camelCase.
+            </p>
+            <p>
+                <strong> pm2.5Year:</strong><br>
+                Renamed in camelCase.
+            </p>
+            <p>
+                <strong>pm2.5Converted:</strong><br>
+                New column indicating “Yes” if the pm2.5 value was converted from pm10 data. In total there were 720
+                records which matched this criteria.
+            </p>
+            <p>
+                <strong>pm2.5ConvertedNote:</strong><br>
+                The channel shows a key which can be looked up to tell what type of data conversion was applied.
+            </p>
+            <p>
+                <strong>pm2.5ConvertedAlert:</strong><br>
+                In this column we add warning text to be displayed in a tooltip for any pm2.5 data that was
+                converted from pm10 measurements: “This PM2.5 value has been derived from a PM10 measurement,
+                therefore caution is advised when interpreting this result.”
+            </p>
+            <p>
+                <strong>temporalCoverage:</strong><br>
+                Renamed in camelCase.
+            </p>
+            <p>
+                <strong>dataCoverageAlert:</strong><br>
+                Here we add a warning whenever the temporal coverage is indicated to be below 75%: “This station has
+                low data coverage (<75%), therefore the annual mean pollution level may not be an accurate
+                representation of the annual conditions.”<br><br>
+
+
+                In addition, the value NA was inserted where no data was available:
+                PM10 (98 entries), pm10Year (552 entries), pm2.5 (7 entries), pm2.5Year (728 entries).
+            </p>
+
+
+            <h4>20 Leading Causes of Death <span class="badge">April 10th</span> </h4>
+
+            <p>
+                The Causes of Death data was already structured and cleaned by the WHO organization. We only
+                modified the data by adding information of air pollution. There were two tables; the data of 2000
+                and 2012. The 2000 data was dropped completely.
+            </p>
+            <p>
+                <strong> Rank</strong><br>
+                Removed.
+            </p>
+            <p>
+                <strong> Cause</strong><br>
+                No changes.
+            </p>
+            <p>
+                <strong>Deaths</strong><br>
+                Removed.
+            </p>
+            <p>
+                <strong> Deaths per 100.000</strong><br>
+                Because the 3.7 million deaths caused by air pollution are diagnosed as other diseases (source),
+                those deaths had to be removed from the totals of the individual diseases to prevent duplicate
+                deaths. The removed counts were added as separate rows with air pollution as their parent. Because
+                of this, it is possible to zoom into the air pollution numbers.
+            </p>
+            <p>
+                <strong>% Deaths</strong><br>
+                After the total deaths (Deaths per 100.000) were recalculated, the percentages were updated to keep
+                the data consistent.
+            </p>
+
+            <div class="alert alert-warning" role="alert">
+                <strong>Oops...</strong> We are missing the World Bank data cleansing.
+            </div>
+
+            <h3>Exploratory Data Analysis</h3>
+            <div class="col-sm-6 col-md-6 pull-right">
+                <div class="thumbnail">
+                    <img src="img/analysis1.png" alt="anslysis">
+                    <div class="caption">
+                        <p>An excerpt from the Tableau analysis</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Behind the Numbers:</h4>
+            <p>
+                We performed an initial check to see which country level metrics available from the World Bank would offer interesting insights for the user. We used Tableau as a tool to perform this analysis because it makes it easy to perform rapid testing of chart results before we jump into coding.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+

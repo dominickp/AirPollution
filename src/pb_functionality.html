@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div class="next-banner">
+        <span class="left"><a href="index.html">CS171 - Free Radicals</a></span>
+        <span><a href="processbook.html">ProcessBook</a></span>
+    </div>
+
+    <div class="jumbotron" id="hero-sun">
+        <div class="container">
+            <h1>Process Book</h1>
+            <p>The steps we took to develop our solution.<i class="fa fa-github" aria-hidden="true"></i></p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="pb_index.html" class="list-group-item">
+                    Overview
+                </a>
+                <a href="pb_data.html" class="list-group-item">Data</a>
+                <a href="pb_functionality.html" class="list-group-item active">Functionality</a>
+                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item">Vestibulum at eros</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-9">
+
+            <h2>Functionality</h2>
+
+            <h3>Tasks</h3>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="label label-default">Filter</span>
+                    The initial view presented to the reader will show pollution data filtered for their city of choice.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Navigate</span>
+                    After the reader sees information about his city, the visualization zooms out to show information about the whole country. Additionally, when the user clicks on a country, they will be presented with the underlying city level detail.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Select</span>
+                    The reader will be able select additional countries to add to the visualization. This will provide the flexibility for the user to choose which country comparisons are most relevant or interesting.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Sort</span>
+                    The bar chart with the countries can be sorted based on PM2.5 or PM10.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Determine Range</span>
+                    The visual encoding we have chosen uses bars to represent the range of pollution for each country. We think this is an important metric and therefore it is presented using the very effective position encoding.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Coordinate</span>
+                    The city that is picked when you enter the page is the main focus of all visualizations. It is the city that will be explored in the beginning, the country that will be used to compare to well known polluters and the city that will be the main focus on the map.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-default">Coordinate</span>
+                    TIn the section “Behind the numbers: factors contributing to pollution” readers will be able to explore coordinated scatter plots showing PM2.5 vs 9 different metrics such as % fossil fuel use, % forestry in country. We also plan to include functionality for simultaneous highlighting and filtering.
+                </li>
+            </ul>
+
+            <h3>Must Have Features</h3>
+            <h4>Act 1: Air</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">Selectable city with a text input using Typeahead.js</li>
+                <li class="list-group-item list-group-item-success">Allow the user to put in their home city to filter the data to their city.</li>
+                <li class="list-group-item list-group-item-success">Show PM2.5 value of selected city on a scale from 0-300(?)</li>
+                <li class="list-group-item list-group-item-success">Show a line with the limit of the WHO Safe level</li>
+                <li class="list-group-item list-group-item-success">Show PM2.5 value of well known places like New Delhi as comparison</li>
+                <li class="list-group-item list-group-item-success">Switch between PM2.5 and PM10 value.</li>
+                <li class="list-group-item list-group-item-warning">Auto-populated commentary based on city selection</li>
+                <li class="list-group-item list-group-item-success">Display facts based on the city date, like “twice as much pollution than the average cities in the US”.</li>
+                <li class="list-group-item list-group-item-success">Add and remove additional cities also using Typeahead.js - This will give the viewer the ability to compare their city data to others</li>
+            </ul>
+
+            <h4>A year in the life of Beijing’s air.</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    One year time series of Beijing PM2.5 data with interactive narration.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    Chart will be presented in a multi-step chronological sequence, stopping at each key event to explain to the user the main points. This will provide a tacit tutorial while giving the reader the ability to move forward and backwards to the key events.
+                </li>
+            </ul>
+
+            <h4>Behind the numbers: factors contributing to pollution</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    Small multiples charts showing PM2.5 scatter plot correlations with 6 key metrics
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    Coordinated views with highlight ability.
+                </li>
+            </ul>
+
+            <h4>Act 2: Death</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    Show different causes of mortality in a chart (well known causes like aids or malaria). - Animate the chart with human-icons (<a href="http://www.fallen.io/ww2/" target="_blank">Inspiration</a>).
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    Zoom in to show how air pollution consists of deaths of different diseases.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    Show percentages
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    A legend to show what a skeleton means
+                </li>
+            </ul>
+
+
+                    <h3>Optional Features</h3>
+
+
+        </div>
+    </div>
+</div>
+
+
