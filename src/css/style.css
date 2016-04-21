@@ -92,17 +92,19 @@
     cursor: -moz-grab;
 }
 
-.header {
+#main-hero {
 
     /* http://metro.co.uk/2014/04/02/saharan-dust-prompts-very-high-air-pollution-warning-4685906/ */
-    background-image: url("https://metrouk2.files.wordpress.com/2014/04/ad131317904air-pollution-ha.jpg");
+    /*background-image: url("https://metrouk2.files.wordpress.com/2014/04/ad131317904air-pollution-ha.jpg");*/
+    background-image: url("img/header_bg_craig.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     color: white;
     min-height: 70vh;
+    background-position-y: bottom;
 }
 
 .container {
