@@ -369,7 +369,7 @@ var yearlyVis = function (container_selector, service) {
 
     model.setBar = function () {
 
-        model.yLabel.text("Countries");
+        model.yLabel.text("Countries change in outcome since 1990");
         var vals = [
             {
                 count: better,
@@ -389,6 +389,7 @@ var yearlyVis = function (container_selector, service) {
         model.update();
 
         model.lines.selectAll("path")
+            .on('mouseover', model.bartip.hide)
             .transition()
             .delay(function (d, i) {
                 d.active = false;
