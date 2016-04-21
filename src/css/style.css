@@ -7,6 +7,7 @@
     height: 100%;
     text-align: center;
 }
+
 #preloader-image {
     margin-top: 150px;
 }
@@ -144,10 +145,6 @@ body, html {
     padding: 0;
 }
 
-body{
-    padding-bottom: 100px;
-}
-
 /*.introduction {*/
 /*min-height: 50vh;*/
 /*}*/
@@ -223,9 +220,11 @@ body{
     background-color: brown;
 }
 
-.next-banner.lol-wut{
-    text-align:left!important;
-    color:#FFF;
+.next-banner.lol-wut {
+    text-align: left !important;
+    color: #FFF;
+
+    padding-bottom: 100px;
 }
 
 .next-banner > span > a {
@@ -281,6 +280,6 @@ body{
 
 }
 
-.wrapping-btn{
+.wrapping-btn {
     white-space: normal;
 }

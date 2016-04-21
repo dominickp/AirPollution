@@ -215,7 +215,7 @@ var behindNumbers = function (container_selectors, service) {
                         .style("opacity", 1);
                 }
             });
-        
+
 
     };
 
