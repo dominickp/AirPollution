@@ -305,7 +305,7 @@ var airVisualization = function (container_selector, service) {
                     return d.city;
                 })
                 .attr("y", function (d, index) {
-                    return (gauge_height + (gauge_label_spacing * (index + 3)));
+                    return (gauge_height + (gauge_label_spacing * (index + 2)));
                 });
 
             model.selected_city
@@ -315,7 +315,7 @@ var airVisualization = function (container_selector, service) {
                     return model.x(d[model.selected_unit.key]);
                 })
                 .attr("height", function (d, index) {
-                    return (gauge_height + (gauge_label_spacing * (index + 2)));
+                    return (gauge_height + (gauge_label_spacing * (index + 1)));
                 });
 
             // Exit
