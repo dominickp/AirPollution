@@ -93,7 +93,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     // get all "next" buttons
     var buttons = document.getElementsByClassName("next");
-    var text = document.getElementsByClassName("text"); 
+    var text = document.getElementsByClassName("text");
     // give them the on-click action
     if (buttons) {
         for (var i = 0; i < buttons.length; i++) {
@@ -184,6 +184,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     });
     $("#intro_1").mouseout(yearVis.resetSelection);
 
+    $("#but1").click(yearVis.switch);
 
     // sharable link goes directly to the summary
     var city = getURLParameter("city");

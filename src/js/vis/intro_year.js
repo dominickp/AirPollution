@@ -36,6 +36,22 @@ var yearlyVis = function (container_selector, service) {
         return String;
     });
 
+    model.bartip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+        return d.info;
+    });
+
+    var better = 0;
+    var worse = 0;
+
+
+    model.countries.forEach(function (d) {
+        if ((d["2013"] - d["1990"]) > 0) {
+            worse++;
+        }
+        else {
+            better++;
+        }
+    });
 
     // init svg
     model.svg = d3.select(container_selector).append("svg")
@@ -60,16 +76,7 @@ var yearlyVis = function (container_selector, service) {
 
     y.domain(model.range);
     model.svg.call(model.tooltip);
-
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom")
-        .tickValues([1990, 1995, 2000, 2005, 2010, 2013])
-        .tickFormat(d3.format(""));
-
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
+    model.svg.call(model.bartip);
 
     var line = d3.svg.line()
         .x(function (d) {
@@ -80,104 +87,20 @@ var yearlyVis = function (container_selector, service) {
         });
 
 
-    model.svg.append("g")
+    var xAxisSVG = model.svg.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .attr("transform", "translate(0," + height + ")");
 
-    model.svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-        .append("text")
+    var yAxisSVG = model.svg.append("g")
+        .attr("class", "y axis");
+
+
+    model.yLabel = yAxisSVG.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .text("PM 2.5");
-
-    model.line.append("line")
-        .attr("x1", 0)
-        .attr("y1", y(10))
-        .attr("x2", width)
-        .attr("y2", y(10))
-        .style('stroke', 'red')
-        .style('opacity', 1)
-        .style('stroke-width', '3px');
-
-    model.line.append("text")
-        .attr("x", width)
-        .attr("y", y(10))
-        .style('fill', 'red')
-        .text("WHO safe level");
-
-
-    model.lines.selectAll("path").data(model.countries).enter().append("path")
-        .attr("class", "line")
-        .style('stroke', 'gray')
-        .style('opacity', 0.1)
-
-        .on('mouseover', function (d) {
-            d3.select(this).style('stroke', '#447392').style('opacity', 1).style('cursor', 'pointer');
-            model.tooltip.show(d);
-            if (!d.active) {
-                var index = model.labelData.indexOf(d);
-                if (index === -1) {
-                    model.labelData.push(d);
-                    model.updateLabel();
-                }
-
-            }
-
-        })
-        .on('mouseout', function (d) {
-            model.tooltip.hide(d);
-
-            if (!d.active && !d.tempActive) {
-                d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
-
-                var index = model.labelData.indexOf(d);
-                if (index > -1) {
-                    model.labelData.splice(index, 1);
-                    model.update();
-                }
-                return;
-            }
-            d3.select(this).style('stroke', '#447392').style('opacity', 1);
-
-
-        })
-        .on('click', function (d) {
-
-            var index;
-
-
-            if (d.active) {
-                index = model.labelData.indexOf(d);
-                if (index > -1) {
-                    model.labelData.splice(index, 1);
-                }
-            }
-            else {
-
-                if (model.labelData.length > 10) {
-                    sweetAlert("Oops...", "You can pin a maximum of 10 countries.", "error");
-                    return;
-                }
-
-                index = model.labelData.indexOf(d);
-                if (index === -1) {
-                    model.labelData.push(d);
-
-                }
-            }
-
-
-            d.active = !d.active;
-            model.update();
-        })
-        .attr("d", function (d) {
-            return line(d.vals);
-        });
 
     model.setActive = function (d) {
 
@@ -223,9 +146,11 @@ var yearlyVis = function (container_selector, service) {
     };
 
     model.setActiveArray = function (arr) {
-        arr.forEach(function (d) {
-            model.setActiveName(d);
-        });
+        if (model.isLine === true) {
+            arr.forEach(function (d) {
+                model.setActiveName(d);
+            });
+        }
 
     };
 
@@ -441,6 +366,255 @@ var yearlyVis = function (container_selector, service) {
             relax();
         }
     }
+
+    model.setBar = function () {
+
+        model.yLabel.text("Countries");
+        var vals = [
+            {
+                count: better,
+                name: "better",
+                info: better + " countries air quality has improved since 1990",
+                color: "#008800"
+            },
+            {
+                count: worse,
+                name: "worse",
+                info: worse + " countries air quality has worsened since 1990",
+                color: "#7D0000"
+            }
+        ];
+
+        model.labelData = [];
+        model.update();
+
+        model.lines.selectAll("path")
+            .transition()
+            .delay(function (d, i) {
+                d.active = false;
+                return 300 + (i * 4);
+            })
+            .remove();
+
+
+        model.lines = model.svg.append("g");
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        x.domain(vals.map(function (d) {
+            return d.name;
+        }));
+
+        y.domain([0, d3.max(vals, function (d) {
+            return d.count;
+        }) + 10]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+
+        xAxisSVG.transition().duration(1000).call(xAxis);
+        yAxisSVG.transition().duration(1000).call(yAxis);
+
+        model.lines.selectAll(".bar")
+            .data(vals)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function (d) {
+                return x(d.name);
+            })
+            .attr("width", x.rangeBand())
+            .attr("y", height)
+            .attr("height", 0)
+            .attr("fill", function (d) {
+                return d.color;
+            })
+            .on('mouseover', model.bartip.show)
+            .on('mouseout', model.bartip.hide)
+            .transition()
+            .delay(1000)
+            .duration(1000)
+            .attr("y", function (d) {
+                return y(d.count);
+            })
+            .attr("height", function (d) {
+                return height - y(d.count);
+            });
+
+        model.line.selectAll("line")
+            .transition()
+            .duration(500)
+            .attr("x2", 0)
+            .remove();
+
+        model.line.selectAll("text")
+            .remove();
+
+    };
+
+    model.isLine = true;
+
+
+    model.switch = function () {
+        if (model.isLine === true) {
+            $("#intro-country").prop('disabled', true);
+            $("#but1").text('Show countries');
+
+            model.setBar();
+            model.isLine = false;
+            return;
+
+        }
+        $("#intro-country").prop('disabled', false);
+        $("#but1").text('Show statistics');
+        model.setLine();
+        model.isLine = true;
+
+    };
+
+
+    model.setLine = function () {
+
+        model.yLabel.text("PM 2.5");
+
+        model.lines.selectAll(".bar")
+            .transition()
+            .attr("y", height)
+            .attr("height", 0)
+            .transition()
+            .remove();
+
+
+        model.lines = model.svg.append("g");
+
+        var x = d3.time.scale()
+            .range([0, width]);
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        x.domain(model.years);
+
+        y.domain(model.range);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+            .tickValues([1990, 1995, 2000, 2005, 2010, 2013])
+            .tickFormat(d3.format(""));
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        xAxisSVG.transition().duration(1000).call(xAxis);
+        yAxisSVG.transition().duration(1000).call(yAxis);
+
+
+        model.lines.selectAll("path").data(model.countries).enter().append("path")
+            .attr("class", "line")
+            .style('stroke', 'gray')
+            .style('opacity', 0.1)
+
+            .on('mouseover', function (d) {
+                d3.select(this).style('stroke', '#447392').style('opacity', 1).style('cursor', 'pointer');
+                model.tooltip.show(d);
+                if (!d.active) {
+                    var index = model.labelData.indexOf(d);
+                    if (index === -1) {
+                        model.labelData.push(d);
+                        model.updateLabel();
+                    }
+
+                }
+
+            })
+            .on('mouseout', function (d) {
+                model.tooltip.hide(d);
+
+                if (!d.active && !d.tempActive) {
+                    d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
+
+                    var index = model.labelData.indexOf(d);
+                    if (index > -1) {
+                        model.labelData.splice(index, 1);
+                        model.update();
+                    }
+                    return;
+                }
+                d3.select(this).style('stroke', '#447392').style('opacity', 1);
+
+
+            })
+            .on('click', function (d) {
+
+                var index;
+
+
+                if (d.active) {
+                    index = model.labelData.indexOf(d);
+                    if (index > -1) {
+                        model.labelData.splice(index, 1);
+                    }
+                }
+                else {
+
+                    if (model.labelData.length > 10) {
+                        sweetAlert("Oops...", "You can pin a maximum of 10 countries.", "error");
+                        return;
+                    }
+
+                    index = model.labelData.indexOf(d);
+                    if (index === -1) {
+                        model.labelData.push(d);
+
+                    }
+                }
+
+
+                d.active = !d.active;
+                model.update();
+            })
+            .transition()
+            .delay(function (d, i) {
+                d.active = false;
+                return 300 + (i * 4);
+            })
+            .attr("d", function (d) {
+                return line(d.vals);
+            });
+
+        model.line.append("line")
+            .attr("x1", 0)
+            .attr("y1", y(10))
+            .attr("x2", 0)
+            .attr("y2", y(10))
+            .style('stroke', 'red')
+            .style('opacity', 1)
+            .style('stroke-width', '3px')
+            .transition()
+            .duration(500)
+            .attr("x2", width);
+
+        model.line.append("text")
+            .attr("x", width)
+            .attr("y", y(10))
+            .style('fill', 'red')
+            .text("WHO safe level");
+
+    };
+
+    model.setLine();
+
 
 };
 
