@@ -132,15 +132,15 @@ var airVisualization = function (container_selector, service) {
     // WHO Safe Level Line
     model.safe_level = model.lines.append("rect")
         .attr("x", 0)
-        .attr("y", 0)
-        .attr("height", (gauge_height + (2)))
+        .attr("y", -20)
+        .attr("height", (gauge_height + (20)))
         .attr("width", 2)
         .attr("fill", "black");
     // Add label
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height + (gauge_label_spacing+2)))
+        .attr("y", ((gauge_label_spacing*-1)-15))
         .style("text-anchor", "middle")
         .text("WHO Safe Level");
 
