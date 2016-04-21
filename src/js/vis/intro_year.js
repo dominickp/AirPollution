@@ -1,6 +1,7 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
-//var $ = require("jquery");
+var $ = require("jquery");
+var sweetAlert = require("sweetalert");
 
 console.log("src/js/vis/intro_year.js");
 
@@ -149,6 +150,7 @@ var yearlyVis = function (container_selector, service) {
 
             var index;
 
+
             if (d.active) {
                 index = model.labelData.indexOf(d);
                 if (index > -1) {
@@ -156,11 +158,20 @@ var yearlyVis = function (container_selector, service) {
                 }
             }
             else {
+
+                if (model.labelData.length > 10) {
+                    sweetAlert("Oops...", "You can pin a maximum of 10 countries.", "error");
+                    return;
+                }
+
                 index = model.labelData.indexOf(d);
                 if (index === -1) {
                     model.labelData.push(d);
+
                 }
             }
+
+
             d.active = !d.active;
             model.update();
         })
@@ -169,6 +180,12 @@ var yearlyVis = function (container_selector, service) {
         });
 
     model.setActive = function (d) {
+
+        if (model.labelData.length >= 10) {
+            sweetAlert("Oops...", "You can pin a maximum of 10 countries.", "error");
+            return;
+        }
+
         d.active = true;
         var index = model.labelData.indexOf(d);
         if (index === -1) {
@@ -190,11 +207,11 @@ var yearlyVis = function (container_selector, service) {
         });
 
 
-        if (found === null)
+        if (found === null) {
             return;
+        }
 
 
-        console.log(found);
         found.tmpActive = true;
         var index = model.tmpData.indexOf(found);
         if (index === -1) {
@@ -208,7 +225,7 @@ var yearlyVis = function (container_selector, service) {
     model.setActiveArray = function (arr) {
         arr.forEach(function (d) {
             model.setActiveName(d);
-        })
+        });
 
     };
 
@@ -289,7 +306,10 @@ var yearlyVis = function (container_selector, service) {
                 })
                 .on('mouseout', model.tooltip.hide)
                 .on('click', function (d) {
+
                     model.tooltip.hide(d);
+
+
                     if (d.active) {
                         var index = model.labelData.indexOf(d);
                         if (index > -1) {
@@ -297,6 +317,11 @@ var yearlyVis = function (container_selector, service) {
                         }
                     }
                     else {
+                        if (model.labelData.length > 10) {
+                            sweetAlert("Oops...", "You can pin a maximum of 10 countries.", "error");
+                            return;
+                        }
+
                         model.labelData.push(d);
                     }
                     d.active = !d.active;
@@ -312,7 +337,12 @@ var yearlyVis = function (container_selector, service) {
                         return '#447392';
                     }
                     return 'gray';
+                })
+                .attr("y", function (d) {
+                    return y(d.vals[6].val);
                 });
+            relax();
+
         }
 
     };
@@ -331,7 +361,6 @@ var yearlyVis = function (container_selector, service) {
 
                         return "gray";
                     }
-                    console.log(d);
                     return "#447392";
                 })
                 .style('opacity', function (d) {
@@ -354,7 +383,6 @@ var yearlyVis = function (container_selector, service) {
 
                     return "gray";
                 }
-                console.log(d);
                 return "#447392";
             })
             .style('opacity', function (d) {
@@ -367,6 +395,52 @@ var yearlyVis = function (container_selector, service) {
 
     };
 
+    var again = false;
+
+    var alpha = 0.5;
+    var spacing = 9;
+
+    function relax() {
+        again = false;
+        model.labels.selectAll("text").data(model.labelData, function (d) {
+            return d["Country Name"];
+        }).each(function () {
+            var a = this;
+            var da = d3.select(a);
+            var y1 = da.attr("y");
+            model.labels.selectAll("text").data(model.labelData, function (d) {
+                return d["Country Name"];
+            }).each(function () {
+                var b = this;
+
+                if (a === b) {
+                    return;
+                }
+                var db = d3.select(b);
+
+                if (da.attr("text-anchor") !== db.attr("text-anchor")) {
+                    return;
+                }
+
+                var y2 = db.attr("y");
+                var deltaY = y1 - y2;
+
+                if (Math.abs(deltaY) > spacing) {
+                    return;
+                }
+
+
+                again = true;
+                var sign = deltaY > 0 ? 1 : -1;
+                var adjust = sign * alpha;
+                da.attr("y", +y1 + adjust);
+                db.attr("y", +y2 - adjust);
+            });
+        });
+        if (again) {
+            relax();
+        }
+    }
 
 };
 
