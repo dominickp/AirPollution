@@ -229,7 +229,7 @@ body, html {
     padding-bottom: 100px;
 }
 
-.next-banner > span > a {
+.next-banner a {
     color: white;
 }
 
@@ -284,4 +284,8 @@ body, html {
 
 .wrapping-btn {
     white-space: normal;
+}
+
+.no-padding{
+    padding:0;
 }
