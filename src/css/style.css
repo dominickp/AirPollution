@@ -7,7 +7,6 @@
     height: 100%;
     text-align: center;
 }
-
 #preloader-image {
     margin-top: 150px;
 }
@@ -145,6 +144,10 @@ body, html {
     padding: 0;
 }
 
+body{
+    padding-bottom: 100px;
+}
+
 /*.introduction {*/
 /*min-height: 50vh;*/
 /*}*/
@@ -220,6 +223,11 @@ body, html {
     background-color: brown;
 }
 
+.next-banner.lol-wut{
+    text-align:left!important;
+    color:#FFF;
+}
+
 .next-banner > span > a {
     color: white;
 }
@@ -228,7 +236,7 @@ body, html {
     float: left;
 }
 
-.next-banner > .next, .next-banner > .text {
+.next-banner > .next, .next-banner > .text, .next-transition-btn {
     background-color: white;
     color: brown;
     padding: 10px 100px;
@@ -271,4 +279,8 @@ body, html {
 .action:hover {
     color: brown;
 
+}
+
+.wrapping-btn{
+    white-space: normal;
 }
