@@ -74,26 +74,93 @@
                 </li>
             </ul>
 
-            <h3>Must Have Features</h3>
-            <h4>Act 1: Air</h4>
+            <h3>Features</h3>
+
+            <h4>Introductory Visualization</h4>
             <ul class="list-group">
-                <li class="list-group-item list-group-item-success">Selectable city with a text input using Typeahead.js</li>
-                <li class="list-group-item list-group-item-success">Allow the user to put in their home city to filter the data to their city.</li>
-                <li class="list-group-item list-group-item-success">Show PM2.5 value of selected city on a scale from 0-300(?)</li>
-                <li class="list-group-item list-group-item-success">Show a line with the limit of the WHO Safe level</li>
-                <li class="list-group-item list-group-item-success">Show PM2.5 value of well known places like New Delhi as comparison</li>
-                <li class="list-group-item list-group-item-success">Switch between PM2.5 and PM10 value.</li>
-                <li class="list-group-item list-group-item-warning">Auto-populated commentary based on city selection</li>
-                <li class="list-group-item list-group-item-success">Display facts based on the city date, like “twice as much pollution than the average cities in the US”.</li>
-                <li class="list-group-item list-group-item-success">Add and remove additional cities also using Typeahead.js - This will give the viewer the ability to compare their city data to others</li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Add lines of all countries with air pollution data over time.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Be able to pin countries down.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Be able to search for countries using a search box.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Be able to highlight countries based on text-hovers in the text in the introduction.
+                </li>
+            </ul>
+
+            <h4>Act 1: Air</h4>
+
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Selectable city with a text input using Typeahead.js
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Allow the user to put in their home city to filter the data to their city.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Show PM2.5 value of selected city on a scale from 0-300(?)
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Show a line with the limit of the WHO Safe level
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Show PM2.5 value of well known places like New Delhi as comparison
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Switch between PM2.5 and PM10 value.
+                </li>
+                <li class="list-group-item list-group-item-warning">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Auto-populated commentary based on city selection
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Display facts based on the city date, like “twice as much pollution than the average cities in the US”.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Add and remove additional cities also using Typeahead.js - This will give the viewer the ability to compare their city data to others
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    A manual zoom to check differences when multiple lines are close to each other.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Add small stories for well known polluting countries.
+                </li>
+            </ul>
+
+            <h4>Shining a light on pollution: the value of measurements</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="label label-primary pull-right">Nice to have</span>
+                    Bar chart showing number of air measurement stations by country.
+                </li>
             </ul>
 
             <h4>A year in the life of Beijing’s air.</h4>
             <ul class="list-group">
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     One year time series of Beijing PM2.5 data with interactive narration.
                 </li>
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Chart will be presented in a multi-step chronological sequence, stopping at each key event to explain to the user the main points. This will provide a tacit tutorial while giving the reader the ability to move forward and backwards to the key events.
                 </li>
             </ul>
@@ -101,32 +168,100 @@
             <h4>Behind the numbers: factors contributing to pollution</h4>
             <ul class="list-group">
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Small multiples charts showing PM2.5 scatter plot correlations with 6 key metrics
                 </li>
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Coordinated views with highlight ability.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Add trend lines to the scatter plots.
+                </li>
+            </ul>
+
+            <h4>All city 1D scatterplot</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    A visualization showing all data points
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Highlight selected city and the other cities we have data from, from the same country.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Hover over selected regions to highlight them.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Click to separate different regions in different charts.
                 </li>
             </ul>
 
             <h4>Act 2: Death</h4>
             <ul class="list-group">
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Show different causes of mortality in a chart (well known causes like aids or malaria). - Animate the chart with human-icons (<a href="http://www.fallen.io/ww2/" target="_blank">Inspiration</a>).
                 </li>
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Zoom in to show how air pollution consists of deaths of different diseases.
                 </li>
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     Show percentages
                 </li>
                 <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
                     A legend to show what a skeleton means
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    split the visualization into two parts: one with the amount of deaths of air pollution as coffins, and one as a bar chart comparing it to different causes.
                 </li>
             </ul>
 
+            <h4>Act 3: Action</h4>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Pulsing marker to show the viewer’s city on a map.
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Auto rotating map.
+                </li>
+                <li class="list-group-item list-group-item-warning">
+                    <span class="label label-primary pull-right">Must have</span>
+                    Summary & city specific data.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Animate the globe by loading all data points.
+                </li>
+            </ul>
 
-                    <h3>Optional Features</h3>
+            <h4>Act 3: Action</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    A time-line in the process book, which shows different stages of development.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Add a timelapse video of polluted air as background image.
+                </li>
+                <li class="list-group-item">
+                    <span class="label label-info pull-right">Nice to have</span>
+                    Be able to link and share to your city summary.
+                </li>
+            </ul>
 
+            
 
         </div>
     </div>
