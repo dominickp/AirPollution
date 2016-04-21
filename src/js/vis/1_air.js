@@ -102,6 +102,17 @@ var airVisualization = function (container_selector, service) {
             return string;
         });
 
+    model.tip_selected_city = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([10, 0])
+        .direction('s')
+        .html(function (d) {
+            var string = 'Country: ' + model.active_city_data.country + '</br>' +
+                'PM2.5: ' + model.active_city_data['pm2.5Mean'] + '</br>' +
+                'PM10: ' + model.active_city_data.pm10Mean;
+            return string;
+        });
+
 
     /* Invoke the tip in the context of your visualization */
     model.svg.call(model.tip);
@@ -132,7 +143,9 @@ var airVisualization = function (container_selector, service) {
         .attr("x", 0)
         .attr("y", (gauge_height + (gauge_label_spacing * 2)))
         .style("text-anchor", "middle")
-        .text("");
+        .text("")
+        .on('mouseover', model.tip_selected_city.show)
+        .on('mouseout', model.tip_selected_city.hide);
 
     // WHO Safe Level Line
     model.safe_level = model.lines.append("rect")
