@@ -37,9 +37,7 @@ console.log('d3-tip', d3tip);
 console.log('sweetalert', sweetalert);
 
 
-var initialDataLoad = function (
-    error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics
-) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -179,6 +177,12 @@ var initialDataLoad = function (
         numberVis.swap(5);
         numberVis.reset();
     });
+
+    $("#intro_1").mouseover(function () {
+
+        yearVis.setActiveArray(["Netherlands", "Belgium", "Canada"]);
+    });
+    $("#intro_1").mouseout(yearVis.resetSelection);
 
 
     // sharable link goes directly to the summary

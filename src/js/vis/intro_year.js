@@ -23,6 +23,7 @@ var yearlyVis = function (container_selector, service) {
         String += d["Country Name"] + "<br>";
         if ((d["2013"] - d["1990"]) > 0) {
             String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
+
         }
         else {
             String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
@@ -31,8 +32,6 @@ var yearlyVis = function (container_selector, service) {
         if (!d.active) {
             String += "Click to pin";
         }
-
-
         return String;
     });
 
@@ -45,6 +44,7 @@ var yearlyVis = function (container_selector, service) {
     model.svg = model.svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    model.tmpData = [];
     model.labelData = [];
     model.line = model.svg.append("g");
     model.lines = model.svg.append("g");
@@ -179,78 +179,186 @@ var yearlyVis = function (container_selector, service) {
 
     };
 
+    model.setActiveName = function (name) {
+
+        // get country
+        var found = null;
+        $.each(model.countries, function (i, str) {
+            if (str["Country Name"] === name) {
+                found = str;
+            }
+        });
+
+
+        if (found === null)
+            return;
+
+
+        console.log(found);
+        found.tmpActive = true;
+        var index = model.tmpData.indexOf(found);
+        if (index === -1) {
+            model.tmpData.push(found);
+
+        }
+        model.update();
+
+    };
+
+    model.setActiveArray = function (arr) {
+        arr.forEach(function (d) {
+            model.setActiveName(d);
+        })
+
+    };
+
+    model.resetSelection = function () {
+        $.each(model.countries, function (i, str) {
+            str.tmpActive = false;
+
+        });
+        model.tmpData = [];
+        model.update();
+
+    };
+
     model.updateLabel = function () {
-        // labels
-        model.labels.selectAll("text").data(model.labelData, function (d) {
-            return d["Country Name"];
-        }).exit().remove();
 
-        model.labels.selectAll("text").data(model.labelData, function (d) {
+        if (model.tmpData.length > 0) {
+            // show tmplabels
+            model.labels.selectAll("text").data(model.tmpData, function (d) {
                 return d["Country Name"];
-            })
-            .enter().append("text")
-            .attr("x", width)
-            .style('fill', function (d) {
-                if (d.active) {
-                    return '#447392';
-                }
-                return 'gray';
-            })
-            .attr("y", function (d) {
-                return y(d.vals[6].val);
-            })
-            .text(function (d) {
-                return d["Country Name"];
-            })
-            .on('mouseover', function (d) {
-                d3.select(this).style('cursor', 'pointer');
-                model.tooltip.show(d);
+            }).exit().remove();
 
-            })
-            .on('mouseout', model.tooltip.hide)
-            .on('click', function (d) {
-                model.tooltip.hide(d);
-                if (d.active) {
-                    var index = model.labelData.indexOf(d);
-                    if (index > -1) {
-                        model.labelData.splice(index, 1);
+            model.labels.selectAll("text").data(model.tmpData, function (d) {
+                    return d["Country Name"];
+                })
+                .enter().append("text")
+                .attr("x", width)
+                .style('fill', function (d) {
+                    if (d.tmpActive) {
+                        return '#447392';
                     }
-                }
-                else {
-                    model.labelData.push(d);
-                }
-                d.active = !d.active;
-                model.update();
-            });
+                    return 'gray';
+                })
+                .attr("y", function (d) {
+                    return y(d.vals[6].val);
+                })
+                .text(function (d) {
+                    return d["Country Name"];
+                });
 
-        //update
-        model.labels.selectAll("text").data(model.labelData, function (d) {
+            //update
+            model.labels.selectAll("text").data(model.tmpData, function (d) {
+                    return d["Country Name"];
+                })
+                .style('fill', function (d) {
+                    if (d.tmpActive) {
+                        return '#447392';
+                    }
+                    return 'gray';
+                });
+        }
+        else {
+            // labels
+            model.labels.selectAll("text").data(model.labelData, function (d) {
                 return d["Country Name"];
-            })
-            .style('fill', function (d) {
-                if (d.active) {
-                    return '#447392';
-                }
-                return 'gray';
-            });
+            }).exit().remove();
+
+            model.labels.selectAll("text").data(model.labelData, function (d) {
+                    return d["Country Name"];
+                })
+                .enter().append("text")
+                .attr("x", width)
+                .style('fill', function (d) {
+                    if (d.active) {
+                        return '#447392';
+                    }
+                    return 'gray';
+                })
+                .attr("y", function (d) {
+                    return y(d.vals[6].val);
+                })
+                .text(function (d) {
+                    return d["Country Name"];
+                })
+                .on('mouseover', function (d) {
+                    d3.select(this).style('cursor', 'pointer');
+                    model.tooltip.show(d);
+
+                })
+                .on('mouseout', model.tooltip.hide)
+                .on('click', function (d) {
+                    model.tooltip.hide(d);
+                    if (d.active) {
+                        var index = model.labelData.indexOf(d);
+                        if (index > -1) {
+                            model.labelData.splice(index, 1);
+                        }
+                    }
+                    else {
+                        model.labelData.push(d);
+                    }
+                    d.active = !d.active;
+                    model.update();
+                });
+
+            //update
+            model.labels.selectAll("text").data(model.labelData, function (d) {
+                    return d["Country Name"];
+                })
+                .style('fill', function (d) {
+                    if (d.active) {
+                        return '#447392';
+                    }
+                    return 'gray';
+                });
+        }
+
     };
 
     model.update = function () {
 
         model.updateLabel();
+        if (model.tmpData.length > 0) {
 
+            model.lines.selectAll("path").data(model.countries)
+                .attr("class", "line")
+                .style('stroke', function (d) {
+
+                    if (!d.tmpActive) {
+
+
+                        return "gray";
+                    }
+                    console.log(d);
+                    return "#447392";
+                })
+                .style('opacity', function (d) {
+                    if (!d.tmpActive) {
+                        return 0.1;
+                    }
+                    return 1;
+                });
+
+            return;
+        }
 
         // lines
         model.lines.selectAll("path").data(model.countries)
             .attr("class", "line")
             .style('stroke', function (d) {
-                if (!d.active && !d.tempActive) {
+
+                if (!d.active && !d.tempActive && !d.tmpActive) {
+
+
                     return "gray";
                 }
+                console.log(d);
                 return "#447392";
             })
             .style('opacity', function (d) {
-                if (!d.active && !d.tempActive) {
+                if (!d.active && !d.tempActive && !d.tmpActive) {
                     return 0.1;
                 }
                 d.tempActive = false;
