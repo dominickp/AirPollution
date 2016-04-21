@@ -57,7 +57,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     introCityPicker.render();
 
     // Load vis 1
-    var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Peshwar'];
+    var citiesToPrepopulate = ['Beijing', 'Puerto La Cruz', 'Delhi'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
     service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
 
