@@ -72,7 +72,8 @@ gulp.task('buildVendor', function(){
 
 gulp.task('buildFonts', function(){
     return gulp.src([
-            'bower_components/bootstrap/dist/fonts/*'
+            'bower_components/bootstrap/dist/fonts/*',
+            'bower_components/font-awesome/fonts/*'
     ])
         .pipe(gulp.dest('dist/fonts'));
 });
@@ -81,6 +82,7 @@ gulp.task('buildFonts', function(){
 gulp.task('buildCSS', function(){
     return gulp.src([
             'bower_components/bootstrap/dist/css/bootstrap.css',
+            'bower_components/font-awesome/css/font-awesome.css',
             'src/css/**/*.css'])
         .pipe(concat('styles.css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))

@@ -23,6 +23,7 @@
     "d3": "^3.5.16",
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.2",
-    "typeahead.js": "^0.11.1"
+    "typeahead.js": "^0.11.1",
+    "font-awesome": "fontawesome#^4.6.1"
   }
 }
