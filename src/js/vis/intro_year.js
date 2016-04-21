@@ -1,6 +1,6 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
-var $ = require("jquery");
+//var $ = require("jquery");
 
 console.log("src/js/vis/intro_year.js");
 

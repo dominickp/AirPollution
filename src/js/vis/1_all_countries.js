@@ -19,7 +19,7 @@ var allCountries = function (container_selector, service) {
         return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
     });
 
-    model.legendtip = d3.tip().attr('class', 'd3-tip').html(function (d) {
+    model.legendtip = d3.tip().attr('class', 'd3-tip').html(function () {
         return "Click to pin";
     });
 
@@ -269,7 +269,7 @@ var allCountries = function (container_selector, service) {
             .each(function (d) {
 
                 d3.select(this).style("opacity", 0.1)
-                    .style("fill", function (d) {
+                    .style("fill", function () {
                         return 'gray';
                     });
 
@@ -291,8 +291,9 @@ var allCountries = function (container_selector, service) {
             model.cityline.remove();
             model.others.remove();
 
-            if (model.citydot)
+            if (model.citydot){
                 model.citydot.remove();
+            }
         }
         model.others = svg.append("g");
         model.cityline = svg.append("g");
@@ -348,10 +349,10 @@ var allCountries = function (container_selector, service) {
                                 .attr("stroke", "gray")
                                 .attr("stroke-width", 1)
                                 .on('mouseover', function () {
-                                    model.iconTip.show(d)
+                                    model.iconTip.show(d);
                                 })
                                 .on('mouseout', function () {
-                                    model.iconTip.hide(d)
+                                    model.iconTip.hide(d);
                                 });
 
                         }

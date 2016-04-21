@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div class="next-banner">
+        <span class="left"><a href="index.html">CS171 - Free Radicals</a></span>
+        <span><a href="pb_index.html"><span class="glyphicon glyphicon-book"></span> Process Book</a></span>
+    </div>
+
+    <div class="jumbotron" id="hero-sun">
+        <div class="container">
+            <h1>Process Book</h1>
+            <p>The steps we took to develop our solution.<i class="fa fa-github" aria-hidden="true"></i></p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="pb_index.html" class="list-group-item">
+                    Overview
+                </a>
+                <a href="pb_data.html" class="list-group-item">Data</a>
+                <a href="pb_functionality.html" class="list-group-item">Functionality</a>
+                <a href="pb_design.html" class="list-group-item active">Design</a>
+                <a href="pb_implementation.html" class="list-group-item">Implementation</a>
+            </div>
+        </div>
+
+
+        <div class="col-md-9">
+
+            <h2>Design</h2>
+
+            <h3>Inspiration</h3>
+
+            <p>
+                The idea for using Horizontal bars to represent air pollution came partially from the website Hipmunk, which uses the same approach display flight information. The idea of using position for your most important metric, and the elegance of the Hipmunk visual encoding was further reinforced a <a href="https://www.youtube.com/watch?v=R-oiKt7bUU8">lecture</a> titled “Designing Data Visualization given by Noah Iliinsky at LinkedIn (see video at 37:00)
+            </p>
+            <p>
+                <img class="thumbnail processImg" src="img/related1.png" alt="Iliinsky1"/>
+            </p>
+
+            <p>
+                The excellent data visualization documentary The Fallen of World War II (http://www.fallen.io/ww2/ )
+                was an inspiration for how to represent the imapct of human loss from air pollution in an engaging
+                and impactful way.
+            </p>
+            <p>
+                <img class="thumbnail processImg" src="img/related3.png" alt="fallenIO"/>
+            </p>
+
+            <h4>Existing EPA options for visualizing data</h4>
+            <p>
+                EPA includes four basic visualization methods:
+            </p>
+            <p>
+                AQI Plot
+                <img class="thumbnail processImg" src="img/option1.png" alt="AQI"/>
+            </p>
+            <p>
+                Tile Plot
+                <img class="thumbnail processImg" src="img/option2.png" alt="Tile"/>
+            </p>
+            <p>
+                Concentration Plot
+                <img class="thumbnail processImg" src="img/option3.png" alt="Concentration1"/>
+            </p>
+            <p>
+                Concentration Map
+                <img class="thumbnail processImg" src="img/option4.png" alt="Concentration2"/>
+            </p>
+
+
+
+
+
+            <h3>Introduction</h3>
+            <p>
+                While working on different parts of the project, we thought it would be a smart idea to add some interactivity in the introduction, to spark interest early. While discussing what to make, an idea came up for showing all country data. We added the country data of multiple years to show that air pollution is still an important issue today.
+            </p>
+
+            <h3>Act 1: Air</h3>
+            <p>
+                We found several issues with our original design. Labelling the countries turned out to be very tricky since they would easily overlap. For example, if you lived in a country which had a similar PM 2.5 level to the WHO safe level, the labels would overlap. We overcame this by extending the line by 10px based on the index value of the city, which allowed each city added to be longer than the last. This helped but it extended the vertical height of the chart greatly.
+            </p>
+
+            <h3>Act 1: Beijing</h3>
+            <p>
+                The beijing visualization has not changed during development, other then a technical change: We went from 'text' elements to 'Foreign Objects' to be able to style and link inside the bullet points.
+            </p>
+
+            <h3>Act 1: All cities</h3>
+            <p>
+                One of us found an article of the NYT <a href="http://www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html?_r=0" target="_blank">here</a>, and thought something like it would be a great addition to the project, to show the data of all cities at once. It started with a few drawings.
+            </p>
+            <img class="thumbnail processImg" src="img/act_1_all.png" alt="drawingcities"/>
+            <p>
+                Which were translated into a first draft design.
+
+            </p>
+            <img class="thumbnail processImg" src="img/allcities_1.png" alt="allcities1"/>
+
+            <p>
+                <b> Act 2: Death development</b><br><br>
+                <img class="thumbnail processImg" src="img/design_draw1.png" alt="drawing1"/>
+                We first had the problem of how to show external svg files with d3. After some research we were able
+                to show skeletons based on the amount of deaths.<br>
+                Because these skeletons consist of quite some whitespace, hovering and clicking on them was not as
+                easy as it looks. This white space also made it less obvious what the border of each group
+                was.<br><br>
+                <img class="thumbnail processImg" src="img/redesign1.png" alt="skeletons"/>
+
+                We changed the skeletons to show coffins instead. This made the visualization easier to understand
+                by glancing at it.
+                <img class="thumbnail processImg" src="img/redesign2.png" alt="koffins"/>
+
+            </p>
+
+            <h3>Act 3: Act development</h3>
+
+            <img class="thumbnail processImg" src="img/design_draw2.png" alt="world1"/>
+            <p>
+                At first, we build a flat world map, where you would be zoomed in into the selected city.
+                When we noticed this could cause trouble with cities in the middle of big countries, we added a
+                topojson file which also showed all regions. this file was 9mb.
+            </p>
+
+            <p>Old test version:
+                <a href="http://mariusdv.nl/tests/mapzoom/">http://mariusdv.nl/tests/mapzoom/ </a> (slow
+                load)
+            </p>
+            <p>
+                We later changed the design to a globe and reverted back to the old topojson file.
+                This globe was automatically turned to center your city. After some more brainstorming, we decided that it would be pretty to show your city as a pulsing marker, but also let the globe auto-rotate,
+                which is our current version.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+

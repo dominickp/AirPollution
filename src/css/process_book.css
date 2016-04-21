@@ -1,0 +1,21 @@
+#hero-sun{
+    background-image: url("img/header_bg_craig.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    color: white;
+}
+
+img.headshot{
+    max-width:80px;
+}
+
+.lead-question{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-bottom: 5px;
+    font-size:18px;
+    padding-top: 8px;
+}

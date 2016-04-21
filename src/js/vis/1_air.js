@@ -16,7 +16,7 @@ var airVisualization = function (container_selector, service) {
 
     var margin = {top: 40, right: 20, bottom: 60, left: 20};
     var width = 400 - margin.left - margin.right,
-        height = 170 - margin.top - margin.bottom;
+        height = 200 - margin.top - margin.bottom;
     var gauge_height = 50;
     var gauge_label_spacing = 10;
 
@@ -123,14 +123,14 @@ var airVisualization = function (container_selector, service) {
     model.selected_city = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height + (gauge_label_spacing * 4)))
+        .attr("height", (gauge_height + (gauge_label_spacing * 1)))
         .attr("width", 2)
         .attr("fill", "red");
     // Add label
     model.selected_city_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height + (gauge_label_spacing * 5)))
+        .attr("y", (gauge_height + (gauge_label_spacing * 2)))
         .style("text-anchor", "middle")
         .text("");
 
@@ -138,14 +138,14 @@ var airVisualization = function (container_selector, service) {
     model.safe_level = model.lines.append("rect")
         .attr("x", 0)
         .attr("y", 0)
-        .attr("height", (gauge_height + (gauge_label_spacing * 3)))
+        .attr("height", (gauge_height + (2)))
         .attr("width", 2)
-        .attr("fill", "blue");
+        .attr("fill", "black");
     // Add label
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", (gauge_height + (gauge_label_spacing * 4)))
+        .attr("y", (gauge_height + (gauge_label_spacing+2)))
         .style("text-anchor", "middle")
         .text("WHO Safe Level");
 
@@ -191,7 +191,7 @@ var airVisualization = function (container_selector, service) {
             .attr("y", 0)
             .attr("height", 0)
             .attr("width", 2)
-            .attr("fill", "green")
+            .attr("fill", "#666666")
             .on('mouseover', model.tip.show)
             .on('mouseout', model.tip.hide);
 
@@ -201,7 +201,7 @@ var airVisualization = function (container_selector, service) {
                 return model.x(d[model.selected_unit.key]);
             })
             .attr("y", function (d, index) {
-                return (gauge_height + (gauge_label_spacing * (index + 5)));
+                return (gauge_height + (gauge_label_spacing * (index + 3)));
             })
             .style("text-anchor", "middle")
             .text(function (d) {
@@ -223,7 +223,7 @@ var airVisualization = function (container_selector, service) {
                 return d.city;
             })
             .attr("y", function (d, index) {
-                return (gauge_height + (gauge_label_spacing * (index + 5)));
+                return (gauge_height + (gauge_label_spacing * (index + 3)));
             });
 
         model.other_city_lines
@@ -233,7 +233,7 @@ var airVisualization = function (container_selector, service) {
                 return model.x(d[model.selected_unit.key]);
             })
             .attr("height", function (d, index) {
-                return (gauge_height + (gauge_label_spacing * (index + 4)));
+                return (gauge_height + (gauge_label_spacing * (index + 2)));
             });
 
         // Exit

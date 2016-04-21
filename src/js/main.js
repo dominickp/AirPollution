@@ -37,7 +37,9 @@ console.log('d3-tip', d3tip);
 console.log('sweetalert', sweetalert);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics) {
+var initialDataLoad = function (
+    error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics
+) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -70,7 +72,14 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     webController.setAction(1, beijingVisualization.update);
 
     // Load Numbers
-    var numberVis = new NumbersVisualization(["#vis-1-numbers_1", "#vis-1-numbers_2", "#vis-1-numbers_3", "#vis-1-numbers_4", "#vis-1-numbers_5", "#vis-1-numbers_6"], service);
+    var numberVis = new NumbersVisualization([
+        "#vis-1-numbers_1",
+        "#vis-1-numbers_2",
+        "#vis-1-numbers_3",
+        "#vis-1-numbers_4",
+        "#vis-1-numbers_5",
+        "#vis-1-numbers_6"
+    ], service);
 
 
     // Load vis 2
@@ -139,7 +148,11 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     $("#hover4").mouseout(numberVis.reset);
 
     $("#hover5").mouseover(function () {
-        numberVis.setActiveArray(["Egypt, Arab Rep.", "Pakistan", "Cabo Verde", "Bahrain", "Iraq", "Saudi Arabia", "Iran", "Niger", "Mali", "Turkmenistan", "Mauritania", "Kuwait", "United Arab Emirates", "Yemen, Rep.", "Qatar"], 1);
+        numberVis.setActiveArray([
+            "Egypt, Arab Rep.", "Pakistan", "Cabo Verde", "Bahrain", "Iraq",
+            "Saudi Arabia", "Iran", "Niger", "Mali", "Turkmenistan", "Mauritania",
+            "Kuwait", "United Arab Emirates", "Yemen, Rep.", "Qatar"
+        ], 1);
     });
     $("#hover5").mouseout(numberVis.reset);
 
@@ -183,7 +196,8 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 };
 
 function getURLParameter(name) {
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+    return decodeURIComponent((
+        new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
 
 var createView = function () {
