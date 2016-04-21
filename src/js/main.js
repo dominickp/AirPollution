@@ -115,11 +115,11 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         // remove buttons after click (act2, act3)
         webController.setAction(2, function () {
             $(buttons[1]).addClass("hidden");
-            $(text[1]).addClass("hidden");
+            $(text[0]).addClass("hidden");
         });
         webController.setAction(3, function () {
             $(buttons[2]).addClass("hidden");
-            $(text[2]).addClass("hidden");
+            $(text[1]).addClass("hidden");
 
         });
     }
