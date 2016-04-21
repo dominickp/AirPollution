@@ -93,7 +93,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     // get all "next" buttons
     var buttons = document.getElementsByClassName("next");
-    var text = document.getElementsByClassName("text");
+    var text = document.getElementsByClassName("text"); 
     // give them the on-click action
     if (buttons) {
         for (var i = 0; i < buttons.length; i++) {
