@@ -23,11 +23,9 @@ var yearlyVis = function (container_selector, service) {
         String += d["Country Name"] + "<br>";
         if ((d["2013"] - d["1990"]) > 0) {
             String += "Change since 1990: +" + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
-            model.tooltip.style("background", "rgba(171, 30, 30, 0.8)");
         }
         else {
             String += "Change since 1990: " + (d["2013"] - d["1990"]).toFixed(2) + "<br>";
-            model.tooltip.style("background", "rgba(30, 171, 34, 0.8)");
         }
 
         if (!d.active) {
@@ -115,10 +113,10 @@ var yearlyVis = function (container_selector, service) {
     model.lines.selectAll("path").data(model.countries).enter().append("path")
         .attr("class", "line")
         .style('stroke', 'gray')
-        .style('opacity', 0.2)
+        .style('opacity', 0.1)
 
         .on('mouseover', function (d) {
-            d3.select(this).style('stroke', 'brown').style('opacity', 1).style('cursor', 'pointer');
+            d3.select(this).style('stroke', '#447392').style('opacity', 1).style('cursor', 'pointer');
             model.tooltip.show(d);
             if (!d.active) {
                 var index = model.labelData.indexOf(d);
@@ -134,7 +132,7 @@ var yearlyVis = function (container_selector, service) {
             model.tooltip.hide(d);
 
             if (!d.active && !d.tempActive) {
-                d3.select(this).style('stroke', 'gray').style('opacity', 0.2);
+                d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
 
                 var index = model.labelData.indexOf(d);
                 if (index > -1) {
@@ -143,7 +141,7 @@ var yearlyVis = function (container_selector, service) {
                 }
                 return;
             }
-            d3.select(this).style('stroke', 'brown').style('opacity', 1);
+            d3.select(this).style('stroke', '#447392').style('opacity', 1);
 
 
         })
@@ -194,7 +192,7 @@ var yearlyVis = function (container_selector, service) {
             .attr("x", width)
             .style('fill', function (d) {
                 if (d.active) {
-                    return 'brown';
+                    return '#447392';
                 }
                 return 'gray';
             })
@@ -231,7 +229,7 @@ var yearlyVis = function (container_selector, service) {
             })
             .style('fill', function (d) {
                 if (d.active) {
-                    return 'brown';
+                    return '#447392';
                 }
                 return 'gray';
             });
@@ -249,11 +247,11 @@ var yearlyVis = function (container_selector, service) {
                 if (!d.active && !d.tempActive) {
                     return "gray";
                 }
-                return "brown";
+                return "#447392";
             })
             .style('opacity', function (d) {
                 if (!d.active && !d.tempActive) {
-                    return 0.2;
+                    return 0.1;
                 }
                 d.tempActive = false;
                 return 1;
