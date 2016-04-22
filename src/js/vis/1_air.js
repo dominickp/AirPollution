@@ -14,8 +14,8 @@ var airVisualization = function (container_selector, service) {
 
     model.selected_unit = {key: "pm2.5Mean", safe_level: 10};
 
-    var margin = {top: 40, right: 20, bottom: 60, left: 20};
-    var width = 400 - margin.left - margin.right,
+    var margin = {top: 40, right: 20, bottom: 60, left: 40};
+    var width = 500 - margin.left - margin.right,
         height = 200 - margin.top - margin.bottom;
     var gauge_height = 50;
     var gauge_label_spacing = 10;
