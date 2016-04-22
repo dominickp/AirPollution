@@ -192,15 +192,22 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     $("#intro_3").mouseover(function () {
 
-        yearVis.setActiveArray(["Singapore"]);
+        yearVis.setActiveArray(["United States"]);
     });
     $("#intro_3").mouseout(yearVis.resetSelection);
 
     $("#intro_4").mouseover(function () {
 
-        yearVis.setActiveArray(["Singapore", "Indonesia"]);
+        yearVis.setActiveArray(["United Kingdom", "Germany", "Netherlands", "France", "Spain", "Italy"]);
     });
     $("#intro_4").mouseout(yearVis.resetSelection);
+
+    $("#intro_5").mouseover(function () {
+
+        yearVis.setActiveArray(["Singapore", "Indonesia"]);
+    });
+    $("#intro_5").mouseout(yearVis.resetSelection);
+
 
     $("#but1").click(yearVis.switch);
 
