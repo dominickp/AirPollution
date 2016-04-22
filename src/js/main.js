@@ -37,7 +37,7 @@ console.log('d3-tip', d3tip);
 console.log('sweetalert', sweetalert);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -45,10 +45,46 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     dataProcessing.process("mapTopoJson", mapTopoJson);
     dataProcessing.process("deathData", deathData);
     dataProcessing.process("beijingData", beijingData);
+    dataProcessing.process("delhiData", delhi);
     dataProcessing.process("overtimeData", overtimeData);
     dataProcessing.process("metrics", metrics);
     createView();
 
+
+    var beijing_message =
+        [
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>March 7:</strong> Stagnant air is trapped by nearby mountains, resulting in a rapid increase in particulate matter. A strong northerly wind the next day gives residents a reprieve from the dangerous air. See how <a href="http://aqicn.org/faq/2015-11-05/a-visual-study-of-wind-impact-on-pm25-concentration/" target="_blank">wind patterns</a> impact Beijing&rsquo;s air quality.</div></body>',
+                date: Date.parse("3/7/15")
+
+            },
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>July:</strong> Hot, humid summer weather combined with high pollution puts the elderly at high risk.</div></body>',
+                date: Date.parse("7/20/15")
+            },
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>December 8:</strong> Beijing authorities issue the city&rsquo;s first ever air quality <a href="http://www.nytimes.com/2015/12/09/world/asia/beijing-smog-pollution.html?_r=0" target="_blank">red alert</a> after 24hr pm2.5 values reach 268 micrograms per cubic metre, 10 times the WHO guidelines for daily exposure. 2 million school children ordered to stay home.</div></body>',
+                date: Date.parse("12/8/15")
+            }
+        ];
+
+
+    var delhi_message =
+        [
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml">Lorum ips.</body>',
+                date: Date.parse("2/2/15")
+
+            },
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml">Lorum ips..</body>',
+                date: Date.parse("5/5/15")
+            },
+            {
+                message: '<body xmlns="http://www.w3.org/1999/xhtml">lorum ips...</body>',
+                date: Date.parse("8/8/15")
+            }
+        ];
 
     // load introduction
     var yearVis = new YearVisualization("#vis-intro-container", service);
@@ -66,8 +102,11 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     webController.setAction(1, allCitiesView.update);
 
     // Load beijing
-    var beijingVisualization = new BeijingVisualization("#vis-1-beijing", service);
+    var beijingVisualization = new BeijingVisualization("#vis-1-beijing", service, service.getActiveDataset("beijingData"), beijing_message, "next_button_beijing");
     webController.setAction(1, beijingVisualization.update);
+
+    var delhiVisualization = new BeijingVisualization("#vis-1-delhi", service, service.getActiveDataset("delhiData"), delhi_message, "next_button_delhi");
+    webController.setAction(1, delhiVisualization.update);
 
     // Load Numbers
     var numberVis = new NumbersVisualization([
@@ -250,5 +289,6 @@ q.queue()
     .defer(d3.csv, "data/beijing-data-2015.csv")
     .defer(d3.csv, "data/World Bank pm2.5 over time.csv")
     .defer(d3.csv, "data/World Bank six key metrics.csv")
+    .defer(d3.csv, "data/delhi-data-2015.csv")
     .await(initialDataLoad);
 

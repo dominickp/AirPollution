@@ -4,12 +4,14 @@ var $ = require("jquery");
 
 console.log("src/js/vis/1_beijing.js");
 
-var beijingVis = function (container_selector, service) {
+var beijingVis = function (container_selector, service, d, messages, button) {
 
     var model = this;
     model.service = service;
 
-    var data = model.service.getActiveDataset("beijingData");
+    model.button = button;
+
+    var data = d;
 
 
     var margin = {top: 20, right: 150, bottom: 200, left: 100};
@@ -34,9 +36,7 @@ var beijingVis = function (container_selector, service) {
         .range([0, width]);
 
 
-    var pmRange = d3.extent(data, function (d) {
-        return d.pm25;
-    });
+    var pmRange = [0, 800];
 
     var pmScale = d3.scale.linear()
         .domain([pmRange[1] + 100, pmRange[0]])
@@ -120,8 +120,8 @@ var beijingVis = function (container_selector, service) {
 
 
         model.cur = 0;
-        $("#next_button").val("Play");
-        $("#next_button").removeClass("hidden");
+        $("#" + model.button).val("Play");
+        $("#" + model.button).removeClass("hidden");
         model.message.selectAll("line").remove();
         model.message.selectAll("foreignObject").remove();
 
@@ -140,20 +140,7 @@ var beijingVis = function (container_selector, service) {
     };
 
     model.cur = 0;
-    model.messages = [
-        {
-            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>March 7:</strong> Stagnant air is trapped by nearby mountains, resulting in a rapid increase in particulate matter. A strong northerly wind the next day gives residents a reprieve from the dangerous air. See how <a href="http://aqicn.org/faq/2015-11-05/a-visual-study-of-wind-impact-on-pm25-concentration/" target="_blank">wind patterns</a> impact Beijing&rsquo;s air quality.</div></body>',
-            date: Date.parse("3/7/15")
-
-        },
-        {
-            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>July:</strong> Hot, humid summer weather combined with high pollution puts the elderly at high risk.</div></body>',
-            date: Date.parse("7/20/15")
-        },
-        {
-            message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>December 8:</strong> Beijing authorities issue the city&rsquo;s first ever air quality <a href="http://www.nytimes.com/2015/12/09/world/asia/beijing-smog-pollution.html?_r=0" target="_blank">red alert</a> after 24hr pm2.5 values reach 268 micrograms per cubic metre, 10 times the WHO guidelines for daily exposure. 2 million school children ordered to stay home.</div></body>',
-            date: Date.parse("12/8/15")
-        }];
+    model.messages = messages;
 
     model.bisectDate = d3.bisector(function (d) {
         return d.time;
@@ -226,7 +213,7 @@ var beijingVis = function (container_selector, service) {
         }
         else if (model.messages.length === model.cur) {
 
-            $("#next_button").addClass("hidden");
+            $("#" + model.button).addClass("hidden");
             model.rect.transition()
                 .duration(500)
                 .attr("x", width);
@@ -237,7 +224,7 @@ var beijingVis = function (container_selector, service) {
 
         }
 
-        $("#next_button").val("Continue");
+        $("#" + model.button).val("Continue");
         model.rect.transition()
             .duration(500)
             .attr("x", dateScale(model.messages[model.cur].date));
@@ -281,7 +268,7 @@ var beijingVis = function (container_selector, service) {
     };
 
     // "next button"
-    $("#next_button").click(model.next);
+    $("#" + model.button).click(model.next);
 
 
 };

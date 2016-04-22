@@ -29,6 +29,11 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
         }
+        else if (name === "delhiData") {
+            processedDataset = model.processDelhiData(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else if (name === "overtimeData") {
             processedDataset = model.processYearlyData(dataset);
             service.addOriginalDataset(name, processedDataset);
@@ -172,6 +177,52 @@ var dataProcessor = function (service) {
                 curday = timestamp;
             }
             else if (timestamp === curday) {
+                sum += +time.concentration;
+                count++;
+                curday = timestamp;
+            }
+            else {
+                values.push({time: curday, pm25: sum / count});
+                sum = +time.concentration;
+                count = 1;
+                curday = timestamp;
+
+            }
+
+
+        });
+
+        // add rest
+        values.push({time: curday, pm25: sum / count});
+        return values;
+
+    };
+
+    model.processDelhiData = function (dataset) {
+
+        var values = [];
+
+        var sum = 0;
+        var count = 0;
+        var curday = null;
+        dataset.forEach(function (time) {
+
+
+            if (!time.date) {
+                return;
+            }
+            var parts = time.date.split("-");
+            var timestamp = new Date(parseInt(parts[2], 10),
+                parseInt(parts[1], 10) - 1,
+                parseInt(parts[0], 10));
+
+
+            if (curday === null) {
+                sum = +time.concentration;
+                count = 1;
+                curday = timestamp;
+            }
+            else if (timestamp.toDateString() === curday.toDateString()) {
                 sum += +time.concentration;
                 count++;
                 curday = timestamp;
