@@ -92,17 +92,19 @@
     cursor: -moz-grab;
 }
 
-.header {
+#main-hero {
 
     /* http://metro.co.uk/2014/04/02/saharan-dust-prompts-very-high-air-pollution-warning-4685906/ */
-    background-image: url("https://metrouk2.files.wordpress.com/2014/04/ad131317904air-pollution-ha.jpg");
+    /*background-image: url("https://metrouk2.files.wordpress.com/2014/04/ad131317904air-pollution-ha.jpg");*/
+    background-image: url("img/header_bg_craig.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     color: white;
     min-height: 70vh;
+    background-position-y: bottom;
 }
 
 .container {
@@ -139,7 +141,7 @@
 }
 
 body, html {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     min-width: 679px;
     margin: 0;
     padding: 0;
@@ -186,6 +188,7 @@ body, html {
 
 .fact {
     height: 250px;
+    font-size: 15px;
 }
 
 .line {
@@ -223,11 +226,11 @@ body, html {
 .next-banner.lol-wut {
     text-align: left !important;
     color: #FFF;
-
     padding-bottom: 100px;
+    min-height: 20px;
 }
 
-.next-banner > span > a {
+.next-banner a {
     color: white;
 }
 
@@ -265,8 +268,8 @@ body, html {
 .text {
     background-color: transparent !important;
     color: white !important;
-    margin: 0;
-
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
 
 .action {
@@ -282,4 +285,13 @@ body, html {
 
 .wrapping-btn {
     white-space: normal;
+}
+
+.no-padding{
+    padding:0 !important;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
 }
