@@ -375,13 +375,13 @@ var yearlyVis = function (container_selector, service) {
                 count: better,
                 name: "better",
                 info: better + " countries air quality has improved since 1990",
-                color: "#008800"
+                color: "#87CEEB"
             },
             {
                 count: worse,
                 name: "worse",
                 info: worse + " countries air quality has worsened since 1990",
-                color: "#7D0000"
+                color: "#7a5e5e"
             }
         ];
 
