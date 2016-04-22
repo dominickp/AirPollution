@@ -291,7 +291,7 @@ var allCountries = function (container_selector, service) {
             model.cityline.remove();
             model.others.remove();
 
-            if (model.citydot){
+            if (model.citydot) {
                 model.citydot.remove();
             }
         }
@@ -334,19 +334,18 @@ var allCountries = function (container_selector, service) {
                         }
 
                         d3.select(this).style("opacity", 0.7)
-                            .style("fill", 'black');
+                            .style("fill", d.color);
 
                         if (d.city === model.city.city) {
                             d3.select(this).style("opacity", 0.3)
                                 .style("fill", 'gray');
 
                             model.citydot = svg.append("circle")
-                                .attr("class", "pulsate dot")
                                 .attr("r", radius)
                                 .attr("cx", d.lineX)
                                 .attr("cy", d.lineY)
-                                .style("fill", 'brown')
-                                .attr("stroke", "gray")
+                                .style("fill", 'yellow')
+                                .attr("stroke", "black")
                                 .attr("stroke-width", 1)
                                 .on('mouseover', function () {
                                     model.iconTip.show(d);
