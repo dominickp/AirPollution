@@ -341,12 +341,12 @@ var allCountries = function (container_selector, service) {
                                 .style("fill", 'gray');
 
                             model.citydot = svg.append("circle")
-                                .attr("class", "pulsate dot")
+                                //.attr("class", "pulsate dot")
                                 .attr("r", radius)
                                 .attr("cx", d.lineX)
                                 .attr("cy", d.lineY)
-                                .style("fill", 'brown')
-                                .attr("stroke", "gray")
+                                .style("fill", 'yellow')
+                                .attr("stroke", "black")
                                 .attr("stroke-width", 1)
                                 .on('mouseover', function () {
                                     model.iconTip.show(d);
