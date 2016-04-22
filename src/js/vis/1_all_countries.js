@@ -341,7 +341,7 @@ var allCountries = function (container_selector, service) {
                                 .style("fill", 'gray');
 
                             model.citydot = svg.append("circle")
-                                //.attr("class", "pulsate dot")
+                                .attr("class", "pulsate dot")
                                 .attr("r", radius)
                                 .attr("cx", d.lineX)
                                 .attr("cy", d.lineY)
