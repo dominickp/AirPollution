@@ -298,3 +298,11 @@ h1,h2,h3,h4,h5{
 
 .instruction{
 }
+
+#main-hero blockquote footer {
+    color: #FFF;
+}
+
+#main-hero blockquote {
+    border-left: 5px solid rgba(255,255,255,0.2);
+}
