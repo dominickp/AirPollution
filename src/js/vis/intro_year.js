@@ -11,8 +11,9 @@ var yearlyVis = function (container_selector, service) {
     model.service = service;
     model.countries = model.service.getActiveDataset("overtimeData").countries;
     model.years = model.service.getActiveDataset("overtimeData").yearrange;
+    model.population = model.service.getActiveDataset("metrics").countries;
     model.range = model.service.getActiveDataset("overtimeData").valuerange;
-    var margin = {top: 40, right: 200, bottom: 40, left: 40};
+    var margin = {top: 40, right: 200, bottom: 40, left: 90};
     var width = 700 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
 
@@ -45,12 +46,22 @@ var yearlyVis = function (container_selector, service) {
 
 
     model.countries.forEach(function (d) {
+
+        var popu = 0;
+        model.population.forEach(function (e) {
+            if (e.name == d["Country Name"]) {
+                popu = e.population;
+            }
+        });
+
         if ((d["2013"] - d["1990"]) > 0) {
-            worse++;
+            worse += popu;
         }
         else {
-            better++;
+            better += popu;
         }
+
+
     });
 
     // init svg
@@ -370,18 +381,18 @@ var yearlyVis = function (container_selector, service) {
 
     model.setBar = function () {
 
-        model.yLabel.text("Countries change in outcome since 1990");
+        model.yLabel.text("People");
         var vals = [
             {
                 count: better,
                 name: "better",
-                info: better + " countries air quality has improved since 1990",
+                info: d3.format(",d")(better) + " people breathe air better than in 1990",
                 color: "#87CEEB"
             },
             {
                 count: worse,
                 name: "worse",
-                info: worse + " countries air quality has worsened since 1990",
+                info: d3.format(",d")(worse) + " people breathe air worse than in 1990",
                 color: "#7a5e5e"
             }
         ];
