@@ -180,9 +180,27 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     $("#intro_1").mouseover(function () {
 
-        yearVis.setActiveArray(["Netherlands", "Belgium", "Canada"]);
+        yearVis.setActiveArray(["China", "India", "Bangladesh", "Pakistan"]);
     });
     $("#intro_1").mouseout(yearVis.resetSelection);
+
+    $("#intro_2").mouseover(function () {
+
+        yearVis.setActiveArray(["Thailand", "Vietnam", "Cambodia", "Lao PDR"]);
+    });
+    $("#intro_2").mouseout(yearVis.resetSelection);
+
+    $("#intro_3").mouseover(function () {
+
+        yearVis.setActiveArray(["Singapore"]);
+    });
+    $("#intro_3").mouseout(yearVis.resetSelection);
+
+    $("#intro_4").mouseover(function () {
+
+        yearVis.setActiveArray(["Singapore", "Indonesia"]);
+    });
+    $("#intro_4").mouseout(yearVis.resetSelection);
 
     $("#but1").click(yearVis.switch);
 
