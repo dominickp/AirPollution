@@ -76,6 +76,7 @@ var dataProcessor = function (service) {
             newValue.life = +d["Life expectancy at birth, total (years)"];
             newValue.precipitation = +d["Average precipitation in depth (mm per year)"];
             newValue.pm = +d["PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)"];
+            newValue.population = +d["Population"];
 
             if (isNaN(newValue.pm)) {
                 return;
