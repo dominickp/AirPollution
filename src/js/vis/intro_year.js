@@ -200,6 +200,7 @@ var yearlyVis = function (container_selector, service) {
                     }
                     return 'gray';
                 });
+            relax(model.tmpData);
         }
         else {
             // labels
@@ -266,7 +267,7 @@ var yearlyVis = function (container_selector, service) {
                 .attr("y", function (d) {
                     return y(d.vals[6].val);
                 });
-            relax();
+            relax(model.labelData);
 
         }
 
@@ -325,15 +326,15 @@ var yearlyVis = function (container_selector, service) {
     var alpha = 0.5;
     var spacing = 9;
 
-    function relax() {
+    function relax(data) {
         again = false;
-        model.labels.selectAll("text").data(model.labelData, function (d) {
+        model.labels.selectAll("text").data(data, function (d) {
             return d["Country Name"];
         }).each(function () {
             var a = this;
             var da = d3.select(a);
             var y1 = da.attr("y");
-            model.labels.selectAll("text").data(model.labelData, function (d) {
+            model.labels.selectAll("text").data(data, function (d) {
                 return d["Country Name"];
             }).each(function () {
                 var b = this;
@@ -363,7 +364,7 @@ var yearlyVis = function (container_selector, service) {
             });
         });
         if (again) {
-            relax();
+            relax(data);
         }
     }
 
