@@ -1,0 +1,19 @@
+.hamilton-is-the-best-musical-ever {
+    position:relative;
+    height:281px;
+    width:450px;
+    margin:0 auto;
+}
+
+.hamilton-is-the-best-musical-ever img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.hamilton-is-the-best-musical-ever img.top:hover {
+    opacity: 0;
+}
