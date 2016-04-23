@@ -33,12 +33,12 @@
                 <a href="pb_functionality.html" class="list-group-item">Functionality</a>
                 <a href="pb_design.html" class="list-group-item">Design</a>
                 <a href="pb_implementation.html" class="list-group-item active">Implementation</a>
+                <a href="pb_evaluation.html" class="list-group-item">Evaluation</a>
             </div>
         </div>
 
 
         <div class="col-md-9">
-
             <h2>Implementation</h2>
 
             <h3>Build Automation and Project Bootstrapping</h3>
@@ -81,51 +81,159 @@
 
             <h3>Introduction</h3>
             <p>
-                TODO: Explain Vis.
+
+                <b>Reason</b><br>
+                For the Introduction, we added the country data of multiple years to show that air pollution
+                is still an important issue today.
+                <br>
+                After further development, the question: "How is the earth doing as a whole?" came in mind.
+                We decided to answer that question by adding a transition to show a bar chart, showing how the global
+                population is doing compared to 1990.<br><br>
+
+                <b>Interaction</b><br>
+                There are a few different ways to interact with the visualization:<br>
             </p>
+            <ul>
+                <li>
+                    <strong>Clicking lines</strong> to pin them down and make it easier to compare the different
+                    countries.
+                </li>
+                <li>
+                    <strong>Hovering over lines in the chart</strong> to get information about that country.
+                </li>
+                <li>
+                    <strong>Searching countries using typeahead</strong> to find specific countries in the
+                    visualization.
+                </li>
+                <li>
+                    <strong>Hovering over text-elements</strong> to instantly show what findings are talked about in the
+                    story.
+                </li>
+                <li>
+                    <strong>Clicking the button underneath the visualization</strong> to show how the population as a
+                    whole is doing.
+                </li>
+            </ul>
+
+            <img class="thumbnail processImg" src="NONEXIST" alt="Intro GIF"/>
+
 
             <h3>Act 1: Air</h3>
-            <p>
-                Creating this visualization was pretty simple after a bit of exploration. In D3, each datum is a
-                vertical line which is placed on the x coordinate with a simple scale. The tricky part was treating
-                each line differently. Obviously, the user's home city should display differently from the
-                "additional" cities they add to the chart. Given that we handled the current city within our Service
-                object, it meant that we needed to have two sets of data in the chart. This worked, but meant I had
-                to duplicate code more than I liked.
-            </p>
-            <p>
-                The chart also required an additional city selector, which meant we had to use typeahead.js again,
-                like we did in the introduction. Because the view and logic code was not decoupled, we had to
-                duplicate the CityPicker class, tweaking it slightly. I wasn't concerned about this duplication at
-                the time, but we discovered that we really had to add the country to the typeahead suggestions for
-                instances like "London, CA" and "London, UK", both showing as "London". Fixing this was more
-                troublesome because it had to be fixed in two places instead of one.
-            </p>
+            <div class="alert alert-warning" role="alert">
+                <strong>Oops...</strong> We are missing the Act 1: Air information
+            </div>
 
             <h3>Act 1: All cities</h3>
             <p>
-                TODO: Explain Vis.
-            </p>
 
-            <h3>Act 1: Beijing</h3>
-            <p>
-                TODO: Explain Vis.
+                <b>Reason</b><br>
+                We wanted to show more data than we did at the time, to make an easy comparison with the different
+                cities in our dataset. Showing all our datapoints also gives the reader the feeling that our data is
+                comprehensive.
+                <br><br>
+
+                <b>Interaction</b><br>
+                There are a few different ways to interact with the visualization:<br>
             </p>
+            <ul>
+                <li>
+                    <strong>Hovering over cities</strong> to get information about that city
+                </li>
+                <li>
+                    <strong>Clicking different regions</strong> to pin them down with to spot trends.
+                </li>
+            </ul>
+
+            <img class="thumbnail processImg" src="NONEXIST" alt="allCity GIF"/>
+
+
+            <h3>Act 1: Beijing & Delhi</h3>
+            <p>
+
+                <b>Reason</b><br>
+                Our section “A year in the life of Beijing’s air” will take readers through a year of pollution,
+                highlighting the impact it has on the daily lives of its residents. This is done to conceptualize the
+                meaning of high air pollution.
+
+                <br><br>
+
+                <b>Interaction</b><br>
+                There are a few different ways to interact with the visualization:<br>
+            </p>
+            <ul>
+                <li>
+                    <strong>Clicking through the story</strong> to..
+                </li>
+                <li>
+                    <strong>Hovering over the graph</strong> to..
+                </li>
+            </ul>
+
+            <img class="thumbnail processImg" src="NONEXIST" alt="beijng GIF"/>
 
             <h3>Act 1: Behind the Numbers</h3>
             <p>
-                TODO: Explain Vis.
-            </p>
 
+                <b>Reason</b><br>
+                What causes air pollution? <br>
+                This section invites readers to explore this question. This will be supported by additional text and
+                links to air pollution studies.
+                <br><br>
+
+                <b>Interaction</b><br>
+                There are a few different ways to interact with the visualization:<br>
+            </p>
+            <ul>
+                <li>
+                    <strong>Searching countries using typeahead</strong> to find specific countries in the
+                    visualization.
+                </li>
+                <li>
+                    <strong>Hovering over text-elements</strong> to instantly show what findings are talked about in the
+                    story.
+                </li>
+                <li>
+                    <strong>Hovering over dots in the chart</strong> to get information about that country and let it
+                    show up in the other graphs as well.
+                </li>
+            </ul>
+            <img class="thumbnail processImg" src="NONEXIST" alt="Behind Numbers GIF"/>
             <h3>Act 2</h3>
             <p>
-                TODO: Explain Vis.
-            </p>
 
+                <b>Reason</b><br>
+                To show that air pollution is an important problem, this visualization shows the true human cost of air
+                pollution through the lives lost every year.
+                <br><br>
+
+                <b>Interaction</b><br>
+                There are a few different ways to interact with the visualization:<br>
+            </p>
+            <ul>
+                <li>
+                    <strong>Hovering over coffins</strong>to show that it represents 100.000 deaths.
+                    this is done to let the reader realize how much deaths are displayed.
+                </li>
+                <li>
+                    <strong>Clicking the air pollution line</strong> to divide it into different diagnoses. this is done
+                    to show what our data consists of and to let the reader know what kind of diseases are caused by air
+                    pollution.
+                </li>
+            </ul>
+            <img class="thumbnail processImg" src="NONEXIST" alt="Act 2 GIF"/>
             <h3>Act 3</h3>
             <p>
-                TODO: Explain Vis.
+
+                <b>Reason</b><br>
+                At the end we show a rotating map with the selected country on it using a pulsating marker. this is
+                there to let the reader know we are talking about what HE can do for his city, and not some generic
+                text.
+                <br><br>
+
+                <b>Interaction</b><br>
+                There is no way to interact with this visualization.<br>
             </p>
+            <img class="thumbnail processImg" src="NONEXIST" alt="Act 3 GIF"/>
 
         </div>
     </div>

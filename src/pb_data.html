@@ -33,6 +33,7 @@
                 <a href="pb_functionality.html" class="list-group-item">Functionality</a>
                 <a href="pb_design.html" class="list-group-item">Design</a>
                 <a href="pb_implementation.html" class="list-group-item">Implementation</a>
+                <a href="pb_evaluation.html" class="list-group-item">Evaluation</a>
             </div>
         </div>
 
@@ -46,8 +47,8 @@
 
             <p>
                 The central visualization for Act 1 shows air pollution data for various cities and countries using
-            horizontal bars layered out in a stacked gantt chart style. All of the data for this visualization is
-            contained in the following WHO data file:
+                horizontal bars layered out in a stacked gantt chart style. All of the data for this visualization is
+                contained in the following WHO data file:
             </p>
 
             <table class="table table-bordered">
@@ -79,7 +80,7 @@
 
 
             <p>The main air pollution visualization will be followed by three subsections which allow the reader to
-            explore more details about air pollution:</p>
+                explore more details about air pollution:</p>
 
             <ul>
                 <li><i>A year in the life of Beijing's air</i></li>
@@ -156,8 +157,8 @@
             <h4>Act 2: Death</h4>
 
             <p>In Act 2 we focus the reader's attention on the human impact of the air pollution see in Act 1. The
-            central visualization will show deaths from air pollution around the world, and compare this with other
-            causes of death. The source for this data is again the WHO:</p>
+                central visualization will show deaths from air pollution around the world, and compare this with other
+                causes of death. The source for this data is again the WHO:</p>
 
             <table class="table table-bordered">
                 <tr>
@@ -196,17 +197,17 @@
 
             <h4>Act 3: Action</h4>
             <p>In the final act we bring the reader back to think about their home town and what they can do to both
-            protect their health from air pollution, and what actions can be taken to help reduce the problem. No
-            data visualizations are proposed for this section, but information from the Environmental
-            Protection Agency and other sources of advice on air pollution will be used.</p>
+                protect their health from air pollution, and what actions can be taken to help reduce the problem. No
+                data visualizations are proposed for this section, but information from the Environmental
+                Protection Agency and other sources of advice on air pollution will be used.</p>
 
 
             <h3>Data Cleansing</h3>
 
-            <h4>WHO Particulate matter dataset <span class="badge">April 7th</span> </h4>
+            <h4>WHO Particulate matter dataset <span class="badge">April 7th</span></h4>
 
             <p>The cleaned WHO particulate matter dataset consists of the data channels shown below. For each we
-            provide details of any data wrangling performed.</p>
+                provide details of any data wrangling performed.</p>
 
             <p>
                 <strong>Region:</strong><br>
@@ -255,7 +256,7 @@
                 Renamed in camelCase.
             </p>
             <p>
-            <strong>pm10Year:</strong><br>
+                <strong>pm10Year:</strong><br>
                 Renamed in camelCase. For any entry which contained a range of dates (e.g. 2009-2001), the later
                 date was used so that only a single value appears. This only occurred for station id’s 665 and 1296.
             </p>
@@ -313,7 +314,7 @@
             </p>
 
 
-            <h4>20 Leading Causes of Death <span class="badge">April 10th</span> </h4>
+            <h4>20 Leading Causes of Death <span class="badge">April 10th</span></h4>
 
             <p>
                 The Causes of Death data was already structured and cleaned by the WHO organization. We only
@@ -360,7 +361,9 @@
             </div>
             <h4>Behind the Numbers:</h4>
             <p>
-                We performed an initial check to see which country level metrics available from the World Bank would offer interesting insights for the user. We used Tableau as a tool to perform this analysis because it makes it easy to perform rapid testing of chart results before we jump into coding.
+                We performed an initial check to see which country level metrics available from the World Bank would
+                offer interesting insights for the user. We used Tableau as a tool to perform this analysis because it
+                makes it easy to perform rapid testing of chart results before we jump into coding.
             </p>
 
         </div>
