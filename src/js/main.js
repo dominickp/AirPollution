@@ -266,7 +266,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     //image  before after slider (Dominick to fix require/bower)
 /*    $(window).load(function() {
-        $("#container1").twentytwenty();
+        $("#imageSlider").twentytwenty();
     });*/
 
 };
