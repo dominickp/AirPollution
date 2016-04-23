@@ -182,6 +182,29 @@ var allCountries = function (container_selector, service) {
             model.update();
         });
 
+    svg.append("line")
+        .attr("x1", width - 150)
+        .attr("y1", 175)
+        .attr("x2", width)
+        .attr("y2", 175)
+        .style("stroke", "gray")
+        .style("stroke-width", 1);
+
+    svg.append("text")
+        .attr("x", width - 24)
+        .attr("y", 190)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .text("Selected City");
+
+    svg.append("circle")
+        .attr("r", radius)
+        .attr("cx", width - 8)
+        .attr("cy", 190)
+        .style("fill", 'yellow')
+        .attr("stroke", "black")
+        .attr("stroke-width", 1);
+
 
     force.start();
 
