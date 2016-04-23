@@ -13,7 +13,7 @@ var yearlyVis = function (container_selector, service) {
     model.years = model.service.getActiveDataset("overtimeData").yearrange;
     model.population = model.service.getActiveDataset("metrics").countries;
     model.range = model.service.getActiveDataset("overtimeData").valuerange;
-    var margin = {top: 10, right: 200, bottom: 40, left: 75};
+    var margin = {top: 10, right: 200, bottom: 40, left: 80};
     var width = 700 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
 

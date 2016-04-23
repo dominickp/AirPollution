@@ -13,6 +13,7 @@ var DataProcessing = require('./dataProcessor');
 var CityPicker = require('./view/cityPicker');
 var IntroCityPicker = require('./view/introCityPicker');
 var Vis1CityPicker = require('./view/vis1CityPicker');
+var NumberCityPicker = require('./view/numbersCityPicker');
 var Preloader = require('./view/preloader');
 var AirVisualization = require('./vis/1_air.js');
 var BeijingVisualization = require('./vis/1_beijing.js');
@@ -118,6 +119,8 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         "#vis-1-numbers_6"
     ], service);
 
+    var numberCityPicker = new NumberCityPicker(service, numberVis);
+    numberCityPicker.render();
 
     // Load vis 2
     var deathVisualization = new DeathVisualization("#vis-2-container", service);
