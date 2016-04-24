@@ -417,10 +417,10 @@ var allCountries = function (container_selector, service) {
         var perc = (better / total * 100);
 
         if (perc >= 50) {
-            $("#percentCompared").text("The air in " + c + " is better than the air in " + perc.toFixed(2) + "% of all other recorded cities.");
+            $("#percentCompared").text("The air in " + c + " is better than the air in " + perc.toFixed(0) + "% of all other recorded cities.");
         }
         else {
-            $("#percentCompared").text("The air in " + c + " is worse than the air in " + (100 - perc).toFixed(2) + "% of all other recorded cities.");
+            $("#percentCompared").text("The air in " + c + " is worse than the air in " + (100 - perc).toFixed(0) + "% of all other recorded cities.");
         }
 
         // model.stop = true;
