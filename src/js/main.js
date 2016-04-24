@@ -73,8 +73,8 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     var delhi_message =
         [
             {
-                message: '<body xmlns="http://www.w3.org/1999/xhtml">Lorum ips.</body>',
-                date: Date.parse("2/2/15")
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><strong>Winter</strong> temperature inversions cause cold air to trap pollution, leading sustained high levels of PM2.5 pollution.</body>',
+                date: Date.parse("1/17/15")
 
             },
             {
