@@ -385,13 +385,13 @@ var yearlyVis = function (container_selector, service) {
         var vals = [
             {
                 count: better,
-                name: "better",
+                name: "Breathing better air",
                 info: d3.format(",d")(better) + " people breathe air better than in 1990",
                 color: "#87CEEB"
             },
             {
                 count: worse,
-                name: "worse",
+                name: "Breathing worse air",
                 info: d3.format(",d")(worse) + " people breathe air worse than in 1990",
                 color: "#7a5e5e"
             }
