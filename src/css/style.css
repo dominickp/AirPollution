@@ -310,3 +310,8 @@ h1, h2, h3, h4, h5 {
 .cityRanking {
     background-color: #eeeeee;
 }
+
+.caption {
+    color: #cccccc;
+    text-align: right;
+}
