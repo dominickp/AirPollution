@@ -320,14 +320,6 @@ var behindNumbers = function (container_selectors, service) {
             });
     };
 
-    // Interaction icon
-    model.hand = model.svg.append("svg:image")
-        .attr("x", 210)
-        .attr("y", 10)
-        .attr("width", 30)
-        .attr("height", 30)
-        .attr("xlink:href", "img/hand.png");
-
 
     model.setActiveArray = function (array, raster) {
         array.forEach(function (d) {

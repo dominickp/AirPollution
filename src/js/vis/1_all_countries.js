@@ -24,8 +24,8 @@ var allCountries = function (container_selector, service) {
     });
 
 
-    var margin = {top: 20, right: 20, bottom: 100, left: 100};
-    var width = 950 - margin.left - margin.right,
+    var margin = {top: 20, right: 60, bottom: 100, left: 5};
+    var width = 1100 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
     var radius = 4;
     var padding = 8;
@@ -95,8 +95,8 @@ var allCountries = function (container_selector, service) {
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
-        .attr("x", -80)
-        .attr("y", 0)
+        .attr("x", width)
+        .attr("y", 50)
         .attr("width", 30)
         .attr("height", 30)
         .attr("xlink:href", "img/hand.png");
@@ -136,8 +136,10 @@ var allCountries = function (container_selector, service) {
         .attr("x", width - 18)
         .attr("width", 18)
         .attr("height", 18)
-        .style("fill", color)
+        .style("fill", "transparent")
         .style('cursor', 'pointer')
+        .style("stroke-width", 3)
+        .style("stroke", color)
         .on("mouseover", function (d) {
             model.legendtip.show(d);
             model.show(d);
@@ -153,9 +155,11 @@ var allCountries = function (container_selector, service) {
 
             if (index > -1) {
                 model.pinned.splice(index, 1);
+                d3.select(this).style("fill", "transparent");
             }
             else {
                 model.pinned.push(d);
+                d3.select(this).style("fill", color);
             }
         });
 
@@ -163,32 +167,12 @@ var allCountries = function (container_selector, service) {
     legend.append("text")
         .attr("x", width - 24)
         .attr("y", 9)
-        .style('cursor', 'pointer')
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text(function (d) {
             return d;
-        })
-        .on("mouseover", function (d) {
-            model.legendtip.show(d);
-            model.show(d);
-        })
-        .on("click", function (d) {
-
-
-            var index = model.pinned.indexOf(d);
-
-            if (index > -1) {
-                model.pinned.splice(index, 1);
-            }
-            else {
-                model.pinned.push(d);
-            }
-        })
-        .on("mouseout", function (d) {
-            model.legendtip.hide(d);
-            model.update();
         });
+
 
     svg.append("line")
         .attr("x1", width - 150)
