@@ -65,18 +65,18 @@ var deathVisualization = function (container_selector, service) {
         model.curData = [];
         model.colorScale = d3.scale.category20().range(
             [
-                "#A9E569",
-                "#A8ADE7",
-                "#6ED28E",
-                "#E493BB",
+                "#dcf4c3",
+                "#dcdef5",
+                "#c5edd1",
+                "#f4d3e3",
                 "brown",
-                "#DBBF5C",
-                "#79C3DC",
-                "#E19A5D",
-                "#A0ABCA",
-                "#93B27D",
-                "#B690BC",
-                "#D47E54"
+                "#f0e5bd",
+                "#c9e7f1",
+                "#f3d6be",
+                "#d9dde9",
+                "#d3e0cb",
+                "#e1d2e4",
+                "#edcbba"
             ]);
         model.picturesPline = 30;
         model.WidthPerImage = model.width / model.picturesPline;
