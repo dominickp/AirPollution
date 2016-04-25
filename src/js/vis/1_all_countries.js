@@ -423,6 +423,7 @@ var allCountries = function (container_selector, service) {
         $('head').append('<meta property="og:title" content="' + model.text + '">');
 
         console.log(model.textLine);
+        $("#fb_share").unbind();
         $("#fb_share").click(function () {
             FB.ui({
                 method: 'feed',
