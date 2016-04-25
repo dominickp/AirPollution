@@ -432,8 +432,9 @@ var allCountries = function (container_selector, service) {
                 name: model.textLine,
             }, function (response) {
             });
-        });
 
+        });
+        window.history.pushState('string', 'The Air we Breathe', 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country);
     };
 
     model.updateExternal = function () {
