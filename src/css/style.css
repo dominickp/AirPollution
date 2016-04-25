@@ -22,66 +22,6 @@
     margin-top: 10px;
 }
 
-.pulsate {
-    fill: red;
-    -webkit-animation: pulsate 5s ease-out;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation: pulsate 5s ease-out;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation: pulsate 5s ease-out;
-    -ms-animation-iteration-count: infinite;
-    animation: pulsate 5s ease-out;
-    animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes pulsate {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        opacity: 0.2;
-    }
-}
-
-@-moz-keyframes pulsate {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        opacity: 0.2;
-    }
-}
-
-@-ms-keyframes pulsate {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        opacity: 0.2;
-    }
-}
-
-@keyframes pulsate {
-    0% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 1.0;
-    }
-    100% {
-        opacity: 0.2;
-    }
-}
-
 .dragstart {
     cursor: -webkit-grabbing;
     cursor: -moz-grabbing;
@@ -154,6 +94,10 @@ body, html {
 /*.part {*/
 /*min-height: 100vh;*/
 /*}*/
+
+.notShown {
+    opacity: 0.0;
+}
 
 .hidden {
     visibility: hidden;
@@ -314,4 +258,27 @@ h1, h2, h3, h4, h5 {
 .caption {
     color: #cccccc;
     text-align: right;
+}
+
+.notSelected {
+    opacity: 0.7;
+    fill: #3f3f3f;
+}
+
+.feature {
+    opacity: 0.0;
+}
+
+.feature2 {
+    fill: #86a156;
+}
+
+.water {
+    fill: #1053d8;
+}
+
+.selected {
+    opacity: 1;
+    fill: brown;
+
 }

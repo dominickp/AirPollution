@@ -44,10 +44,25 @@ var dataProcessor = function (service) {
             service.addOriginalDataset(name, processedDataset);
             service.addActiveDataset(name, processedDataset);
         }
+        else if (name === "coords") {
+            processedDataset = model.processCoords(dataset);
+            service.addOriginalDataset(name, processedDataset);
+            service.addActiveDataset(name, processedDataset);
+        }
         else {
             throw new Error("Dataset name '" + name + "' has no defined data processing function.");
         }
     };
+
+    model.processCoords = function (dataset) {
+
+        dataset.forEach(function (city) {
+            city["latitude"] = +city["latitude"];
+            city["longitude"] = +city["longitude"];
+        });
+
+        return dataset;
+    }
 
     model.processMetrics = function (dataset) {
 

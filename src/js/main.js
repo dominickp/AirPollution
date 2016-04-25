@@ -38,7 +38,7 @@ console.log('d3-tip', d3tip);
 console.log('sweetalert', sweetalert);
 
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi) {
+var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi, coords) {
 
     var dataProcessing = new DataProcessing(service);
     dataProcessing.process("worldBankData", worldBankData);
@@ -49,6 +49,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     dataProcessing.process("delhiData", delhi);
     dataProcessing.process("overtimeData", overtimeData);
     dataProcessing.process("metrics", metrics);
+    dataProcessing.process("coords", coords);
     createView();
 
 
@@ -308,6 +309,7 @@ q.queue()
     .defer(d3.csv, "data/World Bank pm2.5 over time.csv")
     .defer(d3.csv, "data/World Bank six key metrics.csv")
     .defer(d3.csv, "data/delhi-data-2015.csv")
+    .defer(d3.csv, "data/coordinates.csv")
     .await(initialDataLoad);
 
 window.onload = function () {
