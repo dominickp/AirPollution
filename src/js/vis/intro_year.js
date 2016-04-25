@@ -497,7 +497,7 @@ var yearlyVis = function (container_selector, service) {
 
         }
         $("#intro-country").prop('disabled', false);
-        $("#but1").text('Show statistics');
+        $("#but1").text('Global statistics');
         model.setLine();
         model.isLine = true;
 
