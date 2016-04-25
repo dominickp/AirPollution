@@ -431,7 +431,8 @@ var allCountries = function (container_selector, service) {
         $('meta[property="og:title"]').remove();
         $('head').append('<meta property="og:title" content="' + model.text + '">');
 
-        var link = 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '%26country=' + model.city.country;
+        var simpleLink = 'http://www.theairwebreathe.org';
+        var link = simpleLink + '/index.html?city=' + model.city.city + '%26country=' + model.city.country;
         $("#fb_share").unbind();
         $("#fb_share").click(function () {
             FB.ui({
@@ -453,7 +454,7 @@ var allCountries = function (container_selector, service) {
 
         $("#twitterShare").unbind()
         $("#twitterShare").click(function () {
-            var tlink = 'https://twitter.com/intent/tweet?hashtags=air%2Cpollution&original_referer=' + link + '&ref_src=twsrc%5Etfw&text=' + encodeURIComponent('"' + model.textLine + '" - ') + '&tw_p=tweetbutton&url=' + link;
+            var tlink = 'https://twitter.com/intent/tweet?hashtags=air%2Cpollution&original_referer=' + simpleLink + '&ref_src=twsrc%5Etfw&text=' + encodeURIComponent('"' + model.textLine + '" - ') + '&tw_p=tweetbutton&url=' + simpleLink;
             window.open(tlink, "popupWindow", "width=600, height=400, scrollbars=yes");
         });
     };
