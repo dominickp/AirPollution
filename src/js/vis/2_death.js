@@ -65,13 +65,13 @@ var deathVisualization = function (container_selector, service) {
         model.curData = [];
         model.colorScale = d3.scale.category20().range(
             [
-                "#dcf4c3",
+                "#cff0ad",
                 "#dcdef5",
                 "#c5edd1",
                 "#f4d3e3",
                 "brown",
                 "#f0e5bd",
-                "#c9e7f1",
+                "#a1d5e7",
                 "#f3d6be",
                 "#d9dde9",
                 "#d3e0cb",
