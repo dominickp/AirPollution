@@ -93,6 +93,14 @@ var allCountries = function (container_selector, service) {
         .style("text-anchor", "end")
         .text("PM 2.5");
 
+    // Interaction icon
+    model.hand = model.svg.append("svg:image")
+        .attr("x", -80)
+        .attr("y", 0)
+        .attr("width", 30)
+        .attr("height", 30)
+        .attr("xlink:href", "img/hand.png");
+
 
     // TODO: Split into different views?
 

@@ -113,6 +113,15 @@ var yearlyVis = function (container_selector, service) {
         .style("text-anchor", "end")
         .text("PM 2.5");
 
+    // Interaction icon
+    model.hand = model.svg.append("svg:image")
+        .attr("x", 380)
+        .attr("y", 10)
+        .attr("width", 30)
+        .attr("height", 30)
+        .attr("xlink:href", "img/hand.png");
+
+
     model.setActive = function (d) {
 
         if (model.labelData.length >= 10) {
