@@ -408,24 +408,27 @@ var allCountries = function (container_selector, service) {
         var c = model.city.city + ", " + model.city.country;
         var perc = (better / total * 100);
 
+        model.textLine = "";
         if (perc >= 50) {
-            $("#percentCompared").text("The air in " + c + " is better than the air in " + perc.toFixed(0) + "% of all other recorded cities.");
+            model.textLine = "The air in " + c + " is better than the air in " + perc.toFixed(0) + "% of all other recorded cities.";
+
         }
         else {
-            $("#percentCompared").text("The air in " + c + " is worse than the air in " + (100 - perc).toFixed(0) + "% of all other recorded cities.");
+            model.textLine = "The air in " + c + " is worse than the air in " + (100 - perc).toFixed(0) + "% of all other recorded cities.";
         }
+        $("#percentCompared").text(model.textLine);
 
-        var text = $("#percentCompared").text();
 
         $('meta[property="og:title"]').remove();
-        $('head').append('<meta property="og:title" content="' + text + '">');
+        $('head').append('<meta property="og:title" content="' + model.text + '">');
 
+        console.log(model.textLine);
         $("#fb_share").click(function () {
             FB.ui({
                 method: 'feed',
                 link: 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country,
                 caption: 'The Air We Breathe - Free Radicals',
-                name: text,
+                name: model.textLine,
             }, function (response) {
             });
         });
