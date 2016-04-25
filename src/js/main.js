@@ -264,10 +264,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         }
     }
 
-    //image  before after slider (Dominick to fix require/bower)
-/*    $(window).load(function() {
-        $("#imageSlider").twentytwenty();
-    });*/
+
+    // remove watermark slider -Marius
+    var els = document.getElementsByTagName("a");
+    for (var i = 0, l = els.length; i < l; i++) {
+        var el = els[i];
+        if (el.href === 'http://juxtapose.knightlab.com/') {
+            el.parentElement.removeChild(el);
+            return;
+        }
+    }
 
 };
 
