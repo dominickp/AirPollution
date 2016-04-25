@@ -419,22 +419,43 @@ var allCountries = function (container_selector, service) {
         $("#percentCompared").text(model.textLine);
 
 
+        model.setSocial();
+
+
+        window.history.pushState('string', 'The Air we Breathe', 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country);
+    };
+
+
+    model.setSocial = function () {
+
         $('meta[property="og:title"]').remove();
         $('head').append('<meta property="og:title" content="' + model.text + '">');
 
-        console.log(model.textLine);
+        var link = 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '%26country=' + model.city.country;
         $("#fb_share").unbind();
         $("#fb_share").click(function () {
             FB.ui({
                 method: 'feed',
-                link: 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country,
+                link: link,
                 caption: 'The Air We Breathe - Free Radicals',
                 name: model.textLine,
             }, function (response) {
             });
 
         });
-        window.history.pushState('string', 'The Air we Breathe', 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country);
+
+        $("#linkedInShare").unbind()
+        $("#linkedInShare").click(function () {
+            var llink = 'https://www.linkedin.com/shareArticle?url=' + link + '&title="' + encodeURIComponent(model.textLine) + '"&summary=Air%20pollution%20is%20now%20the%20single%20biggest%20environmental%20health%20risk%20to%20humans.%20Outdoor%20air%20pollution%20in%20both%20cities%20and%20rural%20areas%20was%20estimated%20to%20cause%203.7%20million%20premature%20deaths%20worldwide%20in%202012.&source=LinkedIn';
+            window.open(llink, "popupWindow", "width=600, height=400, scrollbars=yes");
+        });
+
+
+        $("#twitterShare").unbind()
+        $("#twitterShare").click(function () {
+            var tlink = 'https://twitter.com/intent/tweet?hashtags=air%2Cpollution&original_referer=' + link + '&ref_src=twsrc%5Etfw&text=' + encodeURIComponent('"' + model.textLine + '" - ') + '&tw_p=tweetbutton&url=' + link;
+            window.open(tlink, "popupWindow", "width=600, height=400, scrollbars=yes");
+        });
     };
 
     model.updateExternal = function () {
