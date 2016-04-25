@@ -204,7 +204,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     $("#hover6").mouseout(numberVis.reset);
 
     $("#hover7").mouseover(function () {
-        numberVis.swap(5);
+        numberVis.swap(3);
 
         numberVis.setActiveArray(
             [
@@ -212,11 +212,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
                 "East Asia & Pacific (all income levels)",
                 "Latin America & Caribbean (all income levels)",
                 "Europe & Central Asia (developing only)",
-                "European Union"],
-            5);
+                "European Union",
+                "Sub-Saharan Africa (all income levels)",
+                "World",
+                "Upper middle income",
+                "Middle income"
+            ],
+            3);
     });
     $("#hover7").mouseout(function () {
-        numberVis.swap(5);
+        numberVis.swap(3);
         numberVis.reset();
     });
 
