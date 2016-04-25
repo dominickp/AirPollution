@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="img/mask.jpg"/>
+
+
     <title>The Air We Breathe</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Signika:300" rel="stylesheet" type="text/css">
@@ -378,7 +383,7 @@
                 <div class="media">
                     <div class="media-left">
                         <a href="#">
-                            <img class="media-object img-thumbnail" src="img/pollution mask.jpg" alt="Pollution mask"
+                            <img class="media-object img-thumbnail" src="img/mask.jpg" alt="Pollution mask"
                                  height="213"
                                  width="320">
                         </a>
@@ -647,6 +652,9 @@
                             Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
                             ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
                             Praesent augue erat, pretium quis congue quis, tempus at tortor.</p>
+                        <a id="fb_share">Share</a>
+
+
                     </div>
                 </div>
 
@@ -654,7 +662,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class=" container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Sources</h2>
@@ -664,13 +672,48 @@
                     </li>
                 </ol>
             </div>
+
         </div>
     </div>
 
 
 </div>
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+
 <script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1308186375874906',
+            xfbml: true,
+            version: 'v2.6'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    $("#fb_share").click(function () {
+        FB.ui({
+            method: 'feed',
+            link: 'http://www.theairwebreathe.org/',
+            caption: 'An example caption',
+        }, function (response) {
+        });
+    });
+
+</script>
+
+
 </body>
 </html>

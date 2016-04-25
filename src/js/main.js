@@ -260,7 +260,12 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         service.setCityCountry(city, country);
 
         if (service.getSelectedCity() !== null) {
-            webController.skiptolast();
+
+            var text = allCitiesView.getText();
+            console.log(text);
+
+            $('meta[property="og:title"]').remove();
+            $('head').append('<meta property="og:title" content="' + text + '">');
         }
     }
 

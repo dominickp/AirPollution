@@ -57,8 +57,7 @@ var cityPicker = function (service) {
             var selectedCity = datum;
 
 
-            $("#city_choice_name").text(selectedCity.city + ", " + selectedCity.country);
-            $("#city_choice").removeClass("hidden");
+
             service.setSelectedCity(selectedCity);
         });
 

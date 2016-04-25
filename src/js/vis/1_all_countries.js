@@ -419,6 +419,11 @@ var allCountries = function (container_selector, service) {
 
     };
 
+    model.getText = function () {
+        model.update();
+        return $("#percentCompared").text();
+    }
+
 
 };
 

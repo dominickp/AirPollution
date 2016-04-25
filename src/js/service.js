@@ -19,6 +19,9 @@ var service = function () {
 
         console.log(city);
 
+        $("#city_choice_name").text(city.city + ", " + city.country);
+        $("#city_choice").removeClass("hidden");
+
         // Update vis
         model.visualizations.vis1.updateVis();
     };

@@ -46,26 +46,6 @@ var WebController = function (pages, service) {
 
     };
 
-    model.skiptolast = function () {
-        var page = $("#p" + 3);
-        page.removeClass("hidden");
-
-        $('html, body').animate({
-            scrollTop: page.offset().top
-        }, 1000);
-
-        if (model.actions[3]) {
-
-            model.actions[3].forEach(function (d) {
-
-                setTimeout(function () {
-                    d();
-                }, 999);
-
-
-            });
-        }
-    };
 
     model.reset = function () {
 
