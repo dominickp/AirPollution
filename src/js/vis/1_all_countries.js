@@ -415,13 +415,26 @@ var allCountries = function (container_selector, service) {
             $("#percentCompared").text("The air in " + c + " is worse than the air in " + (100 - perc).toFixed(0) + "% of all other recorded cities.");
         }
 
-        // model.stop = true;
+        var text = $("#percentCompared").text();
+
+        $('meta[property="og:title"]').remove();
+        $('head').append('<meta property="og:title" content="' + text + '">');
+
+        $("#fb_share").click(function () {
+            FB.ui({
+                method: 'feed',
+                link: 'http://www.theairwebreathe.org/index.html?city=' + model.city.city + '&country=' + model.city.country,
+                caption: 'The Air We Breathe - Free Radicals',
+                name: text,
+            }, function (response) {
+            });
+        });
 
     };
 
-    model.getText = function () {
+    model.updateExternal = function () {
         model.update();
-        return $("#percentCompared").text();
+
     }
 
 

@@ -261,11 +261,10 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
         if (service.getSelectedCity() !== null) {
 
-            var text = allCitiesView.getText();
+            var text = allCitiesView.updateExternal();
             console.log(text);
 
-            $('meta[property="og:title"]').remove();
-            $('head').append('<meta property="og:title" content="' + text + '">');
+
         }
     }
 
