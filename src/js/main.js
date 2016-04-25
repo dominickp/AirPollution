@@ -265,16 +265,6 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     }
 
 
-    // remove watermark slider -Marius
-    var els = document.getElementsByTagName("a");
-    for (var i = 0, l = els.length; i < l; i++) {
-        var el = els[i];
-        if (el.href === 'http://juxtapose.knightlab.com/') {
-            el.parentElement.removeChild(el);
-            return;
-        }
-    }
-
 };
 
 function getURLParameter(name) {
@@ -305,3 +295,14 @@ q.queue()
     .defer(d3.csv, "data/delhi-data-2015.csv")
     .await(initialDataLoad);
 
+window.onload = function () {
+    // remove watermark slider -Marius
+    var els = document.getElementsByTagName("a");
+    for (var i = 0, l = els.length; i < l; i++) {
+        var el = els[i];
+        if (el.href === 'http://juxtapose.knightlab.com/') {
+            el.parentElement.removeChild(el);
+            return;
+        }
+    }
+}
