@@ -225,6 +225,12 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         numberVis.reset();
     });
 
+    $("#hover8").mouseover(function () {
+        numberVis.setActiveArray(["Turkey", "Norway", "Denmark", "Netherlands", "United Kingdom", "Portugal", "Sweden", "Uruguay", "Finland"], 4);
+
+    });
+    $("#hover8").mouseout(numberVis.reset);
+
     $("#intro_1").mouseover(function () {
 
         yearVis.setActiveArray(["China", "India", "Bangladesh", "Pakistan"]);
