@@ -304,7 +304,7 @@ var deathVisualization = function (container_selector, service) {
             .on('mouseout', model.iconTip.hide)
             .transition()
             .delay(function (d) {
-                return d.index * 85;
+                return d.index * 40;
             })
             .attr("width", model.img_width)
             .attr("height", model.img_height);
