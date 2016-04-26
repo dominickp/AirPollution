@@ -1,10 +1,27 @@
 #footer{
-    
+
+    background-color:brown;
+    height: 300px;
+    color:white;
+    padding: 60px;
+
 }
 
 #footer .social-sharing-container i{
     cursor: pointer;
+    z-index: 15;
 }
 #footer .social-sharing-container i:hover{
-    color:brown;
+    color:rgba(255,255,255,0.7);
+}
+
+#footer .social-sharing-container{
+    position: relative;
+}
+
+#footer #brand-floater {
+    position: absolute;
+    opacity: .2;
+    top: 0px;
+    left: 0;
 }
