@@ -1,0 +1,10 @@
+#footer{
+    
+}
+
+#footer .social-sharing-container i{
+    cursor: pointer;
+}
+#footer .social-sharing-container i:hover{
+    color:brown;
+}
