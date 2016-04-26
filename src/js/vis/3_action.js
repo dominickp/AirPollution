@@ -47,7 +47,7 @@ var actionVisualization = function (container_selector, service) {
 
             projection.rotate(model.rotate);
             path = d3.geo.path().projection(projection);
-            var path2 = d3.geo.path().projection(projection).pointRadius(5);
+            var path2 = d3.geo.path().projection(projection).pointRadius(4);
             var path3 = d3.geo.path().projection(projection).pointRadius(1.5);
             model.land.selectAll("path").attr("d", path);
             model.points.selectAll("path").attr("d", path3);
@@ -146,7 +146,7 @@ var actionVisualization = function (container_selector, service) {
             projection.rotate(model.oldrotate);
             path = d3.geo.path().projection(projection);
             var path3 = d3.geo.path().projection(projection).pointRadius(1.5);
-            var path2 = d3.geo.path().projection(projection).pointRadius(5);
+            var path2 = d3.geo.path().projection(projection).pointRadius(4);
             model.land.selectAll("path").attr("d", path);
             model.points.selectAll("path").attr("d", path3);
             model.countryspot.selectAll("path").attr("d", path2);
@@ -191,7 +191,7 @@ var actionVisualization = function (container_selector, service) {
             .attr("class", "notShown")
             .transition()
             .delay(function (d, i) {
-                return 5 + 2 * i;
+                return 5 + 10 * i;
             })
             .attr("class", function (d) {
                 if (d.val === cityString) {
