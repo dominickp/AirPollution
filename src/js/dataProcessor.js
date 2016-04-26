@@ -227,17 +227,16 @@ var dataProcessor = function (service) {
                 return;
             }
             var parts = time.date.split("-");
-            var timestamp = new Date(parseInt(parts[2], 10),
-                parseInt(parts[1], 10) - 1,
-                parseInt(parts[0], 10));
+            var timestamp = Date.parse(parts[1] + "/" + parts[0] + "/" + (parts[2]));
 
+            console.log(timestamp);
 
             if (curday === null) {
                 sum = +time.concentration;
                 count = 1;
                 curday = timestamp;
             }
-            else if (timestamp.toDateString() === curday.toDateString()) {
+            else if (timestamp === curday) {
                 sum += +time.concentration;
                 count++;
                 curday = timestamp;

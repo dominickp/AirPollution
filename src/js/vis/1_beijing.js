@@ -31,7 +31,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         return d.time;
     });
 
-    var dateScale = d3.time.scale()
+    model.dateScale = d3.time.scale()
         .domain([dateRange[0], dateRange[1]])
         .range([0, width]);
 
@@ -43,7 +43,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         .range([0, height]);
 
     var xAxis = d3.svg.axis()
-        .scale(dateScale)
+        .scale(model.dateScale)
         .orient("bottom")
         .tickFormat(d3.time.format("%b"));
 
@@ -56,7 +56,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
 
     var area = d3.svg.area()
         .x(function (d) {
-            return dateScale(d.time);
+            return model.dateScale(d.time);
         })
         .y0(height)
         .y1(function (d) {
@@ -147,7 +147,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
     }).left;
 
     model.mousemove = function () {
-        var x0 = dateScale.invert(d3.mouse(this)[0]),
+        var x0 = model.dateScale.invert(d3.mouse(this)[0]),
             i = model.bisectDate(data, x0, 1),
             d0 = data[i - 1],
             d1 = data[i];
@@ -159,18 +159,18 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         var d = x0 - d0.time > d1.time - x0 ? d1 : d0;
         model.focus.select("rect.AreaTooltip")
             .attr("transform",
-                "translate(" + dateScale(d.time) + "," +
+                "translate(" + model.dateScale(d.time) + "," +
                 0 + ")");
 
         model.focus.select("text.AreaTooltipDate")
             .attr("transform",
-                "translate(" + (dateScale(d.time) + 10) + "," +
+                "translate(" + (model.dateScale(d.time) + 10) + "," +
                 (height / 5 + 10) + ")")
             .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
 
         model.focus.select("text.AreaTooltipPopulation")
             .attr("transform",
-                "translate(" + (dateScale(d.time) + 10) + "," +
+                "translate(" + (model.dateScale(d.time) + 10) + "," +
                 height / 5 + ")")
             .html(Math.round(d.pm25));
     };
@@ -225,20 +225,21 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         }
 
         $("#" + model.button).val("Continue");
+        console.log(model.messages[model.cur].date);
         model.rect.transition()
             .duration(500)
-            .attr("x", dateScale(model.messages[model.cur].date));
+            .attr("x", model.dateScale(model.messages[model.cur].date));
 
         model.vals.push(model.messages[model.cur]);
 
 
         model.message.selectAll("line").data(model.vals).enter().append("line")
             .attr("x1", function (d) {
-                return dateScale(d.date) - 1;
+                return model.dateScale(d.date) - 1;
             })
             .attr("y1", height)
             .attr("x2", function (d) {
-                return dateScale(d.date) - 1;
+                return model.dateScale(d.date) - 1;
             })
             .attr("y2", height)
             .style("stroke", "gray")
@@ -250,7 +251,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
 
         model.message.selectAll("foreignObject").data(model.vals).enter().append("foreignObject")
             .attr("x", function (d) {
-                return dateScale(d.date) - 1;
+                return model.dateScale(d.date) - 1;
             })
             .attr("y", height + 40)
             .attr("width", 195)
@@ -262,7 +263,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
             });
 
         model.selection.transition()
-            .duration(1000).attr("width", dateScale(model.messages[model.cur].date));
+            .duration(1000).attr("width", model.dateScale(model.messages[model.cur].date));
 
         model.cur++;
     };

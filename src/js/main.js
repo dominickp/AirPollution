@@ -57,16 +57,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         [
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>March 7:</strong> Stagnant air is trapped by nearby mountains, resulting in a rapid increase in particulate matter. A strong northerly wind the next day gives residents a reprieve from the dangerous air. See how <a href="http://aqicn.org/faq/2015-11-05/a-visual-study-of-wind-impact-on-pm25-concentration/" target="_blank">wind patterns</a> impact Beijing&rsquo;s air quality.</div></body>',
-                date: Date.parse("3/7/15")
+                date: Date.parse("3/7/2015")
 
             },
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>July:</strong> Hot, humid summer weather combined with high pollution puts the elderly at high risk.</div></body>',
-                date: Date.parse("7/20/15")
+                date: Date.parse("7/20/2015")
             },
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml"><div><strong>December 8:</strong> Beijing authorities issue the city&rsquo;s first ever air quality <a href="http://www.nytimes.com/2015/12/09/world/asia/beijing-smog-pollution.html?_r=0" target="_blank">red alert</a> after 24hr pm2.5 values reach 268 micrograms per cubic metre, 10 times the WHO guidelines for daily exposure. 2 million school children ordered to stay home.</div></body>',
-                date: Date.parse("12/8/15")
+                date: Date.parse("12/8/2015")
             }
         ];
 
@@ -75,16 +75,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         [
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml"><strong>Winter</strong> temperature inversions cause cold air to trap pollution, leading sustained high levels of PM2.5 pollution.</body>',
-                date: Date.parse("1/17/15")
+                date: Date.parse("1/17/2015")
 
             },
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml">Delhi has a high proportion of diesel cars (which emit more fine particulates) resulting in elevated PM2.5 pollution year round.</body>',
-                date: Date.parse("5/5/15")
+                date: Date.parse("5/5/2015")
             },
             {
                 message: '<body xmlns="http://www.w3.org/1999/xhtml"><strong>Diwali:</strong> India&rsquo;s national festival of lights is accompanied by the launching of fireworks across the city. Air <br> quality suffers so much that local authorities urge vulnerable groups to <br> <a href="http://www.theguardian.com/world/2015/nov/11/delhi-warns-against-diwali-fireworks-to-safeguard-air-quality" target="_blank">stay indoors.</a> </body>',
-                date: Date.parse("11/9/15")
+                date: Date.parse("11/9/2015")
             }
         ];
 
