@@ -1,0 +1,16 @@
+#header-logo-mini{
+    width: 20px;
+    height: auto;
+    margin-right: 6px;
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+}
+
+.header-logo-container a:hover #header-logo-mini{
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.header-logo-container a:hover{
+    text-decoration: none;
+}
