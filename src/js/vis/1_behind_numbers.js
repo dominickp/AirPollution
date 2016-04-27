@@ -19,12 +19,10 @@ var behindNumbers = function (container_selectors, service) {
 
     /* Initialize tooltip */
     model.tooltip = d3.tip()
-        .offset(-10,0)
         .attr('class', 'd3-tip')
+        .offset(-10,0)
         .html(function (d) {
-            var String = "";
-            String += d.name;
-            return String;
+            return d.name.toString();
         });
 
     model.values = [];
@@ -135,7 +133,7 @@ var behindNumbers = function (container_selectors, service) {
                 return y(d[lookup[lookup.length - 1].key]);
             })
             .style("opacity", 0.3)
-            .attr("r", 4)
+            .attr("r", 6)
             .attr("fill", "lightblue")
             .on("mouseover", function (d) {
                 model.tooltip.show(d);
