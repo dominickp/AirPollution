@@ -115,7 +115,7 @@ var yearlyVis = function (container_selector, service) {
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
-        .attr("x", 380)
+        .attr("x", 400)
         .attr("y", 10)
         .attr("width", 30)
         .attr("height", 30)
