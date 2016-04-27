@@ -27,7 +27,7 @@ var allCountries = function (container_selector, service) {
     var margin = {top: 20, right: 60, bottom: 100, left: 5};
     var width = 1100 - margin.left - margin.right,
         height = 600 - margin.top - margin.bottom;
-    var radius = 4;
+    var radius = 5;
     var padding = 8;
     var radius2 = 10;
     // init svg
