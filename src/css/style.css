@@ -288,3 +288,9 @@ h1, h2, h3, h4, h5 {
 .share {
     cursor: pointer;
 }
+
+hr.section {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+}
