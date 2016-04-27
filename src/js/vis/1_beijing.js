@@ -231,7 +231,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         }
 
         $("#" + model.button).val("Continue");
-        console.log(model.messages[model.cur].date);
+        //console.log(model.messages[model.cur].date);
         model.rect.transition()
             .duration(500)
             .attr("x", model.dateScale(model.messages[model.cur].date));
