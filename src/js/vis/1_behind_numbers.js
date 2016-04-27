@@ -18,13 +18,14 @@ var behindNumbers = function (container_selectors, service) {
         {key: "pm", name: "PM2.5 air pollution, mean annual exposure ( μg/m3)"}];
 
     /* Initialize tooltip */
-    model.tooltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-        var String = "";
-        String += d.name;
-
-
-        return String;
-    });
+    model.tooltip = d3.tip()
+        .offset(-10,0)
+        .attr('class', 'd3-tip')
+        .html(function (d) {
+            var String = "";
+            String += d.name;
+            return String;
+        });
 
     model.values = [];
 
