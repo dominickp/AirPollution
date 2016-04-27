@@ -182,6 +182,7 @@ var allCountries = function (container_selector, service) {
         .style("stroke", "gray")
         .style("stroke-width", 1);
 
+    // Selected city legend
     svg.append("text")
         .attr("x", width - 24)
         .attr("y", 190)
@@ -302,6 +303,28 @@ var allCountries = function (container_selector, service) {
 
     model.update = function () {
 
+
+        // Selected country legend
+        svg.append("text")
+            .attr("x", width - 24)
+            .attr("y", 210)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text("Selected Country");
+
+        svg.append("circle")
+            .attr("r", radius)
+            .attr("cx", width - 8)
+            .attr("cy", 210)
+            .style("fill", function(){
+                var colorVal = color(service.getSelectedCityData().region);
+                console.log(service.getSelectedCityData());
+                return colorVal;
+            })
+            .attr("stroke", "black")
+            .attr("stroke-width", 1);
+
+
         if (model.cityline) {
             model.cityline.remove();
             model.others.remove();
@@ -325,6 +348,7 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
+                //console.log(d);
                     d3.select(this).style("opacity", 0.3)
                         .style("fill", function (d) {
 
