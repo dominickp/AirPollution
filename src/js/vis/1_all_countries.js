@@ -150,6 +150,7 @@ var allCountries = function (container_selector, service) {
         })
         .on("click", function (d) {
 
+            model.removeInteractivityIcon();
 
             var index = model.pinned.indexOf(d);
 
@@ -280,6 +281,12 @@ var allCountries = function (container_selector, service) {
         .text("WHO SAFE VALUE");
 
 
+    // Function to remove the interactivity icon later
+    model.removeInteractivityIcon = function(){
+        model.hand.remove();
+        return true;
+    };
+
     model.show = function (group) {
         node.data(data)
             .each(function (d) {
@@ -318,7 +325,7 @@ var allCountries = function (container_selector, service) {
             .attr("cy", 210)
             .style("fill", function(){
                 var colorVal = color(service.getSelectedCityData().region);
-                console.log(service.getSelectedCityData());
+                //console.log(service.getSelectedCityData());
                 return colorVal;
             })
             .attr("stroke", "black")
