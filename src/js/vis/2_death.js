@@ -237,7 +237,7 @@ var deathVisualization = function (container_selector, service) {
             .attr("x", (width) - 40)
             .attr("y", 10)
             .attr("width", 160)
-            .attr("height", 35)
+            .attr("height", 30)
             .attr("fill", "none")
             .attr("stroke", "grey");
 
