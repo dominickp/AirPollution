@@ -211,7 +211,7 @@ var deathVisualization = function (container_selector, service) {
         // set legend
 
         model.legend.append("svg")
-            .attr("x", (width/2) - 40)
+            .attr("x", (width) - 40)
             .attr("y", 10)
             .attr("width", model.img_width)
             .attr("height", model.img_height)
@@ -220,19 +220,20 @@ var deathVisualization = function (container_selector, service) {
                 this.appendChild(model.imported_node.cloneNode(true));
             });
         model.legend.append("text")
-            .attr("x", width/2)
+            .attr("x", width)
             .attr("y", 10 + (model.img_height / 2))
             .attr("width", 100)
             .attr("fill", "#oA52A2A")
-            .text("100.000 deaths");
+            .text("= 100.000 deaths");
 
-        // Line under the legend
+        // Legend box
         model.legend.append("rect")
-            .attr("x", (width/2) - 40)
-            .attr("y", 22 + (model.img_height / 2))
-            .attr("width", 150)
-            .attr("height", 1)
-            .attr("fill", "#oA52A2A");
+            .attr("x", (width) - 40)
+            .attr("y", 10)
+            .attr("width", 160)
+            .attr("height", 35)
+            .attr("fill", "none")
+            .attr("stroke", "grey");
 
 
     });
