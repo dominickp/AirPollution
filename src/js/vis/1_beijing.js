@@ -79,6 +79,12 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         .html("(PM 2.5)")
         .attr("class", "axis-label y-axis");
 
+    model.svg.append("text")
+        .attr("x", width)
+        .attr("y", 0)
+        .html("(2015)")
+        .attr("class", "axis-label x-axis");
+
     model.rect = model.svg.append("rect")
         .attr("x", 0)
         .attr("y", 0)
