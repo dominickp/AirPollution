@@ -56,7 +56,7 @@ var WebController = function (pages, service) {
 
         $(".next").each(function () {
 
-            console.log(this);
+            //console.log(this);
             if ($(this).hasClass("hidden")) {
                 $(this).removeClass("hidden");
             }
@@ -65,7 +65,7 @@ var WebController = function (pages, service) {
 
         $(".text").each(function () {
 
-            console.log(this);
+            //console.log(this);
             if ($(this).hasClass("hidden")) {
                 $(this).removeClass("hidden");
             }

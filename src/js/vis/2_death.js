@@ -226,6 +226,14 @@ var deathVisualization = function (container_selector, service) {
             .attr("fill", "#oA52A2A")
             .text("100.000 deaths");
 
+        // Line under the legend
+        model.legend.append("rect")
+            .attr("x", model.img_width - 40)
+            .attr("y", 22 + (model.img_height / 2))
+            .attr("width", 150)
+            .attr("height", 1)
+            .attr("fill", "#oA52A2A");
+
 
     });
 
