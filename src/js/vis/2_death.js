@@ -31,7 +31,7 @@ var deathVisualization = function (container_selector, service) {
         });
 
         model.labeltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-            console.log(d);
+            //console.log(d);
             if (d.id === 1) {
 
                 if (model.global) {
@@ -211,7 +211,7 @@ var deathVisualization = function (container_selector, service) {
         // set legend
 
         model.legend.append("svg")
-            .attr("x", 0)
+            .attr("x", (width/2) - 40)
             .attr("y", 10)
             .attr("width", model.img_width)
             .attr("height", model.img_height)
@@ -220,7 +220,7 @@ var deathVisualization = function (container_selector, service) {
                 this.appendChild(model.imported_node.cloneNode(true));
             });
         model.legend.append("text")
-            .attr("x", model.img_width)
+            .attr("x", width/2)
             .attr("y", 10 + (model.img_height / 2))
             .attr("width", 100)
             .attr("fill", "#oA52A2A")
@@ -228,7 +228,7 @@ var deathVisualization = function (container_selector, service) {
 
         // Line under the legend
         model.legend.append("rect")
-            .attr("x", model.img_width - 40)
+            .attr("x", (width/2) - 40)
             .attr("y", 22 + (model.img_height / 2))
             .attr("width", 150)
             .attr("height", 1)
