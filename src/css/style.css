@@ -223,7 +223,9 @@ body, html {
 .action {
     color: black;
     font-weight: bold;
-
+    background-color: #fff3b8;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .action:hover {
