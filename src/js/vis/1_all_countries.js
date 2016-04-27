@@ -408,14 +408,17 @@ var allCountries = function (container_selector, service) {
         // set cities in country lines
         var lowest = 9001;
         var highest = 0;
+        var highest_val, lowest_val;
 
         values.forEach(function (d) {
 
             if (x(d[xVar]) > highest) {
                 highest = x(d[xVar]);
+                highest_val = d[xVar];
             }
             if (x(d[xVar]) < lowest) {
                 lowest = x(d[xVar]);
+                lowest_val = d[xVar];
             }
 
         });
@@ -435,6 +438,24 @@ var allCountries = function (container_selector, service) {
             .style("text-anchor", "middle")
             .style("fill", "black")
             .text(model.city.country);
+
+        // Lowest
+        model.cityline.append("text")
+            .attr("class", "label")
+            .attr("x",  lowest - 10)
+            .attr("y", height + 60)
+            .style("text-anchor", "middle")
+            .style("fill", "black")
+            .text(lowest_val);
+
+        // Highest
+        model.cityline.append("text")
+            .attr("class", "label")
+            .attr("x",  highest + 10)
+            .attr("y", height + 60)
+            .style("text-anchor", "middle")
+            .style("fill", "black")
+            .text(highest_val);
 
         var c = model.city.city + ", " + model.city.country;
         var perc = (better / total * 100);
