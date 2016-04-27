@@ -26,22 +26,28 @@ var deathVisualization = function (container_selector, service) {
             .attr("height", height + margin.top + margin.bottom);
 
         /* Initialize tooltip */
-        model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-            return "This icon is equal to 100.000 deaths due to " + d.disease + "<br>" + d.suffix;
-        });
+        model.iconTip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function (d) {
+                return "This icon is equal to 100.000 deaths due to " + d.disease + "<br>" + d.suffix;
+            });
 
-        model.labeltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-            //console.log(d);
-            if (d.id === 1) {
+        model.labeltip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function (d) {
+                //console.log(d);
+                if (d.id === 1) {
 
-                if (model.global) {
-                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                    if (model.global) {
+                        return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                    }
+                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
+
                 }
-                return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
-
-            }
-            return d.percent + "% of all deaths are caused by " + d.name;
-        });
+                return d.percent + "% of all deaths are caused by " + d.name;
+            });
 
         /* Invoke the tip in the context of your visualization */
         model.svg.call(model.iconTip);
