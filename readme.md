@@ -1,7 +1,21 @@
+# The Air We Breath
+An exploration of air pollution, its health impacts, and what can be done about it. Please see the project book for more details.
 
+## Class Requirements
 
+### Process Book
+- dist/pb_index.html
+- http://theairwebreathe.org/pb_index.html
+
+### Project URL
+- http://theairwebreathe.org
+
+### Screencast
+- [TO COME]
 
 ## Setup
+We're using some build automation tools with our project. To build the application yourself, you'll need to follow the steps below. Otherwise, you can view the final site at our project URL.
+
 - Install Node
 - Clone this repo and navigate to the repo directory in terminal
 - Install gulp globally (npm install -g gulp)
@@ -9,6 +23,7 @@
 - Install browserify globally (npm install -g browserify)
 - Install local dependencies (npm install)
 - Run bower (bower install)
+- Run Gulp (gulp)
 
 You should be able to run "gulp". Navigate to http://localhost:8080/ in your browser.
 
