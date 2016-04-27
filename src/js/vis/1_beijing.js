@@ -165,14 +165,14 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         model.focus.select("text.AreaTooltipDate")
             .attr("transform",
                 "translate(" + (model.dateScale(d.time) + 10) + "," +
-                (height / 5 + 10) + ")")
+                (height / 5 + 15) + ")")
             .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
 
         model.focus.select("text.AreaTooltipPopulation")
             .attr("transform",
                 "translate(" + (model.dateScale(d.time) + 10) + "," +
                 height / 5 + ")")
-            .html(Math.round(d.pm25));
+            .html(Math.round(d.pm25)+" PM 2.5");
     };
 
     model.next = function () {
