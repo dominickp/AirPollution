@@ -2,7 +2,7 @@ var d3 = require("d3");
 var $ = require("jquery");
 
 
-console.log("src/js/vis/1_beijing.js");
+//console.log("src/js/vis/1_beijing.js");
 
 var beijingVis = function (container_selector, service, d, messages, button) {
 

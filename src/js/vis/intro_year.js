@@ -3,7 +3,7 @@ require('d3-tip')(d3);
 var $ = require("jquery");
 var sweetAlert = require("sweetalert");
 
-console.log("src/js/vis/intro_year.js");
+//console.log("src/js/vis/intro_year.js");
 
 var yearlyVis = function (container_selector, service) {
 

@@ -2,7 +2,7 @@ var d3 = require("d3");
 var d3tip = require('d3-tip')(d3);
 var $ = require("jquery");
 
-console.log("src/js/vis/1_air.js");
+//console.log("src/js/vis/1_air.js");
 
 var airVisualization = function (container_selector, service) {
 

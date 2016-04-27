@@ -2,7 +2,7 @@ var d3 = require("d3");
 var $ = require("jquery");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/1_all_countries.js");
+//console.log("src/js/vis/1_all_countries.js");
 
 var allCountries = function (container_selector, service) {
 

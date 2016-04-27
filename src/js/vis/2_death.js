@@ -1,7 +1,7 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/2_death.js");
+//console.log("src/js/vis/2_death.js");
 
 var deathVisualization = function (container_selector, service) {
 

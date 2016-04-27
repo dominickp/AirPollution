@@ -1,7 +1,7 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/1_behind_numbers.js");
+//console.log("src/js/vis/1_behind_numbers.js");
 
 var behindNumbers = function (container_selectors, service) {
 

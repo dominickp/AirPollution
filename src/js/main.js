@@ -28,14 +28,14 @@ var service = new Service();
 var webController = new WebController(3, service);
 
 // Sanity check
-console.log("src/js/main.js");
+//console.log("src/js/main.js");
 
 // Test libraries are being required properly
-console.log('d3', d3);
-console.log('d3-queue', q);
-console.log('topojson', topojson);
-console.log('d3-tip', d3tip);
-console.log('sweetalert', sweetalert);
+//console.log('d3', d3);
+//console.log('d3-queue', q);
+//console.log('topojson', topojson);
+//console.log('d3-tip', d3tip);
+//console.log('sweetalert', sweetalert);
 
 var checkbrowser = function () {
     // Opera 8.0+
