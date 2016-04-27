@@ -37,6 +37,42 @@ console.log('topojson', topojson);
 console.log('d3-tip', d3tip);
 console.log('sweetalert', sweetalert);
 
+var checkbrowser = function () {
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    // At least Safari 3+: "[object HTMLElementConstructor]"
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    // Chrome 1+
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+    // Blink engine detection
+
+    var ua = navigator.userAgent;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile/i.test(ua)) {
+        swal(
+            {
+                type: "error",
+                title: "Sorry, device unsupported.",
+                text: "This interactive story does not work on mobile phones.",
+                showConfirmButton: false
+            }
+        );
+    }
+    else if (!isChrome && !isFirefox && !isOpera && !isSafari) {
+        swal(
+            {
+                type: "error",
+                title: "Sorry, browser unsupported.",
+                text: "This interactive story works in Chrome, Opera, Safari and Firefox.",
+                showConfirmButton: false
+            }
+        );
+    }
+
+};
 
 var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi, coords) {
 
@@ -51,6 +87,8 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     dataProcessing.process("metrics", metrics);
     dataProcessing.process("coords", coords);
     createView();
+
+    checkbrowser();
 
 
     var beijing_message =
