@@ -80,8 +80,8 @@ var deathVisualization = function (container_selector, service) {
             ]);
         model.picturesPline = 30;
         model.WidthPerImage = model.width / model.picturesPline;
-        model.img_height = model.WidthPerImage * 1.8;
-        model.img_width = model.WidthPerImage * 1.8;
+        model.img_height = model.WidthPerImage * 1.5;
+        model.img_width = model.WidthPerImage * 1.5;
 
 
         // set data to data zoomed in on air pollution
