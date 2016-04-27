@@ -172,7 +172,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
             .attr("transform",
                 "translate(" + (model.dateScale(d.time) + 10) + "," +
                 height / 5 + ")")
-            .html(Math.round(d.pm25)+" PM 2.5");
+            .html(+Math.round(d.pm25)+" PM 2.5");
     };
 
     model.next = function () {
