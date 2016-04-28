@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>D3 Project</title>
+    <title>Process Book: Evaluation</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Signika:300" rel="stylesheet" type="text/css">
 </head>
@@ -46,31 +46,84 @@
         <div class="col-md-9">
 
             <h2>Project Evaluation</h2>
-            <p>What did you learn about the data by using your visualizations? How did you answer your questions? How
-                well does your visualization work, and how could you further improve it?</p>
+            
+            <h3>What did you learn about the data by using your visualizations?</h3>
+            <p>
+                One of the most interesting things we learned, which only became apparent when interacting with our own visualization, was how little pollution data exists for some areas of the world. Once we had all of our particulate matter data plotted on the globe map, you can easily see how regions like Africa, Antarctica, and huge swaths of South America are left empty.
+            </p>
+            <p>
+                In general, I had previously thought China was the worst when it came to air pollution. But that crown is really reserved for India and other parts of the Middle East who are in their own league of PM 2.5 pollution.
+            </p>
 
-            <h3>Data</h3>
-            <p>
-                TODO
+            <h3>How did you answer your questions?</h3>
+
+            <p class="lead-question">
+                "How polluted is the air in my city?"
             </p>
-            <h3>Questions</h3>
             <p>
-                TODO
+                We attempted to answer this question with several elements. We had text blurbs which told the reader how their city's PM level compared to other cities: "The air in Durban, South Africa is better than the air in 55% of all other recorded cities". The All Cities and Compare visualisations also show the reader how their PM level stacks up against other areas and what the WHO recommends.
             </p>
-            <h3>Visualizations</h3>
-            <h4>Introduction</h4>
+
+            <p class="lead-question">
+                "How polluted is the air in my country compared to others?"
+            </p>
             <p>
-                TODO
+                The "All Cities" and "Compare" visualisations also show the reader how their PM level stacks up against other cities or regions.
             </p>
-            <h4>All Cities</h4>
+
+            <p class="lead-question">
+                "Is air pollution really that big of a problem?"
+            </p>
             <p>
-                TODO
+                Act 2: Death, really shows the reader how serious air pollution can be. We wanted Act 2 to show the human factor that people can really relate to. Nothing is more empathetic than sickness and death.
             </p>
-            <h4>...</h4>
+
+            <p class="lead-question">
+                "What is it like to live in a city with bad air?"
+            </p>
+            <p>
+                Our section “A year in the life of Beijing’s air” takes readers through a year of pollution,
+                highlighting the impact it has on the daily lives of its residents. We did the same thing for Delhi, showing how another part of the world has grappled with air pollution. In "Behind the Numbers", we show other factors which impact health for people in different regions dealing with various particulate matter levels.
+            </p>
+
+            <p class="lead-question">
+                "What causes air pollution?"
+            </p>
+            <p>
+                Our section “Behind the numbers: factors contributing to pollution” explores this. But our main introduction does a good job of setting the table, explaining the basics of air pollution and describing the sources of particulate matter with the help of a video.
+            </p>
+
+            <p class="lead-question">
+                "What can I do about air pollution?"
+            </p>
+            <p>
+                [ACT 3]
+            </p>
+
+            <h3>How could we improve our visualizations?</h3>
+            <p>
+                One area we wanted to improve upon in several of our visualizations was to add zooming. We had some ideas, particularly with the "Compare" visualization. Some of the data points can get very close together, so allowing the reader to zoom in to part of the scale to see small differences would be useful.
+            </p>
+            <p>
+                Brushing on the "Behind the Numbers" visualizations would have been nice. The user could have selected a data points by brushing them, highlighting them on all charts.
+            </p>
+
         </div>
 
     </div>
 </div>
+
+<script>
+    //    Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77077301-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 </body>
 </html>
 

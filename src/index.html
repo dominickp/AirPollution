@@ -35,8 +35,8 @@
         </div>
     </div>
     <video autoplay id="bgvid" loop muted>
-        <source src="http://mariusdv.nl/CS171/clip1.mp4" type="video/mp4">
-        <!--<source src="http://mariusdv.nl/CS171/clip2.mp4" type="video/mp4">-->
+        <source src="https://s3.amazonaws.com/dom-harvard/cs171/clip1.mp4" type="video/mp4">
+        <!--<source src="https://s3.amazonaws.com/dom-harvard/cs171/clip2.mp4" type="video/mp4">-->
     </video>
 
     <div class="jumbotron" id="main-hero">
@@ -145,40 +145,53 @@
                         </p>
 
 
-                        <h3>What is air pollution?</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>What is air pollution?</h3>
 
-
-                        <p>
-                            Air pollutants are substances suspended in air that are damaging to the health of humans.
-                            Many pollutants are a direct result of human activity, including motor vehicle exhaust,
-                            industrial processes, power plant emissions, agricultural burning and forest fires. <br><br>
-                            These activities release a host of pollutants into the air we breathe, including:
-                            Particulate Matter (PM), ground level ozone, carbon monoxide, sulphur dioxide, lead, and
-                            nitrogen dioxide.<br><br>
-                        </p>
-
-
-                        <h3>Particulate Matter</h3>
-                        <p>
-                            Fine particulate pollution (PM2.5), consists of particles 2.5 micrometers in diameter or
-                            less which are small enough to pass through the lungs and into the bloodstream. This makes
-                            PM2.5 pollution particularly dangerous for human health and has been liked to premature
-                            death from heart and lung disease.<br>
-                        </p>
-                        <div class="col-sm-12 col-md-6">
-                            <br>
-                            <iframe src="https://player.vimeo.com/video/107859947?byline=0&portrait=0" width="450"
-                                    height="335" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                    allowfullscreen></iframe>
-
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <br>
-                            <div class="juxtapose">
-                                <img src="img/cnxClean_950.png">
-                                <img src="img/cnxPolluted_950.png">
+                                <p>
+                                    Air pollutants are substances suspended in air that are damaging to the health of humans.
+                                    Many pollutants are a direct result of human activity, including motor vehicle exhaust,
+                                    industrial processes, power plant emissions, agricultural burning and forest fires.
+                                </p>
+                                <p>
+                                    These activities release a host of pollutants into the air we breathe, including:
+                                </p>
+                                <ul>
+                                    <li>Particulate Matter (PM)</li>
+                                    <li>Ground level ozone</li>
+                                    <li>Carbon monoxide</li>
+                                    <li>Lead</li>
+                                    <li>Sulphur dioxide</li>
+                                    <li>Nitrogen dioxide</li>
+                                </ul>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="juxtapose">
+                                    <img src="img/cnxClean_950.png">
+                                    <img src="img/cnxPolluted_950.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Particulate Matter</h3>
+                                <p>
+                                    Fine particulate pollution (PM2.5), consists of particles 2.5 micrometers in diameter or
+                                    less which are small enough to pass through the lungs and into the bloodstream. This makes
+                                    PM2.5 pollution particularly dangerous for human health and has been liked to premature
+                                    death from heart and lung disease.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <iframe src="https://player.vimeo.com/video/107859947?byline=0&portrait=0" width="450"
+                                        height="335" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                                        allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,10 +202,10 @@
 
                 <br>
                 <p>
-                    <mark class="instruction">
+                    <div class="instruction">
                         <strong>Tip:</strong>
-                        interact with <a class="action"><b>bold text</b> </a>
-                    </mark>
+                        interact with <a class="action"><b>highlighted text</b> </a>
+                    </div>
                 </p>
                 <br>
 
@@ -250,17 +263,21 @@
 
                 </div>
 
-                <div class="col-sm-6 text-center">
-                    <button class="btn btn-info" id="but1">Global statistics</button>
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <button class="btn btn-block btn-info" id="but1">Global Statistics</button>
+                    </div>
+                    <div class="col-sm-3 text-center">
+                        <button class="btn btn-block btn-danger" id="btn-all-cities-reset">Reset Lines</button>
+                    </div>
 
-                </div>
-
-                <div class="col-sm-5">
-                    <form>
-                        <input type="text" class="form-control typeahead" id="intro-country"
-                               placeholder="Look for countries">
-                        <!--<button type="button" class="btn btn-primary">+</button>-->
-                    </form>
+                    <div class="col-sm-5">
+                        <form>
+                            <input type="text" class="form-control typeahead" id="intro-country"
+                                   placeholder="Look for countries">
+                            <!--<button type="button" class="btn btn-primary">+</button>-->
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -615,21 +632,27 @@
 <div id="p2" class="part hidden">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-7">
                 <h2>Act 2: Death</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur vulputate egestas sapien a pharetra.
-                    Vivamus gravida pharetra elit, non malesuada sem ultricies eu.
-                    Quisque vitae augue id magna ullamcorper malesuada id non quam.
-                    Nam sit amet augue ligula. In vel arcu vel ante cursus euismod.
-                    In erat ipsum, interdum id quam quis, tincidunt suscipit urna.
-                    Proin sit amet euismod nunc. Mauris auctor sem id enim pulvinar,
-                    ut porta risus pharetra. Vestibulum hendrerit nunc eget est scelerisque luctus.
-                    Praesent augue erat, pretium quis congue quis, tempus at tortor.
-                    Quisque pretium laoreet orci eu ultricies. Morbi dictum vulputate dolor, nec dignissim sapien
-                    sodales vitae.
+                    Beyond health complications, increased particulate matter levels have been linked to disease and cancer deaths.
                 </p>
+                <blockquote>
+                    <p>
+                        Worldwide, ambient air pollution is estimated to cause about 16% of the lung cancer deaths, 11% of chronic obstructive pulmonary disease (COPD) deaths, more than 20% of ischaemic heart disease and stroke, and about 13% of respiratory infection deaths.
+                    </p>
+                    <footer>
+                        World Health Organization
+                        <cite title="Source Title">Mortality from ambient air pollution</cite>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="col-md-5">
+                <img src="img/walker_mask.jpg" class="thumbnail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="vis-2-container"></div>
             </div>
         </div>
@@ -734,6 +757,18 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+
+</script>
+
+<script>
+//    Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77077301-1', 'auto');
+    ga('send', 'pageview');
 
 </script>
 

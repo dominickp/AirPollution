@@ -3,7 +3,7 @@ require('d3-tip')(d3);
 var $ = require("jquery");
 var sweetAlert = require("sweetalert");
 
-console.log("src/js/vis/intro_year.js");
+//console.log("src/js/vis/intro_year.js");
 
 var yearlyVis = function (container_selector, service) {
 
@@ -115,8 +115,8 @@ var yearlyVis = function (container_selector, service) {
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
-        .attr("x", 400)
-        .attr("y", 10)
+        .attr("x", width/2)
+        .attr("y", 0)
         .attr("width", 30)
         .attr("height", 30)
         .attr("xlink:href", "img/hand.png");
@@ -292,6 +292,13 @@ var yearlyVis = function (container_selector, service) {
         }
 
     };
+
+    // Function to remove the interactivity icon later
+    model.removeInteractivityIcon = function(){
+        model.hand.remove();
+        return true;
+    };
+
 
     model.update = function () {
 
@@ -548,7 +555,12 @@ var yearlyVis = function (container_selector, service) {
             .style('opacity', 0.1)
 
             .on('mouseover', function (d) {
-                d3.select(this).style('stroke', '#447392').style('opacity', 1).style('cursor', 'pointer');
+                d3.select(this)
+                    .style('stroke', '#447392')
+                    .style('stroke-width', 3)
+                    .style('opacity', 1)
+                    .style('cursor', 'pointer');
+
                 model.tooltip.show(d);
                 if (!d.active) {
                     var index = model.labelData.indexOf(d);
@@ -563,8 +575,13 @@ var yearlyVis = function (container_selector, service) {
             .on('mouseout', function (d) {
                 model.tooltip.hide(d);
 
+                model.removeInteractivityIcon();
+
                 if (!d.active && !d.tempActive) {
-                    d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
+                    d3.select(this)
+                        .style('stroke', 'gray')
+                        .style('stroke-width', 2)
+                        .style('opacity', 0.1);
 
                     var index = model.labelData.indexOf(d);
                     if (index > -1) {
@@ -637,7 +654,13 @@ var yearlyVis = function (container_selector, service) {
 
     model.setLine();
 
-
+    $("#btn-all-cities-reset").click(function(){
+        model.countries.forEach(function(country){
+            country.active = false;
+        });
+        model.labelData = [];
+        model.update();
+    });
 };
 
 module.exports = yearlyVis;

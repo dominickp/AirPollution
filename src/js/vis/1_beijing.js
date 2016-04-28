@@ -2,7 +2,7 @@ var d3 = require("d3");
 var $ = require("jquery");
 
 
-console.log("src/js/vis/1_beijing.js");
+//console.log("src/js/vis/1_beijing.js");
 
 var beijingVis = function (container_selector, service, d, messages, button) {
 
@@ -78,6 +78,12 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         .attr("y", height / 2)
         .html("(PM 2.5)")
         .attr("class", "axis-label y-axis");
+
+    model.svg.append("text")
+        .attr("x", width)
+        .attr("y", 0)
+        .html("(2015)")
+        .attr("class", "axis-label x-axis");
 
     model.rect = model.svg.append("rect")
         .attr("x", 0)
@@ -165,14 +171,14 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         model.focus.select("text.AreaTooltipDate")
             .attr("transform",
                 "translate(" + (model.dateScale(d.time) + 10) + "," +
-                (height / 5 + 10) + ")")
+                (height / 5 + 15) + ")")
             .html(d3.time.format("%B %d, %Y")(new Date(d.time)));
 
         model.focus.select("text.AreaTooltipPopulation")
             .attr("transform",
                 "translate(" + (model.dateScale(d.time) + 10) + "," +
                 height / 5 + ")")
-            .html(Math.round(d.pm25));
+            .html(+Math.round(d.pm25)+" PM 2.5");
     };
 
     model.next = function () {
@@ -225,7 +231,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
         }
 
         $("#" + model.button).val("Continue");
-        console.log(model.messages[model.cur].date);
+        //console.log(model.messages[model.cur].date);
         model.rect.transition()
             .duration(500)
             .attr("x", model.dateScale(model.messages[model.cur].date));

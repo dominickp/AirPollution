@@ -1,7 +1,7 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/2_death.js");
+//console.log("src/js/vis/2_death.js");
 
 var deathVisualization = function (container_selector, service) {
 
@@ -26,22 +26,28 @@ var deathVisualization = function (container_selector, service) {
             .attr("height", height + margin.top + margin.bottom);
 
         /* Initialize tooltip */
-        model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-            return "This icon is equal to 100.000 deaths due to " + d.disease + "<br>" + d.suffix;
-        });
+        model.iconTip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function (d) {
+                return "This icon is equal to 100.000 deaths due to " + d.disease + "<br>" + d.suffix;
+            });
 
-        model.labeltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-            console.log(d);
-            if (d.id === 1) {
+        model.labeltip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function (d) {
+                //console.log(d);
+                if (d.id === 1) {
 
-                if (model.global) {
-                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                    if (model.global) {
+                        return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                    }
+                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
+
                 }
-                return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
-
-            }
-            return d.percent + "% of all deaths are caused by " + d.name;
-        });
+                return d.percent + "% of all deaths are caused by " + d.name;
+            });
 
         /* Invoke the tip in the context of your visualization */
         model.svg.call(model.iconTip);
@@ -80,8 +86,8 @@ var deathVisualization = function (container_selector, service) {
             ]);
         model.picturesPline = 30;
         model.WidthPerImage = model.width / model.picturesPline;
-        model.img_height = model.WidthPerImage * 1.8;
-        model.img_width = model.WidthPerImage * 1.8;
+        model.img_height = model.WidthPerImage * 1.5;
+        model.img_width = model.WidthPerImage * 1.5;
 
 
         // set data to data zoomed in on air pollution
@@ -211,7 +217,7 @@ var deathVisualization = function (container_selector, service) {
         // set legend
 
         model.legend.append("svg")
-            .attr("x", 0)
+            .attr("x", (width) - 40)
             .attr("y", 10)
             .attr("width", model.img_width)
             .attr("height", model.img_height)
@@ -220,11 +226,20 @@ var deathVisualization = function (container_selector, service) {
                 this.appendChild(model.imported_node.cloneNode(true));
             });
         model.legend.append("text")
-            .attr("x", model.img_width)
+            .attr("x", width)
             .attr("y", 10 + (model.img_height / 2))
             .attr("width", 100)
             .attr("fill", "#oA52A2A")
-            .text("100.000 deaths");
+            .text("= 100.000 deaths");
+
+        // Legend box
+        model.legend.append("rect")
+            .attr("x", (width) - 40)
+            .attr("y", 10)
+            .attr("width", 160)
+            .attr("height", 30)
+            .attr("fill", "none")
+            .attr("stroke", "grey");
 
 
     });

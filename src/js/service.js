@@ -17,7 +17,7 @@ var service = function () {
     model.setSelectedCity = function (city) {
         model.selected_city = city;
 
-        console.log(city);
+        //console.log(city);
 
         $("#city_choice_name").text(city.city + ", " + city.country);
         $("#city_choice").removeClass("hidden");
@@ -76,13 +76,13 @@ var service = function () {
         }
 
         if (exists === true) {
-            console.log("exists.");
+            //console.log("exists.");
             return false;
         }
 
         model.other_cities.push(cityData);
 
-        console.log("Other city added: " + cityData.city);
+        //console.log("Other city added: " + cityData.city);
         // Update vis
         model.visualizations.vis1.updateVis();
     };
@@ -107,7 +107,7 @@ var service = function () {
     };
 
     model.addOriginalDataset = function (name, dataset) {
-        console.log("Dataset '" + name + "' added to Service", dataset);
+        //console.log("Dataset '" + name + "' added to Service", dataset);
         model.original_datasets[name] = dataset;
     };
 
@@ -125,7 +125,7 @@ var service = function () {
 
     model.addVisualization = function (name, visualization) {
         model.visualizations[name] = visualization;
-        console.log("Visualization '" + name + "' registered with the service.");
+        //console.log("Visualization '" + name + "' registered with the service.");
     };
 
     model.getVisualization = function (name) {

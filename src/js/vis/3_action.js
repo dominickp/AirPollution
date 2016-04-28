@@ -2,7 +2,7 @@ var d3 = require("d3");
 var topojson = require("topojson");
 var GoogleMapsLoader = require('google-maps');
 
-console.log("src/js/vis/3_action.js");
+//console.log("src/js/vis/3_action.js");
 
 var actionVisualization = function (container_selector, service) {
 

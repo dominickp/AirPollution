@@ -1,7 +1,7 @@
 var d3 = require("d3");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/1_behind_numbers.js");
+//console.log("src/js/vis/1_behind_numbers.js");
 
 var behindNumbers = function (container_selectors, service) {
 
@@ -18,13 +18,12 @@ var behindNumbers = function (container_selectors, service) {
         {key: "pm", name: "PM2.5 air pollution, mean annual exposure ( μg/m3)"}];
 
     /* Initialize tooltip */
-    model.tooltip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-        var String = "";
-        String += d.name;
-
-
-        return String;
-    });
+    model.tooltip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10,0])
+        .html(function (d) {
+            return d.name.toString();
+        });
 
     model.values = [];
 
@@ -134,7 +133,7 @@ var behindNumbers = function (container_selectors, service) {
                 return y(d[lookup[lookup.length - 1].key]);
             })
             .style("opacity", 0.3)
-            .attr("r", 4)
+            .attr("r", 6)
             .attr("fill", "lightblue")
             .on("mouseover", function (d) {
                 model.tooltip.show(d);

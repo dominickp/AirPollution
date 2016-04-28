@@ -229,7 +229,7 @@ var dataProcessor = function (service) {
             var parts = time.date.split("-");
             var timestamp = Date.parse(parts[1] + "/" + parts[0] + "/" + (parts[2]));
 
-            console.log(timestamp);
+            //console.log(timestamp);
 
             if (curday === null) {
                 sum = +time.concentration;

@@ -2,7 +2,7 @@ var d3 = require("d3");
 var $ = require("jquery");
 require('d3-tip')(d3);
 
-console.log("src/js/vis/1_all_countries.js");
+//console.log("src/js/vis/1_all_countries.js");
 
 var allCountries = function (container_selector, service) {
 
@@ -15,13 +15,19 @@ var allCountries = function (container_selector, service) {
         return !(isNaN(d[xVar]) || isNaN(d[xVar]));
     });
 
-    model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-        return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
-    });
+    model.iconTip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function (d) {
+            return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
+        });
 
-    model.legendtip = d3.tip().attr('class', 'd3-tip').html(function () {
-        return "Click to pin";
-    });
+    model.legendtip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function () {
+            return "Click to pin";
+        });
 
 
     var margin = {top: 20, right: 60, bottom: 100, left: 5};
@@ -150,6 +156,7 @@ var allCountries = function (container_selector, service) {
         })
         .on("click", function (d) {
 
+            model.removeInteractivityIcon();
 
             var index = model.pinned.indexOf(d);
 
@@ -182,6 +189,7 @@ var allCountries = function (container_selector, service) {
         .style("stroke", "gray")
         .style("stroke-width", 1);
 
+    // Selected city legend
     svg.append("text")
         .attr("x", width - 24)
         .attr("y", 190)
@@ -279,6 +287,12 @@ var allCountries = function (container_selector, service) {
         .text("WHO SAFE VALUE");
 
 
+    // Function to remove the interactivity icon later
+    model.removeInteractivityIcon = function(){
+        model.hand.remove();
+        return true;
+    };
+
     model.show = function (group) {
         node.data(data)
             .each(function (d) {
@@ -301,6 +315,28 @@ var allCountries = function (container_selector, service) {
     };
 
     model.update = function () {
+
+
+        // Selected country legend
+        svg.append("text")
+            .attr("x", width - 24)
+            .attr("y", 210)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text("Selected Country");
+
+        svg.append("circle")
+            .attr("r", radius)
+            .attr("cx", width - 8)
+            .attr("cy", 210)
+            .style("fill", function(){
+                var colorVal = color(service.getSelectedCityData().region);
+                //console.log(service.getSelectedCityData());
+                return colorVal;
+            })
+            .attr("stroke", "black")
+            .attr("stroke-width", 1);
+
 
         if (model.cityline) {
             model.cityline.remove();
@@ -325,6 +361,7 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
+                //console.log(d);
                     d3.select(this).style("opacity", 0.3)
                         .style("fill", function (d) {
 
@@ -377,14 +414,17 @@ var allCountries = function (container_selector, service) {
         // set cities in country lines
         var lowest = 9001;
         var highest = 0;
+        var highest_val, lowest_val;
 
         values.forEach(function (d) {
 
             if (x(d[xVar]) > highest) {
                 highest = x(d[xVar]);
+                highest_val = d[xVar];
             }
             if (x(d[xVar]) < lowest) {
                 lowest = x(d[xVar]);
+                lowest_val = d[xVar];
             }
 
         });
@@ -404,6 +444,24 @@ var allCountries = function (container_selector, service) {
             .style("text-anchor", "middle")
             .style("fill", "black")
             .text(model.city.country);
+
+        // Lowest
+        model.cityline.append("text")
+            .attr("class", "label")
+            .attr("x",  lowest - 10)
+            .attr("y", height + 60)
+            .style("text-anchor", "middle")
+            .style("fill", "black")
+            .text(lowest_val);
+
+        // Highest
+        model.cityline.append("text")
+            .attr("class", "label")
+            .attr("x",  highest + 10)
+            .attr("y", height + 60)
+            .style("text-anchor", "middle")
+            .style("fill", "black")
+            .text(highest_val);
 
         var c = model.city.city + ", " + model.city.country;
         var perc = (better / total * 100);
