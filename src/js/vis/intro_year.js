@@ -115,8 +115,8 @@ var yearlyVis = function (container_selector, service) {
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
-        .attr("x", 400)
-        .attr("y", 10)
+        .attr("x", width/2)
+        .attr("y", 0)
         .attr("width", 30)
         .attr("height", 30)
         .attr("xlink:href", "img/hand.png");
@@ -292,6 +292,13 @@ var yearlyVis = function (container_selector, service) {
         }
 
     };
+
+    // Function to remove the interactivity icon later
+    model.removeInteractivityIcon = function(){
+        model.hand.remove();
+        return true;
+    };
+
 
     model.update = function () {
 
@@ -562,6 +569,8 @@ var yearlyVis = function (container_selector, service) {
             })
             .on('mouseout', function (d) {
                 model.tooltip.hide(d);
+
+                model.removeInteractivityIcon();
 
                 if (!d.active && !d.tempActive) {
                     d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
