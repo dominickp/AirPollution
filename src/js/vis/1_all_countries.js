@@ -15,13 +15,19 @@ var allCountries = function (container_selector, service) {
         return !(isNaN(d[xVar]) || isNaN(d[xVar]));
     });
 
-    model.iconTip = d3.tip().attr('class', 'd3-tip').html(function (d) {
-        return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
-    });
+    model.iconTip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function (d) {
+            return d.city + ", " + d.country + "<br>PM2.5: " + d[xVar];
+        });
 
-    model.legendtip = d3.tip().attr('class', 'd3-tip').html(function () {
-        return "Click to pin";
-    });
+    model.legendtip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function () {
+            return "Click to pin";
+        });
 
 
     var margin = {top: 20, right: 60, bottom: 100, left: 5};

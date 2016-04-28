@@ -20,7 +20,7 @@ var behindNumbers = function (container_selectors, service) {
     /* Initialize tooltip */
     model.tooltip = d3.tip()
         .attr('class', 'd3-tip')
-        .offset(-10,0)
+        .offset([-10,0])
         .html(function (d) {
             return d.name.toString();
         });
