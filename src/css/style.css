@@ -317,3 +317,8 @@ video {
 .facts{
     background-color: white;
 }
+
+.highlight {
+    font-weight: 900;
+    background-color: #ffffdc;
+}

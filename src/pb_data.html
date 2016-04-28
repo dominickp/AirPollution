@@ -150,7 +150,7 @@
                     </td>
                 <tr>
                     <td>Source</td>
-                    <td>World Bank</td>
+                    <td><a href="http://data.worldbank.org/indicator" target="_blank"> World Bank</a</td>
                 </tr>
                 <tr>
                     <td>Format</td>
@@ -175,7 +175,7 @@
                     </td>
                 <tr>
                     <td>Source</td>
-                    <td> World Health Organization.</td>
+                    <td><a href="http://www.who.int/entity/healthinfo/global_burden_disease/GHE_DthGlobal_2000_2012.xls?ua=1" target="_blank"> World Health Organiztion</a></td>
                 </tr>
                 <tr>
                     <td>Format</td>
@@ -357,9 +357,51 @@
 
             <h4>Behind the numbers - a multi-faceted problem <span class="badge">April 15th</span><span class="badge">April 16th</span></h4>
 
-            <div class="alert alert-warning" role="alert">
-                <strong>Oops...</strong> We are missing the World Bank data cleansing.
-            </div>
+           <p>
+               This section enables readers to look a little deeper behind the main PM2.5 numbers and start to build some understanding about the various factors that may, or may not contribute to air pollution.
+           </p>
+
+            <p>
+                The World Bank provides a rich set of country indicators covering categories such as: climate change, eduction, energy, health etc. Since annual PM2.5 is one of the available metrics, this allowed us to correlate this metric against any of the World Banks indicators.
+            </p>
+
+            <p>
+                Initially we chose a broad selection of metrics to explore correlations with PM2.5 (see Exploratory Data Analysis below). This was narrowed down to the six metrics highlighted.
+            </p>
+
+            <ul>
+                <li class="highlight">Electricity production from coal sources (% of total)</li>
+                <li>Fossil fuel energy consumption (% of total)</li>
+                <li>Population density (people per sq. km of land area)</li>
+                <li class="highlight">Forest area (% of land area)</li>
+                <li>Renewable energy consumption (% of total final energy consumption)</li>
+                <li>Urban population (% of total)</li>
+                <li>Population in urban agglomerations of more than 1 million (% of total population)</li>
+                <li class="highlight">Pump price for gasoline (US$ per liter)</li>
+                <li class="highlight">Gross enrolment ratio, tertiary, both sexes (%)</li>
+                <li class="highlight">Average precipitation in depth (mm per year)</li>
+                <li>CO2 emissions from manufacturing industries and construction (% of total fuel combustion)</li>
+                <li class="highlight">Life expectancy at birth, total (years)</li>
+                <li>Energy intensity level of primary energy (MJ/$2011 PPP GDP)</li>
+                <li>Pump price for diesel fuel (US$ per liter)</li>
+                <li>Container port traffic (TEU: 20 foot equivalent units)</li>
+                <li>Trade in services (% of GDP)</li>
+            </ul>
+
+            <p>
+                Note that all metrics were taken for the year 2012, with the exception of PM2.5 which was only available for 2013. In this way the data was consistent with the corresponding WHO PM2.5 data, which was mostly sampled in 2012.
+            </p>
+
+            <p>
+                The main cleaning tasks undertaken on the selected data metrics included:
+            </p>
+            <ul>
+                <li>Checking consistency of country order between different metrics.  Checks revealed that all of the World Bank data files were identically ordered, which helped speed up the process of combining different metrics.</li>
+                <li>Differentiating country level data from aggregate measures.  The World Bank has embedded a total of 31 aggregated measures (e.g. High income countries, European Union, Pacific islands and small states) into the country list. A new data column indicating either "Country" or "Aggregate" was added so that these could be later filtered in the data visualiztion.</li>
+                <li>All missing values were labelled as NA.</li>
+                <li>Many of the data values had lots of meaningless decimal places (e.g 64.542873%). All data values were therefore reduced to a maximum of two decimal places.  This had the addition benefit of reducing the file size.</li>
+
+            <hr class="section">
 
             <h3>Exploratory Data Analysis</h3>
             <div class="col-sm-6 col-md-6 pull-right">
@@ -376,6 +418,8 @@
                 offer interesting insights for the user. We used Tableau as a tool to perform this analysis because it
                 makes it easy to perform rapid testing of chart results before we jump into coding.
             </p>
+
+
 
         </div>
     </div>
