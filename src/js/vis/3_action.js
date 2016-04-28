@@ -26,13 +26,7 @@ var actionVisualization = function (container_selector, service) {
     var path = d3.geo.path()
         .projection(projection).pointRadius(1.5);
 
-    //model.colorScale = d3.scale.category10();
-    //
-    //// Get region colors
-    //data.forEach(function (d) {
-    //    d.color = model.colorScale(d.region);
-    //});
-
+    model.colorScale = d3.scale.category10();
 
     // UNCOMMENT FOR MANUAL DRAG
     model.drag = d3.behavior.drag()
@@ -194,12 +188,20 @@ var actionVisualization = function (container_selector, service) {
         var select = null;
         model.points.selectAll(".pin").data(model.coords).enter().append("path")
             .datum(function (d) {
-                return {type: "Point", coordinates: [d.longitude, d.latitude], val: d.city};
+                return {
+                    type: "Point",
+                    coordinates: [d.longitude, d.latitude],
+                    val: d.city,
+                    color: model.colorScale(d.region)
+                };
             })
             .attr("class", "notShown")
             .transition()
             .delay(function (d, i) {
                 return 5 + 10 * i;
+            })
+            .style("fill", function (d) {
+                return d.color;
             })
             .attr("class", function (d) {
                 if (d.val === cityString) {
@@ -207,7 +209,8 @@ var actionVisualization = function (container_selector, service) {
                 }
                 return "pin notSelected";
 
-            });
+            })
+        ;
 
         if (model.country !== null) {
             model.countryspot.selectAll(".pin").remove();
