@@ -41,12 +41,12 @@ var deathVisualization = function (container_selector, service) {
                 if (d.id === 1) {
 
                     if (model.global) {
-                        return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
+                        return d3.round(d.percent,1) + "% of all deaths are caused by " + d.name + ". <br>Click for a detailed breakdown";
                     }
-                    return d.percent + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
+                    return d3.round(d.percent,1) + "% of all deaths are caused by " + d.name + ". <br>Click to reset breakdown";
 
                 }
-                return d.percent + "% of all deaths are caused by " + d.name;
+                return d3.round(d.percent,1) + "% of all deaths are caused by " + d.name;
             });
 
         /* Invoke the tip in the context of your visualization */
@@ -177,7 +177,7 @@ var deathVisualization = function (container_selector, service) {
                         return y;
                     })
                     .text(function (d) {
-                        return "(" + d.percent + "%) " + d.name;
+                        return "(" + d3.round(d.percent, 1) + "%) " + d.name;
                     })
                     .style("fill", function (d) {
                         if (d.id === 1) {
