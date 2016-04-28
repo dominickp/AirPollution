@@ -56,8 +56,8 @@ var checkbrowser = function () {
             {
                 type: "error",
                 title: "Sorry, device unsupported.",
-                text: "This interactive story does not work on mobile phones.",
-                showConfirmButton: false
+                text: "This interactive story does not work on mobile phones. You're welcome to try anyway.",
+                showConfirmButton: true
             }
         );
     }
@@ -66,8 +66,8 @@ var checkbrowser = function () {
             {
                 type: "error",
                 title: "Sorry, browser unsupported.",
-                text: "This interactive story works in Chrome, Opera, Safari and Firefox.",
-                showConfirmButton: false
+                text: "This interactive story works in Chrome, Opera, Safari and Firefox. You're welcome to try anyway.",
+                showConfirmButton: true
             }
         );
     }
@@ -316,6 +316,15 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
 
         }
+    }
+
+    if(localStorage.getItem('selected-city')){
+
+        console.log("City loaded from localStorage.");
+
+        service.setSelectedCity(JSON.parse(localStorage.getItem('selected-city')));
+        //allCitiesView.updateExternal()
+        webController.next();
     }
 
 

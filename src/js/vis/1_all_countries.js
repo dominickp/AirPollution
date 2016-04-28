@@ -57,7 +57,7 @@ var allCountries = function (container_selector, service) {
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient("top");
 
 
     var svg = model.svg;
@@ -95,9 +95,9 @@ var allCountries = function (container_selector, service) {
         .append("text")
         .attr("class", "label")
         .attr("x", width)
-        .attr("y", -6)
+        .attr("y", 12)
         .style("text-anchor", "end")
-        .text("PM 2.5");
+        .text("Annual PM 2.5 (μg/m3)");
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
@@ -149,6 +149,7 @@ var allCountries = function (container_selector, service) {
         .on("mouseover", function (d) {
             model.legendtip.show(d);
             model.show(d);
+            model.removeCountryLegend();
         })
         .on("mouseout", function (d) {
             model.legendtip.hide(d);
@@ -190,19 +191,19 @@ var allCountries = function (container_selector, service) {
         .style("stroke-width", 1);
 
     // Selected city legend
-    svg.append("text")
+    model.legend_city_text = svg.append("text")
         .attr("x", width - 24)
         .attr("y", 190)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
         .text("Selected City");
 
-    svg.append("circle")
+    model.legend_city_circle = svg.append("circle")
         .attr("r", radius)
         .attr("cx", width - 8)
         .attr("cy", 190)
         .style("fill", 'yellow')
-        .attr("stroke", "black")
+        .attr("stroke", "gray")
         .attr("stroke-width", 1);
 
 
@@ -293,6 +294,13 @@ var allCountries = function (container_selector, service) {
         return true;
     };
 
+    // Function to remove the country legend text for later
+    model.removeCountryLegend = function(){
+        model.legend_country_text.remove();
+        model.legend_country_circle.remove();
+        return true;
+    };
+
     model.show = function (group) {
         node.data(data)
             .each(function (d) {
@@ -318,14 +326,14 @@ var allCountries = function (container_selector, service) {
 
 
         // Selected country legend
-        svg.append("text")
+        model.legend_country_text = svg.append("text")
             .attr("x", width - 24)
             .attr("y", 210)
             .attr("dy", ".35em")
             .style("text-anchor", "end")
             .text("Selected Country");
 
-        svg.append("circle")
+        model.legend_country_circle = svg.append("circle")
             .attr("r", radius)
             .attr("cx", width - 8)
             .attr("cy", 210)
@@ -334,7 +342,7 @@ var allCountries = function (container_selector, service) {
                 //console.log(service.getSelectedCityData());
                 return colorVal;
             })
-            .attr("stroke", "black")
+            .attr("stroke", "grey")
             .attr("stroke-width", 1);
 
 
@@ -397,7 +405,7 @@ var allCountries = function (container_selector, service) {
                                 .attr("cx", d.lineX)
                                 .attr("cy", d.lineY)
                                 .style("fill", 'yellow')
-                                .attr("stroke", "black")
+                                .attr("stroke", "gray")
                                 .attr("stroke-width", 1)
                                 .on('mouseover', function () {
                                     model.iconTip.show(d);

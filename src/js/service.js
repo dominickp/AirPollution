@@ -1,3 +1,5 @@
+var sweetalert = require('sweetalert');
+
 var service = function () {
 
     var model = this;
@@ -14,7 +16,7 @@ var service = function () {
 
     model.visualizations = {};
 
-    model.setSelectedCity = function (city) {
+    model.setSelectedCity = function (city, callback) {
         model.selected_city = city;
 
         //console.log(city);
@@ -22,8 +24,16 @@ var service = function () {
         $("#city_choice_name").text(city.city + ", " + city.country);
         $("#city_choice").removeClass("hidden");
 
+        // Add to local storage
+        localStorage.setItem('selected-city', JSON.stringify(city));
+
         // Update vis
         model.visualizations.vis1.updateVis();
+
+        if(callback){
+            callback(model.selected_city);
+        }
+
     };
 
     model.getSelectedCity = function () {
