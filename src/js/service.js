@@ -24,6 +24,9 @@ var service = function () {
         $("#city_choice_name").text(city.city + ", " + city.country);
         $("#city_choice").removeClass("hidden");
 
+        // Add to local storage
+        localStorage.setItem('selected-city', JSON.stringify(city));
+
         // Update vis
         model.visualizations.vis1.updateVis();
 

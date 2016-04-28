@@ -318,6 +318,15 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         }
     }
 
+    if(localStorage.getItem('selected-city')){
+
+        console.log("City loaded from localStorage.");
+
+        service.setSelectedCity(JSON.parse(localStorage.getItem('selected-city')));
+        //allCitiesView.updateExternal()
+        webController.next();
+    }
+
 
 };
 
