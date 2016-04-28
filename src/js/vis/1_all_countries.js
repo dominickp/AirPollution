@@ -97,7 +97,7 @@ var allCountries = function (container_selector, service) {
         .attr("x", width)
         .attr("y", -6)
         .style("text-anchor", "end")
-        .text("PM 2.5");
+        .text("Annual PM 2.5 (μg/m3)");
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
