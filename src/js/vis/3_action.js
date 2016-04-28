@@ -26,6 +26,14 @@ var actionVisualization = function (container_selector, service) {
     var path = d3.geo.path()
         .projection(projection).pointRadius(1.5);
 
+    //model.colorScale = d3.scale.category10();
+    //
+    //// Get region colors
+    //data.forEach(function (d) {
+    //    d.color = model.colorScale(d.region);
+    //});
+
+
     // UNCOMMENT FOR MANUAL DRAG
     model.drag = d3.behavior.drag()
         .origin(function () {
