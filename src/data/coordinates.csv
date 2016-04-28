@@ -1,1615 +1,1615 @@
-city,latitude,longitude
-"Accra, Ghana",5.603717,-0.186964
-"Buchanan, Liberia",5.887247,-10.030372
-"Sanniquellie, Liberia",7.358656,-8.709579
-"Beau Bassin-Rose Hill, Mauritius",-20.22303,57.468383
-"Flacq, Mauritius",-20.225784,57.711927
-"Midlands, Mauritius",-20.339905,57.568847
-"Port Louis, Mauritius",-20.160891,57.501222
-"Dakar, Senegal",14.764504,-17.366029
-"Cape Town, South Africa",-33.924868,18.424055
-"Durban, South Africa",-29.85868,31.02184
-"Pretoria, South Africa",-25.747868,28.229271
-"Johannesburg, South Africa",-26.204103,28.047305
-"Tshwane, South Africa",-25.69755,28.159079
-"Waterberg, South Africa",-23.974785,28.299435
-"Morogoro, Tanzania",-6.830373,37.670589
-"Buenos Aires, Argentina",-34.603684,-58.381559
-"Cochabamba, Bolivia",-17.413977,-66.165322
-"La Paz, Bolivia",-16.489689,-68.119294
-"Americana, Brazil",-22.737846,-47.333569
-"Aracatuba, Brazil",-21.202854,-50.453679
-"Araraquara, Brazil",-21.784827,-48.178649
-"Araucaria, Brazil",-25.586431,-49.405225
-"Bauru, Brazil",-22.314459,-49.058695
-"Belo Horizonte, Brazil",-19.916681,-43.934493
-"Betim, Brazil",-19.967308,-44.20119
-"Campinas, Brazil",-22.909938,-47.062633
-"Carapicuiba, Brazil",-23.523962,-46.841124
-"Catanduva, Brazil",-21.131855,-48.977473
-"Colombo, Brazil",-25.292978,-49.226634
-"Curitiba, Brazil",-25.428954,-49.267137
-"Diadema, Brazil",-23.68184,-46.620967
-"Grande Vitoria, Brazil",-20.28869,-40.340761
-"Ibirite, Brazil",-20.025669,-44.057296
-"Jacarei, Brazil",-23.298783,-45.966254
-"Jau, Brazil",-22.30275,-48.575549
-"Jundiai, Brazil",-23.185708,-46.897806
-"Limeira, Brazil",-22.566535,-47.397437
-"Marilia, Brazil",-22.217585,-49.950529
-"Maua, Brazil",-23.668163,-46.461709
-"Osasco, Brazil",-23.532881,-46.792003
-"Paulinia, Brazil",-22.765015,-47.150027
-"Piracicaba, Brazil",-22.734286,-47.648064
-"Pirassununga, Brazil",-21.996465,-47.426194
-"Presidente Prudente, Brazil",-22.121126,-51.393006
-"Ribeirio Preto, Brazil",-21.170401,-47.810324
-"Rio Claro, Brazil",-22.414902,-47.565139
-"Rio de Janeiro, Brazil",-22.906847,-43.172896
-"Salvador, Brazil",-12.97304,-38.502304
-"Santa Gertrudes, Brazil",-22.457322,-47.532594
-"Santo Andre, Brazil",-23.674223,-46.5436
-"Sao Bernardo do Campo, Brazil",-23.689843,-46.564848
-"Sao Caetano do Sul, Brazil",-23.623362,-46.555243
-"Sao Jose do Rio Preto, Brazil",-20.811761,-49.376227
-"Sao Jose dos Campos, Brazil",-23.223701,-45.900907
-"Sao Paulo, Brazil",-23.55052,-46.633309
-"Socoraba, Brazil",-23.50153,-47.45256
-"Taboao da Serra, Brazil",-23.622876,-46.781665
-"Tatui, Brazil",-23.349219,-47.846576
-"Bogota, Colombia",4.710989,-74.072092
-"Bucaramanga, Colombia",7.119349,-73.122742
-"Caldas, Colombia",5.29826,-75.247906
-"Cali, Colombia",3.451647,-76.531985
-"Copacabana, Colombia",6.357621,-75.505078
-"Itagui, Colombia",6.167568,-75.614671
-"Manizales, Colombia",5.070275,-75.513817
-"Medellin, Colombia",6.253041,-75.564574
-"Sabaneta, Colombia",6.150559,-75.61682
-"Alajuela, Costa Rica",10.391583,-84.438272
-"Belen, Costa Rica",10.406616,-85.589507
-"Heredia, Costa Rica",10.473523,-84.016742
-"San Jose, Costa Rica",9.928069,-84.090725
-"Ambato, Ecuador",-1.254341,-78.62285
-"Cuenca, Ecuador",-2.900128,-79.005896
-"Ibarra, Ecuador",0.339176,-78.122234
-"Latacunga, Ecuador",-0.775495,-78.52065
-"Manta, Ecuador",-0.967653,-80.70891
-"Milagro, Ecuador",-2.138768,-79.594054
-"Portoviejo, Ecuador",-1.054723,-80.45249
-"Quito, Ecuador",-0.180653,-78.467838
-"Santo Domingo, Ecuador",-0.238904,-79.177427
-"Guatemala city, Guatemala",14.634915,-90.506882
-"Tegucigalpa, Honduras",14.072275,-87.192136
-"Clarendon, Jamaica",17.955718,-77.240515
-"Ewarton, Jamaica",18.175225,-77.088103
-"Kingston, Jamaica",18.017874,-76.809904
-"Guadalajara, Mexico",20.659699,-103.349609
-"Irapuato, Mexico",20.678665,-101.354496
-"Leon, Mexico",21.125008,-101.68596
-"Mexico city, Mexico",19.432608,-99.133208
-"Monterrey, Mexico",25.686614,-100.316113
-"Puebla, Mexico",19.041297,-98.2062
-"Salamanca , Mexico",20.573931,-101.195717
-"Silao, Mexico",20.952141,-101.428237
-"Toluca, Mexico",19.28261,-99.655665
-"Asuncion , Paraguay",-25.26374,-57.575926
-"Lima, Peru",-12.046374,-77.042793
-"Puerto La Cruz, Venezuela",10.200799,-64.633464
-"Caracas, Venezuela",10.480594,-66.903606
-"Abbotsford, Canada",49.054587,-122.328026
-"Auclair, Canada",47.728469,-68.644387
-"Barrie, Canada",44.389356,-79.690332
-"Bathurst, Canada",47.618351,-65.651336
-"Beaverlodge, Canada",55.213974,-119.423302
-"Becancour, Canada",46.350622,-72.435055
-"Belleville, Canada",44.162759,-77.383231
-"Brampton, Canada",43.731548,-79.762418
-"Brandon, Canada",49.848471,-99.95009
-"Brantford, Canada",43.139387,-80.264425
-"Burlington, Canada",43.32552,-79.799032
-"Burnaby, Canada",49.248809,-122.98051
-"Burns Lake, Canada",54.233415,-125.763613
-"Calgary, Canada",51.048615,-114.070846
-"Campbell River, Canada",50.033123,-125.273335
-"Caroline, Canada",52.093932,-114.740442
-"Castlegar, Canada",49.323741,-117.659334
-"Chalk River, Canada",46.01591,-77.452276
-"Charette, Canada",46.44065,-72.923934
-"Chatham, Canada",42.404802,-82.191038
-"Chilliwack, Canada",49.15794,-121.951467
-"Cold Lake, Canada",54.464317,-110.173147
-"Corner Brook, Canada",48.948997,-57.950273
-"Cornwall, Canada",45.021276,-74.730345
-"Creston, Canada",49.09554,-116.513508
-"Crofton, Canada",48.863844,-123.645798
-"Debolt, Canada",55.21479,-118.026119
-"Deschambault, Canada",46.65064,-71.929556
-"Drayton Valley, Canada",53.221407,-114.976679
-"Duncan, Canada",48.778691,-123.707942
-"Edmonton, Canada",53.544389,-113.490927
-"Elk Island, Canada",53.781261,-112.982038
-"Ferme Neuve, Canada",46.701978,-75.456654
-"Flin Flon, Canada",54.765769,-101.876215
-"Fort Chipewyan, Canada",58.719637,-111.140697
-"Fort Mackay, Canada",57.186758,-111.636785
-"Fort Mcmurray, Canada",56.72638,-111.380341
-"Fort Saskatchewan, Canada",53.700716,-113.209466
-"Fredericton, Canada",45.96359,-66.643115
-"Gatineau, Canada",45.476545,-75.701272
-"Golden, Canada",51.296119,-116.963137
-"Grand Bend, Canada",43.31304,-81.756224
-"Grand Forks, Canada",49.030095,-118.445139
-"Grande Prairie, Canada",55.16994,-118.798615
-"Guelph, Canada",43.544805,-80.248167
-"Hamilton, Canada",43.250021,-79.866091
-"Hinton, Canada",53.403709,-117.571842
-"Hope, Canada",49.382993,-121.442475
-"Houston, Canada",54.397997,-126.648209
-"Kelowna, Canada",49.887952,-119.496011
-"Kingston, Canada",44.231172,-76.485954
-"Kitchener, Canada",43.412924,-80.477147
-"Kitimat, Canada",54.063274,-128.636961
-"La Dore, Canada",48.713647,-72.649283
-"La Patrie, Canada",45.401858,-71.249643
-"La Peche, Canada",45.68621,-75.992255
-"Lac-edouard, Canada",47.66173,-72.271136
-"Lamont, Canada",53.760198,-112.779539
-"Langley, Canada",49.074331,-122.559322
-"L'Assomption, Canada",45.85199,-73.412398
-"Laval, Canada",45.606649,-73.712409
-"Lethbridge, Canada",49.69349,-112.84184
-"London, Canada",42.98695,-81.243177
-"Longueuil, Canada",45.536944,-73.510713
-"Medicine Hat, Canada",50.040549,-110.676426
-"Mississauga, Canada",43.589045,-79.64412
-"Moncton, Canada",46.087817,-64.778231
-"Montreal, Canada",45.501689,-73.567256
-"Morrisburg, Canada",44.897789,-75.183397
-"Mount Pearl, Canada",47.520641,-52.807682
-"Nanaimo, Canada",49.165884,-123.940065
-"Nelson, Canada",49.492812,-117.294834
-"Newmarket, Canada",44.059187,-79.461256
-"North Bay, Canada",46.309115,-79.46082
-"Notre-Dame-du-Rosaire, Canada",46.825481,-70.392222
-"Oakville, Canada",43.467517,-79.687666
-"Oshawa, Canada",43.897093,-78.865791
-"Osoyoos, Canada",49.032304,-119.468163
-"Ottawa, Canada",45.42153,-75.697193
-"Parry Sound, Canada",45.347393,-80.034783
-"Peterborough, Canada",44.309058,-78.319747
-"Pitt Meadow, Canada",49.208381,-122.709213
-"Port Alice, Canada",50.425429,-127.487708
-"Port Moody, Canada",49.284911,-122.867756
-"Port Stanley, Canada",42.664135,-81.215633
-"Powell River, Canada",49.835235,-124.524706
-"Prince Albert, Canada",53.203349,-105.753071
-"Prince George, Canada",53.917064,-122.749669
-"Quebec, Canada",52.939916,-73.549136
-"Quesnel, Canada",52.981737,-122.494906
-"Red Deer, Canada",52.268112,-113.811239
-"Regina, Canada",50.445211,-104.618894
-"Revelstoke, Canada",50.998115,-118.195672
-"Richmond, Canada",49.16659,-123.133569
-"Rouyn-Noranda, Canada",48.234236,-79.018784
-"Saguenay, Canada",48.428053,-71.068492
-"Saint John, Canada",45.273315,-66.063308
-"Saint-Anicet, Canada",45.135455,-74.362325
-"Saint-Jean-Sur-Richelieu, Canada",45.305771,-73.25449
-"Saint-Simon, Canada",47.844387,-69.877795
-"Sarnia, Canada",42.974536,-82.40659
-"Saskatoon, Canada",52.133214,-106.670046
-"Senneterre, Canada",48.390597,-77.241167
-"Sherbrooke, Canada",45.400993,-71.882429
-"Simcoe, Canada",42.837263,-80.304042
-"Smithers, Canada",54.782355,-127.168554
-"Squamish, Canada",49.701634,-123.155812
-"St. Andrews, Canada",47.808351,-101.025207
-"St. Catharines, Canada",43.159375,-79.246863
-"St. John's, Canada",47.560541,-52.712831
-"St. Zephirin-de-Courval, Canada",46.059798,-72.62634
-"St-Hilaire-de-Dorset, Canada",45.865231,-70.857041
-"Stukely-Sud, Canada",45.316943,-72.415128
-"Sudbury, Canada",46.522099,-80.953035
-"Telkwa, Canada",54.695016,-127.04761
-"Terrace, Canada",54.518193,-128.603154
-"Thorsby, Canada",53.227553,-114.050048
-"Thunder Bay, Canada",48.380895,-89.247682
-"Tingwick, Canada",45.88116,-71.943945
-"Tiverton, Canada",44.267658,-81.543323
-"Tomahawk, Canada",53.395845,-114.763275
-"Toronto, Canada",43.653226,-79.383184
-"Trois-Rivieres, Canada",46.35468,-72.583787
-"Vancouver, Canada",49.282729,-123.120738
-"Vanderhoof, Canada",54.01398,-124.01298
-"Vernon, Canada",50.267014,-119.272011
-"Victoria, Canada",48.428421,-123.365644
-"Whistler, Canada",50.11632,-122.957356
-"Williams Lake, Canada",52.141674,-122.141688
-"Windsor, Canada",42.314937,-83.036363
-"Winnipeg, Canada",49.899754,-97.137494
-"Antofagasta, Chile",-23.650928,-70.397502
-"Calama, Chile",-22.454392,-68.929382
-"Chillan, Chile",-36.606262,-72.102335
-"Concon, Chile",-32.923937,-71.523479
-"Copiapo, Chile",-27.366576,-70.332159
-"Coquimbo, Chile",-29.959001,-71.338918
-"Iquique, Chile",-20.230703,-70.135669
-"La Calera, Chile",-32.787796,-71.203996
-"La Cruz, Chile",-32.825807,-71.227305
-"La Quillota, Chile",-32.880303,-71.249716
-"Los Andes, Chile",-32.833799,-70.597218
-"Machali, Chile",-34.179452,-70.656515
-"Puente Alto, Chile",-33.618608,-70.590606
-"Rancagua, Chile",-34.170132,-70.740626
-"Rengo, Chile",-34.402379,-70.867441
-"San Fernando, Chile",-34.58586,-70.99078
-"San Pedro de la Paz, Chile",-36.830535,-73.116737
-"Santiago, Chile",-33.44889,-70.669265
-"Talca, Chile",-35.423244,-71.64848
-"Talcahuano, Chile",-36.724783,-73.116981
-"Temuco, Chile",-38.735902,-72.590374
-"Tocopilla, Chile",-22.085798,-70.193006
-"Vina del Mar, Chile",-33.015348,-71.550028
-"Aberdeen, SD, United States of America",45.464699,-98.486483
-"Adrian, MI, United States of America",41.897547,-84.037166
-"Akron, OH, United States of America",41.081445,-81.519005
-"Albany, GA, United States of America",31.578507,-84.155741
-"Albany-Lebanon, OR, United States of America",44.555823,-123.074486
-"Albany-Schenectady-Troy, NY, United States of America",42.791803,-73.873271
-"Albuquerque, NM, United States of America",35.085334,-106.605553
-"Alexandria, LA, United States of America",31.311294,-92.445137
-"Allegan, MI, United States of America",42.529199,-85.855303
-"Allentown-Bethlehem-Easton, PA-NJ, United States of America",40.649797,-75.338572
-"Altoona, PA, United States of America",40.518681,-78.394736
-"Anchorage, AK, United States of America",61.218056,-149.900278
-"Anderson, IN, United States of America",40.10532,-85.680254
-"Ann Arbor, MI, United States of America",42.280826,-83.743038
-"Appleton, WI, United States of America",44.261931,-88.415385
-"Asheville, NC, United States of America",35.595058,-82.551487
-"Athens, OH, United States of America",39.32924,-82.101255
-"Athens, TN, United States of America",35.442851,-84.59299
-"Athens-Clarke County, GA, United States of America",33.951935,-83.357567
-"Atlanta-Sandy Springs-Marietta, GA, United States of America",33.888116,-84.46427
-"Atlantic City-Hammonton, NJ, United States of America",39.636506,-74.802385
-"Augusta-Richmond County, GA-SC, United States of America",33.473498,-82.010515
-"Augusta-Waterville, ME, United States of America",44.520187,-69.652927
-"Austin-Round Rock, TX, United States of America",30.453163,-97.724177
-"Bakersfield, CA, United States of America",35.373292,-119.018712
-"Baltimore-Towson, MD, United States of America",39.401496,-76.601913
-"Bangor, ME, United States of America",44.801182,-68.777814
-"Baraboo, WI, United States of America",43.471094,-89.744291
-"Baton Rouge, LA, United States of America",30.458283,-91.14032
-"Bay City, MI, United States of America",43.594468,-83.888865
-"Beaver Dam, WI, United States of America",43.457769,-88.837329
-"Beckley, WV, United States of America",37.77817,-81.188156
-"Bellingham, WA, United States of America",48.74908,-122.478147
-"Bennington, VT, United States of America",42.878135,-73.196774
-"Birmingham-Hoover, AL, United States of America",33.400235,-86.805099
-"Bishop, CA, United States of America",37.361424,-118.399664
-"Bismarck, ND, United States of America",46.808327,-100.783739
-"Bloomington, IN, United States of America",39.165325,-86.526386
-"Bloomington-Normal, IL, United States of America",40.518147,-88.991586
-"Boise City-Nampa, ID, United States of America",43.582409,-116.595528
-"Boone, NC, United States of America",36.216795,-81.674552
-"Boston-Cambridge-Quincy, MA-NH, United States of America",43.193852,-71.572395
-"Boulder, CO, United States of America",40.014986,-105.270546
-"Bowling Green, KY, United States of America",36.968522,-86.480804
-"Bradenton-Sarasota-Venice, FL, United States of America",27.06152,-82.406358
-"Brainerd, MN, United States of America",46.352673,-94.202008
-"Bremerton-Silverdale, WA, United States of America",47.571551,-122.638824
-"Bridgeport-Stamford-Norwalk, CT, United States of America",41.141156,-73.284652
-"Brigham City, UT, United States of America",41.510213,-112.015502
-"Brookings, SD, United States of America",44.311357,-96.798388
-"Brownsville-Harlingen, TX, United States of America",26.190631,-97.696103
-"Brunswick, GA, United States of America",31.149953,-81.491489
-"Buffalo-Niagara Falls, NY, United States of America",42.920344,-78.868032
-"Burlington, NC, United States of America",36.095692,-79.437799
-"Burlington-South Burlington, VT, United States of America",44.506328,-73.145209
-"Butte-Silver Bow, MT, United States of America",46.003823,-112.534778
-"Cadillac, MI, United States of America",44.251953,-85.401162
-"Cambridge, MD, United States of America",38.563174,-76.078829
-"Canton-Massillon, OH, United States of America",40.818606,-81.454875
-"Cape Coral-Fort Myers, FL, United States of America",26.558783,-81.922892
-"Casper, WY, United States of America",42.866632,-106.313081
-"Cedar Rapids, IA, United States of America",41.97788,-91.665623
-"Champaign-Urbana, IL, United States of America",40.110588,-88.20727
-"Charleston, WV, United States of America",38.34982,-81.632623
-"Charleston-North Charleston-Summerville, SC, United States of America",32.831284,-79.955159
-"Charlotte-Gastonia-Concord, NC-SC, United States of America",33.836081,-81.163724
-"Charlottesville, VA, United States of America",38.029306,-78.476678
-"Chattanooga, TN-GA, United States of America",35.04563,-85.30968
-"Cheyenne, WY, United States of America",41.139981,-104.820246
-"Chicago-Naperville-Joliet, IL-IN-WI, United States of America",43.78444,-88.787868
-"Chico, CA, United States of America",39.728494,-121.837478
-"Cincinnati-Middletown, OH-KY-IN, United States of America",37.09024,-95.712891
-"Clarksburg, WV, United States of America",39.280645,-80.344534
-"Clarksville, TN-KY, United States of America",36.529771,-87.359453
-"Clearlake, CA, United States of America",38.958231,-122.626373
-"Cleveland-Elyria-Mentor, OH, United States of America",41.666157,-81.339552
-"Clinton, IA, United States of America",41.844474,-90.188738
-"Colorado Springs, CO, United States of America",38.833882,-104.821363
-"Columbia, SC, United States of America",34.00071,-81.034814
-"Columbia, TN, United States of America",35.615072,-87.035283
-"Columbus, GA-AL, United States of America",32.460976,-84.987709
-"Columbus, OH, United States of America",39.961176,-82.998794
-"Concord, NH, United States of America",43.208137,-71.537572
-"Cookeville, TN, United States of America",36.162839,-85.501642
-"Corning, NY, United States of America",42.142852,-77.05469
-"Corpus Christi, TX, United States of America",27.800583,-97.396381
-"Dallas-Fort Worth-Arlington, TX, United States of America",32.743344,-97.026241
-"Daphne-Fairhope-Foley, AL, United States of America",30.406587,-87.683597
-"Davenport-Moline-Rock Island, IA-IL, United States of America",41.519018,-90.542196
-"Dayton, OH, United States of America",39.758948,-84.191607
-"Decatur, AL, United States of America",34.605925,-86.983342
-"Decatur, IL, United States of America",39.840315,-88.9548
-"Deltona-Daytona Beach-Ormond Beach, FL, United States of America",29.285813,-81.055889
-"Denver-Aurora-Broomfield, CO, United States of America",39.920541,-105.08665
-"Des Moines-West Des Moines, IA, United States of America",41.52549,-93.630511
-"Detroit-Warren-Livonia, MI, United States of America",42.341202,-83.28356
-"Dickinson, ND, United States of America",46.879176,-102.789624
-"Dothan, AL, United States of America",31.223231,-85.390489
-"Dover, DE, United States of America",39.158168,-75.524368
-"Duluth, MN-WI, United States of America",46.786672,-92.100485
-"Durango, CO, United States of America",37.27528,-107.880067
-"Durham, NC, United States of America",35.994033,-78.898619
-"Durham-Chapel Hill, NC, United States of America",35.9132,-79.055845
-"Dyersburg, TN, United States of America",36.034516,-89.385628
-"East Stroudsburg, PA, United States of America",40.999539,-75.181291
-"Eau Claire, WI, United States of America",44.811349,-91.498494
-"El Centro, CA, United States of America",32.792,-115.563051
-"El Dorado, AR, United States of America",33.20763,-92.666267
-"El Paso, TX, United States of America",31.761878,-106.485022
-"Elizabethtown, KY, United States of America",37.703065,-85.864941
-"Elkhart-Goshen, IN, United States of America",41.582272,-85.834438
-"Erie, PA, United States of America",42.129224,-80.085059
-"Eugene-Springfield, OR, United States of America",44.051085,-123.086563
-"Eureka-Arcata-Fortuna, CA, United States of America",40.598187,-124.157276
-"Evansville, IN-KY, United States of America",37.971559,-87.57109
-"Fairbanks, AK, United States of America",64.837778,-147.716389
-"Fairmont, WV, United States of America",39.485085,-80.142578
-"Fargo, ND-MN, United States of America",46.877186,-96.789803
-"Farmington, NM, United States of America",36.728058,-108.218686
-"Fayetteville, NC, United States of America",35.052664,-78.878358
-"Fayetteville-Springdale-Rogers, AR-MO, United States of America",37.964253,-91.831833
-"Flagstaff, AZ, United States of America",35.198284,-111.651302
-"Flint, MI, United States of America",43.012527,-83.687456
-"Florence, SC, United States of America",34.195433,-79.762562
-"Florence-Muscle Shoals, AL, United States of America",34.814856,-87.642664
-"Fort Collins-Loveland, CO, United States of America",40.449256,-105.002428
-"Fort Madison-Keokuk, IA-MO, United States of America",37.964253,-91.831833
-"Fort Payne, AL, United States of America",34.444255,-85.719689
-"Fort Smith, AR-OK, United States of America",35.385924,-94.398547
-"Fort Wayne, IN, United States of America",41.079273,-85.139351
-"Fresno, CA, United States of America",36.746842,-119.772587
-"Gadsden, AL, United States of America",34.014264,-86.006639
-"Gainesville, FL, United States of America",29.651634,-82.324826
-"Gainesville, GA, United States of America",34.297879,-83.824066
-"Gettysburg, PA, United States of America",39.830929,-77.231095
-"Gillette, WY, United States of America",44.291092,-105.502221
-"Goldsboro, NC, United States of America",35.384884,-77.992765
-"Grand Island, NE, United States of America",40.926396,-98.342012
-"Grand Junction, CO, United States of America",39.063871,-108.550649
-"Grand Rapids-Wyoming, MI, United States of America",42.883043,-85.72166
-"Grants Pass, OR, United States of America",42.439007,-123.328392
-"Greeley, CO, United States of America",40.423314,-104.709132
-"Green Bay, WI, United States of America",44.519159,-88.019826
-"Greensboro-High Point, NC, United States of America",36.022422,-79.878497
-"Greenville, NC, United States of America",35.612661,-77.366354
-"Greenville-Mauldin-Easley, SC, United States of America",34.839974,-82.626006
-"Grenada, MS, United States of America",33.769005,-89.808419
-"Gulfport-Biloxi, MS, United States of America",30.41338,-89.072958
-"Hagerstown-Martinsburg, MD-WV, United States of America",38.597626,-80.454903
-"Hammond, LA, United States of America",30.504358,-90.4612
-"Hanford-Corcoran, CA, United States of America",36.098007,-119.560402
-"Harriman, TN, United States of America",35.933964,-84.552436
-"Harrisburg-Carlisle, PA, United States of America",40.160004,-77.686813
-"Harrisonburg, VA, United States of America",38.449569,-78.868916
-"Hartford-West Hartford-East Hartford, CT, United States of America",41.76154,-72.708783
-"Hattiesburg, MS, United States of America",31.327119,-89.290339
-"Helena, MT, United States of America",46.588371,-112.024505
-"Helena-West Helena, AR, United States of America",34.5291,-90.59
-"Hickory-Lenoir-Morganton, NC, United States of America",35.745407,-81.684819
-"Hilo, HI, United States of America",19.729722,-155.09
-"Hobbs, NM, United States of America",32.702612,-103.13604
-"Holland-Grand Haven, MI, United States of America",42.763373,-86.207023
-"Homosassa Springs, FL, United States of America",28.803706,-82.576137
-"Honolulu, HI, United States of America",21.306944,-157.858333
-"Hot Springs, AR, United States of America",34.5037,-93.05518
-"Houma-Bayou Cane-Thibodaux, LA, United States of America",29.795763,-90.822871
-"Houston-Sugar Land-Baytown, TX, United States of America",29.735505,-94.977427
-"Huntington-Ashland, WV-KY-OH, United States of America",40.417287,-82.907123
-"Huntsville, AL, United States of America",34.730369,-86.586104
-"Indianapolis-Carmel, IN, United States of America",39.944053,-86.018672
-"Iowa City, IA, United States of America",41.661128,-91.530168
-"Jackson, MS, United States of America",32.298757,-90.18481
-"Jackson, TN, United States of America",35.614517,-88.813947
-"Jackson, WY-ID, United States of America",43.479929,-110.762428
-"Jacksonville, FL, United States of America",30.332184,-81.655651
-"Jamestown-Dunkirk-Fredonia, NY, United States of America",42.440058,-79.33171
-"Jasper, IN, United States of America",38.391442,-86.931109
-"Johnstown, PA, United States of America",40.326741,-78.92197
-"Juneau, AK, United States of America",58.301944,-134.419722
-"Kahului-Wailuku, HI, United States of America",20.883198,-156.505009
-"Kalamazoo-Portage, MI, United States of America",42.201154,-85.580002
-"Kalispell, MT, United States of America",48.191989,-114.316813
-"Kansas City, MO-KS, United States of America",39.099727,-94.578567
-"Kapaa, HI, United States of America",22.088139,-159.337982
-"Keene, NH, United States of America",42.933692,-72.278141
-"Kingsport-Bristol-Bristol, TN-VA, United States of America",37.431573,-78.656894
-"Kinston, NC, United States of America",35.262664,-77.581635
-"Klamath Falls, OR, United States of America",42.224867,-121.78167
-"Knoxville, TN, United States of America",35.960638,-83.920739
-"Kokomo, IN, United States of America",40.486427,-86.133603
-"La Crosse, WI-MN, United States of America",43.801356,-91.239581
-"Laconia, NH, United States of America",43.527855,-71.470351
-"Lafayette, IN, United States of America",40.416702,-86.875287
-"Lafayette, LA, United States of America",30.22409,-92.019843
-"Lake Charles, LA, United States of America",30.226595,-93.217376
-"Lake Havasu City-Kingman, AZ, United States of America",35.189443,-114.053006
-"Lakeland-Winter Haven, FL, United States of America",28.027677,-81.724656
-"Lancaster, PA, United States of America",40.037876,-76.305514
-"Lansing-East Lansing, MI, United States of America",42.761259,-84.542783
-"Laramie, WY, United States of America",41.311367,-105.591101
-"Las Cruces, NM, United States of America",32.31994,-106.763654
-"Las Vegas-Paradise, NV, United States of America",36.097195,-115.146665
-"Laurel, MS, United States of America",31.694051,-89.130612
-"Lawrenceburg, TN, United States of America",35.242302,-87.334739
-"Lebanon, NH-VT, United States of America",43.642293,-72.251757
-"Lebanon, PA, United States of America",40.340925,-76.41135
-"Lewiston-Auburn, ME, United States of America",44.016481,-70.285667
-"Lexington-Fayette, KY, United States of America",38.040584,-84.503716
-"Lima, OH, United States of America",40.742551,-84.105226
-"Lincoln, NE, United States of America",40.825763,-96.685198
-"Little Rock-North Little Rock-Conway, AR, United States of America",34.726942,-92.334489
-"Logan, UT-ID, United States of America",41.73698,-111.833836
-"Los Angeles-Long Beach-Santa Ana, CA, United States of America",33.758846,-118.13139
-"Louisville/Jefferson County, KY-IN, United States of America",38.252665,-85.758456
-"Lumberton, NC, United States of America",34.61822,-79.008642
-"Lynchburg, VA, United States of America",37.413754,-79.142246
-"Macon, GA, United States of America",32.840695,-83.632402
-"Madera, CA, United States of America",36.961336,-120.060718
-"Madison, WI, United States of America",43.073052,-89.40123
-"Manchester-Nashua, NH, United States of America",42.77995,-71.477185
-"Marshall, MN, United States of America",44.448423,-95.791192
-"Marshall, TX, United States of America",32.544871,-94.367418
-"McAlester, OK, United States of America",34.93343,-95.769713
-"McAllen-Edinburg-Mission, TX, United States of America",26.215907,-98.325293
-"Medford, OR, United States of America",42.326515,-122.875595
-"Memphis, TN-MS-AR, United States of America",35.149534,-90.04898
-"Merced, CA, United States of America",37.302163,-120.482968
-"Meridian, MS, United States of America",32.36431,-88.703656
-"Miami-Fort Lauderdale-Pompano Beach, FL, United States of America",27.574312,-80.802607
-"Michigan City-La Porte, IN, United States of America",41.707539,-86.89503
-"Middlesborough, KY, United States of America",36.607257,-83.714285
-"Milwaukee-Waukesha-West Allis, WI, United States of America",43.016681,-88.007031
-"Minneapolis-St. Paul-Bloomington, MN-WI, United States of America",44.938911,-93.117755
-"Missoula, MT, United States of America",46.878718,-113.996586
-"Mobile, AL, United States of America",30.695366,-88.039891
-"Modesto, CA, United States of America",37.639097,-120.996878
-"Monroe, LA, United States of America",32.509311,-92.119301
-"Monroe, MI, United States of America",41.916434,-83.39771
-"Montgomery, AL, United States of America",32.366805,-86.299969
-"Morgantown, WV, United States of America",39.629526,-79.955897
-"Mount Vernon, IL, United States of America",38.317271,-88.90312
-"Muncie, IN, United States of America",40.193377,-85.38636
-"Muscatine, IA, United States of America",41.424473,-91.043205
-"Muskegon-Norton Shores, MI, United States of America",43.168904,-86.263946
-"Napa, CA, United States of America",38.297538,-122.286865
-"Nashville-Davidson--Murfreesboro--Franklin, TN, United States of America",35.89948,-86.781189
-"New Castle, IN, United States of America",39.928935,-85.370248
-"New Haven-Milford, CT, United States of America",41.230698,-73.064036
-"New Orleans-Metairie-Kenner, LA, United States of America",29.98453,-90.204452
-"New York-Northern New Jersey-Long Island, NY-NJ-PA, United States of America",41.203322,-77.194525
-"Niles-Benton Harbor, MI, United States of America",42.104359,-86.445355
-"Nogales, AZ, United States of America",31.340378,-110.934253
-"Norwich-New London, CT, United States of America",41.524265,-72.07591
-"Ogden-Clearfield, UT, United States of America",41.110777,-112.026054
-"Oklahoma City, OK, United States of America",35.46756,-97.516428
-"Omaha-Council Bluffs, NE-IA, United States of America",41.218364,-95.817993
-"Orlando-Kissimmee, FL, United States of America",28.294555,-81.408858
-"Owensboro, KY, United States of America",37.771907,-87.111168
-"Oxnard-Thousand Oaks-Ventura, CA, United States of America",34.159817,-119.045183
-"Paducah, KY-IL, United States of America",37.083389,-88.600048
-"Palm Bay-Melbourne-Titusville, FL, United States of America",28.612219,-80.807554
-"Parkersburg-Marietta-Vienna, WV-OH, United States of America",39.263721,-81.555488
-"Pascagoula, MS, United States of America",30.365755,-88.556127
-"Pendleton-Hermiston, OR, United States of America",45.908489,-119.104991
-"Pensacola-Ferry Pass-Brent, FL, United States of America",30.471042,-87.231054
-"Peoria, IL, United States of America",40.693649,-89.588986
-"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD, United States of America",39.814826,-74.967485
-"Phoenix-Mesa-Scottsdale, AZ, United States of America",33.678899,-111.883544
-"Pittsburgh, PA, United States of America",40.440625,-79.995886
-"Pittsfield, MA, United States of America",42.450085,-73.245382
-"Platteville, WI, United States of America",42.73416,-90.478462
-"Pocatello, ID, United States of America",42.871303,-112.445534
-"Ponca City, OK, United States of America",36.706981,-97.085595
-"Portland-South Portland-Biddeford, ME, United States of America",43.709536,-70.309204
-"Portland-Vancouver-Beaverton, OR-WA, United States of America",45.487062,-122.80371
-"Portsmouth, OH, United States of America",38.731743,-82.997674
-"Poughkeepsie-Newburgh-Middletown, NY, United States of America",41.445927,-74.422934
-"Prescott, AZ, United States of America",34.540024,-112.468502
-"Prineville, OR, United States of America",44.299849,-120.834466
-"Providence-New Bedford-Fall River, RI-MA, United States of America",42.407211,-71.382437
-"Provo-Orem, UT, United States of America",40.286006,-111.692627
-"Pueblo, CO, United States of America",38.254447,-104.609141
-"Quincy, IL-MO, United States of America",39.935602,-91.409873
-"Raleigh-Cary, NC, United States of America",35.817867,-78.792512
-"Rapid City, SD, United States of America",44.080543,-103.231015
-"Reading, PA, United States of America",40.335648,-75.926875
-"Red Bluff, CA, United States of America",40.178489,-122.23583
-"Redding, CA, United States of America",40.58654,-122.391675
-"Reno-Sparks, NV, United States of America",39.516934,-119.816219
-"Richmond, VA, United States of America",37.540725,-77.436048
-"Richmond-Berea, KY, United States of America",37.692171,-84.259497
-"Riverside-San Bernardino-Ontario, CA, United States of America",34.063344,-117.650888
-"Riverton, WY, United States of America",43.024959,-108.380104
-"Roanoke, VA, United States of America",37.27097,-79.941427
-"Rochester, MN, United States of America",44.012122,-92.480199
-"Rochester, NY, United States of America",43.16103,-77.610922
-"Rock Springs, WY, United States of America",41.587464,-109.202904
-"Rockford, IL, United States of America",42.271131,-89.093995
-"Rocky Mount, NC, United States of America",35.93821,-77.790534
-"Rome, GA, United States of America",34.257038,-85.164673
-"Russellville, AR, United States of America",35.278417,-93.133786
-"Rutland, VT, United States of America",43.610624,-72.972606
-"Sacramento--Arden-Arcade--Roseville, CA, United States of America",38.652613,-121.389788
-"Salinas, CA, United States of America",36.677737,-121.655501
-"Salisbury, NC, United States of America",35.670973,-80.474226
-"Salt Lake City, UT, United States of America",40.760779,-111.891047
-"San Antonio, TX, United States of America",29.424122,-98.493628
-"San Diego-Carlsbad-San Marcos, CA, United States of America",33.13306,-117.212511
-"San Francisco-Oakland-Fremont, CA, United States of America",37.776979,-122.231952
-"San Jose-Sunnyvale-Santa Clara, CA, United States of America",37.325315,-122.05282
-"San Luis Obispo-Paso Robles, CA, United States of America",35.636876,-120.654502
-"Santa Barbara-Santa Maria-Goleta, CA, United States of America",34.465213,-119.777255
-"Santa Cruz-Watsonville, CA, United States of America",36.910231,-121.756895
-"Santa Fe, NM, United States of America",35.686975,-105.937799
-"Santa Rosa-Petaluma, CA, United States of America",38.398785,-122.821474
-"Sault Ste. Marie, MI, United States of America",46.4953,-84.345317
-"Savannah, GA, United States of America",32.083541,-81.099834
-"Scottsbluff, NE, United States of America",41.866634,-103.667166
-"Scranton--Wilkes-Barre, PA, United States of America",41.336246,-75.731149
-"Seaford, DE, United States of America",38.641226,-75.611038
-"Seattle-Tacoma-Bellevue, WA, United States of America",47.142279,-122.560536
-"Sheridan, WY, United States of America",44.797194,-106.956179
-"Shreveport-Bossier City, LA, United States of America",32.559454,-93.744778
-"Sierra Vista-Douglas, AZ, United States of America",31.431512,-109.516846
-"Sioux City, IA-NE-SD, United States of America",42.499994,-96.400307
-"Sioux Falls, SD, United States of America",43.544596,-96.731103
-"Somerset, KY, United States of America",37.092022,-84.604108
-"South Bend-Mishawaka, IN-MI, United States of America",41.69152,-86.228571
-"Spartanburg, SC, United States of America",34.949567,-81.932048
-"Spokane, WA, United States of America",47.65878,-117.426047
-"Springfield, IL, United States of America",39.781721,-89.650148
-"Springfield, MA, United States of America",42.101483,-72.589811
-"Springfield, MO, United States of America",37.208957,-93.292299
-"Springfield, OH, United States of America",39.924227,-83.808817
-"St. Cloud, MN, United States of America",45.557945,-94.16324
-"St. George, UT, United States of America",37.096528,-113.568416
-"St. Joseph, MO-KS, United States of America",39.767458,-94.846681
-"St. Louis, MO-IL, United States of America",38.627003,-90.199404
-"State College, PA, United States of America",40.793395,-77.860001
-"Stockton, CA, United States of America",37.957702,-121.29078
-"Syracuse, NY, United States of America",43.048122,-76.147424
-"Talladega-Sylacauga, AL, United States of America",33.173172,-86.251641
-"Tallahassee, FL, United States of America",30.438256,-84.280733
-"Tampa-St. Petersburg-Clearwater, FL, United States of America",28.036547,-82.681172
-"Terre Haute, IN, United States of America",39.466703,-87.413909
-"Texarkana, TX-Texarkana, AR, United States of America",33.41261,-94.074085
-"Thomasville-Lexington, NC, United States of America",35.882468,-80.106453
-"Toledo, OH, United States of America",41.663938,-83.555212
-"Topeka, KS, United States of America",39.055824,-95.689018
-"Torrington, CT, United States of America",41.800305,-73.121171
-"Trenton-Ewing, NJ, United States of America",40.257819,-74.8154
-"Truckee-Grass Valley, CA, United States of America",39.219061,-121.061061
-"Tucson, AZ, United States of America",32.221743,-110.926479
-"Tulsa, OK, United States of America",36.153982,-95.992775
-"Tupelo, MS, United States of America",34.257607,-88.703386
-"Tuscaloosa, AL, United States of America",33.209841,-87.569173
-"Ukiah, CA, United States of America",39.150171,-123.207783
-"Valdosta, GA, United States of America",30.832702,-83.278485
-"Vallejo-Fairfield, CA, United States of America",38.256213,-121.928093
-"Vernal, UT, United States of America",40.455516,-109.528748
-"Virginia Beach-Norfolk-Newport News, VA-NC, United States of America",35.759573,-79.0193
-"Visalia-Porterville, CA, United States of America",36.06523,-119.016768
-"Warner Robins, GA, United States of America",32.613001,-83.624201
-"Washington-Arlington-Alexandria, DC-VA-MD-WV, United States of America",38.597626,-80.454903
-"Waterloo-Cedar Falls, IA, United States of America",42.520394,-92.435371
-"Watertown, SD, United States of America",44.899409,-97.115073
-"Weirton-Steubenville, WV-OH, United States of America",40.417287,-82.907123
-"Wenatchee, WA, United States of America",47.42346,-120.310349
-"Wheeling, WV-OH, United States of America",40.063962,-80.720915
-"Wichita, KS, United States of America",37.687176,-97.330053
-"Wilmington, NC, United States of America",34.225726,-77.94471
-"Winchester, VA-WV, United States of America",39.18566,-78.163334
-"Winston-Salem, NC, United States of America",36.09986,-80.244216
-"Worcester, MA, United States of America",42.262593,-71.802293
-"Yakima, WA, United States of America",46.602071,-120.505899
-"York-Hanover, PA, United States of America",39.800655,-76.983036
-"Youngstown-Warren-Boardman, OH-PA, United States of America",41.079933,-80.66321
-"Yuba City, CA, United States of America",39.140448,-121.616911
-"Yuma, AZ, United States of America",32.692651,-114.627692
-"Montevideo, Uruguay",-34.901113,-56.164531
-"Kabul, Afghanistan",34.555349,69.207486
-"Mazar-e Sharif - Camp Northern Lights , Afghanistan",36.692617,67.117951
-"Cairo, Egypt",30.04442,31.235712
-"Delta cities, Egypt",30.097322,31.330623
-"Ahvaz, Iran",31.318327,48.670619
-"Khoramabad, Iran",33.464683,48.338964
-"Tehran, Iran",35.689198,51.388974
-"Amman, Jordan",31.956578,35.945695
-"Beirut, Lebanon",33.888629,35.495479
-"Tripoli, Lebanon",34.438094,35.830837
-"Karachi , Pakistan",24.861462,67.009939
-"Lahore - Johar Town, Pakistan",31.462199,74.294221
-"Peshwar, Pakistan",34.014975,71.58049
-"Rawalpindi, Pakistan",33.598394,73.044135
-"Hamad Town, Bahrain",26.125644,50.498036
-"Hidd, Bahrain",26.215901,50.668999
-"Ma'ameer, Bahrain",26.134677,50.613255
-"Nabih Saleh, Bahrain",26.182327,50.584754
-"Ras Hayan, Bahrain",26.04,50.631389
-"Muscat, Oman",23.58589,58.405923
-"Al Wakrah, Qatar",25.165931,51.597552
-"Doha, Qatar",25.285447,51.53104
-"Jeddah, Saudi Arabia",21.285407,39.237551
-"Abu Dhabi, United Arab Emirates",24.299174,54.697277
-"Al Ain, United Arab Emirates",24.130162,55.802312
-"Gomel, Belarus",52.441176,30.987846
-"Minsk , Belarus",53.90454,27.561524
-"Mogilev, Belarus",53.900716,30.33136
-"Zhlobin, Belarus",52.888895,30.028248
-"Sarajevo, Bosnia and Herzegovina",43.856259,18.413076
-"Blagoevgrad, Bulgaria",42.020857,23.094339
-"Burgas, Bulgaria",42.504793,27.462636
-"Dobrich, Bulgaria",43.57259,27.827261
-"Haskovo, Bulgaria",41.934437,25.555446
-"Pernik, Bulgaria",42.605186,23.037837
-"Pleven, Bulgaria",43.417042,24.606685
-"Plovdiv, Bulgaria",42.135408,24.74529
-"Ruse, Bulgaria",43.835571,25.965655
-"Shumen, Bulgaria",43.27124,26.936129
-"Sofia, Bulgaria",42.697708,23.321868
-"Stara Zagora, Bulgaria",42.425777,25.634464
-"Veliko Tarnovo, Bulgaria",43.075674,25.617151
-"Vratsa, Bulgaria",43.210238,23.55288
-"Budapest, Hungary",47.497912,19.040235
-"Debrecen, Hungary",47.531605,21.627312
-"Gyor, Hungary",47.687457,17.650397
-"Alba Iulia, Romania",46.082337,23.569027
-"Arad, Romania",46.186561,21.312268
-"Bacau, Romania",46.567044,26.914575
-"Baia Mare, Romania",47.656739,23.584988
-"Botosani, Romania",47.740654,26.665813
-"Bucuresti, Romania",44.426767,26.102538
-"Galati, Romania",45.435321,28.007994
-"Iasi, Romania",47.158455,27.601442
-"Pitesti, Romania",44.85648,24.869182
-"Ploiesti, Romania",44.936664,26.012862
-"Satu Mare, Romania",47.80167,22.857593
-"Suceava, Romania",47.663452,26.27323
-"Targu Mures, Romania",46.538586,24.551439
-"Timisoara, Romania",45.748872,21.208679
-"Beograd, Serbia",44.786568,20.448922
-"Nis, Serbia",43.320902,21.895759
-"Adana, Turkey",36.991419,35.330829
-"Adiyaman, Turkey",37.76365,38.277259
-"Afyon, Turkey",38.756885,30.538704
-"Agri, Turkey",39.719074,43.050591
-"Aksaray, Turkey",38.368626,34.0297
-"Amasya, Turkey",40.656455,35.837347
-"Ankara, Turkey",39.933364,32.859742
-"Antalya, Turkey",36.896891,30.713323
-"Artvin, Turkey",41.180937,41.820819
-"Aydin, Turkey",37.838016,27.84556
-"Balikesir, Turkey",39.653298,27.890342
-"Bartin, Turkey",41.637602,32.333811
-"Batman, Turkey",37.889517,41.129283
-"Bayburt, Turkey",40.26032,40.228048
-"Bilecik, Turkey",40.142573,29.97933
-"Bingol, Turkey",38.885464,40.496625
-"Bolu, Turkey",40.732541,31.608209
-"Burdur, Turkey",37.718336,30.282333
-"Canakkale, Turkey",40.14672,26.408587
-"Cankiri, Turkey",40.600207,33.616223
-"Corum, Turkey",40.549926,34.953724
-"Denizli, Turkey",37.783016,29.096333
-"Diyarbakir, Turkey",37.924973,40.210983
-"Duzce, Turkey",40.83872,31.162609
-"Edirne, Turkey",41.67713,26.555715
-"Elazig, Turkey",38.674816,39.222515
-"Erzincan, Turkey",39.746797,39.491124
-"Erzurum, Turkey",39.905499,41.265824
-"Eskisehir, Turkey",39.766706,30.525631
-"Gaziantep, Turkey",37.065953,37.37811
-"Giresun, Turkey",40.917532,38.392653
-"Gumshane, Turkey",40.460825,39.480321
-"Hakkari, Turkey",37.577427,43.736782
-"Igdir, Turkey",39.92006,44.043615
-"Isparta, Turkey",37.762649,30.553705
-"Istanbul, Turkey",41.008238,28.978359
-"Izmir, Turkey",38.423734,27.142826
-"Kahramanmaras, Turkey",37.575276,36.922822
-"Karabuk, Turkey",41.19562,32.622654
-"Kars, Turkey",40.601338,43.097453
-"Kastamonu, Turkey",41.376625,33.776497
-"Kayseri, Turkey",38.720489,35.482597
-"Kilis, Turkey",36.716477,37.114661
-"Kirikkale, Turkey",39.839784,33.508878
-"Kirklareli, Turkey",41.735472,27.224369
-"Kirsehir, Turkey",39.146078,34.159499
-"Konya, Turkey",37.874643,32.493155
-"Kutahya, Turkey",39.419955,29.985732
-"Malatya, Turkey",38.355363,38.333525
-"Manisa, Turkey",38.614034,27.429562
-"Mardin, Turkey",37.312903,40.733951
-"Mugla, Turkey",37.215374,28.363394
-"Mus, Turkey",38.734561,41.491038
-"Nevsehir, Turkey",38.624694,34.714151
-"Nigde, Turkey",37.969774,34.676608
-"Ordu, Turkey",40.986166,37.879721
-"Osmaniye, Turkey",37.074628,36.2464
-"Rize, Turkey",41.025511,40.517666
-"Samsun, Turkey",41.279703,36.336067
-"Siirt, Turkey",37.927404,41.941978
-"Sinop, Turkey",42.027974,35.151725
-"Sirnak, Turkey",37.518974,42.453714
-"Sivas, Turkey",39.750545,37.015022
-"Tokat, Turkey",40.323464,36.552193
-"Trabzon, Turkey",41.002697,39.716763
-"Tunceli, Turkey",39.10617,39.548259
-"Usak, Turkey",38.674229,29.405882
-"Van, Turkey",38.501209,43.372979
-"Yalova, Turkey",40.654895,29.284186
-"Yozgat, Turkey",39.821049,34.808573
-"Zonguldak, Turkey",41.453521,31.78938
-"Escaldes-Engordany, Andorra",42.51008,1.538786
-"Graz, Austria",47.070714,15.439504
-"Klagenfurt, Austria",46.63646,14.312225
-"Linz, Austria",48.30694,14.28583
-"Salzburg, Austria",47.80949,13.05501
-"Wien, Austria",48.208174,16.373819
-"Antwerpen, Belgium",51.219448,4.402464
-"Brugge, Belgium",51.209348,3.2247
-"Brussels, Belgium",50.85034,4.35171
-"Charleroi, Belgium",50.41081,4.444643
-"Gent, Belgium",51.054342,3.717424
-"Liege, Belgium",50.632557,5.579666
-"Mons, Belgium",50.454241,3.956659
-"Lefkosia, Cyprus",35.185566,33.382276
-"Lemesos, Cyprus",34.70713,33.022617
-"Brno, Czech Republic",49.19506,16.606837
-"Ceske Budejovice, Czech Republic",48.975658,14.480255
-"Jirkov, Czech Republic",50.500527,13.448785
-"Havirov, Czech Republic",49.780392,18.430625
-"Jihlava, Czech Republic",49.398378,15.587041
-"Karvina, Czech Republic",49.856652,18.543219
-"Kladno, Czech Republic",50.141699,14.106746
-"Liberec, Czech Republic",50.76628,15.054339
-"Most, Czech Republic",50.501555,13.632912
-"Ostrava, Czech Republic",49.820923,18.262524
-"Pardubice, Czech Republic",50.034309,15.781199
-"Plzen, Czech Republic",49.738431,13.373637
-"Praha, Czech Republic",50.075538,14.4378
-"Usti nad Labem, Czech Republic",50.661116,14.053146
-"Zlin, Czech Republic",49.224437,17.662763
-"Aalborg, Denmark",57.04882,9.921747
-"Kobenhavn, Denmark",55.676097,12.568337
-"Narva, Estonia",59.37968,28.179133
-"Tallinn, Estonia",59.436961,24.753575
-"Tartu, Estonia",58.377625,26.729006
-"Helsinki, Finland",60.169856,24.938379
-"Jyvaskyla, Finland",62.242603,25.747257
-"Kuopio, Finland",62.89797,27.678172
-"Oulu, Finland",65.012089,25.465077
-"Tampere, Finland",61.497752,23.760954
-"Aix-en-Provence, France",43.529742,5.447427
-"Ajaccio, France",41.919229,8.738635
-"Albi, France",43.925085,2.148641
-"Amiens, France",49.894067,2.295753
-"Angers, France",47.478419,-0.563166
-"Angouleme, France",45.648377,0.156237
-"Annecy, France",45.899247,6.129384
-"Antibes, France",43.580418,7.125102
-"Avignon, France",43.949317,4.805528
-"Bayonne, France",43.492949,-1.474841
-"Beauvais, France",49.429539,2.080712
-"Besancon, France",47.237829,6.024054
-"Bordeaux, France",44.837789,-0.57918
-"Boulogne-sur-mer, France",50.725231,1.613334
-"Bourges, France",47.081012,2.398782
-"Brest, France",48.390394,-4.486076
-"Brive-la-Gaillarde, France",45.159555,1.533937
-"Caen, France",49.182863,-0.370679
-"Calais, France",50.95129,1.858686
-"Cergy-Pontoise, France",49.060787,2.068465
-"Chalons-en-Champagne, France",48.956682,4.363073
-"Chalon-sur-Saone, France",46.780764,4.853947
-"Chambery, France",45.564601,5.917781
-"Charleville-Mezieres, France",49.762085,4.726096
-"Chartres, France",48.443854,1.489012
-"Chateauroux, France",46.811434,1.686779
-"Cherbourg, France",49.633731,-1.622137
-"Clermont-Ferrand, France",45.777222,3.087025
-"Colmar, France",48.079359,7.358512
-"Creil, France",49.257687,2.478391
-"Dijon, France",47.322047,5.04148
-"Douai, France",50.367874,3.080602
-"Dunkerque, France",51.034368,2.376776
-"Evreux, France",49.027013,1.151361
-"Fort-de-France, France",14.616065,-61.05878
-"Annemasse, France",46.193253,6.234158
-"Grenoble, France",45.188529,5.724524
-"La Rochelle, France",46.160329,-1.151139
-"Le Havre, France",49.49437,0.107929
-"Le Mans, France",48.00611,0.199556
-"Lens, France",50.42893,2.83183
-"Lille, France",50.62925,3.057256
-"Limoges, France",45.833619,1.261105
-"Lorient, France",47.748252,-3.370245
-"Lyon, France",45.764043,4.835659
-"Marne la Vallee, France",48.859276,2.598505
-"Marseille, France",43.296482,5.36978
-"Martigues, France",43.404811,5.053728
-"Melun, France",48.542105,2.6554
-"Metz, France",49.119309,6.175716
-"Montbeliard, France",47.510356,6.798466
-"Montpellier, France",43.610769,3.876716
-"Mulhouse, France",47.750839,7.335888
-"Nancy, France",48.692054,6.184417
-"Nantes, France",47.218371,-1.553621
-"Nice, France",43.710173,7.261953
-"Nimes, France",43.836699,4.360054
-"Niort, France",46.323716,-0.464777
-"Orleans, France",47.902964,1.909251
-"Paris, France",48.856614,2.352222
-"Pau, France",43.2951,-0.370797
-"Perpignan, France",42.688659,2.894833
-"Poitiers, France",46.580224,0.340375
-"Quimper, France",47.997542,-4.097899
-"Reims, France",49.258329,4.031696
-"Rennes, France",48.117266,-1.677793
-"Roanne, France",46.034432,4.072695
-"Rouen, France",49.443232,1.099971
-"Saint Denis, France",48.936181,2.357443
-"Saint-Brieuc, France",48.51418,-2.765835
-"Saint-Etienne, France",45.439695,4.387178
-"Saint-Nazaire, France",47.273498,-2.213848
-"Saint-Quentin, France",49.847066,3.2874
-"Strasbourg, France",48.573405,7.752111
-"Tarbes, France",43.232951,0.078082
-"Toulon, France",43.124228,5.928
-"Toulouse, France",43.604652,1.444209
-"Tours, France",47.394144,0.68484
-"Troyes, France",48.297345,4.074401
-"Valence, France",44.933393,4.89236
-"Valenciennes, France",50.357113,3.518332
-"Aachen, Germany",50.775346,6.083887
-"Aschaffenburg, Germany",49.980663,9.135555
-"Augsburg, Germany",48.370545,10.89779
-"Bamberg, Germany",49.898814,10.902764
-"Berlin, Germany",52.520007,13.404954
-"Bielefeld, Germany",52.030229,8.532471
-"Bonn, Germany",50.73743,7.098207
-"Brandenburg an der Havel, Germany",52.412529,12.531644
-"Braunschweig, Germany",52.268874,10.52677
-"Bremen, Germany",53.079296,8.801694
-"Bremerhaven, Germany",53.539585,8.580942
-"Chemnitz, Germany",50.827845,12.92137
-"Cottbus, Germany",51.756311,14.332868
-"Darmstadt, Germany",49.872825,8.651193
-"Dortmund, Germany",51.513587,7.465298
-"Dresden, Germany",51.050409,13.737262
-"Duisburg, Germany",51.434408,6.762329
-"Dusseldorf, Germany",51.227741,6.773456
-"Erlangen, Germany",49.589674,11.011961
-"Essen, Germany",51.455643,7.011555
-"Frankfurt, Germany",50.110922,8.682127
-"Freiburg im Breisgau, Germany",47.999008,7.842104
-"Fulda, Germany",50.55581,9.680845
-"Gelsenkirchen, Germany",51.517744,7.085717
-"Gera, Germany",50.885071,12.08072
-"Guttingen, Germany",51.54128,9.915804
-"Halle an der Saale, Germany",51.49698,11.968803
-"Hamburg, Germany",53.551085,9.993682
-"Hannover, Germany",52.375892,9.73201
-"Ingolstadt, Germany",48.766535,11.425754
-"Jena, Germany",50.927054,11.589237
-"Kaiserslautern, Germany",49.440066,7.749126
-"Karlsruhe, Germany",49.00689,8.403653
-"Kassel, Germany",51.312711,9.479746
-"Kempten, Germany",47.72857,10.315783
-"Kiel, Germany",54.323293,10.122765
-"Koln, Germany",50.937531,6.960279
-"Konstanz, Germany",47.67795,9.173238
-"Krefeld, Germany",51.338761,6.585342
-"Leipzig, Germany",51.339696,12.373075
-"Leverkusen, Germany",51.045925,7.01922
-"Lubeck, Germany",53.865467,10.686559
-"Ludwigsburg, Germany",48.894062,9.195464
-"Ludwigshafen am Rhein, Germany",49.47741,8.44518
-"Luneburger Heide, Germany",53.166083,9.918994
-"Magdeburg, Germany",52.120533,11.627624
-"Mainz, Germany",49.992862,8.247253
-"Mannheim, Germany",49.487459,8.466039
-"Marburg, Germany",50.802173,8.766793
-"Monchengladbach, Germany",51.180457,6.442804
-"Mulheim a.d.Ruhr, Germany",51.36591,7.628279
-"Munchen, Germany",48.135125,11.581981
-"Munster, Germany",51.960665,7.626135
-"Neu-Ulm, Germany",48.390604,10.00604
-"Nurnberg, Germany",49.45203,11.07675
-"Offenburg, Germany",48.473451,7.949802
-"Osnabruck, Germany",52.279911,8.047179
-"Potsdam, Germany",52.390569,13.064473
-"Reutlingen, Germany",48.506939,9.203804
-"Rostock, Germany",54.092441,12.099147
-"Saarbrucken, Germany",49.240157,6.996933
-"Solingen, Germany",51.170207,7.083141
-"Stuttgart, Germany",48.775846,9.182932
-"Tubingen, Germany",48.521636,9.057645
-"Ulm, Germany",48.401082,9.987608
-"Villingen-Schwenningen, Germany",48.059402,8.464087
-"Weimar, Germany",50.979493,11.323544
-"Wiesbaden, Germany",50.078218,8.239761
-"Wolfsburg, Germany",52.42265,10.786546
-"Wuppertal, Germany",51.256213,7.150764
-"Agia Paraskevi, Greece",38.013583,23.821808
-"Ioannina, Greece",39.665029,20.853747
-"Koropi, Greece",37.901144,23.87265
-"Panorama, Greece",40.588541,23.027929
-"Hafnarfjordur, Iceland",64.029105,-21.968463
-"Kopavogur, Iceland",64.103302,-21.883258
-"Reykjavik, Iceland",64.126521,-21.817439
-"Cork, Ireland",51.896892,-8.486316
-"Dublin, Ireland",53.349805,-6.26031
-"Ashdod, Israel",31.804381,34.655314
-"Ashkelon, Israel",31.668789,34.574252
-"Beersheva, Israel",31.252973,34.791462
-"Beit Shemesh , Israel",31.747041,34.988099
-"Gadera, Israel",32.069715,34.769538
-"Hadera, Israel",32.434046,34.919652
-"Haifa, Israel",32.794046,34.989571
-"Heftzibah, Israel",32.518729,35.426247
-"Karmei Yosef, Israel",31.848024,34.921347
-"Kibbutz Erez, Israel",31.55984,34.564889
-"Kibbutz Sde Yo'av, Israel",31.645723,34.676849
-"Kiryat Malachi, Israel",31.730202,34.746996
-"Modi'in, Israel",31.90912,35.002462
-"Rehovot, Israel",31.892773,34.811272
-"Sderot, Israel",31.522694,34.595581
-"Tel Aviv, Israel",32.0853,34.781768
-"Ancona, Italy",43.61583,13.518915
-"Asti, Italy",44.900751,8.206426
-"Bari, Italy",41.117143,16.871871
-"Bergamo, Italy",45.698264,9.67727
-"Biella, Italy",45.562884,8.05834
-"Bologna, Italy",44.494887,11.342616
-"Brescia, Italy",45.541553,10.211802
-"Cagliari, Italy",39.223841,9.121661
-"Campobasso, Italy",41.560254,14.662716
-"Catania, Italy",37.507877,15.08303
-"Cosenza, Italy",39.298263,16.253736
-"Cremona, Italy",45.133249,10.022651
-"Ferrara, Italy",44.838124,11.619787
-"Firenze, Italy",43.76956,11.255814
-"Forli, Italy",44.22274,12.040731
-"Genova, Italy",44.40565,8.946256
-"La Spezia, Italy",44.10245,9.824083
-"Lecco, Italy",45.85657,9.39767
-"Livorno, Italy",43.548473,10.310567
-"Milano, Italy",45.465422,9.185924
-"Modena, Italy",44.647128,10.925227
-"Monza, Italy",45.5845,9.274449
-"Napoli, Italy",40.851775,14.268124
-"Novara, Italy",45.44693,8.622161
-"Padova, Italy",45.406435,11.876761
-"Parma, Italy",44.801485,10.327904
-"Pavia, Italy",45.184725,9.158207
-"Perugia, Italy",43.110717,12.390828
-"Pesaro, Italy",43.912476,12.915549
-"Pescara, Italy",42.46179,14.21609
-"Piacenza, Italy",45.052621,9.692984
-"Pisa, Italy",43.722839,10.401689
-"Prato, Italy",43.877705,11.102228
-"Ravenna, Italy",44.41836,12.203529
-"Reggio nell Emilia, Italy",44.698993,10.629686
-"Rimini, Italy",44.067829,12.569516
-"Roma, Italy",41.902784,12.496366
-"Savona, Italy",44.29756,8.4645
-"Taranto, Italy",40.464361,17.24703
-"Torino, Italy",45.070312,7.686856
-"Trento, Italy",46.074779,11.121749
-"Treviso, Italy",45.666889,12.243044
-"Udine, Italy",46.071067,13.234579
-"Varese, Italy",45.820599,8.825058
-"Venezia, Italy",45.440847,12.315515
-"Verona, Italy",45.438384,10.991622
-"Viareggio, Italy",43.865727,10.25131
-"Vicenza, Italy",45.545479,11.535421
-"Riga, Latvia",56.949649,24.105186
-"Panevezys, Lithuania",55.734792,24.357477
-"Vilnius, Lithuania",54.687156,25.279651
-"Luxembourg, Luxembourg",49.611621,6.131935
-"Zejtun, Malta",35.854871,14.536397
-"Monaco, Monaco",43.737411,7.420816
-"Amsterdam, Netherlands",52.370216,4.895168
-"Breda, Netherlands",51.571915,4.768323
-"Dordrecht, Netherlands",51.813298,4.690093
-"Enschede, Netherlands",52.221537,6.893662
-"Groningen, Netherlands",53.219384,6.566502
-"Heerlen, Netherlands",50.888174,5.979499
-"Nijmegen, Netherlands",51.812563,5.837226
-"Rotterdam, Netherlands",51.92442,4.477733
-"s' Gravenhage, Netherlands",52.070498,4.3007
-"Schiedam, Netherlands",51.91696,4.398819
-"Utrecht, Netherlands",52.090737,5.12142
-"Zaanstad, Netherlands",52.457966,4.751043
-"Bergen, Norway",60.391263,5.322054
-"Oslo, Norway",59.913869,10.752245
-"Stavanger, Norway",58.969976,5.733107
-"Trondheim, Norway",63.430515,10.395053
-"Bialystok, Poland",53.132489,23.16884
-"Bielsko-Biala, Poland",49.822377,19.058384
-"Bydgoszcz, Poland",53.12348,18.008438
-"Chelm, Poland",51.143123,23.471199
-"Czestochowa, Poland",50.81182,19.120309
-"Elblag, Poland",54.156061,19.40449
-"Gdansk, Poland",54.352025,18.646638
-"Gdynia, Poland",54.51889,18.530541
-"Gliwice, Poland",50.294492,18.67138
-"Gorzow Wielkopolski, Poland",52.732529,15.23693
-"Grudziadz, Poland",53.483749,18.753565
-"Inowroclaw, Poland",52.799332,18.256203
-"Jelenia Gora, Poland",50.904417,15.719362
-"Kalisz, Poland",51.76728,18.085346
-"Katowice, Poland",50.264892,19.023782
-"Kielce, Poland",50.866077,20.628568
-"Koszalin, Poland",54.194322,16.171491
-"Krakow, Poland",50.06465,19.94498
-"Legnica, Poland",51.207007,16.155323
-"Leszno, Poland",51.841986,16.593754
-"Lodz, Poland",51.759249,19.455983
-"Lomza, Poland",53.17812,22.059032
-"Lublin, Poland",51.246454,22.568446
-"Nowy Sacz, Poland",49.617454,20.715333
-"Olsztyn, Poland",53.778422,20.480119
-"Opole, Poland",50.675107,17.921298
-"Ostrow Wielkopolski, Poland",51.654986,17.806826
-"Pabianice, Poland",51.65673,19.35776
-"Pila, Poland",53.150967,16.738227
-"Piotrkow Trybunalski, Poland",51.405172,19.703024
-"Plock, Poland",52.546345,19.706536
-"Poznan, Poland",52.406374,16.925168
-"Przemysl, Poland",49.783862,22.767791
-"Radom, Poland",51.402724,21.147133
-"Rybnik, Poland",50.102174,18.546285
-"Rzeszow, Poland",50.041187,21.99912
-"Slupsk, Poland",54.464148,17.028482
-"Sosnowiec, Poland",50.286264,19.104079
-"Suwalki, Poland",54.111522,22.930788
-"Swidnica, Poland",50.849843,16.475679
-"Szczecin, Poland",53.428544,14.552812
-"Tarnow, Poland",50.012101,20.985841
-"Tczew, Poland",54.091927,18.777307
-"Torun, Poland",53.01379,18.598444
-"Tychy, Poland",50.121801,19.020002
-"Walbrzych, Poland",50.784009,16.284355
-"Warszawa, Poland",52.229676,21.012229
-"Wloclawek, Poland",52.64833,19.067736
-"Wroclaw, Poland",51.107885,17.038538
-"Zabrze, Poland",50.324928,18.785719
-"Zamosc, Poland",50.723088,23.251969
-"Zgierz, Poland",51.855058,19.40607
-"Zielona Gora, Poland",51.935621,15.506186
-"Zory, Poland",50.044724,18.70064
-"Almada, Portugal",38.676524,-9.165105
-"Amadora, Portugal",38.75776,-9.224547
-"Barreiro, Portugal",38.660815,-9.079072
-"Braga, Portugal",41.545449,-8.426507
-"Faro, Portugal",37.019355,-7.93044
-"Funchal, Portugal",32.666933,-16.924055
-"Lisboa, Portugal",38.722252,-9.139337
-"Matosinhos, Portugal",41.184436,-8.696277
-"Paredes, Portugal",41.205167,-8.330387
-"Porto, Portugal",41.157944,-8.629105
-"Seixal, Portugal",38.641068,-9.0975
-"Setubal, Portugal",38.526044,-8.890933
-"Valongo, Portugal",41.188759,-8.498352
-"Vila Franca de Xira, Portugal",38.955156,-8.988993
-"Vila Nova de Gaia, Portugal",41.123876,-8.611785
-"Moscow, Russian Federation",55.755826,37.6173
-"Banska Bystrica, Slovakia",48.736277,19.146192
-"Bratislava, Slovakia",48.148597,17.107748
-"Kosice, Slovakia",48.716386,21.261075
-"Nitra, Slovakia",48.306141,18.076376
-"Trencin, Slovakia",48.884936,18.033521
-"zilina, Slovakia",49.21945,18.7408
-"Ljubljana, Slovenia",46.056947,14.505751
-"Maribor, Slovenia",46.55465,15.645881
-"Albacete, Spain",38.994349,-1.858542
-"Alcorcon, Spain",40.346845,-3.827844
-"Alicante, Spain",38.345996,-0.490686
-"Arrecife, Spain",28.965169,-13.555036
-"Badajoz, Spain",38.87945,-6.970654
-"Barcelona, Spain",41.385064,2.173403
-"Benidorm, Spain",38.541057,-0.122494
-"Bilbao, Spain",43.263013,-2.934985
-"Burgos, Spain",42.343993,-3.696906
-"Caceres, Spain",39.475277,-6.372425
-"Cartagena, Spain",37.625683,-0.996584
-"Castellon de la Plana, Spain",39.986356,-0.051325
-"Ciudad Real, Spain",38.98483,-3.927378
-"Cordoba, Spain",37.888175,-4.779383
-"Elche, Spain",38.269933,-0.712561
-"Elda, Spain",38.476507,-0.79646
-"Ferrol, Spain",43.489646,-8.219345
-"Gijon, Spain",43.532202,-5.66112
-"Granada, Spain",37.177336,-3.598557
-"Guadalajara, Spain",40.632489,-3.16017
-"Jaen, Spain",37.779594,-3.784906
-"Jerez de la Frontera, Spain",36.685006,-6.126074
-"Las Palmas, Spain",28.123546,-15.436257
-"Linea de la Concepcion, La, Spain",36.168256,-5.349472
-"Logrono, Spain",42.46272,-2.444985
-"Madrid, Spain",40.416775,-3.70379
-"Majadahonda, Spain",40.473759,-3.868312
-"Malaga, Spain",36.721261,-4.421266
-"Marbella, Spain",36.510071,-4.882447
-"Mataro, Spain",41.538112,2.444741
-"Mostoles, Spain",40.323213,-3.867629
-"Oviedo, Spain",43.361915,-5.849389
-"Palma de Mallorca, Spain",39.569601,2.65016
-"Pamplona, Spain",42.812526,-1.645775
-"Salamanca, Spain",40.970104,-5.66354
-"San Fernando, Spain",36.471865,-6.196595
-"San Sebastian, Spain",43.318334,-1.981231
-"Santander, Spain",43.462306,-3.80998
-"Santiago de Compostela, Spain",42.878213,-8.544844
-"Sevilla, Spain",37.389092,-5.984459
-"Talavera de la Reina, Spain",39.962884,-4.830454
-"Telde, Spain",27.995531,-15.417373
-"Toledo, Spain",39.862832,-4.027323
-"Torrejon de Ardoz, Spain",40.456755,-3.475497
-"Valencia, Spain",39.469908,-0.376288
-"Zaragoza, Spain",41.648823,-0.889085
-"Guteborg, Sweden",57.70887,11.97456
-"Lund, Sweden",55.70466,13.191007
-"Malmo, Sweden",55.604981,13.003822
-"Stockholm, Sweden",59.329323,18.068581
-"Umea, Sweden",63.825847,20.263035
-"Basel, Switzerland",47.559599,7.588576
-"Geneve, Switzerland",46.204391,6.143158
-"Lugano, Switzerland",46.003678,8.951052
-"Luzern, Switzerland",47.050168,8.309307
-"Winterthur, Switzerland",47.49882,8.723689
-"Zurich, Switzerland",47.376887,8.541694
-"Aberdeen, United Kingdom",57.149717,-2.094278
-"Belfast, United Kingdom",54.597285,-5.93012
-"Birmingham, United Kingdom",52.486243,-1.890401
-"Bournemouth, United Kingdom",50.719164,-1.880769
-"Brighton and Hove, United Kingdom",50.82253,-0.137163
-"Bristol, United Kingdom",51.454513,-2.58791
-"Chesterfield, United Kingdom",53.235048,-1.421629
-"Derry, United Kingdom",54.996612,-7.308575
-"Eastbourne, United Kingdom",50.768035,0.290472
-"Edinburgh, United Kingdom",55.953252,-3.188267
-"Glasgow, United Kingdom",55.864237,-4.251806
-"Kingston-upon-Hull, United Kingdom",53.745671,-0.336741
-"Leeds, United Kingdom",53.800755,-1.549077
-"Leicester, United Kingdom",52.636878,-1.139759
-"Liverpool, United Kingdom",53.408371,-2.991573
-"London, United Kingdom",51.507351,-0.127758
-"Manchester, United Kingdom",53.480759,-2.242631
-"Newcastle upon Tyne, United Kingdom",54.978252,-1.61778
-"Newport, United Kingdom",51.584151,-2.997664
-"Northampton, United Kingdom",52.240477,-0.902656
-"Norwich, United Kingdom",52.630886,1.297355
-"Nottingham, United Kingdom",52.954783,-1.158109
-"Oxford, United Kingdom",51.752021,-1.257726
-"Plymouth, United Kingdom",50.375457,-4.142656
-"Portsmouth, United Kingdom",50.819768,-1.087977
-"Preston, United Kingdom",53.763201,-2.70309
-"Reading, United Kingdom",51.454265,-0.97813
-"Sheffield, United Kingdom",53.381129,-1.470085
-"Southampton, United Kingdom",50.9097,-1.404351
-"Stoke-on-trent, United Kingdom",53.002668,-2.179404
-"Sunderland, United Kingdom",54.906869,-1.383801
-"Thurrock, United Kingdom",51.493456,0.35292
-"Warrington, United Kingdom",53.390044,-2.59695
-"Warwick, United Kingdom",52.282316,-1.584927
-"Wirral, United Kingdom",53.333333,-3.083333
-"York, United Kingdom",53.959965,-1.087298
-"Barisal, Bangladesh",22.702921,90.346597
-"Chittagong, Bangladesh",22.347537,91.812332
-"Dhaka, Bangladesh",23.810332,90.412518
-"Gazipur, Bangladesh",23.991735,90.419588
-"Khulna, Bangladesh",22.845641,89.540328
-"Narayonganj, Bangladesh",23.62264,90.499797
-"Rajshahi, Bangladesh",24.363589,88.624135
-"Sylhet, Bangladesh",24.904539,91.861101
-"Thimpu, Bhutan",27.472792,89.639286
-"Agra, India",27.17667,78.008075
-"Ahmedabad, India",23.022505,72.571362
-"Aizawl, India",23.727107,92.717639
-"Alappuzha, India",9.498067,76.338848
-"Allahabad, India",25.435801,81.846311
-"Alwar, India",27.552991,76.634573
-"Amravati, India",20.937424,77.779551
-"Amritsar, India",31.633979,74.872264
-"Angul, India",20.844403,85.151082
-"Anklesvar, India",21.626424,73.015198
-"Aurangabad, India",19.876165,75.343314
-"Balasore, India",21.486934,86.924601
-"Bangalore, India",12.971599,77.594563
-"Berhampur, India",19.314962,84.794091
-"Bhilai, India",21.193848,81.350942
-"Bhopal, India",23.259933,77.412615
-"Bhubaneshwar, India",20.296059,85.82454
-"Bongaigaon, India",26.500999,90.535236
-"Chandigarh, India",30.733315,76.779418
-"Chandrapur, India",19.97046,79.301485
-"Chennai, India",13.08268,80.270718
-"Coimbatore, India",11.016845,76.955832
-"Cuttack, India",20.462521,85.88299
-"Dawki, India",25.184025,92.02487
-"Dehradun, India",30.316495,78.032192
-"Delhi, India",28.613939,77.209021
-"Dera Baba Nanak, India",32.032186,75.030448
-"Dewas, India",22.962267,76.050795
-"Dibrugarh, India",27.472833,94.911962
-"Dimapur, India",25.862989,93.753666
-"Durgapur, India",23.520444,87.311923
-"Firozabad, India",27.159101,78.395757
-"Gobindgarh, India",30.858747,75.943421
-"Golaghat, India",26.523852,93.962337
-"Gulbarga, India",17.329731,76.834296
-"Guntur , India",16.306652,80.43654
-"Guwahati, India",26.144517,91.736237
-"Gwalior, India",26.218287,78.182831
-"Hassan, India",13.006814,76.099552
-"Hisar, India",29.149188,75.721653
-"Howrah, India",22.595769,88.263639
-"Hyderabad, India",17.385044,78.486671
-"Indore, India",22.719569,75.857726
-"Jaipur, India",26.912434,75.787271
-"Jalandhar, India",31.326015,75.576183
-"Jammu, India",32.726602,74.857026
-"Jamnagar, India",22.470702,70.05773
-"Jhansi, India",25.448426,78.568459
-"Jodhpur, India",26.238947,73.024309
-"Kakinada , India",16.989065,82.247465
-"Kanpur, India",26.449923,80.331874
-"Khammam , India",17.247253,80.151445
-"Khanna, India",30.697852,76.211229
-"Khurja, India",28.251354,77.85388
-"Kochi, India",9.931233,76.267304
-"Kohima, India",25.658596,94.105331
-"Kolhapur, India",16.704987,74.243253
-"Kolkata, India",22.572646,88.363895
-"Kollam, India",8.893212,76.61414
-"Korba, India",22.35945,82.75006
-"Kota, India",25.213816,75.864753
-"Kottayam, India",9.591567,76.522153
-"Kozhikode, India",11.258753,75.78041
-"Kurnool , India",15.828126,78.037279
-"Lucknow, India",26.846694,80.946166
-"Ludhiana, India",30.900965,75.857276
-"Madurai, India",9.925201,78.119775
-"Mahad, India",18.082021,73.422441
-"Margherita, India",27.291066,95.669461
-"Meerut, India",28.984462,77.706414
-"Mumbai, India",19.075984,72.877656
-"Nagaon, India",26.346371,92.684043
-"Nagda, India",23.44546,75.416992
-"Nagpur, India",21.1458,79.088155
-"Nahan, India",30.559933,77.295483
-"Nalbari, India",26.444619,91.441053
-"Nalgonda , India",17.057571,79.262029
-"Nashik, India",19.997453,73.789802
-"Navi Mumbai, India",19.033049,73.029662
-"Naya Nangal, India",31.386641,76.355046
-"Nellore, India",14.442599,79.986456
-"Noida, India",28.535516,77.391026
-"North Lakhimpur Town, India",27.225319,94.105331
-"Panaji, India",15.49093,73.82785
-"Parwanoo, India",30.837164,76.961426
-"Patancheru, India",17.528743,78.266725
-"Pathanamthitta, India",9.264758,76.787041
-"Patiala, India",30.339781,76.38688
-"Patna, India",25.594095,85.137565
-"Pondicherry, India",11.91386,79.814472
-"Pune, India",18.52043,73.856744
-"Raipur, India",21.251384,81.629641
-"Rajkot, India",22.303895,70.80216
-"Ramagundam, India",18.75955,79.481638
-"Rayagada, India",19.171209,83.416323
-"Rishikesh, India",30.086928,78.267612
-"Roha, India",18.438951,73.116751
-"Rourkela, India",22.260423,84.853584
-"Salem, India",11.664325,78.146014
-"Sambalpur, India",21.466872,83.981166
-"Sangli, India",16.852397,74.581477
-"Satna, India",24.600508,80.832243
-"Shillong, India",25.578773,91.893254
-"Shimla, India",31.104815,77.173403
-"Sibsagar, India",26.98261,94.642452
-"Silchar, India",24.833271,92.778905
-"Singrauli, India",24.19921,82.664547
-"Solapur, India",17.659919,75.906391
-"Surat, India",21.17024,72.831061
-"Tezpur, India",26.65285,92.792559
-"Thane, India",19.218331,72.97809
-"Thoothukudi, India",8.764166,78.134836
-"Thrissur, India",10.527642,76.214435
-"Tinsukia, India",27.492191,95.346775
-"Trivandrum, India",8.524139,76.936638
-"Tura, India",25.514071,90.203214
-"Udaipur, India",24.585445,73.712479
-"Ujjain, India",23.179301,75.78491
-"Vadodara, India",22.307159,73.181219
-"Vapi, India",20.389316,72.91062
-"Varanasi, India",25.317645,82.973914
-"Vijayawada, India",16.506174,80.648015
-"Visikhapatnam, India",17.686816,83.218482
-"Warangal, India",17.968901,79.594054
-"Jakarta, Indonesia",-6.208763,106.845599
-"Male, Maldives",4.175496,73.509347
-"Mandalay, Myanmar",21.958828,96.089103
-"Kathmandu, Nepal",27.717245,85.323961
-"Colombo, Sri Lanka",6.927079,79.861243
-"Ayutthaya, Thailand",14.369233,100.587663
-"Bangkok, Thailand",13.756331,100.501765
-"Chachoengsao, Thailand",13.690419,101.07796
-"Chiang Mai, Thailand",18.787747,98.993128
-"Chiang Rai, Thailand",19.907166,99.830955
-"Chon Buri, Thailand",13.361143,100.984672
-"Khon Kaen, Thailand",16.441936,102.835992
-"Lampang, Thailand",18.28884,99.490874
-"Lamphun, Thailand",18.574461,99.008722
-"Loei, Thailand",17.486023,101.7223
-"Mae Hong Son, Thailand",19.30203,97.965437
-"Nakhon Ratchasima, Thailand",14.9799,102.097769
-"Nakhon Sawan, Thailand",15.693007,100.122559
-"Nan, Thailand",18.775632,100.773042
-"Narathiwat, Thailand",6.425461,101.825314
-"Nonthaburi , Thailand",13.862113,100.514353
-"Pathum Thani, Thailand",14.020839,100.525028
-"Phayao, Thailand",19.215437,100.202369
-"Phrae, Thailand",18.144577,100.140283
-"Phuket, Thailand",7.951933,98.338088
-"Ratchaburi, Thailand",13.528289,99.813421
-"Rayong, Thailand",12.707434,101.147352
-"Sa Kaeo, Thailand",13.824041,102.064582
-"Samut Prakan, Thailand",13.599096,100.599832
-"Samut Sakhon, Thailand",13.547522,100.274396
-"Saraburi, Thailand",14.528915,100.910142
-"Songkhla, Thailand",7.1756,100.614347
-"Surat Thani, Thailand",9.138239,99.321748
-"Yala, Thailand",6.541147,101.280395
-"Anshan, China",41.108647,122.994329
-"Anyang, China",36.097577,114.392393
-"Baoding, China",38.874434,115.46459
-"Baoji, China",34.363184,107.237743
-"Baotou, China",40.657378,109.840349
-"Beihai, China",21.481291,109.120161
-"Beijing, China",39.904211,116.407395
-"Benxi, China",41.486981,123.685143
-"Changchun, China",43.817072,125.323544
-"Changde, China",29.031673,111.698497
-"Changsha, China",28.228209,112.938814
-"Changzhi, China",36.195409,113.116404
-"Changzhou, China",31.811226,119.974062
-"Chengdu, China",30.572816,104.066801
-"Chifeng, China",42.257817,118.886856
-"Chongqing, China",29.56301,106.551556
-"Datong, China",40.076763,113.300129
-"Deyang, China",31.126856,104.397894
-"Fushun, China",41.880872,123.957208
-"Fuzhou, China",26.074508,119.296494
-"Guangzhou, China",23.12911,113.264385
-"Guilin, China",25.234479,110.179954
-"Guiyang, China",26.647661,106.630154
-"Haikou, China",20.044002,110.198293
-"Handan, China",36.625657,114.538962
-"Hangzhou, China",30.274085,120.15507
-"Harbin, China",45.803775,126.534967
-"Hefei, China",31.820592,117.227219
-"Hohhot, China",40.842585,111.749181
-"Hong Kong, China",22.396428,114.109497
-"Huzhou, China",30.894348,120.086823
-"Jiaozuo, China",35.215893,113.241823
-"Jilin, China",43.837883,126.549572
-"Jinan, China",36.651216,117.12
-"Jinchang, China",38.520089,102.188043
-"Jingzhou, China",30.335165,112.239741
-"Jining, China",35.414982,116.587282
-"Jiujiang, China",29.705077,116.00193
-"Kaifeng, China",34.797281,114.307583
-"Karamay, China",45.579889,84.889207
-"Kunming, China",24.880095,102.832892
-"Lanzhou, China",36.061089,103.834304
-"Lhasa, China",29.652491,91.17211
-"Lianyungang, China",34.596653,119.221611
-"Linfen, China",36.088005,111.518976
-"Liuzhou, China",24.326038,109.42841
-"Luoyang, China",34.619683,112.45404
-"Luzhou, China",28.871811,105.442258
-"Maanshan, China",31.670452,118.50676
-"Mianyang, China",31.467495,104.678946
-"Mudanjiang, China",44.551653,129.633169
-"Nanchang, China",28.682892,115.858198
-"Nanchong, China",30.837793,106.110698
-"Nanjing, China",32.060255,118.796877
-"Nanning, China",22.817002,108.366543
-"Nantong, China",31.980172,120.894291
-"Ningbo, China",29.868336,121.54399
-"Panzhihua, China",26.582347,101.718637
-"Pingdingshan, China",33.76617,113.192661
-"Qingdao, China",36.067108,120.382609
-"Qinhuangdao, China",39.935385,119.600493
-"Qiqihar, China",47.354348,123.918186
-"Quanzhou, China",24.874132,118.675676
-"Qujing, China",25.49,103.796167
-"Rizhao, China",35.416734,119.526925
-"Sanmenxia, China",34.772792,111.200367
-"Shanghai, China",31.230416,121.473701
-"Shantou, China",23.354091,116.681972
-"Shaoguan, China",24.810329,113.597547
-"Shaoxing, China",29.995762,120.586109
-"Shenyang, China",41.805699,123.431472
-"Shenzhen, China",22.543096,114.057865
-"Shijiazhuang, China",38.042307,114.51486
-"Shizuishan, China",38.983236,106.383304
-"Suzhou, China",31.298979,120.58529
-"Taian, China",36.200252,117.087614
-"Taiyuan, China",37.87059,112.548879
-"Tangshan, China",39.630867,118.180194
-"Tianjin, China",39.084158,117.200983
-"Tongchuan, China",34.896756,108.945233
-"Urumqi, China",43.825592,87.616848
-"Weifang, China",36.706962,119.161749
-"Weinan, China",34.499995,109.509786
-"Wenzhou, China",27.993828,120.699362
-"Wuhan, China",30.593099,114.305393
-"Wuhu, China",31.352859,118.432941
-"Wuxi, China",31.49117,120.31191
-"Xiamen, China",24.479834,118.089425
-"Xi'an, China",34.341575,108.93977
-"Xiangtan, China",27.829738,112.944049
-"Xianyang, China",34.329605,108.708991
-"Xining, China",36.617134,101.778224
-"Xuzhou, China",34.205768,117.284124
-"Yan'an, China",36.585445,109.489757
-"Yangquan, China",37.856972,113.580519
-"Yangzhou, China",32.394213,119.412947
-"Yantai, China",37.463822,121.447935
-"Yibing, China",28.751769,104.643215
-"Yichang, China",30.691967,111.286471
-"Yinchuan, China",38.487194,106.230909
-"Yueyang, China",29.356804,113.12873
-"Yuxi, China",24.347324,102.527197
-"Zaozhuang, China",34.810488,117.323725
-"Zhangjiajie, China",29.117096,110.479191
-"Zhanjiang, China",21.270746,110.359336
-"Zhengzhou, China",34.746611,113.625328
-"Zhenjiang, China",32.187849,119.425836
-"Zhuhai, China",22.270978,113.576678
-"Zhuzhou, China",27.827987,113.133853
-"Zibo, China",36.813487,118.054927
-"Zigong, China",29.33903,104.778442
-"Zunyi, China",27.725654,106.927389
-"Bayan Lepas, Malaysia",5.294464,100.259327
-"Kota Kinabalu, Malaysia",5.980408,116.073457
-"Kuantan, Malaysia",3.763386,103.220183
-"Kuching, Malaysia",1.607681,110.378544
-"Petaling Jaya, Malaysia",3.127887,101.594489
-"Senai, Malaysia",1.602031,103.644379
-"Tanah Rata, Malaysia",4.470611,101.376639
-"Bayankhongor, Mongolia",46.177215,100.711865
-"Darkhan, Mongolia",49.464843,105.974592
-"Erdenet, Mongolia",49.054082,104.071653
-"Khobd, Mongolia",47.112965,92.311075
-"Murun, Mongolia",49.64289,100.17719
-"Sukhbaatar, Mongolia",46.565316,113.538084
-"Tsetserleg, Mongolia",47.46965,101.477434
-"Ulaanbaatar, Mongolia",47.886399,106.905744
-"Baguio, Philippines",16.402333,120.596007
-"Cebu, Philippines",10.315699,123.885437
-"Manila, Philippines",14.599512,120.98422
-"Da Nang, Viet Nam",16.047079,108.206229
-"Ha Noi, Viet Nam",21.027764,105.83416
-"Ho Chi Minh, Viet Nam",10.823099,106.629664
-"Adelaide, Australia",-34.928621,138.599959
-"Brisbane, Australia",-27.471011,153.023449
-"Bunbury, Australia",-33.327069,115.639174
-"Busselton, Australia",-33.649945,115.344611
-"Canberra, Australia",-35.282,149.128684
-"Casuarina, Australia",-12.37565,130.882213
-"Geelong, Australia",-38.148544,144.361348
-"Hobart, Australia",-42.881903,147.323815
-"Illawarra, Australia",-34.425073,150.893149
-"Launceston, Australia",-41.426181,147.112468
-"Lower Hunter, Australia",-32.260669,150.884448
-"Melbourne, Australia",-37.814107,144.96328
-"Perth, Australia",-31.953513,115.857047
-"Sydney, Australia",-33.867487,151.20699
-"Traralgon, Australia",-38.197109,146.534618
-"Belait, Brunei Darussalam",4.449758,114.318703
-"Brunei-Muara, Brunei Darussalam",4.931121,114.951687
-"Temburong, Brunei Darussalam",4.620413,115.141484
-"Tutong, Brunei Darussalam",4.714037,114.666794
-"Sendai, Japan",38.268215,140.869356
-"Nagoya, Japan",35.181446,136.906398
-"Tokyo, Japan",35.709026,139.731992
-"Chiba, Japan",35.607267,140.106291
-"Fukuoka, Japan",33.590355,130.401716
-"Kobe, Japan",34.690083,135.195511
-"Osaka, Japan",34.693738,135.502165
-"Kawasaki, Japan",35.530906,139.703051
-"Niigata, Japan",37.916192,139.036413
-"Okayama, Japan",34.655146,133.919502
-"Sapporo, Japan",43.062096,141.354376
-"Hiroshima, Japan",34.385203,132.455293
-"Kitakyushu, Japan",33.883409,130.875216
-"Kyoto, Japan",35.011636,135.768029
-"Hamamatsu, Japan",34.710834,137.726126
-"Yokohama, Japan",35.443708,139.638026
-"Sagamihara, Japan",35.571462,139.373177
-"Sakai, Japan",34.573262,135.482998
-"Shizuoka, Japan",34.975562,138.38276
-"Saitama, Japan",35.861729,139.645482
-"Auckland, New Zealand",-36.84846,174.763332
-"Blenheim, New Zealand",-41.513442,173.96125
-"Christchurch, New Zealand",-43.532054,172.636225
-"Dunedin, New Zealand",-45.87876,170.502798
-"Hamilton, New Zealand",-37.787001,175.279253
-"Hastings, New Zealand",-39.639578,176.839232
-"Lower Hutt, New Zealand",-41.209165,174.908056
-"Masterton, New Zealand",-40.951112,175.65735
-"Napier, New Zealand",-39.492844,176.912018
-"Porirua, New Zealand",-41.1339,174.840601
-"Rotorua, New Zealand",-38.136848,176.249746
-"Taupo, New Zealand",-38.685692,176.07021
-"Timaru, New Zealand",-44.396972,171.254973
-"Upper Hutt, New Zealand",-41.124433,175.070783
-"Wainuiomata, New Zealand",-41.263362,174.947905
-"Wellington, New Zealand",-41.28646,174.776236
-"Whangarei, New Zealand",-35.725112,174.323708
-"Ansan, Republic of Korea",37.321878,126.830885
-"Anyang, Republic of Korea",37.394253,126.956821
-"Bucheon, Republic of Korea",37.503414,126.766031
-"Busan, Republic of Korea",35.179554,129.075642
-"Cheonan, Republic of Korea",36.815129,127.113894
-"Cheongju, Republic of Korea",36.642434,127.489032
-"Chuncheon, Republic of Korea",37.881315,127.729971
-"Chungju, Republic of Korea",36.991011,127.92595
-"Daegue, Republic of Korea",35.871435,128.601445
-"Daejeon, Republic of Korea",36.350412,127.384548
-"Gangneung, Republic of Korea",37.751853,128.876057
-"Gimcheon, Republic of Korea",36.139839,128.113595
-"Gumi, Republic of Korea",36.119485,128.344573
-"Gunsan, Republic of Korea",35.967677,126.736629
-"Guri, Republic of Korea",37.594312,127.129565
-"Gwacheon, Republic of Korea",37.429246,126.987445
-"Gwangju, Republic of Korea",35.159545,126.852601
-"Gwangmyeong, Republic of Korea",37.478488,126.864289
-"Gwangyang, Republic of Korea",34.940697,127.695888
-"Gyeongju, Republic of Korea",35.856172,129.224748
-"Iksan, Republic of Korea",35.948286,126.957599
-"Incheon, Republic of Korea",37.456256,126.705206
-"Jecheon, Republic of Korea",37.132582,128.190948
-"Jeju, Republic of Korea",33.499621,126.531188
-"Jeonju, Republic of Korea",35.824224,127.147953
-"Mokpo, Republic of Korea",34.811835,126.392166
-"Pohang, Republic of Korea",36.019018,129.343481
-"Seongnam, Republic of Korea",37.444917,127.138868
-"Seosan, Republic of Korea",36.784499,126.450317
-"Seoul, Republic of Korea",37.566535,126.977969
-"Suwon, Republic of Korea",37.263573,127.028601
-"Uijeongbu, Republic of Korea",37.738098,127.033682
-"Ulsan, Republic of Korea",35.538377,129.31136
-"Wonju, Republic of Korea",37.342219,127.920162
-"Yeosu, Republic of Korea",34.760374,127.662222
-"Singapore, Singapore",1.355379,103.867744
+city,latitude,longitude,region
+"Aachen, Germany",50.775346,6.083887,European Region
+"Aalborg, Denmark",57.04882,9.921747,European Region
+"Abbotsford, Canada",49.054587,-122.328026,Region of the Americas
+"Aberdeen, SD, United States of America",45.464699,-98.486483,Region of the Americas
+"Aberdeen, United Kingdom",57.149717,-2.094278,Region of the Americas
+"Abu Dhabi, United Arab Emirates",24.299174,54.697277,Eastern Mediterranean Region
+"Accra, Ghana",5.603717,-0.186964,African Region
+"Adana, Turkey",36.991419,35.330829,European Region
+"Adelaide, Australia",-34.928621,138.599959,Western Pacific Region
+"Adiyaman, Turkey",37.76365,38.277259,European Region
+"Adrian, MI, United States of America",41.897547,-84.037166,Region of the Americas
+"Afyon, Turkey",38.756885,30.538704,European Region
+"Agia Paraskevi, Greece",38.013583,23.821808,European Region
+"Agra, India",27.17667,78.008075,South-East Asian Region
+"Agri, Turkey",39.719074,43.050591,European Region
+"Ahmedabad, India",23.022505,72.571362,South-East Asian Region
+"Ahvaz, Iran",31.318327,48.670619,Eastern Mediterranean Region
+"Aix-en-Provence, France",43.529742,5.447427,European Region
+"Aizawl, India",23.727107,92.717639,South-East Asian Region
+"Ajaccio, France",41.919229,8.738635,European Region
+"Akron, OH, United States of America",41.081445,-81.519005,Region of the Americas
+"Aksaray, Turkey",38.368626,34.0297,European Region
+"Al Ain, United Arab Emirates",24.130162,55.802312,Eastern Mediterranean Region
+"Al Wakrah, Qatar",25.165931,51.597552,Eastern Mediterranean Region
+"Alajuela, Costa Rica",10.391583,-84.438272,Region of the Americas
+"Alappuzha, India",9.498067,76.338848,South-East Asian Region
+"Alba Iulia, Romania",46.082337,23.569027,European Region
+"Albacete, Spain",38.994349,-1.858542,European Region
+"Albany-Lebanon, OR, United States of America",44.555823,-123.074486,Region of the Americas
+"Albany-Schenectady-Troy, NY, United States of America",42.791803,-73.873271,Region of the Americas
+"Albany, GA, United States of America",31.578507,-84.155741,Region of the Americas
+"Albi, France",43.925085,2.148641,European Region
+"Albuquerque, NM, United States of America",35.085334,-106.605553,Region of the Americas
+"Alcorcon, Spain",40.346845,-3.827844,European Region
+"Alexandria, LA, United States of America",31.311294,-92.445137,Region of the Americas
+"Alicante, Spain",38.345996,-0.490686,European Region
+"Allahabad, India",25.435801,81.846311,South-East Asian Region
+"Allegan, MI, United States of America",42.529199,-85.855303,Region of the Americas
+"Allentown-Bethlehem-Easton, PA-NJ, United States of America",40.649797,-75.338572,Region of the Americas
+"Almada, Portugal",38.676524,-9.165105,European Region
+"Altoona, PA, United States of America",40.518681,-78.394736,Region of the Americas
+"Alwar, India",27.552991,76.634573,South-East Asian Region
+"Amadora, Portugal",38.75776,-9.224547,European Region
+"Amasya, Turkey",40.656455,35.837347,European Region
+"Ambato, Ecuador",-1.254341,-78.62285,Region of the Americas
+"Americana, Brazil",-22.737846,-47.333569,Region of the Americas
+"Amiens, France",49.894067,2.295753,European Region
+"Amman, Jordan",31.956578,35.945695,Eastern Mediterranean Region
+"Amravati, India",20.937424,77.779551,South-East Asian Region
+"Amritsar, India",31.633979,74.872264,South-East Asian Region
+"Amsterdam, Netherlands",52.370216,4.895168,European Region
+"Anchorage, AK, United States of America",61.218056,-149.900278,Region of the Americas
+"Ancona, Italy",43.61583,13.518915,European Region
+"Anderson, IN, United States of America",40.10532,-85.680254,Region of the Americas
+"Angers, France",47.478419,-0.563166,European Region
+"Angouleme, France",45.648377,0.156237,European Region
+"Angul, India",20.844403,85.151082,South-East Asian Region
+"Ankara, Turkey",39.933364,32.859742,European Region
+"Anklesvar, India",21.626424,73.015198,South-East Asian Region
+"Ann Arbor, MI, United States of America",42.280826,-83.743038,Region of the Americas
+"Annecy, France",45.899247,6.129384,European Region
+"Annemasse, France",46.193253,6.234158,European Region
+"Ansan, Republic of Korea",37.321878,126.830885,Western Pacific Region
+"Anshan, China",41.108647,122.994329,Western Pacific Region
+"Antalya, Turkey",36.896891,30.713323,European Region
+"Antibes, France",43.580418,7.125102,European Region
+"Antofagasta, Chile",-23.650928,-70.397502,Region of the Americas
+"Antwerpen, Belgium",51.219448,4.402464,European Region
+"Anyang, China",36.097577,114.392393,Western Pacific Region
+"Anyang, Republic of Korea",37.394253,126.956821,Western Pacific Region
+"Appleton, WI, United States of America",44.261931,-88.415385,Region of the Americas
+"Aracatuba, Brazil",-21.202854,-50.453679,Region of the Americas
+"Arad, Romania",46.186561,21.312268,European Region
+"Araraquara, Brazil",-21.784827,-48.178649,Region of the Americas
+"Araucaria, Brazil",-25.586431,-49.405225,Region of the Americas
+"Arrecife, Spain",28.965169,-13.555036,European Region
+"Artvin, Turkey",41.180937,41.820819,European Region
+"Aschaffenburg, Germany",49.980663,9.135555,European Region
+"Ashdod, Israel",31.804381,34.655314,European Region
+"Asheville, NC, United States of America",35.595058,-82.551487,Region of the Americas
+"Ashkelon, Israel",31.668789,34.574252,European Region
+"Asti, Italy",44.900751,8.206426,European Region
+"Asuncion , Paraguay",-25.26374,-57.575926,European Region
+"Athens-Clarke County, GA, United States of America",33.951935,-83.357567,Region of the Americas
+"Athens, OH, United States of America",39.32924,-82.101255,Region of the Americas
+"Athens, TN, United States of America",35.442851,-84.59299,Region of the Americas
+"Atlanta-Sandy Springs-Marietta, GA, United States of America",33.888116,-84.46427,Region of the Americas
+"Atlantic City-Hammonton, NJ, United States of America",39.636506,-74.802385,Region of the Americas
+"Auckland, New Zealand",-36.84846,174.763332,Western Pacific Region
+"Auclair, Canada",47.728469,-68.644387,Region of the Americas
+"Augsburg, Germany",48.370545,10.89779,European Region
+"Augusta-Richmond County, GA-SC, United States of America",33.473498,-82.010515,Region of the Americas
+"Augusta-Waterville, ME, United States of America",44.520187,-69.652927,Region of the Americas
+"Aurangabad, India",19.876165,75.343314,South-East Asian Region
+"Austin-Round Rock, TX, United States of America",30.453163,-97.724177,Region of the Americas
+"Avignon, France",43.949317,4.805528,European Region
+"Aydin, Turkey",37.838016,27.84556,European Region
+"Ayutthaya, Thailand",14.369233,100.587663,South-East Asian Region
+"Bacau, Romania",46.567044,26.914575,European Region
+"Badajoz, Spain",38.87945,-6.970654,European Region
+"Baguio, Philippines",16.402333,120.596007,Western Pacific Region
+"Baia Mare, Romania",47.656739,23.584988,European Region
+"Bakersfield, CA, United States of America",35.373292,-119.018712,Region of the Americas
+"Balasore, India",21.486934,86.924601,South-East Asian Region
+"Balikesir, Turkey",39.653298,27.890342,European Region
+"Baltimore-Towson, MD, United States of America",39.401496,-76.601913,Region of the Americas
+"Bamberg, Germany",49.898814,10.902764,European Region
+"Bangalore, India",12.971599,77.594563,South-East Asian Region
+"Bangkok, Thailand",13.756331,100.501765,South-East Asian Region
+"Bangor, ME, United States of America",44.801182,-68.777814,Region of the Americas
+"Banska Bystrica, Slovakia",48.736277,19.146192,European Region
+"Baoding, China",38.874434,115.46459,Western Pacific Region
+"Baoji, China",34.363184,107.237743,Western Pacific Region
+"Baotou, China",40.657378,109.840349,Western Pacific Region
+"Baraboo, WI, United States of America",43.471094,-89.744291,Region of the Americas
+"Barcelona, Spain",41.385064,2.173403,European Region
+"Bari, Italy",41.117143,16.871871,European Region
+"Barisal, Bangladesh",22.702921,90.346597,South-East Asian Region
+"Barreiro, Portugal",38.660815,-9.079072,European Region
+"Barrie, Canada",44.389356,-79.690332,Region of the Americas
+"Bartin, Turkey",41.637602,32.333811,European Region
+"Basel, Switzerland",47.559599,7.588576,European Region
+"Bathurst, Canada",47.618351,-65.651336,Region of the Americas
+"Batman, Turkey",37.889517,41.129283,European Region
+"Baton Rouge, LA, United States of America",30.458283,-91.14032,Region of the Americas
+"Bauru, Brazil",-22.314459,-49.058695,Region of the Americas
+"Bay City, MI, United States of America",43.594468,-83.888865,Region of the Americas
+"Bayan Lepas, Malaysia",5.294464,100.259327,Western Pacific Region
+"Bayankhongor, Mongolia",46.177215,100.711865,Western Pacific Region
+"Bayburt, Turkey",40.26032,40.228048,European Region
+"Bayonne, France",43.492949,-1.474841,European Region
+"Beau Bassin-Rose Hill, Mauritius",-20.22303,57.468383,African Region
+"Beauvais, France",49.429539,2.080712,European Region
+"Beaver Dam, WI, United States of America",43.457769,-88.837329,Region of the Americas
+"Beaverlodge, Canada",55.213974,-119.423302,Region of the Americas
+"Becancour, Canada",46.350622,-72.435055,Region of the Americas
+"Beckley, WV, United States of America",37.77817,-81.188156,Region of the Americas
+"Beersheva, Israel",31.252973,34.791462,European Region
+"Beihai, China",21.481291,109.120161,Western Pacific Region
+"Beijing, China",39.904211,116.407395,Western Pacific Region
+"Beirut, Lebanon",33.888629,35.495479,Eastern Mediterranean Region
+"Beit Shemesh , Israel",31.747041,34.988099,Eastern Mediterranean Region
+"Belait, Brunei Darussalam",4.449758,114.318703,Western Pacific Region
+"Belen, Costa Rica",10.406616,-85.589507,Region of the Americas
+"Belfast, United Kingdom",54.597285,-5.93012,European Region
+"Belleville, Canada",44.162759,-77.383231,Region of the Americas
+"Bellingham, WA, United States of America",48.74908,-122.478147,Region of the Americas
+"Belo Horizonte, Brazil",-19.916681,-43.934493,Region of the Americas
+"Benidorm, Spain",38.541057,-0.122494,European Region
+"Bennington, VT, United States of America",42.878135,-73.196774,Region of the Americas
+"Benxi, China",41.486981,123.685143,Western Pacific Region
+"Beograd, Serbia",44.786568,20.448922,European Region
+"Bergamo, Italy",45.698264,9.67727,European Region
+"Bergen, Norway",60.391263,5.322054,European Region
+"Berhampur, India",19.314962,84.794091,South-East Asian Region
+"Berlin, Germany",52.520007,13.404954,European Region
+"Besancon, France",47.237829,6.024054,European Region
+"Betim, Brazil",-19.967308,-44.20119,Region of the Americas
+"Bhilai, India",21.193848,81.350942,South-East Asian Region
+"Bhopal, India",23.259933,77.412615,South-East Asian Region
+"Bhubaneshwar, India",20.296059,85.82454,South-East Asian Region
+"Bialystok, Poland",53.132489,23.16884,European Region
+"Bielefeld, Germany",52.030229,8.532471,European Region
+"Biella, Italy",45.562884,8.05834,European Region
+"Bielsko-Biala, Poland",49.822377,19.058384,European Region
+"Bilbao, Spain",43.263013,-2.934985,European Region
+"Bilecik, Turkey",40.142573,29.97933,European Region
+"Bingol, Turkey",38.885464,40.496625,European Region
+"Birmingham-Hoover, AL, United States of America",33.400235,-86.805099,European Region
+"Birmingham, United Kingdom",52.486243,-1.890401,Region of the Americas
+"Bishop, CA, United States of America",37.361424,-118.399664,Region of the Americas
+"Bismarck, ND, United States of America",46.808327,-100.783739,Region of the Americas
+"Blagoevgrad, Bulgaria",42.020857,23.094339,European Region
+"Blenheim, New Zealand",-41.513442,173.96125,Western Pacific Region
+"Bloomington-Normal, IL, United States of America",40.518147,-88.991586,Region of the Americas
+"Bloomington, IN, United States of America",39.165325,-86.526386,Region of the Americas
+"Bogota, Colombia",4.710989,-74.072092,Region of the Americas
+"Boise City-Nampa, ID, United States of America",43.582409,-116.595528,Region of the Americas
+"Bologna, Italy",44.494887,11.342616,European Region
+"Bolu, Turkey",40.732541,31.608209,European Region
+"Bongaigaon, India",26.500999,90.535236,South-East Asian Region
+"Bonn, Germany",50.73743,7.098207,European Region
+"Boone, NC, United States of America",36.216795,-81.674552,Region of the Americas
+"Bordeaux, France",44.837789,-0.57918,European Region
+"Boston-Cambridge-Quincy, MA-NH, United States of America",43.193852,-71.572395,Region of the Americas
+"Botosani, Romania",47.740654,26.665813,European Region
+"Boulder, CO, United States of America",40.014986,-105.270546,Region of the Americas
+"Boulogne-sur-mer, France",50.725231,1.613334,European Region
+"Bourges, France",47.081012,2.398782,European Region
+"Bournemouth, United Kingdom",50.719164,-1.880769,European Region
+"Bowling Green, KY, United States of America",36.968522,-86.480804,Region of the Americas
+"Bradenton-Sarasota-Venice, FL, United States of America",27.06152,-82.406358,Region of the Americas
+"Braga, Portugal",41.545449,-8.426507,European Region
+"Brainerd, MN, United States of America",46.352673,-94.202008,Region of the Americas
+"Brampton, Canada",43.731548,-79.762418,Region of the Americas
+"Brandenburg an der Havel, Germany",52.412529,12.531644,European Region
+"Brandon, Canada",49.848471,-99.95009,Region of the Americas
+"Brantford, Canada",43.139387,-80.264425,Region of the Americas
+"Bratislava, Slovakia",48.148597,17.107748,European Region
+"Braunschweig, Germany",52.268874,10.52677,European Region
+"Breda, Netherlands",51.571915,4.768323,European Region
+"Bremen, Germany",53.079296,8.801694,European Region
+"Bremerhaven, Germany",53.539585,8.580942,European Region
+"Bremerton-Silverdale, WA, United States of America",47.571551,-122.638824,Region of the Americas
+"Brescia, Italy",45.541553,10.211802,European Region
+"Brest, France",48.390394,-4.486076,European Region
+"Bridgeport-Stamford-Norwalk, CT, United States of America",41.141156,-73.284652,Region of the Americas
+"Brigham City, UT, United States of America",41.510213,-112.015502,Region of the Americas
+"Brighton and Hove, United Kingdom",50.82253,-0.137163,European Region
+"Brisbane, Australia",-27.471011,153.023449,Western Pacific Region
+"Bristol, United Kingdom",51.454513,-2.58791,European Region
+"Brive-la-Gaillarde, France",45.159555,1.533937,European Region
+"Brno, Czech Republic",49.19506,16.606837,European Region
+"Brookings, SD, United States of America",44.311357,-96.798388,Region of the Americas
+"Brownsville-Harlingen, TX, United States of America",26.190631,-97.696103,Region of the Americas
+"Brugge, Belgium",51.209348,3.2247,European Region
+"Brunei-Muara, Brunei Darussalam",4.931121,114.951687,Western Pacific Region
+"Brunswick, GA, United States of America",31.149953,-81.491489,Region of the Americas
+"Brussels, Belgium",50.85034,4.35171,European Region
+"Bucaramanga, Colombia",7.119349,-73.122742,Region of the Americas
+"Buchanan, Liberia",5.887247,-10.030372,African Region
+"Bucheon, Republic of Korea",37.503414,126.766031,Western Pacific Region
+"Bucuresti, Romania",44.426767,26.102538,European Region
+"Budapest, Hungary",47.497912,19.040235,European Region
+"Buenos Aires, Argentina",-34.603684,-58.381559,Region of the Americas
+"Buffalo-Niagara Falls, NY, United States of America",42.920344,-78.868032,Region of the Americas
+"Bunbury, Australia",-33.327069,115.639174,Western Pacific Region
+"Burdur, Turkey",37.718336,30.282333,European Region
+"Burgas, Bulgaria",42.504793,27.462636,European Region
+"Burgos, Spain",42.343993,-3.696906,European Region
+"Burlington-South Burlington, VT, United States of America",44.506328,-73.145209,Region of the Americas
+"Burlington, Canada",43.32552,-79.799032,Region of the Americas
+"Burlington, NC, United States of America",36.095692,-79.437799,Region of the Americas
+"Burnaby, Canada",49.248809,-122.98051,Region of the Americas
+"Burns Lake, Canada",54.233415,-125.763613,Region of the Americas
+"Busan, Republic of Korea",35.179554,129.075642,Western Pacific Region
+"Busselton, Australia",-33.649945,115.344611,Western Pacific Region
+"Butte-Silver Bow, MT, United States of America",46.003823,-112.534778,Region of the Americas
+"Bydgoszcz, Poland",53.12348,18.008438,European Region
+"Caceres, Spain",39.475277,-6.372425,European Region
+"Cadillac, MI, United States of America",44.251953,-85.401162,Region of the Americas
+"Caen, France",49.182863,-0.370679,European Region
+"Cagliari, Italy",39.223841,9.121661,European Region
+"Cairo, Egypt",30.04442,31.235712,Eastern Mediterranean Region
+"Calais, France",50.95129,1.858686,European Region
+"Calama, Chile",-22.454392,-68.929382,Region of the Americas
+"Caldas, Colombia",5.29826,-75.247906,Region of the Americas
+"Calgary, Canada",51.048615,-114.070846,Region of the Americas
+"Cali, Colombia",3.451647,-76.531985,Region of the Americas
+"Cambridge, MD, United States of America",38.563174,-76.078829,Region of the Americas
+"Campbell River, Canada",50.033123,-125.273335,Region of the Americas
+"Campinas, Brazil",-22.909938,-47.062633,Region of the Americas
+"Campobasso, Italy",41.560254,14.662716,European Region
+"Canakkale, Turkey",40.14672,26.408587,European Region
+"Canberra, Australia",-35.282,149.128684,Western Pacific Region
+"Cankiri, Turkey",40.600207,33.616223,European Region
+"Canton-Massillon, OH, United States of America",40.818606,-81.454875,Region of the Americas
+"Cape Coral-Fort Myers, FL, United States of America",26.558783,-81.922892,Region of the Americas
+"Cape Town, South Africa",-33.924868,18.424055,African Region
+"Caracas, Venezuela",10.480594,-66.903606,Region of the Americas
+"Carapicuiba, Brazil",-23.523962,-46.841124,Region of the Americas
+"Caroline, Canada",52.093932,-114.740442,Region of the Americas
+"Cartagena, Spain",37.625683,-0.996584,European Region
+"Casper, WY, United States of America",42.866632,-106.313081,Region of the Americas
+"Castellon de la Plana, Spain",39.986356,-0.051325,European Region
+"Castlegar, Canada",49.323741,-117.659334,Region of the Americas
+"Casuarina, Australia",-12.37565,130.882213,Western Pacific Region
+"Catanduva, Brazil",-21.131855,-48.977473,Region of the Americas
+"Catania, Italy",37.507877,15.08303,European Region
+"Cebu, Philippines",10.315699,123.885437,Western Pacific Region
+"Cedar Rapids, IA, United States of America",41.97788,-91.665623,Region of the Americas
+"Cergy-Pontoise, France",49.060787,2.068465,European Region
+"Ceske Budejovice, Czech Republic",48.975658,14.480255,European Region
+"Chachoengsao, Thailand",13.690419,101.07796,South-East Asian Region
+"Chalk River, Canada",46.01591,-77.452276,Region of the Americas
+"Chalon-sur-Saone, France",46.780764,4.853947,European Region
+"Chalons-en-Champagne, France",48.956682,4.363073,European Region
+"Chambery, France",45.564601,5.917781,European Region
+"Champaign-Urbana, IL, United States of America",40.110588,-88.20727,Region of the Americas
+"Chandigarh, India",30.733315,76.779418,South-East Asian Region
+"Chandrapur, India",19.97046,79.301485,South-East Asian Region
+"Changchun, China",43.817072,125.323544,Western Pacific Region
+"Changde, China",29.031673,111.698497,Western Pacific Region
+"Changsha, China",28.228209,112.938814,Western Pacific Region
+"Changzhi, China",36.195409,113.116404,Western Pacific Region
+"Changzhou, China",31.811226,119.974062,Western Pacific Region
+"Charette, Canada",46.44065,-72.923934,Region of the Americas
+"Charleroi, Belgium",50.41081,4.444643,European Region
+"Charleston-North Charleston-Summerville, SC, United States of America",32.831284,-79.955159,Region of the Americas
+"Charleston, WV, United States of America",38.34982,-81.632623,Region of the Americas
+"Charleville-Mezieres, France",49.762085,4.726096,European Region
+"Charlotte-Gastonia-Concord, NC-SC, United States of America",33.836081,-81.163724,Region of the Americas
+"Charlottesville, VA, United States of America",38.029306,-78.476678,Region of the Americas
+"Chartres, France",48.443854,1.489012,European Region
+"Chateauroux, France",46.811434,1.686779,European Region
+"Chatham, Canada",42.404802,-82.191038,Region of the Americas
+"Chattanooga, TN-GA, United States of America",35.04563,-85.30968,Region of the Americas
+"Chelm, Poland",51.143123,23.471199,European Region
+"Chemnitz, Germany",50.827845,12.92137,European Region
+"Chengdu, China",30.572816,104.066801,Western Pacific Region
+"Chennai, India",13.08268,80.270718,South-East Asian Region
+"Cheonan, Republic of Korea",36.815129,127.113894,Western Pacific Region
+"Cheongju, Republic of Korea",36.642434,127.489032,Western Pacific Region
+"Cherbourg, France",49.633731,-1.622137,European Region
+"Chesterfield, United Kingdom",53.235048,-1.421629,European Region
+"Cheyenne, WY, United States of America",41.139981,-104.820246,Region of the Americas
+"Chiang Mai, Thailand",18.787747,98.993128,South-East Asian Region
+"Chiang Rai, Thailand",19.907166,99.830955,South-East Asian Region
+"Chiba, Japan",35.607267,140.106291,Western Pacific Region
+"Chicago-Naperville-Joliet, IL-IN-WI, United States of America",43.78444,-88.787868,Region of the Americas
+"Chico, CA, United States of America",39.728494,-121.837478,Region of the Americas
+"Chifeng, China",42.257817,118.886856,Western Pacific Region
+"Chillan, Chile",-36.606262,-72.102335,Region of the Americas
+"Chilliwack, Canada",49.15794,-121.951467,Region of the Americas
+"Chittagong, Bangladesh",22.347537,91.812332,South-East Asian Region
+"Chon Buri, Thailand",13.361143,100.984672,South-East Asian Region
+"Chongqing, China",29.56301,106.551556,Western Pacific Region
+"Christchurch, New Zealand",-43.532054,172.636225,Western Pacific Region
+"Chuncheon, Republic of Korea",37.881315,127.729971,Western Pacific Region
+"Chungju, Republic of Korea",36.991011,127.92595,Western Pacific Region
+"Cincinnati-Middletown, OH-KY-IN, United States of America",37.09024,-95.712891,Region of the Americas
+"Ciudad Real, Spain",38.98483,-3.927378,European Region
+"Clarendon, Jamaica",17.955718,-77.240515,Region of the Americas
+"Clarksburg, WV, United States of America",39.280645,-80.344534,Region of the Americas
+"Clarksville, TN-KY, United States of America",36.529771,-87.359453,Region of the Americas
+"Clearlake, CA, United States of America",38.958231,-122.626373,Region of the Americas
+"Clermont-Ferrand, France",45.777222,3.087025,European Region
+"Cleveland-Elyria-Mentor, OH, United States of America",41.666157,-81.339552,Region of the Americas
+"Clinton, IA, United States of America",41.844474,-90.188738,Region of the Americas
+"Cochabamba, Bolivia",-17.413977,-66.165322,Region of the Americas
+"Coimbatore, India",11.016845,76.955832,South-East Asian Region
+"Cold Lake, Canada",54.464317,-110.173147,Region of the Americas
+"Colmar, France",48.079359,7.358512,European Region
+"Colombo, Brazil",-25.292978,-49.226634,Region of the Americas
+"Colombo, Sri Lanka",6.927079,79.861243,South-East Asian Region
+"Colorado Springs, CO, United States of America",38.833882,-104.821363,Region of the Americas
+"Columbia, SC, United States of America",34.00071,-81.034814,Region of the Americas
+"Columbia, TN, United States of America",35.615072,-87.035283,Region of the Americas
+"Columbus, GA-AL, United States of America",32.460976,-84.987709,Region of the Americas
+"Columbus, OH, United States of America",39.961176,-82.998794,Region of the Americas
+"Concon, Chile",-32.923937,-71.523479,Region of the Americas
+"Concord, NH, United States of America",43.208137,-71.537572,Region of the Americas
+"Cookeville, TN, United States of America",36.162839,-85.501642,Region of the Americas
+"Copacabana, Colombia",6.357621,-75.505078,Region of the Americas
+"Copiapo, Chile",-27.366576,-70.332159,Region of the Americas
+"Coquimbo, Chile",-29.959001,-71.338918,Region of the Americas
+"Cordoba, Spain",37.888175,-4.779383,European Region
+"Cork, Ireland",51.896892,-8.486316,European Region
+"Corner Brook, Canada",48.948997,-57.950273,Region of the Americas
+"Corning, NY, United States of America",42.142852,-77.05469,Region of the Americas
+"Cornwall, Canada",45.021276,-74.730345,Region of the Americas
+"Corpus Christi, TX, United States of America",27.800583,-97.396381,Region of the Americas
+"Corum, Turkey",40.549926,34.953724,European Region
+"Cosenza, Italy",39.298263,16.253736,European Region
+"Cottbus, Germany",51.756311,14.332868,European Region
+"Creil, France",49.257687,2.478391,European Region
+"Cremona, Italy",45.133249,10.022651,European Region
+"Creston, Canada",49.09554,-116.513508,Region of the Americas
+"Crofton, Canada",48.863844,-123.645798,Region of the Americas
+"Cuenca, Ecuador",-2.900128,-79.005896,Region of the Americas
+"Curitiba, Brazil",-25.428954,-49.267137,Region of the Americas
+"Cuttack, India",20.462521,85.88299,South-East Asian Region
+"Czestochowa, Poland",50.81182,19.120309,European Region
+"Da Nang, Viet Nam",16.047079,108.206229,Western Pacific Region
+"Daegue, Republic of Korea",35.871435,128.601445,Western Pacific Region
+"Daejeon, Republic of Korea",36.350412,127.384548,Western Pacific Region
+"Dakar, Senegal",14.764504,-17.366029,African Region
+"Dallas-Fort Worth-Arlington, TX, United States of America",32.743344,-97.026241,Region of the Americas
+"Daphne-Fairhope-Foley, AL, United States of America",30.406587,-87.683597,Region of the Americas
+"Darkhan, Mongolia",49.464843,105.974592,Western Pacific Region
+"Darmstadt, Germany",49.872825,8.651193,European Region
+"Datong, China",40.076763,113.300129,Western Pacific Region
+"Davenport-Moline-Rock Island, IA-IL, United States of America",41.519018,-90.542196,Region of the Americas
+"Dawki, India",25.184025,92.02487,South-East Asian Region
+"Dayton, OH, United States of America",39.758948,-84.191607,Region of the Americas
+"Debolt, Canada",55.21479,-118.026119,Region of the Americas
+"Debrecen, Hungary",47.531605,21.627312,European Region
+"Decatur, AL, United States of America",34.605925,-86.983342,Region of the Americas
+"Decatur, IL, United States of America",39.840315,-88.9548,Region of the Americas
+"Dehradun, India",30.316495,78.032192,South-East Asian Region
+"Delhi, India",28.613939,77.209021,South-East Asian Region
+"Delta cities, Egypt",30.097322,31.330623,Eastern Mediterranean Region
+"Deltona-Daytona Beach-Ormond Beach, FL, United States of America",29.285813,-81.055889,Region of the Americas
+"Denizli, Turkey",37.783016,29.096333,European Region
+"Denver-Aurora-Broomfield, CO, United States of America",39.920541,-105.08665,Region of the Americas
+"Dera Baba Nanak, India",32.032186,75.030448,South-East Asian Region
+"Derry, United Kingdom",54.996612,-7.308575,European Region
+"Des Moines-West Des Moines, IA, United States of America",41.52549,-93.630511,Region of the Americas
+"Deschambault, Canada",46.65064,-71.929556,Region of the Americas
+"Detroit-Warren-Livonia, MI, United States of America",42.341202,-83.28356,Region of the Americas
+"Dewas, India",22.962267,76.050795,South-East Asian Region
+"Deyang, China",31.126856,104.397894,Western Pacific Region
+"Dhaka, Bangladesh",23.810332,90.412518,South-East Asian Region
+"Diadema, Brazil",-23.68184,-46.620967,Region of the Americas
+"Dibrugarh, India",27.472833,94.911962,South-East Asian Region
+"Dickinson, ND, United States of America",46.879176,-102.789624,Region of the Americas
+"Dijon, France",47.322047,5.04148,European Region
+"Dimapur, India",25.862989,93.753666,South-East Asian Region
+"Diyarbakir, Turkey",37.924973,40.210983,European Region
+"Dobrich, Bulgaria",43.57259,27.827261,European Region
+"Doha, Qatar",25.285447,51.53104,Eastern Mediterranean Region
+"Dordrecht, Netherlands",51.813298,4.690093,European Region
+"Dortmund, Germany",51.513587,7.465298,European Region
+"Dothan, AL, United States of America",31.223231,-85.390489,Region of the Americas
+"Douai, France",50.367874,3.080602,European Region
+"Dover, DE, United States of America",39.158168,-75.524368,Region of the Americas
+"Drayton Valley, Canada",53.221407,-114.976679,Region of the Americas
+"Dresden, Germany",51.050409,13.737262,European Region
+"Dublin, Ireland",53.349805,-6.26031,European Region
+"Duisburg, Germany",51.434408,6.762329,European Region
+"Duluth, MN-WI, United States of America",46.786672,-92.100485,Region of the Americas
+"Duncan, Canada",48.778691,-123.707942,Region of the Americas
+"Dunedin, New Zealand",-45.87876,170.502798,Western Pacific Region
+"Dunkerque, France",51.034368,2.376776,European Region
+"Durango, CO, United States of America",37.27528,-107.880067,Region of the Americas
+"Durban, South Africa",-29.85868,31.02184,African Region
+"Durgapur, India",23.520444,87.311923,South-East Asian Region
+"Durham-Chapel Hill, NC, United States of America",35.9132,-79.055845,Region of the Americas
+"Durham, NC, United States of America",35.994033,-78.898619,Region of the Americas
+"Dusseldorf, Germany",51.227741,6.773456,European Region
+"Duzce, Turkey",40.83872,31.162609,European Region
+"Dyersburg, TN, United States of America",36.034516,-89.385628,Region of the Americas
+"East Stroudsburg, PA, United States of America",40.999539,-75.181291,Region of the Americas
+"Eastbourne, United Kingdom",50.768035,0.290472,European Region
+"Eau Claire, WI, United States of America",44.811349,-91.498494,Region of the Americas
+"Edinburgh, United Kingdom",55.953252,-3.188267,European Region
+"Edirne, Turkey",41.67713,26.555715,European Region
+"Edmonton, Canada",53.544389,-113.490927,Region of the Americas
+"El Centro, CA, United States of America",32.792,-115.563051,Region of the Americas
+"El Dorado, AR, United States of America",33.20763,-92.666267,Region of the Americas
+"El Paso, TX, United States of America",31.761878,-106.485022,Region of the Americas
+"Elazig, Turkey",38.674816,39.222515,European Region
+"Elblag, Poland",54.156061,19.40449,European Region
+"Elche, Spain",38.269933,-0.712561,European Region
+"Elda, Spain",38.476507,-0.79646,European Region
+"Elizabethtown, KY, United States of America",37.703065,-85.864941,Region of the Americas
+"Elk Island, Canada",53.781261,-112.982038,Region of the Americas
+"Elkhart-Goshen, IN, United States of America",41.582272,-85.834438,Region of the Americas
+"Enschede, Netherlands",52.221537,6.893662,European Region
+"Erdenet, Mongolia",49.054082,104.071653,Western Pacific Region
+"Erie, PA, United States of America",42.129224,-80.085059,Region of the Americas
+"Erlangen, Germany",49.589674,11.011961,European Region
+"Erzincan, Turkey",39.746797,39.491124,European Region
+"Erzurum, Turkey",39.905499,41.265824,European Region
+"Escaldes-Engordany, Andorra",42.51008,1.538786,European Region
+"Eskisehir, Turkey",39.766706,30.525631,European Region
+"Essen, Germany",51.455643,7.011555,European Region
+"Eugene-Springfield, OR, United States of America",44.051085,-123.086563,Region of the Americas
+"Eureka-Arcata-Fortuna, CA, United States of America",40.598187,-124.157276,Region of the Americas
+"Evansville, IN-KY, United States of America",37.971559,-87.57109,Region of the Americas
+"Evreux, France",49.027013,1.151361,European Region
+"Ewarton, Jamaica",18.175225,-77.088103,Region of the Americas
+"Fairbanks, AK, United States of America",64.837778,-147.716389,Region of the Americas
+"Fairmont, WV, United States of America",39.485085,-80.142578,Region of the Americas
+"Fargo, ND-MN, United States of America",46.877186,-96.789803,Region of the Americas
+"Farmington, NM, United States of America",36.728058,-108.218686,Region of the Americas
+"Faro, Portugal",37.019355,-7.93044,European Region
+"Fayetteville-Springdale-Rogers, AR-MO, United States of America",37.964253,-91.831833,Region of the Americas
+"Fayetteville, NC, United States of America",35.052664,-78.878358,Region of the Americas
+"Ferme Neuve, Canada",46.701978,-75.456654,Region of the Americas
+"Ferrara, Italy",44.838124,11.619787,European Region
+"Ferrol, Spain",43.489646,-8.219345,European Region
+"Firenze, Italy",43.76956,11.255814,European Region
+"Firozabad, India",27.159101,78.395757,South-East Asian Region
+"Flacq, Mauritius",-20.225784,57.711927,African Region
+"Flagstaff, AZ, United States of America",35.198284,-111.651302,Region of the Americas
+"Flin Flon, Canada",54.765769,-101.876215,Region of the Americas
+"Flint, MI, United States of America",43.012527,-83.687456,Region of the Americas
+"Florence-Muscle Shoals, AL, United States of America",34.814856,-87.642664,Region of the Americas
+"Florence, SC, United States of America",34.195433,-79.762562,Region of the Americas
+"Forli, Italy",44.22274,12.040731,European Region
+"Fort Chipewyan, Canada",58.719637,-111.140697,Region of the Americas
+"Fort Collins-Loveland, CO, United States of America",40.449256,-105.002428,Region of the Americas
+"Fort Mackay, Canada",57.186758,-111.636785,Region of the Americas
+"Fort Madison-Keokuk, IA-MO, United States of America",37.964253,-91.831833,Region of the Americas
+"Fort Mcmurray, Canada",56.72638,-111.380341,Region of the Americas
+"Fort Payne, AL, United States of America",34.444255,-85.719689,Region of the Americas
+"Fort Saskatchewan, Canada",53.700716,-113.209466,Region of the Americas
+"Fort Smith, AR-OK, United States of America",35.385924,-94.398547,Region of the Americas
+"Fort Wayne, IN, United States of America",41.079273,-85.139351,Region of the Americas
+"Fort-de-France, France",14.616065,-61.05878,European Region
+"Frankfurt, Germany",50.110922,8.682127,European Region
+"Fredericton, Canada",45.96359,-66.643115,Region of the Americas
+"Freiburg im Breisgau, Germany",47.999008,7.842104,European Region
+"Fresno, CA, United States of America",36.746842,-119.772587,Region of the Americas
+"Fukuoka, Japan",33.590355,130.401716,Western Pacific Region
+"Fulda, Germany",50.55581,9.680845,European Region
+"Funchal, Portugal",32.666933,-16.924055,European Region
+"Fushun, China",41.880872,123.957208,Western Pacific Region
+"Fuzhou, China",26.074508,119.296494,Western Pacific Region
+"Gadera, Israel",32.069715,34.769538,European Region
+"Gadsden, AL, United States of America",34.014264,-86.006639,Region of the Americas
+"Gainesville, FL, United States of America",29.651634,-82.324826,Region of the Americas
+"Gainesville, GA, United States of America",34.297879,-83.824066,Region of the Americas
+"Galati, Romania",45.435321,28.007994,European Region
+"Gangneung, Republic of Korea",37.751853,128.876057,Western Pacific Region
+"Gatineau, Canada",45.476545,-75.701272,Region of the Americas
+"Gaziantep, Turkey",37.065953,37.37811,European Region
+"Gazipur, Bangladesh",23.991735,90.419588,South-East Asian Region
+"Gdansk, Poland",54.352025,18.646638,European Region
+"Gdynia, Poland",54.51889,18.530541,European Region
+"Geelong, Australia",-38.148544,144.361348,Western Pacific Region
+"Gelsenkirchen, Germany",51.517744,7.085717,European Region
+"Geneve, Switzerland",46.204391,6.143158,European Region
+"Genova, Italy",44.40565,8.946256,European Region
+"Gent, Belgium",51.054342,3.717424,European Region
+"Gera, Germany",50.885071,12.08072,European Region
+"Gettysburg, PA, United States of America",39.830929,-77.231095,Region of the Americas
+"Gijon, Spain",43.532202,-5.66112,European Region
+"Gillette, WY, United States of America",44.291092,-105.502221,Region of the Americas
+"Gimcheon, Republic of Korea",36.139839,128.113595,Western Pacific Region
+"Giresun, Turkey",40.917532,38.392653,European Region
+"Glasgow, United Kingdom",55.864237,-4.251806,European Region
+"Gliwice, Poland",50.294492,18.67138,European Region
+"Gobindgarh, India",30.858747,75.943421,South-East Asian Region
+"Golaghat, India",26.523852,93.962337,South-East Asian Region
+"Golden, Canada",51.296119,-116.963137,Region of the Americas
+"Goldsboro, NC, United States of America",35.384884,-77.992765,Region of the Americas
+"Gomel, Belarus",52.441176,30.987846,European Region
+"Gorzow Wielkopolski, Poland",52.732529,15.23693,European Region
+"Granada, Spain",37.177336,-3.598557,European Region
+"Grand Bend, Canada",43.31304,-81.756224,Region of the Americas
+"Grand Forks, Canada",49.030095,-118.445139,Region of the Americas
+"Grand Island, NE, United States of America",40.926396,-98.342012,Region of the Americas
+"Grand Junction, CO, United States of America",39.063871,-108.550649,Region of the Americas
+"Grand Rapids-Wyoming, MI, United States of America",42.883043,-85.72166,Region of the Americas
+"Grande Prairie, Canada",55.16994,-118.798615,Region of the Americas
+"Grande Vitoria, Brazil",-20.28869,-40.340761,Region of the Americas
+"Grants Pass, OR, United States of America",42.439007,-123.328392,Region of the Americas
+"Graz, Austria",47.070714,15.439504,European Region
+"Greeley, CO, United States of America",40.423314,-104.709132,Region of the Americas
+"Green Bay, WI, United States of America",44.519159,-88.019826,Region of the Americas
+"Greensboro-High Point, NC, United States of America",36.022422,-79.878497,Region of the Americas
+"Greenville-Mauldin-Easley, SC, United States of America",34.839974,-82.626006,Region of the Americas
+"Greenville, NC, United States of America",35.612661,-77.366354,Region of the Americas
+"Grenada, MS, United States of America",33.769005,-89.808419,Region of the Americas
+"Grenoble, France",45.188529,5.724524,European Region
+"Groningen, Netherlands",53.219384,6.566502,European Region
+"Grudziadz, Poland",53.483749,18.753565,European Region
+"Guadalajara, Mexico",20.659699,-103.349609,Region of the Americas
+"Guadalajara, Spain",40.632489,-3.16017,European Region
+"Guangzhou, China",23.12911,113.264385,Western Pacific Region
+"Guatemala city, Guatemala",14.634915,-90.506882,Region of the Americas
+"Guelph, Canada",43.544805,-80.248167,Region of the Americas
+"Guilin, China",25.234479,110.179954,Western Pacific Region
+"Guiyang, China",26.647661,106.630154,Western Pacific Region
+"Gulbarga, India",17.329731,76.834296,South-East Asian Region
+"Gulfport-Biloxi, MS, United States of America",30.41338,-89.072958,Region of the Americas
+"Gumi, Republic of Korea",36.119485,128.344573,Western Pacific Region
+"Gumshane, Turkey",40.460825,39.480321,European Region
+"Gunsan, Republic of Korea",35.967677,126.736629,Western Pacific Region
+"Guntur , India",16.306652,80.43654,Western Pacific Region
+"Guri, Republic of Korea",37.594312,127.129565,Western Pacific Region
+"Guteborg, Sweden",57.70887,11.97456,European Region
+"Guttingen, Germany",51.54128,9.915804,European Region
+"Guwahati, India",26.144517,91.736237,South-East Asian Region
+"Gwacheon, Republic of Korea",37.429246,126.987445,Western Pacific Region
+"Gwalior, India",26.218287,78.182831,South-East Asian Region
+"Gwangju, Republic of Korea",35.159545,126.852601,Western Pacific Region
+"Gwangmyeong, Republic of Korea",37.478488,126.864289,Western Pacific Region
+"Gwangyang, Republic of Korea",34.940697,127.695888,Western Pacific Region
+"Gyeongju, Republic of Korea",35.856172,129.224748,Western Pacific Region
+"Gyor, Hungary",47.687457,17.650397,European Region
+"Ha Noi, Viet Nam",21.027764,105.83416,Western Pacific Region
+"Hadera, Israel",32.434046,34.919652,European Region
+"Hafnarfjordur, Iceland",64.029105,-21.968463,European Region
+"Hagerstown-Martinsburg, MD-WV, United States of America",38.597626,-80.454903,Region of the Americas
+"Haifa, Israel",32.794046,34.989571,European Region
+"Haikou, China",20.044002,110.198293,Western Pacific Region
+"Hakkari, Turkey",37.577427,43.736782,European Region
+"Halle an der Saale, Germany",51.49698,11.968803,European Region
+"Hamad Town, Bahrain",26.125644,50.498036,Eastern Mediterranean Region
+"Hamamatsu, Japan",34.710834,137.726126,Western Pacific Region
+"Hamburg, Germany",53.551085,9.993682,European Region
+"Hamilton, Canada",43.250021,-79.866091,Region of the Americas
+"Hamilton, New Zealand",-37.787001,175.279253,Western Pacific Region
+"Hammond, LA, United States of America",30.504358,-90.4612,Region of the Americas
+"Handan, China",36.625657,114.538962,Western Pacific Region
+"Hanford-Corcoran, CA, United States of America",36.098007,-119.560402,Region of the Americas
+"Hangzhou, China",30.274085,120.15507,Western Pacific Region
+"Hannover, Germany",52.375892,9.73201,European Region
+"Harbin, China",45.803775,126.534967,Western Pacific Region
+"Harriman, TN, United States of America",35.933964,-84.552436,Region of the Americas
+"Harrisburg-Carlisle, PA, United States of America",40.160004,-77.686813,Region of the Americas
+"Harrisonburg, VA, United States of America",38.449569,-78.868916,Region of the Americas
+"Hartford-West Hartford-East Hartford, CT, United States of America",41.76154,-72.708783,Region of the Americas
+"Haskovo, Bulgaria",41.934437,25.555446,European Region
+"Hassan, India",13.006814,76.099552,South-East Asian Region
+"Hastings, New Zealand",-39.639578,176.839232,Western Pacific Region
+"Hattiesburg, MS, United States of America",31.327119,-89.290339,Region of the Americas
+"Havirov, Czech Republic",49.780392,18.430625,European Region
+"Heerlen, Netherlands",50.888174,5.979499,European Region
+"Hefei, China",31.820592,117.227219,Western Pacific Region
+"Heftzibah, Israel",32.518729,35.426247,European Region
+"Helena-West Helena, AR, United States of America",34.5291,-90.59,Region of the Americas
+"Helena, MT, United States of America",46.588371,-112.024505,Region of the Americas
+"Helsinki, Finland",60.169856,24.938379,European Region
+"Heredia, Costa Rica",10.473523,-84.016742,Region of the Americas
+"Hickory-Lenoir-Morganton, NC, United States of America",35.745407,-81.684819,Region of the Americas
+"Hidd, Bahrain",26.215901,50.668999,Eastern Mediterranean Region
+"Hilo, HI, United States of America",19.729722,-155.09,Region of the Americas
+"Hinton, Canada",53.403709,-117.571842,Region of the Americas
+"Hiroshima, Japan",34.385203,132.455293,Western Pacific Region
+"Hisar, India",29.149188,75.721653,South-East Asian Region
+"Ho Chi Minh, Viet Nam",10.823099,106.629664,Western Pacific Region
+"Hobart, Australia",-42.881903,147.323815,Western Pacific Region
+"Hobbs, NM, United States of America",32.702612,-103.13604,Region of the Americas
+"Hohhot, China",40.842585,111.749181,Western Pacific Region
+"Holland-Grand Haven, MI, United States of America",42.763373,-86.207023,Region of the Americas
+"Homosassa Springs, FL, United States of America",28.803706,-82.576137,Region of the Americas
+"Hong Kong, China",22.396428,114.109497,Western Pacific Region
+"Honolulu, HI, United States of America",21.306944,-157.858333,Region of the Americas
+"Hope, Canada",49.382993,-121.442475,Region of the Americas
+"Hot Springs, AR, United States of America",34.5037,-93.05518,Region of the Americas
+"Houma-Bayou Cane-Thibodaux, LA, United States of America",29.795763,-90.822871,Region of the Americas
+"Houston-Sugar Land-Baytown, TX, United States of America",29.735505,-94.977427,Region of the Americas
+"Houston, Canada",54.397997,-126.648209,Region of the Americas
+"Howrah, India",22.595769,88.263639,South-East Asian Region
+"Huntington-Ashland, WV-KY-OH, United States of America",40.417287,-82.907123,Region of the Americas
+"Huntsville, AL, United States of America",34.730369,-86.586104,Region of the Americas
+"Huzhou, China",30.894348,120.086823,Western Pacific Region
+"Hyderabad, India",17.385044,78.486671,South-East Asian Region
+"Iasi, Romania",47.158455,27.601442,European Region
+"Ibarra, Ecuador",0.339176,-78.122234,Region of the Americas
+"Ibirite, Brazil",-20.025669,-44.057296,Region of the Americas
+"Igdir, Turkey",39.92006,44.043615,European Region
+"Iksan, Republic of Korea",35.948286,126.957599,Western Pacific Region
+"Illawarra, Australia",-34.425073,150.893149,Western Pacific Region
+"Incheon, Republic of Korea",37.456256,126.705206,Western Pacific Region
+"Indianapolis-Carmel, IN, United States of America",39.944053,-86.018672,Region of the Americas
+"Indore, India",22.719569,75.857726,South-East Asian Region
+"Ingolstadt, Germany",48.766535,11.425754,European Region
+"Inowroclaw, Poland",52.799332,18.256203,European Region
+"Ioannina, Greece",39.665029,20.853747,European Region
+"Iowa City, IA, United States of America",41.661128,-91.530168,Region of the Americas
+"Iquique, Chile",-20.230703,-70.135669,Region of the Americas
+"Irapuato, Mexico",20.678665,-101.354496,Region of the Americas
+"Isparta, Turkey",37.762649,30.553705,European Region
+"Istanbul, Turkey",41.008238,28.978359,European Region
+"Itagui, Colombia",6.167568,-75.614671,Region of the Americas
+"Izmir, Turkey",38.423734,27.142826,European Region
+"Jacarei, Brazil",-23.298783,-45.966254,Region of the Americas
+"Jackson, MS, United States of America",32.298757,-90.18481,Region of the Americas
+"Jackson, TN, United States of America",35.614517,-88.813947,Region of the Americas
+"Jackson, WY-ID, United States of America",43.479929,-110.762428,Region of the Americas
+"Jacksonville, FL, United States of America",30.332184,-81.655651,Region of the Americas
+"Jaen, Spain",37.779594,-3.784906,European Region
+"Jaipur, India",26.912434,75.787271,South-East Asian Region
+"Jakarta, Indonesia",-6.208763,106.845599,South-East Asian Region
+"Jalandhar, India",31.326015,75.576183,South-East Asian Region
+"Jamestown-Dunkirk-Fredonia, NY, United States of America",42.440058,-79.33171,Region of the Americas
+"Jammu, India",32.726602,74.857026,South-East Asian Region
+"Jamnagar, India",22.470702,70.05773,South-East Asian Region
+"Jasper, IN, United States of America",38.391442,-86.931109,Region of the Americas
+"Jau, Brazil",-22.30275,-48.575549,Region of the Americas
+"Jecheon, Republic of Korea",37.132582,128.190948,Western Pacific Region
+"Jeddah, Saudi Arabia",21.285407,39.237551,Eastern Mediterranean Region
+"Jeju, Republic of Korea",33.499621,126.531188,Western Pacific Region
+"Jelenia Gora, Poland",50.904417,15.719362,European Region
+"Jena, Germany",50.927054,11.589237,European Region
+"Jeonju, Republic of Korea",35.824224,127.147953,Western Pacific Region
+"Jerez de la Frontera, Spain",36.685006,-6.126074,European Region
+"Jhansi, India",25.448426,78.568459,South-East Asian Region
+"Jiaozuo, China",35.215893,113.241823,Western Pacific Region
+"Jihlava, Czech Republic",49.398378,15.587041,European Region
+"Jilin, China",43.837883,126.549572,Western Pacific Region
+"Jinan, China",36.651216,117.12,Western Pacific Region
+"Jinchang, China",38.520089,102.188043,Western Pacific Region
+"Jingzhou, China",30.335165,112.239741,Western Pacific Region
+"Jining, China",35.414982,116.587282,Western Pacific Region
+"Jirkov, Czech Republic",50.500527,13.448785,European Region
+"Jiujiang, China",29.705077,116.00193,Western Pacific Region
+"Jodhpur, India",26.238947,73.024309,South-East Asian Region
+"Johannesburg, South Africa",-26.204103,28.047305,African Region
+"Johnstown, PA, United States of America",40.326741,-78.92197,Region of the Americas
+"Jundiai, Brazil",-23.185708,-46.897806,Region of the Americas
+"Juneau, AK, United States of America",58.301944,-134.419722,Region of the Americas
+"Jyvaskyla, Finland",62.242603,25.747257,European Region
+"Kabul, Afghanistan",34.555349,69.207486,Eastern Mediterranean Region
+"Kahramanmaras, Turkey",37.575276,36.922822,European Region
+"Kahului-Wailuku, HI, United States of America",20.883198,-156.505009,Region of the Americas
+"Kaifeng, China",34.797281,114.307583,Western Pacific Region
+"Kaiserslautern, Germany",49.440066,7.749126,European Region
+"Kakinada , India",16.989065,82.247465,European Region
+"Kalamazoo-Portage, MI, United States of America",42.201154,-85.580002,Region of the Americas
+"Kalispell, MT, United States of America",48.191989,-114.316813,Region of the Americas
+"Kalisz, Poland",51.76728,18.085346,European Region
+"Kanpur, India",26.449923,80.331874,South-East Asian Region
+"Kansas City, MO-KS, United States of America",39.099727,-94.578567,Region of the Americas
+"Kapaa, HI, United States of America",22.088139,-159.337982,Region of the Americas
+"Karabuk, Turkey",41.19562,32.622654,European Region
+"Karachi , Pakistan",24.861462,67.009939,European Region
+"Karamay, China",45.579889,84.889207,Western Pacific Region
+"Karlsruhe, Germany",49.00689,8.403653,European Region
+"Karmei Yosef, Israel",31.848024,34.921347,European Region
+"Kars, Turkey",40.601338,43.097453,European Region
+"Karvina, Czech Republic",49.856652,18.543219,European Region
+"Kassel, Germany",51.312711,9.479746,European Region
+"Kastamonu, Turkey",41.376625,33.776497,European Region
+"Kathmandu, Nepal",27.717245,85.323961,South-East Asian Region
+"Katowice, Poland",50.264892,19.023782,European Region
+"Kawasaki, Japan",35.530906,139.703051,Western Pacific Region
+"Kayseri, Turkey",38.720489,35.482597,European Region
+"Keene, NH, United States of America",42.933692,-72.278141,Region of the Americas
+"Kelowna, Canada",49.887952,-119.496011,Region of the Americas
+"Kempten, Germany",47.72857,10.315783,European Region
+"Khammam , India",17.247253,80.151445,European Region
+"Khanna, India",30.697852,76.211229,South-East Asian Region
+"Khobd, Mongolia",47.112965,92.311075,Western Pacific Region
+"Khon Kaen, Thailand",16.441936,102.835992,South-East Asian Region
+"Khoramabad, Iran",33.464683,48.338964,Eastern Mediterranean Region
+"Khulna, Bangladesh",22.845641,89.540328,South-East Asian Region
+"Khurja, India",28.251354,77.85388,South-East Asian Region
+"Kibbutz Erez, Israel",31.55984,34.564889,European Region
+"Kibbutz Sde Yo'av, Israel",31.645723,34.676849,European Region
+"Kiel, Germany",54.323293,10.122765,European Region
+"Kielce, Poland",50.866077,20.628568,European Region
+"Kilis, Turkey",36.716477,37.114661,European Region
+"Kingsport-Bristol-Bristol, TN-VA, United States of America",37.431573,-78.656894,Region of the Americas
+"Kingston-upon-Hull, United Kingdom",53.745671,-0.336741,European Region
+"Kingston, Canada",44.231172,-76.485954,European Region
+"Kingston, Jamaica",18.017874,-76.809904,European Region
+"Kinston, NC, United States of America",35.262664,-77.581635,Region of the Americas
+"Kirikkale, Turkey",39.839784,33.508878,European Region
+"Kirklareli, Turkey",41.735472,27.224369,European Region
+"Kirsehir, Turkey",39.146078,34.159499,European Region
+"Kiryat Malachi, Israel",31.730202,34.746996,European Region
+"Kitakyushu, Japan",33.883409,130.875216,Western Pacific Region
+"Kitchener, Canada",43.412924,-80.477147,Region of the Americas
+"Kitimat, Canada",54.063274,-128.636961,Region of the Americas
+"Kladno, Czech Republic",50.141699,14.106746,European Region
+"Klagenfurt, Austria",46.63646,14.312225,European Region
+"Klamath Falls, OR, United States of America",42.224867,-121.78167,Region of the Americas
+"Knoxville, TN, United States of America",35.960638,-83.920739,Region of the Americas
+"Kobe, Japan",34.690083,135.195511,Western Pacific Region
+"Kobenhavn, Denmark",55.676097,12.568337,European Region
+"Kochi, India",9.931233,76.267304,South-East Asian Region
+"Kohima, India",25.658596,94.105331,South-East Asian Region
+"Kokomo, IN, United States of America",40.486427,-86.133603,Region of the Americas
+"Kolhapur, India",16.704987,74.243253,South-East Asian Region
+"Kolkata, India",22.572646,88.363895,South-East Asian Region
+"Kollam, India",8.893212,76.61414,South-East Asian Region
+"Koln, Germany",50.937531,6.960279,European Region
+"Konstanz, Germany",47.67795,9.173238,European Region
+"Konya, Turkey",37.874643,32.493155,European Region
+"Kopavogur, Iceland",64.103302,-21.883258,European Region
+"Korba, India",22.35945,82.75006,South-East Asian Region
+"Koropi, Greece",37.901144,23.87265,European Region
+"Kosice, Slovakia",48.716386,21.261075,European Region
+"Koszalin, Poland",54.194322,16.171491,European Region
+"Kota Kinabalu, Malaysia",5.980408,116.073457,European Region
+"Kota, India",25.213816,75.864753,Western Pacific Region
+"Kottayam, India",9.591567,76.522153,South-East Asian Region
+"Kozhikode, India",11.258753,75.78041,South-East Asian Region
+"Krakow, Poland",50.06465,19.94498,European Region
+"Krefeld, Germany",51.338761,6.585342,European Region
+"Kuantan, Malaysia",3.763386,103.220183,Western Pacific Region
+"Kuching, Malaysia",1.607681,110.378544,Western Pacific Region
+"Kunming, China",24.880095,102.832892,Western Pacific Region
+"Kuopio, Finland",62.89797,27.678172,European Region
+"Kurnool , India",15.828126,78.037279,European Region
+"Kutahya, Turkey",39.419955,29.985732,European Region
+"Kyoto, Japan",35.011636,135.768029,Western Pacific Region
+"L'Assomption, Canada",45.85199,-73.412398,Region of the Americas
+"La Calera, Chile",-32.787796,-71.203996,Region of the Americas
+"La Crosse, WI-MN, United States of America",43.801356,-91.239581,Region of the Americas
+"La Cruz, Chile",-32.825807,-71.227305,Region of the Americas
+"La Dore, Canada",48.713647,-72.649283,Region of the Americas
+"La Patrie, Canada",45.401858,-71.249643,Region of the Americas
+"La Paz, Bolivia",-16.489689,-68.119294,Region of the Americas
+"La Peche, Canada",45.68621,-75.992255,Region of the Americas
+"La Quillota, Chile",-32.880303,-71.249716,Region of the Americas
+"La Rochelle, France",46.160329,-1.151139,European Region
+"La Spezia, Italy",44.10245,9.824083,European Region
+"Lac-edouard, Canada",47.66173,-72.271136,Region of the Americas
+"Laconia, NH, United States of America",43.527855,-71.470351,Region of the Americas
+"Lafayette, IN, United States of America",40.416702,-86.875287,Region of the Americas
+"Lafayette, LA, United States of America",30.22409,-92.019843,Region of the Americas
+"Lahore - Johar Town, Pakistan",31.462199,74.294221,Eastern Mediterranean Region
+"Lake Charles, LA, United States of America",30.226595,-93.217376,Region of the Americas
+"Lake Havasu City-Kingman, AZ, United States of America",35.189443,-114.053006,Region of the Americas
+"Lakeland-Winter Haven, FL, United States of America",28.027677,-81.724656,Region of the Americas
+"Lamont, Canada",53.760198,-112.779539,Region of the Americas
+"Lampang, Thailand",18.28884,99.490874,South-East Asian Region
+"Lamphun, Thailand",18.574461,99.008722,South-East Asian Region
+"Lancaster, PA, United States of America",40.037876,-76.305514,Region of the Americas
+"Langley, Canada",49.074331,-122.559322,Region of the Americas
+"Lansing-East Lansing, MI, United States of America",42.761259,-84.542783,Region of the Americas
+"Lanzhou, China",36.061089,103.834304,Western Pacific Region
+"Laramie, WY, United States of America",41.311367,-105.591101,Region of the Americas
+"Las Cruces, NM, United States of America",32.31994,-106.763654,Region of the Americas
+"Las Palmas, Spain",28.123546,-15.436257,European Region
+"Las Vegas-Paradise, NV, United States of America",36.097195,-115.146665,Region of the Americas
+"Latacunga, Ecuador",-0.775495,-78.52065,Region of the Americas
+"Launceston, Australia",-41.426181,147.112468,Western Pacific Region
+"Laurel, MS, United States of America",31.694051,-89.130612,Region of the Americas
+"Laval, Canada",45.606649,-73.712409,Region of the Americas
+"Lawrenceburg, TN, United States of America",35.242302,-87.334739,Region of the Americas
+"Le Havre, France",49.49437,0.107929,European Region
+"Le Mans, France",48.00611,0.199556,European Region
+"Lebanon, NH-VT, United States of America",43.642293,-72.251757,Region of the Americas
+"Lebanon, PA, United States of America",40.340925,-76.41135,Region of the Americas
+"Lecco, Italy",45.85657,9.39767,European Region
+"Leeds, United Kingdom",53.800755,-1.549077,European Region
+"Lefkosia, Cyprus",35.185566,33.382276,European Region
+"Legnica, Poland",51.207007,16.155323,European Region
+"Leicester, United Kingdom",52.636878,-1.139759,European Region
+"Leipzig, Germany",51.339696,12.373075,European Region
+"Lemesos, Cyprus",34.70713,33.022617,European Region
+"Lens, France",50.42893,2.83183,European Region
+"Leon, Mexico",21.125008,-101.68596,Region of the Americas
+"Leszno, Poland",51.841986,16.593754,European Region
+"Lethbridge, Canada",49.69349,-112.84184,Region of the Americas
+"Leverkusen, Germany",51.045925,7.01922,European Region
+"Lewiston-Auburn, ME, United States of America",44.016481,-70.285667,Region of the Americas
+"Lexington-Fayette, KY, United States of America",38.040584,-84.503716,Region of the Americas
+"Lhasa, China",29.652491,91.17211,Western Pacific Region
+"Lianyungang, China",34.596653,119.221611,Western Pacific Region
+"Liberec, Czech Republic",50.76628,15.054339,European Region
+"Liege, Belgium",50.632557,5.579666,European Region
+"Lille, France",50.62925,3.057256,European Region
+"Lima, OH, United States of America",40.742551,-84.105226,European Region
+"Lima, Peru",-12.046374,-77.042793,Region of the Americas
+"Limeira, Brazil",-22.566535,-47.397437,Region of the Americas
+"Limoges, France",45.833619,1.261105,European Region
+"Lincoln, NE, United States of America",40.825763,-96.685198,Region of the Americas
+"Linea de la Concepcion, La, Spain",36.168256,-5.349472,European Region
+"Linfen, China",36.088005,111.518976,Western Pacific Region
+"Linz, Austria",48.30694,14.28583,European Region
+"Lisboa, Portugal",38.722252,-9.139337,European Region
+"Little Rock-North Little Rock-Conway, AR, United States of America",34.726942,-92.334489,Region of the Americas
+"Liuzhou, China",24.326038,109.42841,Western Pacific Region
+"Liverpool, United Kingdom",53.408371,-2.991573,European Region
+"Livorno, Italy",43.548473,10.310567,European Region
+"Ljubljana, Slovenia",46.056947,14.505751,European Region
+"Lodz, Poland",51.759249,19.455983,European Region
+"Loei, Thailand",17.486023,101.7223,South-East Asian Region
+"Logan, UT-ID, United States of America",41.73698,-111.833836,Region of the Americas
+"Logrono, Spain",42.46272,-2.444985,European Region
+"Lomza, Poland",53.17812,22.059032,European Region
+"London, Canada",42.98695,-81.243177,Region of the Americas
+"London, United Kingdom",51.507351,-0.127758,European Region
+"Longueuil, Canada",45.536944,-73.510713,Region of the Americas
+"Lorient, France",47.748252,-3.370245,European Region
+"Los Andes, Chile",-32.833799,-70.597218,Region of the Americas
+"Los Angeles-Long Beach-Santa Ana, CA, United States of America",33.758846,-118.13139,Region of the Americas
+"Louisville/Jefferson County, KY-IN, United States of America",38.252665,-85.758456,Region of the Americas
+"Lower Hunter, Australia",-32.260669,150.884448,Western Pacific Region
+"Lower Hutt, New Zealand",-41.209165,174.908056,Western Pacific Region
+"Lubeck, Germany",53.865467,10.686559,European Region
+"Lublin, Poland",51.246454,22.568446,European Region
+"Lucknow, India",26.846694,80.946166,South-East Asian Region
+"Ludhiana, India",30.900965,75.857276,South-East Asian Region
+"Ludwigsburg, Germany",48.894062,9.195464,European Region
+"Ludwigshafen am Rhein, Germany",49.47741,8.44518,European Region
+"Lugano, Switzerland",46.003678,8.951052,European Region
+"Lumberton, NC, United States of America",34.61822,-79.008642,Region of the Americas
+"Lund, Sweden",55.70466,13.191007,European Region
+"Luneburger Heide, Germany",53.166083,9.918994,European Region
+"Luoyang, China",34.619683,112.45404,Western Pacific Region
+"Luxembourg, Luxembourg",49.611621,6.131935,European Region
+"Luzern, Switzerland",47.050168,8.309307,European Region
+"Luzhou, China",28.871811,105.442258,Western Pacific Region
+"Lynchburg, VA, United States of America",37.413754,-79.142246,Region of the Americas
+"Lyon, France",45.764043,4.835659,European Region
+"Ma'ameer, Bahrain",26.134677,50.613255,Eastern Mediterranean Region
+"Maanshan, China",31.670452,118.50676,Western Pacific Region
+"Machali, Chile",-34.179452,-70.656515,Region of the Americas
+"Macon, GA, United States of America",32.840695,-83.632402,Region of the Americas
+"Madera, CA, United States of America",36.961336,-120.060718,Region of the Americas
+"Madison, WI, United States of America",43.073052,-89.40123,Region of the Americas
+"Madrid, Spain",40.416775,-3.70379,European Region
+"Madurai, India",9.925201,78.119775,South-East Asian Region
+"Mae Hong Son, Thailand",19.30203,97.965437,South-East Asian Region
+"Magdeburg, Germany",52.120533,11.627624,European Region
+"Mahad, India",18.082021,73.422441,South-East Asian Region
+"Mainz, Germany",49.992862,8.247253,European Region
+"Majadahonda, Spain",40.473759,-3.868312,European Region
+"Malaga, Spain",36.721261,-4.421266,European Region
+"Malatya, Turkey",38.355363,38.333525,European Region
+"Male, Maldives",4.175496,73.509347,South-East Asian Region
+"Malmo, Sweden",55.604981,13.003822,European Region
+"Manchester-Nashua, NH, United States of America",42.77995,-71.477185,European Region
+"Manchester, United Kingdom",53.480759,-2.242631,Region of the Americas
+"Mandalay, Myanmar",21.958828,96.089103,South-East Asian Region
+"Manila, Philippines",14.599512,120.98422,Western Pacific Region
+"Manisa, Turkey",38.614034,27.429562,European Region
+"Manizales, Colombia",5.070275,-75.513817,Region of the Americas
+"Mannheim, Germany",49.487459,8.466039,European Region
+"Manta, Ecuador",-0.967653,-80.70891,Region of the Americas
+"Marbella, Spain",36.510071,-4.882447,European Region
+"Marburg, Germany",50.802173,8.766793,European Region
+"Mardin, Turkey",37.312903,40.733951,European Region
+"Margherita, India",27.291066,95.669461,South-East Asian Region
+"Maribor, Slovenia",46.55465,15.645881,European Region
+"Marilia, Brazil",-22.217585,-49.950529,Region of the Americas
+"Marne la Vallee, France",48.859276,2.598505,European Region
+"Marseille, France",43.296482,5.36978,European Region
+"Marshall, MN, United States of America",44.448423,-95.791192,Region of the Americas
+"Marshall, TX, United States of America",32.544871,-94.367418,Region of the Americas
+"Martigues, France",43.404811,5.053728,European Region
+"Masterton, New Zealand",-40.951112,175.65735,Western Pacific Region
+"Mataro, Spain",41.538112,2.444741,European Region
+"Matosinhos, Portugal",41.184436,-8.696277,European Region
+"Maua, Brazil",-23.668163,-46.461709,Region of the Americas
+"Mazar-e Sharif - Camp Northern Lights , Afghanistan",36.692617,67.117951,Region of the Americas
+"McAlester, OK, United States of America",34.93343,-95.769713,Region of the Americas
+"McAllen-Edinburg-Mission, TX, United States of America",26.215907,-98.325293,Region of the Americas
+"Medellin, Colombia",6.253041,-75.564574,Region of the Americas
+"Medford, OR, United States of America",42.326515,-122.875595,Region of the Americas
+"Medicine Hat, Canada",50.040549,-110.676426,Region of the Americas
+"Meerut, India",28.984462,77.706414,South-East Asian Region
+"Melbourne, Australia",-37.814107,144.96328,Western Pacific Region
+"Melun, France",48.542105,2.6554,European Region
+"Memphis, TN-MS-AR, United States of America",35.149534,-90.04898,Region of the Americas
+"Merced, CA, United States of America",37.302163,-120.482968,Region of the Americas
+"Meridian, MS, United States of America",32.36431,-88.703656,Region of the Americas
+"Metz, France",49.119309,6.175716,European Region
+"Mexico city, Mexico",19.432608,-99.133208,Region of the Americas
+"Miami-Fort Lauderdale-Pompano Beach, FL, United States of America",27.574312,-80.802607,Region of the Americas
+"Mianyang, China",31.467495,104.678946,Western Pacific Region
+"Michigan City-La Porte, IN, United States of America",41.707539,-86.89503,Region of the Americas
+"Middlesborough, KY, United States of America",36.607257,-83.714285,Region of the Americas
+"Midlands, Mauritius",-20.339905,57.568847,African Region
+"Milagro, Ecuador",-2.138768,-79.594054,Region of the Americas
+"Milano, Italy",45.465422,9.185924,European Region
+"Milwaukee-Waukesha-West Allis, WI, United States of America",43.016681,-88.007031,Region of the Americas
+"Minneapolis-St. Paul-Bloomington, MN-WI, United States of America",44.938911,-93.117755,Region of the Americas
+"Minsk , Belarus",53.90454,27.561524,Region of the Americas
+"Mississauga, Canada",43.589045,-79.64412,Region of the Americas
+"Missoula, MT, United States of America",46.878718,-113.996586,Region of the Americas
+"Mobile, AL, United States of America",30.695366,-88.039891,Region of the Americas
+"Modena, Italy",44.647128,10.925227,European Region
+"Modesto, CA, United States of America",37.639097,-120.996878,Region of the Americas
+"Modi'in, Israel",31.90912,35.002462,European Region
+"Mogilev, Belarus",53.900716,30.33136,European Region
+"Mokpo, Republic of Korea",34.811835,126.392166,Western Pacific Region
+"Monaco, Monaco",43.737411,7.420816,European Region
+"Monchengladbach, Germany",51.180457,6.442804,European Region
+"Moncton, Canada",46.087817,-64.778231,Region of the Americas
+"Monroe, LA, United States of America",32.509311,-92.119301,Region of the Americas
+"Monroe, MI, United States of America",41.916434,-83.39771,Region of the Americas
+"Mons, Belgium",50.454241,3.956659,European Region
+"Montbeliard, France",47.510356,6.798466,European Region
+"Monterrey, Mexico",25.686614,-100.316113,Region of the Americas
+"Montevideo, Uruguay",-34.901113,-56.164531,Region of the Americas
+"Montgomery, AL, United States of America",32.366805,-86.299969,Region of the Americas
+"Montpellier, France",43.610769,3.876716,European Region
+"Montreal, Canada",45.501689,-73.567256,Region of the Americas
+"Monza, Italy",45.5845,9.274449,European Region
+"Morgantown, WV, United States of America",39.629526,-79.955897,Region of the Americas
+"Morogoro, Tanzania",-6.830373,37.670589,African Region
+"Morrisburg, Canada",44.897789,-75.183397,Region of the Americas
+"Moscow, Russian Federation",55.755826,37.6173,European Region
+"Most, Czech Republic",50.501555,13.632912,European Region
+"Mostoles, Spain",40.323213,-3.867629,European Region
+"Mount Pearl, Canada",47.520641,-52.807682,Region of the Americas
+"Mount Vernon, IL, United States of America",38.317271,-88.90312,Region of the Americas
+"Mudanjiang, China",44.551653,129.633169,Western Pacific Region
+"Mugla, Turkey",37.215374,28.363394,European Region
+"Mulheim a.d.Ruhr, Germany",51.36591,7.628279,European Region
+"Mulhouse, France",47.750839,7.335888,European Region
+"Mumbai, India",19.075984,72.877656,South-East Asian Region
+"Munchen, Germany",48.135125,11.581981,European Region
+"Muncie, IN, United States of America",40.193377,-85.38636,Region of the Americas
+"Munster, Germany",51.960665,7.626135,European Region
+"Murun, Mongolia",49.64289,100.17719,Western Pacific Region
+"Mus, Turkey",38.734561,41.491038,European Region
+"Muscat, Oman",23.58589,58.405923,Eastern Mediterranean Region
+"Muscatine, IA, United States of America",41.424473,-91.043205,Region of the Americas
+"Muskegon-Norton Shores, MI, United States of America",43.168904,-86.263946,Region of the Americas
+"Nabih Saleh, Bahrain",26.182327,50.584754,Eastern Mediterranean Region
+"Nagaon, India",26.346371,92.684043,South-East Asian Region
+"Nagda, India",23.44546,75.416992,South-East Asian Region
+"Nagoya, Japan",35.181446,136.906398,Western Pacific Region
+"Nagpur, India",21.1458,79.088155,South-East Asian Region
+"Nahan, India",30.559933,77.295483,South-East Asian Region
+"Nakhon Ratchasima, Thailand",14.9799,102.097769,South-East Asian Region
+"Nakhon Sawan, Thailand",15.693007,100.122559,South-East Asian Region
+"Nalbari, India",26.444619,91.441053,South-East Asian Region
+"Nalgonda , India",17.057571,79.262029,South-East Asian Region
+"Nan, Thailand",18.775632,100.773042,South-East Asian Region
+"Nanaimo, Canada",49.165884,-123.940065,Region of the Americas
+"Nanchang, China",28.682892,115.858198,Western Pacific Region
+"Nanchong, China",30.837793,106.110698,Western Pacific Region
+"Nancy, France",48.692054,6.184417,European Region
+"Nanjing, China",32.060255,118.796877,Western Pacific Region
+"Nanning, China",22.817002,108.366543,Western Pacific Region
+"Nantes, France",47.218371,-1.553621,European Region
+"Nantong, China",31.980172,120.894291,Western Pacific Region
+"Napa, CA, United States of America",38.297538,-122.286865,Region of the Americas
+"Napier, New Zealand",-39.492844,176.912018,Western Pacific Region
+"Napoli, Italy",40.851775,14.268124,European Region
+"Narathiwat, Thailand",6.425461,101.825314,South-East Asian Region
+"Narayonganj, Bangladesh",23.62264,90.499797,South-East Asian Region
+"Narva, Estonia",59.37968,28.179133,European Region
+"Nashik, India",19.997453,73.789802,South-East Asian Region
+"Nashville-Davidson--Murfreesboro--Franklin, TN, United States of America",35.89948,-86.781189,Region of the Americas
+"Navi Mumbai, India",19.033049,73.029662,South-East Asian Region
+"Naya Nangal, India",31.386641,76.355046,South-East Asian Region
+"Nellore, India",14.442599,79.986456,South-East Asian Region
+"Nelson, Canada",49.492812,-117.294834,Region of the Americas
+"Neu-Ulm, Germany",48.390604,10.00604,European Region
+"Nevsehir, Turkey",38.624694,34.714151,European Region
+"New Castle, IN, United States of America",39.928935,-85.370248,Region of the Americas
+"New Haven-Milford, CT, United States of America",41.230698,-73.064036,Region of the Americas
+"New Orleans-Metairie-Kenner, LA, United States of America",29.98453,-90.204452,Region of the Americas
+"New York-Northern New Jersey-Long Island, NY-NJ-PA, United States of America",41.203322,-77.194525,Region of the Americas
+"Newcastle upon Tyne, United Kingdom",54.978252,-1.61778,European Region
+"Newmarket, Canada",44.059187,-79.461256,Region of the Americas
+"Newport, United Kingdom",51.584151,-2.997664,European Region
+"Nice, France",43.710173,7.261953,European Region
+"Nigde, Turkey",37.969774,34.676608,European Region
+"Niigata, Japan",37.916192,139.036413,Western Pacific Region
+"Nijmegen, Netherlands",51.812563,5.837226,European Region
+"Niles-Benton Harbor, MI, United States of America",42.104359,-86.445355,Region of the Americas
+"Nimes, France",43.836699,4.360054,European Region
+"Ningbo, China",29.868336,121.54399,Western Pacific Region
+"Niort, France",46.323716,-0.464777,European Region
+"Nis, Serbia",43.320902,21.895759,European Region
+"Nitra, Slovakia",48.306141,18.076376,European Region
+"Nogales, AZ, United States of America",31.340378,-110.934253,Region of the Americas
+"Noida, India",28.535516,77.391026,South-East Asian Region
+"Nonthaburi , Thailand",13.862113,100.514353,South-East Asian Region
+"North Bay, Canada",46.309115,-79.46082,Region of the Americas
+"North Lakhimpur Town, India",27.225319,94.105331,South-East Asian Region
+"Northampton, United Kingdom",52.240477,-0.902656,European Region
+"Norwich-New London, CT, United States of America",41.524265,-72.07591,European Region
+"Norwich, United Kingdom",52.630886,1.297355,Region of the Americas
+"Notre-Dame-du-Rosaire, Canada",46.825481,-70.392222,Region of the Americas
+"Nottingham, United Kingdom",52.954783,-1.158109,European Region
+"Novara, Italy",45.44693,8.622161,European Region
+"Nowy Sacz, Poland",49.617454,20.715333,European Region
+"Nurnberg, Germany",49.45203,11.07675,European Region
+"Oakville, Canada",43.467517,-79.687666,Region of the Americas
+"Offenburg, Germany",48.473451,7.949802,European Region
+"Ogden-Clearfield, UT, United States of America",41.110777,-112.026054,Region of the Americas
+"Okayama, Japan",34.655146,133.919502,Western Pacific Region
+"Oklahoma City, OK, United States of America",35.46756,-97.516428,Region of the Americas
+"Olsztyn, Poland",53.778422,20.480119,European Region
+"Omaha-Council Bluffs, NE-IA, United States of America",41.218364,-95.817993,Region of the Americas
+"Opole, Poland",50.675107,17.921298,European Region
+"Ordu, Turkey",40.986166,37.879721,European Region
+"Orlando-Kissimmee, FL, United States of America",28.294555,-81.408858,Region of the Americas
+"Orleans, France",47.902964,1.909251,European Region
+"Osaka, Japan",34.693738,135.502165,Western Pacific Region
+"Osasco, Brazil",-23.532881,-46.792003,Region of the Americas
+"Oshawa, Canada",43.897093,-78.865791,Region of the Americas
+"Oslo, Norway",59.913869,10.752245,European Region
+"Osmaniye, Turkey",37.074628,36.2464,European Region
+"Osnabruck, Germany",52.279911,8.047179,European Region
+"Osoyoos, Canada",49.032304,-119.468163,Region of the Americas
+"Ostrava, Czech Republic",49.820923,18.262524,European Region
+"Ostrow Wielkopolski, Poland",51.654986,17.806826,European Region
+"Ottawa, Canada",45.42153,-75.697193,Region of the Americas
+"Oulu, Finland",65.012089,25.465077,European Region
+"Oviedo, Spain",43.361915,-5.849389,European Region
+"Owensboro, KY, United States of America",37.771907,-87.111168,Region of the Americas
+"Oxford, United Kingdom",51.752021,-1.257726,European Region
+"Oxnard-Thousand Oaks-Ventura, CA, United States of America",34.159817,-119.045183,Region of the Americas
+"Pabianice, Poland",51.65673,19.35776,European Region
+"Padova, Italy",45.406435,11.876761,European Region
+"Paducah, KY-IL, United States of America",37.083389,-88.600048,Region of the Americas
+"Palm Bay-Melbourne-Titusville, FL, United States of America",28.612219,-80.807554,Region of the Americas
+"Palma de Mallorca, Spain",39.569601,2.65016,European Region
+"Pamplona, Spain",42.812526,-1.645775,European Region
+"Panaji, India",15.49093,73.82785,South-East Asian Region
+"Panevezys, Lithuania",55.734792,24.357477,European Region
+"Panorama, Greece",40.588541,23.027929,European Region
+"Panzhihua, China",26.582347,101.718637,Western Pacific Region
+"Pardubice, Czech Republic",50.034309,15.781199,European Region
+"Paredes, Portugal",41.205167,-8.330387,European Region
+"Paris, France",48.856614,2.352222,European Region
+"Parkersburg-Marietta-Vienna, WV-OH, United States of America",39.263721,-81.555488,Region of the Americas
+"Parma, Italy",44.801485,10.327904,European Region
+"Parry Sound, Canada",45.347393,-80.034783,Region of the Americas
+"Parwanoo, India",30.837164,76.961426,South-East Asian Region
+"Pascagoula, MS, United States of America",30.365755,-88.556127,Region of the Americas
+"Patancheru, India",17.528743,78.266725,South-East Asian Region
+"Pathanamthitta, India",9.264758,76.787041,South-East Asian Region
+"Pathum Thani, Thailand",14.020839,100.525028,South-East Asian Region
+"Patiala, India",30.339781,76.38688,South-East Asian Region
+"Patna, India",25.594095,85.137565,South-East Asian Region
+"Pau, France",43.2951,-0.370797,European Region
+"Paulinia, Brazil",-22.765015,-47.150027,Region of the Americas
+"Pavia, Italy",45.184725,9.158207,European Region
+"Pendleton-Hermiston, OR, United States of America",45.908489,-119.104991,Region of the Americas
+"Pensacola-Ferry Pass-Brent, FL, United States of America",30.471042,-87.231054,Region of the Americas
+"Peoria, IL, United States of America",40.693649,-89.588986,Region of the Americas
+"Pernik, Bulgaria",42.605186,23.037837,European Region
+"Perpignan, France",42.688659,2.894833,European Region
+"Perth, Australia",-31.953513,115.857047,Western Pacific Region
+"Perugia, Italy",43.110717,12.390828,European Region
+"Pesaro, Italy",43.912476,12.915549,European Region
+"Pescara, Italy",42.46179,14.21609,European Region
+"Peshwar, Pakistan",34.014975,71.58049,Eastern Mediterranean Region
+"Petaling Jaya, Malaysia",3.127887,101.594489,Western Pacific Region
+"Peterborough, Canada",44.309058,-78.319747,Region of the Americas
+"Phayao, Thailand",19.215437,100.202369,South-East Asian Region
+"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD, United States of America",39.814826,-74.967485,Region of the Americas
+"Phoenix-Mesa-Scottsdale, AZ, United States of America",33.678899,-111.883544,Region of the Americas
+"Phrae, Thailand",18.144577,100.140283,South-East Asian Region
+"Phuket, Thailand",7.951933,98.338088,South-East Asian Region
+"Piacenza, Italy",45.052621,9.692984,European Region
+"Pila, Poland",53.150967,16.738227,European Region
+"Pingdingshan, China",33.76617,113.192661,Western Pacific Region
+"Piotrkow Trybunalski, Poland",51.405172,19.703024,European Region
+"Piracicaba, Brazil",-22.734286,-47.648064,Region of the Americas
+"Pirassununga, Brazil",-21.996465,-47.426194,Region of the Americas
+"Pisa, Italy",43.722839,10.401689,European Region
+"Pitesti, Romania",44.85648,24.869182,European Region
+"Pitt Meadow, Canada",49.208381,-122.709213,Region of the Americas
+"Pittsburgh, PA, United States of America",40.440625,-79.995886,Region of the Americas
+"Pittsfield, MA, United States of America",42.450085,-73.245382,Region of the Americas
+"Platteville, WI, United States of America",42.73416,-90.478462,Region of the Americas
+"Pleven, Bulgaria",43.417042,24.606685,European Region
+"Plock, Poland",52.546345,19.706536,European Region
+"Ploiesti, Romania",44.936664,26.012862,European Region
+"Plovdiv, Bulgaria",42.135408,24.74529,European Region
+"Plymouth, United Kingdom",50.375457,-4.142656,European Region
+"Plzen, Czech Republic",49.738431,13.373637,European Region
+"Pocatello, ID, United States of America",42.871303,-112.445534,Region of the Americas
+"Pohang, Republic of Korea",36.019018,129.343481,Western Pacific Region
+"Poitiers, France",46.580224,0.340375,European Region
+"Ponca City, OK, United States of America",36.706981,-97.085595,Region of the Americas
+"Pondicherry, India",11.91386,79.814472,South-East Asian Region
+"Porirua, New Zealand",-41.1339,174.840601,Western Pacific Region
+"Port Alice, Canada",50.425429,-127.487708,Region of the Americas
+"Port Louis, Mauritius",-20.160891,57.501222,African Region
+"Port Moody, Canada",49.284911,-122.867756,Region of the Americas
+"Port Stanley, Canada",42.664135,-81.215633,Region of the Americas
+"Portland-South Portland-Biddeford, ME, United States of America",43.709536,-70.309204,Region of the Americas
+"Portland-Vancouver-Beaverton, OR-WA, United States of America",45.487062,-122.80371,Region of the Americas
+"Porto, Portugal",41.157944,-8.629105,European Region
+"Portoviejo, Ecuador",-1.054723,-80.45249,Region of the Americas
+"Portsmouth, OH, United States of America",38.731743,-82.997674,Region of the Americas
+"Portsmouth, United Kingdom",50.819768,-1.087977,Region of the Americas
+"Potsdam, Germany",52.390569,13.064473,European Region
+"Poughkeepsie-Newburgh-Middletown, NY, United States of America",41.445927,-74.422934,Region of the Americas
+"Powell River, Canada",49.835235,-124.524706,Region of the Americas
+"Poznan, Poland",52.406374,16.925168,European Region
+"Praha, Czech Republic",50.075538,14.4378,European Region
+"Prato, Italy",43.877705,11.102228,European Region
+"Prescott, AZ, United States of America",34.540024,-112.468502,Region of the Americas
+"Presidente Prudente, Brazil",-22.121126,-51.393006,Region of the Americas
+"Preston, United Kingdom",53.763201,-2.70309,European Region
+"Pretoria, South Africa",-25.747868,28.229271,African Region
+"Prince Albert, Canada",53.203349,-105.753071,Region of the Americas
+"Prince George, Canada",53.917064,-122.749669,Region of the Americas
+"Prineville, OR, United States of America",44.299849,-120.834466,Region of the Americas
+"Providence-New Bedford-Fall River, RI-MA, United States of America",42.407211,-71.382437,Region of the Americas
+"Provo-Orem, UT, United States of America",40.286006,-111.692627,Region of the Americas
+"Przemysl, Poland",49.783862,22.767791,European Region
+"Puebla, Mexico",19.041297,-98.2062,Region of the Americas
+"Pueblo, CO, United States of America",38.254447,-104.609141,Region of the Americas
+"Puente Alto, Chile",-33.618608,-70.590606,Region of the Americas
+"Puerto La Cruz, Venezuela",10.200799,-64.633464,Region of the Americas
+"Pune, India",18.52043,73.856744,South-East Asian Region
+"Qingdao, China",36.067108,120.382609,Western Pacific Region
+"Qinhuangdao, China",39.935385,119.600493,Western Pacific Region
+"Qiqihar, China",47.354348,123.918186,Western Pacific Region
+"Quanzhou, China",24.874132,118.675676,Western Pacific Region
+"Quebec, Canada",52.939916,-73.549136,Region of the Americas
+"Quesnel, Canada",52.981737,-122.494906,Region of the Americas
+"Quimper, France",47.997542,-4.097899,European Region
+"Quincy, IL-MO, United States of America",39.935602,-91.409873,Region of the Americas
+"Quito, Ecuador",-0.180653,-78.467838,Region of the Americas
+"Qujing, China",25.49,103.796167,Western Pacific Region
+"Radom, Poland",51.402724,21.147133,European Region
+"Raipur, India",21.251384,81.629641,South-East Asian Region
+"Rajkot, India",22.303895,70.80216,South-East Asian Region
+"Rajshahi, Bangladesh",24.363589,88.624135,South-East Asian Region
+"Raleigh-Cary, NC, United States of America",35.817867,-78.792512,Region of the Americas
+"Ramagundam, India",18.75955,79.481638,South-East Asian Region
+"Rancagua, Chile",-34.170132,-70.740626,Region of the Americas
+"Rapid City, SD, United States of America",44.080543,-103.231015,Region of the Americas
+"Ras Hayan, Bahrain",26.04,50.631389,Eastern Mediterranean Region
+"Ratchaburi, Thailand",13.528289,99.813421,South-East Asian Region
+"Ravenna, Italy",44.41836,12.203529,European Region
+"Rawalpindi, Pakistan",33.598394,73.044135,Eastern Mediterranean Region
+"Rayagada, India",19.171209,83.416323,South-East Asian Region
+"Rayong, Thailand",12.707434,101.147352,South-East Asian Region
+"Reading, PA, United States of America",40.335648,-75.926875,Region of the Americas
+"Reading, United Kingdom",51.454265,-0.97813,Region of the Americas
+"Red Bluff, CA, United States of America",40.178489,-122.23583,Region of the Americas
+"Red Deer, Canada",52.268112,-113.811239,Region of the Americas
+"Redding, CA, United States of America",40.58654,-122.391675,Region of the Americas
+"Reggio nell Emilia, Italy",44.698993,10.629686,European Region
+"Regina, Canada",50.445211,-104.618894,Region of the Americas
+"Rehovot, Israel",31.892773,34.811272,European Region
+"Reims, France",49.258329,4.031696,European Region
+"Rengo, Chile",-34.402379,-70.867441,Region of the Americas
+"Rennes, France",48.117266,-1.677793,European Region
+"Reno-Sparks, NV, United States of America",39.516934,-119.816219,Region of the Americas
+"Reutlingen, Germany",48.506939,9.203804,European Region
+"Revelstoke, Canada",50.998115,-118.195672,Region of the Americas
+"Reykjavik, Iceland",64.126521,-21.817439,European Region
+"Ribeirio Preto, Brazil",-21.170401,-47.810324,Region of the Americas
+"Richmond-Berea, KY, United States of America",37.692171,-84.259497,Region of the Americas
+"Richmond, Canada",49.16659,-123.133569,Region of the Americas
+"Richmond, VA, United States of America",37.540725,-77.436048,Region of the Americas
+"Riga, Latvia",56.949649,24.105186,European Region
+"Rimini, Italy",44.067829,12.569516,European Region
+"Rio Claro, Brazil",-22.414902,-47.565139,Region of the Americas
+"Rio de Janeiro, Brazil",-22.906847,-43.172896,Region of the Americas
+"Rishikesh, India",30.086928,78.267612,South-East Asian Region
+"Riverside-San Bernardino-Ontario, CA, United States of America",34.063344,-117.650888,Region of the Americas
+"Riverton, WY, United States of America",43.024959,-108.380104,Region of the Americas
+"Rize, Turkey",41.025511,40.517666,European Region
+"Rizhao, China",35.416734,119.526925,Western Pacific Region
+"Roanne, France",46.034432,4.072695,European Region
+"Roanoke, VA, United States of America",37.27097,-79.941427,Region of the Americas
+"Rochester, MN, United States of America",44.012122,-92.480199,Region of the Americas
+"Rochester, NY, United States of America",43.16103,-77.610922,Region of the Americas
+"Rock Springs, WY, United States of America",41.587464,-109.202904,Region of the Americas
+"Rockford, IL, United States of America",42.271131,-89.093995,Region of the Americas
+"Rocky Mount, NC, United States of America",35.93821,-77.790534,Region of the Americas
+"Roha, India",18.438951,73.116751,South-East Asian Region
+"Roma, Italy",41.902784,12.496366,European Region
+"Rome, GA, United States of America",34.257038,-85.164673,Region of the Americas
+"Rostock, Germany",54.092441,12.099147,European Region
+"Rotorua, New Zealand",-38.136848,176.249746,Western Pacific Region
+"Rotterdam, Netherlands",51.92442,4.477733,European Region
+"Rouen, France",49.443232,1.099971,European Region
+"Rourkela, India",22.260423,84.853584,South-East Asian Region
+"Rouyn-Noranda, Canada",48.234236,-79.018784,Region of the Americas
+"Ruse, Bulgaria",43.835571,25.965655,European Region
+"Russellville, AR, United States of America",35.278417,-93.133786,Region of the Americas
+"Rutland, VT, United States of America",43.610624,-72.972606,Region of the Americas
+"Rybnik, Poland",50.102174,18.546285,European Region
+"Rzeszow, Poland",50.041187,21.99912,European Region
+"s' Gravenhage, Netherlands",52.070498,4.3007,European Region
+"Sa Kaeo, Thailand",13.824041,102.064582,South-East Asian Region
+"Saarbrucken, Germany",49.240157,6.996933,European Region
+"Sabaneta, Colombia",6.150559,-75.61682,Region of the Americas
+"Sacramento--Arden-Arcade--Roseville, CA, United States of America",38.652613,-121.389788,Region of the Americas
+"Sagamihara, Japan",35.571462,139.373177,Western Pacific Region
+"Saguenay, Canada",48.428053,-71.068492,Region of the Americas
+"Saint Denis, France",48.936181,2.357443,European Region
+"Saint John, Canada",45.273315,-66.063308,Region of the Americas
+"Saint-Anicet, Canada",45.135455,-74.362325,Region of the Americas
+"Saint-Brieuc, France",48.51418,-2.765835,European Region
+"Saint-Etienne, France",45.439695,4.387178,European Region
+"Saint-Jean-Sur-Richelieu, Canada",45.305771,-73.25449,Region of the Americas
+"Saint-Nazaire, France",47.273498,-2.213848,European Region
+"Saint-Quentin, France",49.847066,3.2874,European Region
+"Saint-Simon, Canada",47.844387,-69.877795,Region of the Americas
+"Saitama, Japan",35.861729,139.645482,Western Pacific Region
+"Sakai, Japan",34.573262,135.482998,Western Pacific Region
+"Salamanca , Mexico",20.573931,-101.195717,Western Pacific Region
+"Salamanca, Spain",40.970104,-5.66354,European Region
+"Salem, India",11.664325,78.146014,South-East Asian Region
+"Salinas, CA, United States of America",36.677737,-121.655501,Region of the Americas
+"Salisbury, NC, United States of America",35.670973,-80.474226,Region of the Americas
+"Salt Lake City, UT, United States of America",40.760779,-111.891047,Region of the Americas
+"Salvador, Brazil",-12.97304,-38.502304,Region of the Americas
+"Salzburg, Austria",47.80949,13.05501,European Region
+"Sambalpur, India",21.466872,83.981166,South-East Asian Region
+"Samsun, Turkey",41.279703,36.336067,European Region
+"Samut Prakan, Thailand",13.599096,100.599832,South-East Asian Region
+"Samut Sakhon, Thailand",13.547522,100.274396,South-East Asian Region
+"San Antonio, TX, United States of America",29.424122,-98.493628,Region of the Americas
+"San Diego-Carlsbad-San Marcos, CA, United States of America",33.13306,-117.212511,Region of the Americas
+"San Fernando, Chile",-34.58586,-70.99078,Region of the Americas
+"San Fernando, Spain",36.471865,-6.196595,European Region
+"San Francisco-Oakland-Fremont, CA, United States of America",37.776979,-122.231952,Region of the Americas
+"San Jose-Sunnyvale-Santa Clara, CA, United States of America",37.325315,-122.05282,Region of the Americas
+"San Jose, Costa Rica",9.928069,-84.090725,Region of the Americas
+"San Luis Obispo-Paso Robles, CA, United States of America",35.636876,-120.654502,Region of the Americas
+"San Pedro de la Paz, Chile",-36.830535,-73.116737,Region of the Americas
+"San Sebastian, Spain",43.318334,-1.981231,European Region
+"Sangli, India",16.852397,74.581477,South-East Asian Region
+"Sanmenxia, China",34.772792,111.200367,Western Pacific Region
+"Sanniquellie, Liberia",7.358656,-8.709579,African Region
+"Santa Barbara-Santa Maria-Goleta, CA, United States of America",34.465213,-119.777255,Region of the Americas
+"Santa Cruz-Watsonville, CA, United States of America",36.910231,-121.756895,Region of the Americas
+"Santa Fe, NM, United States of America",35.686975,-105.937799,Region of the Americas
+"Santa Gertrudes, Brazil",-22.457322,-47.532594,Region of the Americas
+"Santa Rosa-Petaluma, CA, United States of America",38.398785,-122.821474,Region of the Americas
+"Santander, Spain",43.462306,-3.80998,European Region
+"Santiago de Compostela, Spain",42.878213,-8.544844,European Region
+"Santiago, Chile",-33.44889,-70.669265,European Region
+"Santo Andre, Brazil",-23.674223,-46.5436,Region of the Americas
+"Santo Domingo, Ecuador",-0.238904,-79.177427,Region of the Americas
+"Sao Bernardo do Campo, Brazil",-23.689843,-46.564848,Region of the Americas
+"Sao Caetano do Sul, Brazil",-23.623362,-46.555243,Region of the Americas
+"Sao Jose do Rio Preto, Brazil",-20.811761,-49.376227,Region of the Americas
+"Sao Jose dos Campos, Brazil",-23.223701,-45.900907,Region of the Americas
+"Sao Paulo, Brazil",-23.55052,-46.633309,Region of the Americas
+"Sapporo, Japan",43.062096,141.354376,Western Pacific Region
+"Saraburi, Thailand",14.528915,100.910142,South-East Asian Region
+"Sarajevo, Bosnia and Herzegovina",43.856259,18.413076,European Region
+"Sarnia, Canada",42.974536,-82.40659,Region of the Americas
+"Saskatoon, Canada",52.133214,-106.670046,Region of the Americas
+"Satna, India",24.600508,80.832243,South-East Asian Region
+"Satu Mare, Romania",47.80167,22.857593,European Region
+"Sault Ste. Marie, MI, United States of America",46.4953,-84.345317,Region of the Americas
+"Savannah, GA, United States of America",32.083541,-81.099834,Region of the Americas
+"Savona, Italy",44.29756,8.4645,European Region
+"Schiedam, Netherlands",51.91696,4.398819,European Region
+"Scottsbluff, NE, United States of America",41.866634,-103.667166,Region of the Americas
+"Scranton--Wilkes-Barre, PA, United States of America",41.336246,-75.731149,Region of the Americas
+"Sderot, Israel",31.522694,34.595581,European Region
+"Seaford, DE, United States of America",38.641226,-75.611038,Region of the Americas
+"Seattle-Tacoma-Bellevue, WA, United States of America",47.142279,-122.560536,Region of the Americas
+"Seixal, Portugal",38.641068,-9.0975,European Region
+"Senai, Malaysia",1.602031,103.644379,Western Pacific Region
+"Sendai, Japan",38.268215,140.869356,Western Pacific Region
+"Senneterre, Canada",48.390597,-77.241167,Region of the Americas
+"Seongnam, Republic of Korea",37.444917,127.138868,Western Pacific Region
+"Seosan, Republic of Korea",36.784499,126.450317,Western Pacific Region
+"Seoul, Republic of Korea",37.566535,126.977969,Western Pacific Region
+"Setubal, Portugal",38.526044,-8.890933,European Region
+"Sevilla, Spain",37.389092,-5.984459,European Region
+"Shanghai, China",31.230416,121.473701,Western Pacific Region
+"Shantou, China",23.354091,116.681972,Western Pacific Region
+"Shaoguan, China",24.810329,113.597547,Western Pacific Region
+"Shaoxing, China",29.995762,120.586109,Western Pacific Region
+"Sheffield, United Kingdom",53.381129,-1.470085,European Region
+"Shenyang, China",41.805699,123.431472,Western Pacific Region
+"Shenzhen, China",22.543096,114.057865,Western Pacific Region
+"Sherbrooke, Canada",45.400993,-71.882429,Region of the Americas
+"Sheridan, WY, United States of America",44.797194,-106.956179,Region of the Americas
+"Shijiazhuang, China",38.042307,114.51486,Western Pacific Region
+"Shillong, India",25.578773,91.893254,South-East Asian Region
+"Shimla, India",31.104815,77.173403,South-East Asian Region
+"Shizuishan, China",38.983236,106.383304,Western Pacific Region
+"Shizuoka, Japan",34.975562,138.38276,Western Pacific Region
+"Shreveport-Bossier City, LA, United States of America",32.559454,-93.744778,Region of the Americas
+"Shumen, Bulgaria",43.27124,26.936129,European Region
+"Sibsagar, India",26.98261,94.642452,South-East Asian Region
+"Sierra Vista-Douglas, AZ, United States of America",31.431512,-109.516846,Region of the Americas
+"Siirt, Turkey",37.927404,41.941978,European Region
+"Silao, Mexico",20.952141,-101.428237,Region of the Americas
+"Silchar, India",24.833271,92.778905,South-East Asian Region
+"Simcoe, Canada",42.837263,-80.304042,Region of the Americas
+"Singapore, Singapore",1.355379,103.867744,Western Pacific Region
+"Singrauli, India",24.19921,82.664547,South-East Asian Region
+"Sinop, Turkey",42.027974,35.151725,European Region
+"Sioux City, IA-NE-SD, United States of America",42.499994,-96.400307,Region of the Americas
+"Sioux Falls, SD, United States of America",43.544596,-96.731103,Region of the Americas
+"Sirnak, Turkey",37.518974,42.453714,European Region
+"Sivas, Turkey",39.750545,37.015022,European Region
+"Slupsk, Poland",54.464148,17.028482,European Region
+"Smithers, Canada",54.782355,-127.168554,Region of the Americas
+"Socoraba, Brazil",-23.50153,-47.45256,Region of the Americas
+"Sofia, Bulgaria",42.697708,23.321868,European Region
+"Solapur, India",17.659919,75.906391,South-East Asian Region
+"Solingen, Germany",51.170207,7.083141,European Region
+"Somerset, KY, United States of America",37.092022,-84.604108,Region of the Americas
+"Songkhla, Thailand",7.1756,100.614347,South-East Asian Region
+"Sosnowiec, Poland",50.286264,19.104079,European Region
+"South Bend-Mishawaka, IN-MI, United States of America",41.69152,-86.228571,Region of the Americas
+"Southampton, United Kingdom",50.9097,-1.404351,European Region
+"Spartanburg, SC, United States of America",34.949567,-81.932048,Region of the Americas
+"Spokane, WA, United States of America",47.65878,-117.426047,Region of the Americas
+"Springfield, IL, United States of America",39.781721,-89.650148,Region of the Americas
+"Springfield, MA, United States of America",42.101483,-72.589811,Region of the Americas
+"Springfield, MO, United States of America",37.208957,-93.292299,Region of the Americas
+"Springfield, OH, United States of America",39.924227,-83.808817,Region of the Americas
+"Squamish, Canada",49.701634,-123.155812,Region of the Americas
+"St-Hilaire-de-Dorset, Canada",45.865231,-70.857041,Region of the Americas
+"St. Andrews, Canada",47.808351,-101.025207,Region of the Americas
+"St. Catharines, Canada",43.159375,-79.246863,Region of the Americas
+"St. Cloud, MN, United States of America",45.557945,-94.16324,Region of the Americas
+"St. George, UT, United States of America",37.096528,-113.568416,Region of the Americas
+"St. John's, Canada",47.560541,-52.712831,Region of the Americas
+"St. Joseph, MO-KS, United States of America",39.767458,-94.846681,Region of the Americas
+"St. Louis, MO-IL, United States of America",38.627003,-90.199404,Region of the Americas
+"St. Zephirin-de-Courval, Canada",46.059798,-72.62634,Region of the Americas
+"Stara Zagora, Bulgaria",42.425777,25.634464,European Region
+"State College, PA, United States of America",40.793395,-77.860001,Region of the Americas
+"Stavanger, Norway",58.969976,5.733107,European Region
+"Stockholm, Sweden",59.329323,18.068581,European Region
+"Stockton, CA, United States of America",37.957702,-121.29078,Region of the Americas
+"Stoke-on-trent, United Kingdom",53.002668,-2.179404,European Region
+"Strasbourg, France",48.573405,7.752111,European Region
+"Stukely-Sud, Canada",45.316943,-72.415128,Region of the Americas
+"Stuttgart, Germany",48.775846,9.182932,European Region
+"Suceava, Romania",47.663452,26.27323,European Region
+"Sudbury, Canada",46.522099,-80.953035,Region of the Americas
+"Sukhbaatar, Mongolia",46.565316,113.538084,Western Pacific Region
+"Sunderland, United Kingdom",54.906869,-1.383801,European Region
+"Surat Thani, Thailand",9.138239,99.321748,European Region
+"Surat, India",21.17024,72.831061,South-East Asian Region
+"Suwalki, Poland",54.111522,22.930788,European Region
+"Suwon, Republic of Korea",37.263573,127.028601,Western Pacific Region
+"Suzhou, China",31.298979,120.58529,Western Pacific Region
+"Swidnica, Poland",50.849843,16.475679,European Region
+"Sydney, Australia",-33.867487,151.20699,Western Pacific Region
+"Sylhet, Bangladesh",24.904539,91.861101,South-East Asian Region
+"Syracuse, NY, United States of America",43.048122,-76.147424,Region of the Americas
+"Szczecin, Poland",53.428544,14.552812,European Region
+"Taboao da Serra, Brazil",-23.622876,-46.781665,Region of the Americas
+"Taian, China",36.200252,117.087614,Western Pacific Region
+"Taiyuan, China",37.87059,112.548879,Western Pacific Region
+"Talavera de la Reina, Spain",39.962884,-4.830454,European Region
+"Talca, Chile",-35.423244,-71.64848,Region of the Americas
+"Talcahuano, Chile",-36.724783,-73.116981,Region of the Americas
+"Talladega-Sylacauga, AL, United States of America",33.173172,-86.251641,Region of the Americas
+"Tallahassee, FL, United States of America",30.438256,-84.280733,Region of the Americas
+"Tallinn, Estonia",59.436961,24.753575,European Region
+"Tampa-St. Petersburg-Clearwater, FL, United States of America",28.036547,-82.681172,Region of the Americas
+"Tampere, Finland",61.497752,23.760954,European Region
+"Tanah Rata, Malaysia",4.470611,101.376639,Western Pacific Region
+"Tangshan, China",39.630867,118.180194,Western Pacific Region
+"Taranto, Italy",40.464361,17.24703,European Region
+"Tarbes, France",43.232951,0.078082,European Region
+"Targu Mures, Romania",46.538586,24.551439,European Region
+"Tarnow, Poland",50.012101,20.985841,European Region
+"Tartu, Estonia",58.377625,26.729006,European Region
+"Tatui, Brazil",-23.349219,-47.846576,Region of the Americas
+"Taupo, New Zealand",-38.685692,176.07021,Western Pacific Region
+"Tczew, Poland",54.091927,18.777307,European Region
+"Tegucigalpa, Honduras",14.072275,-87.192136,Region of the Americas
+"Tehran, Iran",35.689198,51.388974,Eastern Mediterranean Region
+"Tel Aviv, Israel",32.0853,34.781768,European Region
+"Telde, Spain",27.995531,-15.417373,European Region
+"Telkwa, Canada",54.695016,-127.04761,Region of the Americas
+"Temburong, Brunei Darussalam",4.620413,115.141484,Western Pacific Region
+"Temuco, Chile",-38.735902,-72.590374,Region of the Americas
+"Terrace, Canada",54.518193,-128.603154,Region of the Americas
+"Terre Haute, IN, United States of America",39.466703,-87.413909,Region of the Americas
+"Texarkana, TX-Texarkana, AR, United States of America",33.41261,-94.074085,Region of the Americas
+"Tezpur, India",26.65285,92.792559,South-East Asian Region
+"Thane, India",19.218331,72.97809,South-East Asian Region
+"Thimpu, Bhutan",27.472792,89.639286,South-East Asian Region
+"Thomasville-Lexington, NC, United States of America",35.882468,-80.106453,Region of the Americas
+"Thoothukudi, India",8.764166,78.134836,South-East Asian Region
+"Thorsby, Canada",53.227553,-114.050048,Region of the Americas
+"Thrissur, India",10.527642,76.214435,South-East Asian Region
+"Thunder Bay, Canada",48.380895,-89.247682,Region of the Americas
+"Thurrock, United Kingdom",51.493456,0.35292,European Region
+"Tianjin, China",39.084158,117.200983,Western Pacific Region
+"Timaru, New Zealand",-44.396972,171.254973,Western Pacific Region
+"Timisoara, Romania",45.748872,21.208679,European Region
+"Tingwick, Canada",45.88116,-71.943945,Region of the Americas
+"Tinsukia, India",27.492191,95.346775,South-East Asian Region
+"Tiverton, Canada",44.267658,-81.543323,Region of the Americas
+"Tocopilla, Chile",-22.085798,-70.193006,Region of the Americas
+"Tokat, Turkey",40.323464,36.552193,European Region
+"Tokyo, Japan",35.709026,139.731992,Western Pacific Region
+"Toledo, OH, United States of America",41.663938,-83.555212,Western Pacific Region
+"Toledo, Spain",39.862832,-4.027323,Region of the Americas
+"Toluca, Mexico",19.28261,-99.655665,Region of the Americas
+"Tomahawk, Canada",53.395845,-114.763275,Region of the Americas
+"Tongchuan, China",34.896756,108.945233,Western Pacific Region
+"Topeka, KS, United States of America",39.055824,-95.689018,Region of the Americas
+"Torino, Italy",45.070312,7.686856,European Region
+"Toronto, Canada",43.653226,-79.383184,Region of the Americas
+"Torrejon de Ardoz, Spain",40.456755,-3.475497,European Region
+"Torrington, CT, United States of America",41.800305,-73.121171,Region of the Americas
+"Torun, Poland",53.01379,18.598444,European Region
+"Toulon, France",43.124228,5.928,European Region
+"Toulouse, France",43.604652,1.444209,European Region
+"Tours, France",47.394144,0.68484,European Region
+"Trabzon, Turkey",41.002697,39.716763,European Region
+"Traralgon, Australia",-38.197109,146.534618,Western Pacific Region
+"Trencin, Slovakia",48.884936,18.033521,European Region
+"Trento, Italy",46.074779,11.121749,European Region
+"Trenton-Ewing, NJ, United States of America",40.257819,-74.8154,Region of the Americas
+"Treviso, Italy",45.666889,12.243044,European Region
+"Tripoli, Lebanon",34.438094,35.830837,Eastern Mediterranean Region
+"Trivandrum, India",8.524139,76.936638,South-East Asian Region
+"Trois-Rivieres, Canada",46.35468,-72.583787,Region of the Americas
+"Trondheim, Norway",63.430515,10.395053,European Region
+"Troyes, France",48.297345,4.074401,European Region
+"Truckee-Grass Valley, CA, United States of America",39.219061,-121.061061,Region of the Americas
+"Tsetserleg, Mongolia",47.46965,101.477434,Western Pacific Region
+"Tshwane, South Africa",-25.69755,28.159079,African Region
+"Tubingen, Germany",48.521636,9.057645,European Region
+"Tucson, AZ, United States of America",32.221743,-110.926479,Region of the Americas
+"Tulsa, OK, United States of America",36.153982,-95.992775,Region of the Americas
+"Tunceli, Turkey",39.10617,39.548259,European Region
+"Tupelo, MS, United States of America",34.257607,-88.703386,Region of the Americas
+"Tura, India",25.514071,90.203214,South-East Asian Region
+"Tuscaloosa, AL, United States of America",33.209841,-87.569173,Region of the Americas
+"Tutong, Brunei Darussalam",4.714037,114.666794,Western Pacific Region
+"Tychy, Poland",50.121801,19.020002,European Region
+"Udaipur, India",24.585445,73.712479,South-East Asian Region
+"Udine, Italy",46.071067,13.234579,European Region
+"Uijeongbu, Republic of Korea",37.738098,127.033682,Western Pacific Region
+"Ujjain, India",23.179301,75.78491,South-East Asian Region
+"Ukiah, CA, United States of America",39.150171,-123.207783,Region of the Americas
+"Ulaanbaatar, Mongolia",47.886399,106.905744,Western Pacific Region
+"Ulm, Germany",48.401082,9.987608,European Region
+"Ulsan, Republic of Korea",35.538377,129.31136,Western Pacific Region
+"Umea, Sweden",63.825847,20.263035,European Region
+"Upper Hutt, New Zealand",-41.124433,175.070783,Western Pacific Region
+"Urumqi, China",43.825592,87.616848,Western Pacific Region
+"Usak, Turkey",38.674229,29.405882,European Region
+"Usti nad Labem, Czech Republic",50.661116,14.053146,European Region
+"Utrecht, Netherlands",52.090737,5.12142,European Region
+"Vadodara, India",22.307159,73.181219,South-East Asian Region
+"Valdosta, GA, United States of America",30.832702,-83.278485,Region of the Americas
+"Valence, France",44.933393,4.89236,European Region
+"Valencia, Spain",39.469908,-0.376288,European Region
+"Valenciennes, France",50.357113,3.518332,European Region
+"Vallejo-Fairfield, CA, United States of America",38.256213,-121.928093,Region of the Americas
+"Valongo, Portugal",41.188759,-8.498352,European Region
+"Van, Turkey",38.501209,43.372979,European Region
+"Vancouver, Canada",49.282729,-123.120738,Region of the Americas
+"Vanderhoof, Canada",54.01398,-124.01298,Region of the Americas
+"Vapi, India",20.389316,72.91062,South-East Asian Region
+"Varanasi, India",25.317645,82.973914,South-East Asian Region
+"Varese, Italy",45.820599,8.825058,European Region
+"Veliko Tarnovo, Bulgaria",43.075674,25.617151,European Region
+"Venezia, Italy",45.440847,12.315515,European Region
+"Vernal, UT, United States of America",40.455516,-109.528748,Region of the Americas
+"Vernon, Canada",50.267014,-119.272011,Region of the Americas
+"Verona, Italy",45.438384,10.991622,European Region
+"Viareggio, Italy",43.865727,10.25131,European Region
+"Vicenza, Italy",45.545479,11.535421,European Region
+"Victoria, Canada",48.428421,-123.365644,Region of the Americas
+"Vijayawada, India",16.506174,80.648015,South-East Asian Region
+"Vila Franca de Xira, Portugal",38.955156,-8.988993,European Region
+"Vila Nova de Gaia, Portugal",41.123876,-8.611785,European Region
+"Villingen-Schwenningen, Germany",48.059402,8.464087,European Region
+"Vilnius, Lithuania",54.687156,25.279651,European Region
+"Vina del Mar, Chile",-33.015348,-71.550028,Region of the Americas
+"Virginia Beach-Norfolk-Newport News, VA-NC, United States of America",35.759573,-79.0193,Region of the Americas
+"Visalia-Porterville, CA, United States of America",36.06523,-119.016768,Region of the Americas
+"Visikhapatnam, India",17.686816,83.218482,South-East Asian Region
+"Vratsa, Bulgaria",43.210238,23.55288,European Region
+"Wainuiomata, New Zealand",-41.263362,174.947905,Western Pacific Region
+"Walbrzych, Poland",50.784009,16.284355,European Region
+"Warangal, India",17.968901,79.594054,South-East Asian Region
+"Warner Robins, GA, United States of America",32.613001,-83.624201,Region of the Americas
+"Warrington, United Kingdom",53.390044,-2.59695,European Region
+"Warszawa, Poland",52.229676,21.012229,European Region
+"Warwick, United Kingdom",52.282316,-1.584927,European Region
+"Washington-Arlington-Alexandria, DC-VA-MD-WV, United States of America",38.597626,-80.454903,Region of the Americas
+"Waterberg, South Africa",-23.974785,28.299435,African Region
+"Waterloo-Cedar Falls, IA, United States of America",42.520394,-92.435371,Region of the Americas
+"Watertown, SD, United States of America",44.899409,-97.115073,Region of the Americas
+"Weifang, China",36.706962,119.161749,Western Pacific Region
+"Weimar, Germany",50.979493,11.323544,European Region
+"Weinan, China",34.499995,109.509786,Western Pacific Region
+"Weirton-Steubenville, WV-OH, United States of America",40.417287,-82.907123,Region of the Americas
+"Wellington, New Zealand",-41.28646,174.776236,Western Pacific Region
+"Wenatchee, WA, United States of America",47.42346,-120.310349,Region of the Americas
+"Wenzhou, China",27.993828,120.699362,Western Pacific Region
+"Whangarei, New Zealand",-35.725112,174.323708,Western Pacific Region
+"Wheeling, WV-OH, United States of America",40.063962,-80.720915,Region of the Americas
+"Whistler, Canada",50.11632,-122.957356,Region of the Americas
+"Wichita, KS, United States of America",37.687176,-97.330053,Region of the Americas
+"Wien, Austria",48.208174,16.373819,European Region
+"Wiesbaden, Germany",50.078218,8.239761,European Region
+"Williams Lake, Canada",52.141674,-122.141688,Region of the Americas
+"Wilmington, NC, United States of America",34.225726,-77.94471,Region of the Americas
+"Winchester, VA-WV, United States of America",39.18566,-78.163334,Region of the Americas
+"Windsor, Canada",42.314937,-83.036363,Region of the Americas
+"Winnipeg, Canada",49.899754,-97.137494,Region of the Americas
+"Winston-Salem, NC, United States of America",36.09986,-80.244216,Region of the Americas
+"Winterthur, Switzerland",47.49882,8.723689,European Region
+"Wirral, United Kingdom",53.333333,-3.083333,European Region
+"Wloclawek, Poland",52.64833,19.067736,European Region
+"Wolfsburg, Germany",52.42265,10.786546,European Region
+"Wonju, Republic of Korea",37.342219,127.920162,Western Pacific Region
+"Worcester, MA, United States of America",42.262593,-71.802293,Region of the Americas
+"Wroclaw, Poland",51.107885,17.038538,European Region
+"Wuhan, China",30.593099,114.305393,Western Pacific Region
+"Wuhu, China",31.352859,118.432941,Western Pacific Region
+"Wuppertal, Germany",51.256213,7.150764,European Region
+"Wuxi, China",31.49117,120.31191,Western Pacific Region
+"Xi'an, China",34.341575,108.93977,Western Pacific Region
+"Xiamen, China",24.479834,118.089425,Western Pacific Region
+"Xiangtan, China",27.829738,112.944049,Western Pacific Region
+"Xianyang, China",34.329605,108.708991,Western Pacific Region
+"Xining, China",36.617134,101.778224,Western Pacific Region
+"Xuzhou, China",34.205768,117.284124,Western Pacific Region
+"Yakima, WA, United States of America",46.602071,-120.505899,Region of the Americas
+"Yala, Thailand",6.541147,101.280395,South-East Asian Region
+"Yalova, Turkey",40.654895,29.284186,European Region
+"Yan'an, China",36.585445,109.489757,Western Pacific Region
+"Yangquan, China",37.856972,113.580519,Western Pacific Region
+"Yangzhou, China",32.394213,119.412947,Western Pacific Region
+"Yantai, China",37.463822,121.447935,Western Pacific Region
+"Yeosu, Republic of Korea",34.760374,127.662222,Western Pacific Region
+"Yibing, China",28.751769,104.643215,Western Pacific Region
+"Yichang, China",30.691967,111.286471,Western Pacific Region
+"Yinchuan, China",38.487194,106.230909,Western Pacific Region
+"Yokohama, Japan",35.443708,139.638026,Western Pacific Region
+"York-Hanover, PA, United States of America",39.800655,-76.983036,Region of the Americas
+"York, United Kingdom",53.959965,-1.087298,Region of the Americas
+"Youngstown-Warren-Boardman, OH-PA, United States of America",41.079933,-80.66321,Region of the Americas
+"Yozgat, Turkey",39.821049,34.808573,European Region
+"Yuba City, CA, United States of America",39.140448,-121.616911,Region of the Americas
+"Yueyang, China",29.356804,113.12873,Western Pacific Region
+"Yuma, AZ, United States of America",32.692651,-114.627692,Region of the Americas
+"Yuxi, China",24.347324,102.527197,Western Pacific Region
+"Zaanstad, Netherlands",52.457966,4.751043,European Region
+"Zabrze, Poland",50.324928,18.785719,European Region
+"Zamosc, Poland",50.723088,23.251969,European Region
+"Zaozhuang, China",34.810488,117.323725,Western Pacific Region
+"Zaragoza, Spain",41.648823,-0.889085,European Region
+"Zejtun, Malta",35.854871,14.536397,European Region
+"Zgierz, Poland",51.855058,19.40607,European Region
+"Zhangjiajie, China",29.117096,110.479191,Western Pacific Region
+"Zhanjiang, China",21.270746,110.359336,Western Pacific Region
+"Zhengzhou, China",34.746611,113.625328,Western Pacific Region
+"Zhenjiang, China",32.187849,119.425836,Western Pacific Region
+"Zhlobin, Belarus",52.888895,30.028248,European Region
+"Zhuhai, China",22.270978,113.576678,Western Pacific Region
+"Zhuzhou, China",27.827987,113.133853,Western Pacific Region
+"Zibo, China",36.813487,118.054927,Western Pacific Region
+"Zielona Gora, Poland",51.935621,15.506186,European Region
+"Zigong, China",29.33903,104.778442,Western Pacific Region
+"zilina, Slovakia",49.21945,18.7408,European Region
+"Zlin, Czech Republic",49.224437,17.662763,European Region
+"Zonguldak, Turkey",41.453521,31.78938,European Region
+"Zory, Poland",50.044724,18.70064,European Region
+"Zunyi, China",27.725654,106.927389,Western Pacific Region
+"Zurich, Switzerland",47.376887,8.541694,European Region
