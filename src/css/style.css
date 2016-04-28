@@ -322,3 +322,14 @@ video {
     font-weight: 900;
     background-color: #ffffdc;
 }
+
+.author {
+    color: white;
+    opacity: 0.7;
+}
+
+a.author:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: underline;
+}
