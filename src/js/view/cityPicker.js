@@ -1,4 +1,5 @@
 var $ = require("jquery");
+var sweetalert = require("sweetalert");
 
 var typeahead = require("typeahead.js-browserify");
 typeahead.loadjQueryPlugin();
@@ -58,7 +59,12 @@ var cityPicker = function (service) {
 
 
 
-            service.setSelectedCity(selectedCity);
+            service.setSelectedCity(selectedCity, function(city){
+
+                if(city.dataCoverageAlert.length > 0){
+                    sweetalert("Heads up...", city.dataCoverageAlert, "warning");
+                }
+            });
         });
 
 
