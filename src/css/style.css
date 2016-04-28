@@ -112,7 +112,7 @@ body, html {
     padding-bottom: 30px;
 }
 
-.axis {
+.axis, .axis-label {
     font: 10px sans-serif;
 }
 
