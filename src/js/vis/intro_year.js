@@ -654,7 +654,13 @@ var yearlyVis = function (container_selector, service) {
 
     model.setLine();
 
-
+    $("#btn-all-cities-reset").click(function(){
+        model.countries.forEach(function(country){
+            country.active = false;
+        });
+        model.labelData = [];
+        model.update();
+    });
 };
 
 module.exports = yearlyVis;
