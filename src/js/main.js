@@ -56,8 +56,8 @@ var checkbrowser = function () {
             {
                 type: "error",
                 title: "Sorry, device unsupported.",
-                text: "This interactive story does not work on mobile phones.",
-                showConfirmButton: false
+                text: "This interactive story does not work on mobile phones. You're welcome to try anyway.",
+                showConfirmButton: true
             }
         );
     }
@@ -66,8 +66,8 @@ var checkbrowser = function () {
             {
                 type: "error",
                 title: "Sorry, browser unsupported.",
-                text: "This interactive story works in Chrome, Opera, Safari and Firefox.",
-                showConfirmButton: false
+                text: "This interactive story works in Chrome, Opera, Safari and Firefox. You're welcome to try anyway.",
+                showConfirmButton: true
             }
         );
     }
