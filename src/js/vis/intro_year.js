@@ -555,7 +555,12 @@ var yearlyVis = function (container_selector, service) {
             .style('opacity', 0.1)
 
             .on('mouseover', function (d) {
-                d3.select(this).style('stroke', '#447392').style('opacity', 1).style('cursor', 'pointer');
+                d3.select(this)
+                    .style('stroke', '#447392')
+                    .style('stroke-width', 3)
+                    .style('opacity', 1)
+                    .style('cursor', 'pointer');
+
                 model.tooltip.show(d);
                 if (!d.active) {
                     var index = model.labelData.indexOf(d);
@@ -573,7 +578,10 @@ var yearlyVis = function (container_selector, service) {
                 model.removeInteractivityIcon();
 
                 if (!d.active && !d.tempActive) {
-                    d3.select(this).style('stroke', 'gray').style('opacity', 0.1);
+                    d3.select(this)
+                        .style('stroke', 'gray')
+                        .style('stroke-width', 2)
+                        .style('opacity', 0.1);
 
                     var index = model.labelData.indexOf(d);
                     if (index > -1) {
