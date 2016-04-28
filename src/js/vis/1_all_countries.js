@@ -57,7 +57,7 @@ var allCountries = function (container_selector, service) {
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient("top");
 
 
     var svg = model.svg;
@@ -95,7 +95,7 @@ var allCountries = function (container_selector, service) {
         .append("text")
         .attr("class", "label")
         .attr("x", width)
-        .attr("y", -6)
+        .attr("y", 12)
         .style("text-anchor", "end")
         .text("Annual PM 2.5 (μg/m3)");
 

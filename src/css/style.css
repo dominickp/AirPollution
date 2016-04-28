@@ -333,3 +333,7 @@ a.author:hover {
     opacity: 1;
     text-decoration: underline;
 }
+
+#vis-1-all .tick line{
+    stroke:grey;
+}
