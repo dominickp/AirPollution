@@ -324,7 +324,6 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
         service.setSelectedCity(JSON.parse(localStorage.getItem('selected-city')));
         //allCitiesView.updateExternal()
-        webController.next();
     }
 
 
