@@ -293,7 +293,7 @@ var behindNumbers = function (container_selectors, service) {
                 return model.values[raster].y(d[lookup[lookup.length - 1].key]);
             })
             .style("opacity", 0.3)
-            .attr("r", 4)
+            .attr("r", 6)
             .attr("fill", "lightblue")
             .on("mouseover", function (d) {
                 model.tooltip.show(d);
