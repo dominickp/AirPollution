@@ -151,7 +151,7 @@ body, html {
 }
 
 #introduction, #p2 {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 #p1, #p3{
@@ -277,11 +277,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .feature2 {
-    fill: #86a156;
+    fill: #cce5cc;
 }
 
 .water {
-    fill: #1053d8;
+    fill: #10c8d8;
 }
 
 .selected {
@@ -339,5 +339,5 @@ a.author:hover {
 }
 
 .timelineText {
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
