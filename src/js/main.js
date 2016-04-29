@@ -121,7 +121,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
                 date: Date.parse("5/5/2015")
             },
             {
-                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div class="timelineText"><strong>Diwali:</strong> India&rsquo;s national festival of lights is accompanied by the launching of fireworks across the city. Air <br> quality suffers so much that local authorities urge vulnerable groups to <br> <a href="http://www.theguardian.com/world/2015/nov/11/delhi-warns-against-diwali-fireworks-to-safeguard-air-quality" target="_blank">stay indoors.</a></div> </body>',
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div class="timelineText"><strong>Diwali:</strong> India&rsquo;s national<br> festival of lights is <br>accompanied by the<br> launching of fireworks <br>across the city. Air quality <br>suffers so much that local <br>authorities urge vulnerable <br>groups to <a href="http://www.theguardian.com/world/2015/nov/11/delhi-warns-against-diwali-fireworks-to-safeguard-air-quality" target="_blank">stay indoors.</a></div> </body>',
                 date: Date.parse("11/9/2015")
             }
         ];

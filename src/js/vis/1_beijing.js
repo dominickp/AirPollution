@@ -260,7 +260,7 @@ var beijingVis = function (container_selector, service, d, messages, button) {
                 return model.dateScale(d.date) - 1;
             })
             .attr("y", height + 40)
-            .attr("width", 195)
+            .attr("width", 200)
             .attr("height", 200)
             .html(function (d) {
 
