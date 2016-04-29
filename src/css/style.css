@@ -337,3 +337,7 @@ a.author:hover {
 #vis-1-all .tick line{
     stroke:grey;
 }
+
+.timelineText {
+    font-size: 0.9em;
+}
