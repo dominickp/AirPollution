@@ -112,16 +112,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
     var delhi_message =
         [
             {
-                message: '<body xmlns="http://www.w3.org/1999/xhtml"><strong>Winter</strong> temperature inversions cause cold air to trap pollution, leading sustained high levels of PM2.5 pollution.</body>',
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div class="timelineText"><strong>Winter</strong> temperature inversions cause cold air to trap pollution, leading sustained high levels of PM2.5 pollution.</div></body>',
                 date: Date.parse("1/17/2015")
 
             },
             {
-                message: '<body xmlns="http://www.w3.org/1999/xhtml">Delhi has a high proportion of diesel cars (which emit more fine particulates) resulting in elevated PM2.5 pollution year round.</body>',
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div class="timelineText">Delhi has a high proportion of diesel cars (which emit more fine particulates) resulting in elevated PM2.5 pollution year round.</div></body>',
                 date: Date.parse("5/5/2015")
             },
             {
-                message: '<body xmlns="http://www.w3.org/1999/xhtml"><strong>Diwali:</strong> India&rsquo;s national festival of lights is accompanied by the launching of fireworks across the city. Air <br> quality suffers so much that local authorities urge vulnerable groups to <br> <a href="http://www.theguardian.com/world/2015/nov/11/delhi-warns-against-diwali-fireworks-to-safeguard-air-quality" target="_blank">stay indoors.</a> </body>',
+                message: '<body xmlns="http://www.w3.org/1999/xhtml"><div class="timelineText"><strong>Diwali:</strong> India&rsquo;s national festival of lights is accompanied by the launching of fireworks across the city. Air <br> quality suffers so much that local authorities urge vulnerable groups to <br> <a href="http://www.theguardian.com/world/2015/nov/11/delhi-warns-against-diwali-fireworks-to-safeguard-air-quality" target="_blank">stay indoors.</a></div> </body>',
                 date: Date.parse("11/9/2015")
             }
         ];
