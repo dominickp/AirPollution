@@ -196,13 +196,14 @@ var actionVisualization = function (container_selector, service) {
                 };
             })
             .attr("class", "notShown")
-            .transition()
-            .delay(function (d, i) {
-                return 5 + 10 * i;
-            })
             .style("fill", function (d) {
                 return d.color;
             })
+            .transition()
+            .delay(function (d, i) {
+                return 3 + 3 * i;
+            })
+
             .attr("class", function (d) {
                 if (d.val === cityString) {
                     select = d;
@@ -238,17 +239,17 @@ var actionVisualization = function (container_selector, service) {
 
         model.land.selectAll("path")
             .transition()
-            .delay(2500)
+            .delay(5000)
             .duration(1000)
             .attr("class", "feature2");
 
         model.water.transition()
-            .delay(2500)
+            .delay(5000)
             .style("fill", "")
             .attr("class", "water");
 
         model.shadow.transition()
-            .delay(2500).style("opacity", 0.1);
+            .delay(5000).style("opacity", 0.1);
 
         if (!model.transition) {
 
