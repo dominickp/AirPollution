@@ -86,7 +86,7 @@ var actionVisualization = function (container_selector, service) {
         .attr("cy", height - 10)
         .attr("rx", 150)
         .attr("ry", 10)
-        .style("opacity", 0.0);
+        .style("opacity", 0.1);
 
 
     // set background
@@ -95,7 +95,7 @@ var actionVisualization = function (container_selector, service) {
 
     model.water = model.water.append("path")
         .datum(globe)
-        .style("fill", "transparent")
+        .attr("class", "water")
         .attr("d", path);
 
     // set land
@@ -103,7 +103,7 @@ var actionVisualization = function (container_selector, service) {
         .data(topojson.feature(model.topo, model.topo.objects.countries).features)
         .enter().append("path")
         .attr("d", path)
-        .attr("class", "feature");
+        .attr("class", "feature2");
 
 
     model.startRotate = function () {
@@ -165,16 +165,7 @@ var actionVisualization = function (container_selector, service) {
 
 // set city
     model.update = function () {
-
-        model.land.selectAll("path")
-            .transition()
-            .attr("class", "feature");
-
-        model.water.transition()
-            .style("fill", "transparent")
-            .attr("class", "");
-
-        model.shadow.style("opacity", 0.0);
+        
 
         var cityString = model.service.getSelectedCityData();
 
@@ -250,19 +241,6 @@ var actionVisualization = function (container_selector, service) {
         //    model.rotate[1] = -50;
         //}
 
-        model.land.selectAll("path")
-            .transition()
-            .delay(5000)
-            .duration(1000)
-            .attr("class", "feature2");
-
-        model.water.transition()
-            .delay(5000)
-            .style("fill", "")
-            .attr("class", "water");
-
-        model.shadow.transition()
-            .delay(5000).style("opacity", 0.1);
 
         if (!model.transition) {
 
