@@ -58,13 +58,29 @@ var cityPicker = function (service) {
             var selectedCity = datum;
 
 
+            service.setSelectedCity(selectedCity);
 
-            service.setSelectedCity(selectedCity, function(city){
 
-                if(city.dataCoverageAlert.length > 0){
-                    sweetalert("Heads up...", city.dataCoverageAlert, "warning");
-                }
-            });
+            var error = "";
+
+
+            if (selectedCity["pm2.5ConvertedAlert"].length > 0) {
+                error += selectedCity["pm2.5ConvertedAlert"] + "<br><br>";
+            }
+            if (selectedCity.dataCoverageAlert.length > 0) {
+                error += selectedCity.dataCoverageAlert + "<br><br>";
+            }
+
+
+            if (error.length > 0) {
+
+                swal({
+                    title: "Heads up...",
+                    text: error,
+                    type: "warning",
+                    html: true
+                });
+            }
         });
 
 

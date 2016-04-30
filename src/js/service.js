@@ -16,7 +16,7 @@ var service = function () {
 
     model.visualizations = {};
 
-    model.setSelectedCity = function (city, callback) {
+    model.setSelectedCity = function (city) {
         model.selected_city = city;
 
         //console.log(city);
@@ -29,10 +29,6 @@ var service = function () {
 
         // Update vis
         model.visualizations.vis1.updateVis();
-
-        if (callback) {
-            callback(model.selected_city);
-        }
 
     };
 
