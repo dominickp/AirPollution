@@ -303,7 +303,16 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     $("#but1").click(yearVis.switch);
 
-    // sharable link goes directly to the summary
+
+    if (localStorage.getItem('selected-city')) {
+
+        console.log("City loaded from localStorage.");
+
+        service.setSelectedCity(JSON.parse(localStorage.getItem('selected-city')));
+        //allCitiesView.updateExternal()
+    }
+
+    // sharable link 
     var city = getURLParameter("city");
     var country = getURLParameter("country");
     if (city && country) {
@@ -316,14 +325,6 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
 
         }
-    }
-
-    if(localStorage.getItem('selected-city')){
-
-        console.log("City loaded from localStorage.");
-
-        service.setSelectedCity(JSON.parse(localStorage.getItem('selected-city')));
-        //allCitiesView.updateExternal()
     }
 
 
