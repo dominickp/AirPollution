@@ -123,7 +123,8 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ZSXPnXNEj5Q" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/ZSXPnXNEj5Q" frameborder="0" allowfullscreen></iframe>
             </div>
 
 
@@ -153,7 +154,8 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/feAFYWfuoBU" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/feAFYWfuoBU" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <h3>Act 1: All cities</h3>
@@ -178,7 +180,8 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/joit1i63Hg0" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/joit1i63Hg0" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <h3>Act 1: Beijing & Delhi</h3>
@@ -204,7 +207,8 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/cWWK4VHVRYA" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/cWWK4VHVRYA" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <h3>Act 1: Behind the Numbers</h3>
@@ -235,7 +239,8 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KKsUFdxjAMg" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/KKsUFdxjAMg" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <h3>Act 2</h3>
@@ -262,34 +267,51 @@
             </ul>
 
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/iiyggsJVN-c" frameborder="0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" width="560" height="315"
+                        src="https://www.youtube.com/embed/iiyggsJVN-c" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <h3>Act 3</h3>
             <p>
 
                 <b>Reason</b><br>
-                At the end we show a rotating map with the selected country on it using a pulsating marker. this is
+                At the end we show a rotating map with all the data points we have in our dataset. The selected city is
+                displayed as a big yellow dot. this is
                 there to let the reader know we are talking about what HE can do for his city, and not some generic
-                text.
+                text. The text in this act is changed based on the pm2.5 value of the selected city.<br>
+                Showing all data points on the map also shows that there is not a lot of data in some regions of the
+                world, which is quite interesting.
                 <br><br>
 
                 <b>Interaction</b><br>
-                There is no way to interact with this visualization.<br>
+
             </p>
+            <ul>
+                <li>
+                    <strong>dragging the world</strong>will turn the map to show the part of the world the user wants to
+                    see.
+                </li>
+
+            </ul>
 
         </div>
     </div>
 </div>
 
 
-
 <script>
     //    Google Analytics
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-77077301-1', 'auto');
     ga('send', 'pageview');
