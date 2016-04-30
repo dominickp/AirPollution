@@ -346,3 +346,7 @@ a.author:hover {
 .timelineText {
     font-size: 0.85em;
 }
+
+.sideCommentary {
+    text-align: left;
+}
