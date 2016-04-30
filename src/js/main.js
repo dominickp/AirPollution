@@ -312,7 +312,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
         //allCitiesView.updateExternal()
     }
 
-    // sharable link 
+    // sharable link
     var city = getURLParameter("city");
     var country = getURLParameter("country");
     if (city && country) {

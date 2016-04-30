@@ -110,8 +110,6 @@ var allCountries = function (container_selector, service) {
         .attr("xlink:href", "img/hand.png");
 
 
-    // TODO: Split into different views?
-
     var node = svg.selectAll(".dot")
         .data(data)
         .enter().append("circle")
@@ -296,9 +294,12 @@ var allCountries = function (container_selector, service) {
         return true;
     };
 
+    model.legend_country_text = null;
+
     // Function to remove the country legend text for later
     model.removeCountryLegend = function () {
         model.legend_country_text.remove();
+        model.legend_country_text = null;
         model.legend_country_circle.remove();
         return true;
     };
@@ -328,25 +329,33 @@ var allCountries = function (container_selector, service) {
 
 
         // Selected country legend
-        model.legend_country_text = svg.append("text")
-            .attr("x", width - 24)
-            .attr("y", 210)
-            .attr("dy", ".35em")
-            .style("text-anchor", "end")
-            .text("Selected Country");
+        if (model.legend_country_text === null && model.pinned.indexOf(service.getSelectedCityData().region) <= -1) {
+            model.legend_country_text = svg.append("text")
+                .attr("x", width - 24)
+                .attr("y", 210)
+                .attr("dy", ".35em")
+                .style("text-anchor", "end")
+                .text("Selected Country");
 
-        model.legend_country_circle = svg.append("circle")
-            .attr("r", radius)
-            .attr("cx", width - 8)
-            .attr("cy", 210)
+            model.legend_country_circle = svg.append("circle")
+                .attr("r", radius)
+                .attr("cx", width - 8)
+                .attr("cy", 210)
+                .style("fill", function () {
+                    var colorVal = color(service.getSelectedCityData().region);
+                    //console.log(service.getSelectedCityData());
+                    return colorVal;
+                })
+                .attr("stroke", "grey")
+                .attr("stroke-width", 1);
+        }
+
+        model.legend_country_circle
             .style("fill", function () {
                 var colorVal = color(service.getSelectedCityData().region);
                 //console.log(service.getSelectedCityData());
                 return colorVal;
-            })
-            .attr("stroke", "grey")
-            .attr("stroke-width", 1);
-
+            });
 
         if (model.cityline) {
             model.cityline.remove();
