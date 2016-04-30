@@ -10,10 +10,9 @@ var actionVisualization = function (container_selector, service) {
     model.service = service;
     model.topo = service.getActiveDataset("mapTopoJson");
     model.coords = service.getActiveDataset("coords");
-    var margin = {top: 0, right: 0, bottom: 60, left: 0};
 
     // init data
-    var width = 960,
+    var width = 800,
         height = 500,
         radius = 240;
 
@@ -26,7 +25,6 @@ var actionVisualization = function (container_selector, service) {
     var path = d3.geo.path()
         .projection(projection).pointRadius(1.5);
 
-    model.colorScale = d3.scale.category10();
 
     // UNCOMMENT FOR MANUAL DRAG
     model.drag = d3.behavior.drag()
@@ -65,10 +63,10 @@ var actionVisualization = function (container_selector, service) {
 
     // init SVG
     model.svg = d3.select(container_selector).append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", width)
+        .attr("height", height)
         .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        .attr("transform", "translate(" + -60 + "," + 0+ ")")
         // Add for Manual drag
         .attr("class", "dragend")
         .call(model.drag);
@@ -79,7 +77,7 @@ var actionVisualization = function (container_selector, service) {
     model.countryspot = model.svg.append("g");
     model.shadow = model.svg.append("g");
     model.shadow = model.shadow.append("ellipse")
-        .attr("cx", width / 2)
+        .attr("cx", width / 2 + 80)
         .attr("cy", height - 10)
         .attr("rx", 150)
         .attr("ry", 10)
@@ -184,10 +182,20 @@ var actionVisualization = function (container_selector, service) {
 
         model.points.selectAll(".pin").remove();
 
+        var datapoints = [];
 
         var select = null;
         model.points.selectAll(".pin").data(model.coords).enter().append("path")
             .datum(function (d) {
+
+                if (datapoints[d.region]) {
+                    datapoints[d.region]++;
+                }
+                else {
+                    datapoints[d.region] = 1;
+                }
+
+
                 return {
                     type: "Point",
                     coordinates: [d.longitude, d.latitude],
@@ -258,6 +266,18 @@ var actionVisualization = function (container_selector, service) {
         model.transition = true;
 
 
+        var table = $("#datapoints");
+        table.empty();
+
+        for (var key in datapoints) {
+            if (key !== "undefined")
+                if (datapoints.hasOwnProperty(key)) {
+
+                    var row = "<tr><td>" + key + "</td><td>" + datapoints[key] + "</td></tr>";
+                    table.append(row);
+
+                }
+        }
     };
 
 
