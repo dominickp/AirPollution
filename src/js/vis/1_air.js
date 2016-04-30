@@ -95,9 +95,13 @@ var airVisualization = function (container_selector, service) {
         .offset([10, 0])
         .direction('s')
         .html(function (d) {
+            var display10 = "?";
+            if (d.pm10Mean) {
+                display10 = d.pm10Mean;
+            }
             var string = 'Country: ' + d.country + '</br>' +
                 'PM2.5: ' + d['pm2.5Mean'] + '</br>' +
-                'PM10: ' + d.pm10Mean;
+                'PM10: ' + display10;
 
             return string;
         });
