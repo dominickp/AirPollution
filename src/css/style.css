@@ -303,6 +303,10 @@ hr.section {
     background-color: #ccc;
 }
 
+.mainbody {
+    background-color: white;
+}
+
 video {
     position: fixed;
     top: 40%;
