@@ -83,7 +83,7 @@
 
 body, html {
     font-family: 'Signika', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    min-width: 679px;
+    min-width: 1500px;
     margin: 0;
     padding: 0;
 }
@@ -152,11 +152,14 @@ body, html {
 
 #introduction, #p2 {
     background-color: #ffffff;
+    min-width: 1500px;
 }
 
-#p1, #p3{
+#p1, #p3 {
     background-color: white;
+    min-width: 1500px;
 }
+
 #p3 {
     min-height: 98vh;
 }
@@ -306,15 +309,13 @@ video {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     z-index: -100;
     transform: translate(-50%, -50%);
 
     background-color: black;
 }
 
-.facts{
+.facts {
     background-color: white;
 }
 
@@ -334,8 +335,8 @@ a.author:hover {
     text-decoration: underline;
 }
 
-#vis-1-all .tick line{
-    stroke:grey;
+#vis-1-all .tick line {
+    stroke: grey;
 }
 
 .timelineText {
