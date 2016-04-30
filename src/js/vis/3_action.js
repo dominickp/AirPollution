@@ -192,7 +192,7 @@ var actionVisualization = function (container_selector, service) {
                     type: "Point",
                     coordinates: [d.longitude, d.latitude],
                     val: d.city,
-                    color: model.colorScale(d.region)
+                    color: service.regionScale(d.region)
                 };
             })
             .attr("class", "notShown")

@@ -87,6 +87,8 @@ var allCountries = function (container_selector, service) {
         d.radius = radius;
     });
 
+    service.regionScale = color;
+
 
     svg.append("g")
         .attr("class", "x-axis")
@@ -289,13 +291,13 @@ var allCountries = function (container_selector, service) {
 
 
     // Function to remove the interactivity icon later
-    model.removeInteractivityIcon = function(){
+    model.removeInteractivityIcon = function () {
         model.hand.remove();
         return true;
     };
 
     // Function to remove the country legend text for later
-    model.removeCountryLegend = function(){
+    model.removeCountryLegend = function () {
         model.legend_country_text.remove();
         model.legend_country_circle.remove();
         return true;
@@ -337,7 +339,7 @@ var allCountries = function (container_selector, service) {
             .attr("r", radius)
             .attr("cx", width - 8)
             .attr("cy", 210)
-            .style("fill", function(){
+            .style("fill", function () {
                 var colorVal = color(service.getSelectedCityData().region);
                 //console.log(service.getSelectedCityData());
                 return colorVal;
@@ -369,7 +371,7 @@ var allCountries = function (container_selector, service) {
         node.data(data)
             .each(function (d) {
 
-                //console.log(d);
+                    //console.log(d);
                     d3.select(this).style("opacity", 0.3)
                         .style("fill", function (d) {
 
@@ -456,7 +458,7 @@ var allCountries = function (container_selector, service) {
         // Lowest
         model.cityline.append("text")
             .attr("class", "label")
-            .attr("x",  lowest - 10)
+            .attr("x", lowest - 10)
             .attr("y", height + 60)
             .style("text-anchor", "middle")
             .style("fill", "black")
@@ -465,7 +467,7 @@ var allCountries = function (container_selector, service) {
         // Highest
         model.cityline.append("text")
             .attr("class", "label")
-            .attr("x",  highest + 10)
+            .attr("x", highest + 10)
             .attr("y", height + 60)
             .style("text-anchor", "middle")
             .style("fill", "black")
