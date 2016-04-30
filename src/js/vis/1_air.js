@@ -17,7 +17,7 @@ var airVisualization = function (container_selector, service) {
     var margin = {top: 40, right: 20, bottom: 60, left: 40};
     var width = 500 - margin.left - margin.right,
         height = 200 - margin.top - margin.bottom;
-    var gauge_height = 50;
+    var gauge_height = 25;
     var gauge_label_spacing = 10;
 
     model.other_cities = [];
@@ -140,7 +140,7 @@ var airVisualization = function (container_selector, service) {
     model.safe_level_text = model.lines.append("text")
         .attr("class", "gauge-line-label")
         .attr("x", 0)
-        .attr("y", ((gauge_label_spacing*-1)-15))
+        .attr("y", ((gauge_label_spacing * -1) - 15))
         .style("text-anchor", "middle")
         .text("WHO Safe Level");
 
@@ -164,7 +164,7 @@ var airVisualization = function (container_selector, service) {
             .attr("width", model.x(d3.max(model.data, function (d) {
                 return d[model.selected_unit.key];
             })))
-            .attr("height", 50)
+            .attr("height", gauge_height)
             .style("fill", "url(#gradient)")
             .attr("stroke", "grey");
 

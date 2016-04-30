@@ -30,7 +30,7 @@ var service = function () {
         // Update vis
         model.visualizations.vis1.updateVis();
 
-        if(callback){
+        if (callback) {
             callback(model.selected_city);
         }
 
@@ -90,11 +90,17 @@ var service = function () {
             return false;
         }
 
-        model.other_cities.push(cityData);
+        if (model.other_cities.length >= 10) {
+            sweetAlert("Oops...", "You can pin a maximum of 10 cities.", "error");
+        }
+        else {
+            model.other_cities.push(cityData);
 
-        //console.log("Other city added: " + cityData.city);
-        // Update vis
-        model.visualizations.vis1.updateVis();
+            //console.log("Other city added: " + cityData.city);
+            // Update vis
+            model.visualizations.vis1.updateVis();
+        }
+
     };
 
     model.getOtherCity = function (index) {

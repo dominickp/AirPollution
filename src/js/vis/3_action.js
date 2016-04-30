@@ -2,9 +2,10 @@ var d3 = require("d3");
 var topojson = require("topojson");
 var GoogleMapsLoader = require('google-maps');
 
-//console.log("src/js/vis/3_action.js");
 
 var actionVisualization = function (container_selector, service) {
+
+    var information = ["aaa", "bbb", "ccc"];
 
     var model = this;
     model.service = service;
@@ -66,7 +67,7 @@ var actionVisualization = function (container_selector, service) {
         .attr("width", width)
         .attr("height", height)
         .append("g")
-        .attr("transform", "translate(" + -60 + "," + 0+ ")")
+        .attr("transform", "translate(" + -60 + "," + 0 + ")")
         // Add for Manual drag
         .attr("class", "dragend")
         .call(model.drag);
@@ -278,6 +279,22 @@ var actionVisualization = function (container_selector, service) {
 
                 }
         }
+
+
+        var data = model.service.getSelectedCityData()["pm2.5Mean"];
+
+        var i = 0;
+        if (data <= 10) {
+            i = 0;
+        }
+        else if (data <= 30) {
+            i = 1;
+        }
+        else {
+            i = 2;
+        }
+
+        $("#prevention").html(information[i]);
     };
 
 
