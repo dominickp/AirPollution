@@ -278,7 +278,7 @@ var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, d
 
     $("#intro_2").mouseover(function () {
 
-        yearVis.setActiveArray(["Thailand", "Vietnam", "Cambodia", "Lao PDR"]);
+        yearVis.setActiveArray(["Thailand", "Vietnam", "Cambodia", "Lao PDR", "Myanmar"]);
     });
     $("#intro_2").mouseout(yearVis.resetSelection);
 
