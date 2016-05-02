@@ -369,4 +369,13 @@ window.onload = function () {
             return;
         }
     }
-}
+};
+
+$(window).scroll(function () {
+    if ($(document).scrollTop() > $('#introduction').offset().top) {
+        $("#bgvid").hide();
+    }
+    else {
+        $("#bgvid").show();
+    }
+});

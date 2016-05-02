@@ -509,7 +509,8 @@ var allCountries = function (container_selector, service) {
         $('head').append('<meta property="og:title" content="' + model.text + '">');
 
         var simpleLink = 'http://www.theairwebreathe.org';
-        var link = simpleLink + '/index.html?city=' + model.city.city + '%26country=' + model.city.country;
+        var Linkedinlink = simpleLink + '/index.html?city=' + model.city.city + '%26country=' + model.city.country;
+        var link = simpleLink + '/index.html?city=' + encodeURIComponent(model.city.city) + '&country=' + encodeURIComponent(model.city.country);
         $("#fb_share").unbind();
         $("#fb_share").click(function () {
             FB.ui({
@@ -524,7 +525,7 @@ var allCountries = function (container_selector, service) {
 
         $("#linkedInShare").unbind()
         $("#linkedInShare").click(function () {
-            var llink = 'https://www.linkedin.com/shareArticle?url=' + link + '&title="' + encodeURIComponent(model.textLine) + '"&summary=Air%20pollution%20is%20now%20the%20single%20biggest%20environmental%20health%20risk%20to%20humans.%20Outdoor%20air%20pollution%20in%20both%20cities%20and%20rural%20areas%20was%20estimated%20to%20cause%203.7%20million%20premature%20deaths%20worldwide%20in%202012.&source=LinkedIn';
+            var llink = 'https://www.linkedin.com/shareArticle?url=' + Linkedinlink + '&title="' + encodeURIComponent(model.textLine) + '"&summary=Air%20pollution%20is%20now%20the%20single%20biggest%20environmental%20health%20risk%20to%20humans.%20Outdoor%20air%20pollution%20in%20both%20cities%20and%20rural%20areas%20was%20estimated%20to%20cause%203.7%20million%20premature%20deaths%20worldwide%20in%202012.&source=LinkedIn';
             window.open(llink, "popupWindow", "width=600, height=400, scrollbars=yes");
         });
 

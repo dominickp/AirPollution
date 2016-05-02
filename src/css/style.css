@@ -83,7 +83,6 @@
 
 body, html {
     font-family: 'Signika', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    min-width: 1500px;
     margin: 0;
     padding: 0;
 }
@@ -152,12 +151,10 @@ body, html {
 
 #introduction, #p2 {
     background-color: #ffffff;
-    min-width: 1500px;
 }
 
 #p1, #p3 {
     background-color: white;
-    min-width: 1500px;
 }
 
 #p3 {
