@@ -11,7 +11,7 @@ An exploration of air pollution, its health impacts, and what can be done about 
 - http://theairwebreathe.org
 
 ### Screencast
-- [TO COME]
+- https://youtu.be/aIs5KUbGPaE
 
 ## Setup
 We're using some build automation tools with our project. To build the application yourself, you'll need to follow the steps below. Otherwise, you can view the final site at our project URL.
