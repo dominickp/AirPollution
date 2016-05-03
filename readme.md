@@ -5,10 +5,10 @@ An exploration of air pollution, its health impacts, and what can be done about 
 
 ### Process Book
 - dist/pb_index.html
-- http://theairwebreathe.org/pb_index.html
+- http://www.theairwebreathe.org/pb_index.html
 
 ### Project URL
-- http://theairwebreathe.org
+- http://www.theairwebreathe.org
 
 ### Screencast
 - https://youtu.be/aIs5KUbGPaE
