@@ -55,8 +55,8 @@ var checkbrowser = function () {
         swal(
             {
                 type: "error",
-                title: "Sorry, device unsupported.",
-                text: "This interactive story does not work on mobile phones. You're welcome to try anyway.",
+                title: "Our site is designed to be viewed on a large screen.",
+                text: "This interactive story does not work well on mobile devices, but you are welcome to try anyway.",
                 showConfirmButton: true
             }
         );
