@@ -32,10 +32,10 @@ var allCountries = function (container_selector, service) {
 
     var margin = {top: 20, right: 60, bottom: 100, left: 5};
     var width = 1100 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
-    var radius = 4;
-    var padding = 8;
-    var radius2 = 10;
+        height = 700 - margin.top - margin.bottom;
+    var radius = 3;
+    var padding = 7;
+    var radius2 = 9;
     // init svg
     model.svgPad = d3.select(container_selector).append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -78,6 +78,14 @@ var allCountries = function (container_selector, service) {
         return d[xVar];
     })).nice();
     y.domain([0, height]).nice();
+
+    // set colors
+    color("African Region");
+    color("Region of the Americas");
+    color("Eastern Mediterranean Region");
+    color("European Region");
+    color("South-East Asian Region");
+    color("Western Pacific Region");
 
     // Set initial positions
     data.forEach(function (d) {

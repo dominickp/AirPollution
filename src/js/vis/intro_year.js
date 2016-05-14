@@ -115,7 +115,7 @@ var yearlyVis = function (container_selector, service) {
 
     // Interaction icon
     model.hand = model.svg.append("svg:image")
-        .attr("x", width/2)
+        .attr("x", width / 2)
         .attr("y", 0)
         .attr("width", 30)
         .attr("height", 30)
@@ -294,7 +294,7 @@ var yearlyVis = function (container_selector, service) {
     };
 
     // Function to remove the interactivity icon later
-    model.removeInteractivityIcon = function(){
+    model.removeInteractivityIcon = function () {
         model.hand.remove();
         return true;
     };
@@ -654,8 +654,8 @@ var yearlyVis = function (container_selector, service) {
 
     model.setLine();
 
-    $("#btn-all-cities-reset").click(function(){
-        model.countries.forEach(function(country){
+    $("#btn-all-cities-reset").click(function () {
+        model.countries.forEach(function (country) {
             country.active = false;
         });
         model.labelData = [];

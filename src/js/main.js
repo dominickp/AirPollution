@@ -74,10 +74,9 @@ var checkbrowser = function () {
 
 };
 
-var initialDataLoad = function (error, worldBankData, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi, coords) {
+var initialDataLoad = function (error, cityPmData, mapTopoJson, deathData, beijingData, overtimeData, metrics, delhi, coords) {
 
     var dataProcessing = new DataProcessing(service);
-    dataProcessing.process("worldBankData", worldBankData);
     dataProcessing.process("cityPmData", cityPmData);
     dataProcessing.process("mapTopoJson", mapTopoJson);
     dataProcessing.process("deathData", deathData);
@@ -348,8 +347,7 @@ var createView = function () {
 
 // Kick everything off
 q.queue()
-    .defer(d3.csv, "data/World Bank pm2.5 data.xls - Data.csv")
-    .defer(d3.csv, "data/WHO_pm_database_clean.csv")
+    .defer(d3.csv, "data/WHO_pm_database_clean_2016.csv")
     .defer(d3.json, "data/world-110m.json")
     .defer(d3.csv, "data/WHO_death_data_clean.csv")
     .defer(d3.csv, "data/beijing-data-2015.csv")
