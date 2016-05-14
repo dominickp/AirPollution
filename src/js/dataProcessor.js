@@ -309,6 +309,7 @@ var dataProcessor = function (service) {
                 city.pm10Mean = +city.pm10Mean;
             });
 
+            console.log(dataset);
             return dataset;
         };
 

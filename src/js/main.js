@@ -347,7 +347,7 @@ var createView = function () {
 
 // Kick everything off
 q.queue()
-    .defer(d3.csv, "data/WHO_pm_database_clean_2016.csv")
+    .defer(d3.json, "data/pm_data_snapshot_fixed_location.json")
     .defer(d3.json, "data/world-110m.json")
     .defer(d3.csv, "data/WHO_death_data_clean.csv")
     .defer(d3.csv, "data/beijing-data-2015.csv")

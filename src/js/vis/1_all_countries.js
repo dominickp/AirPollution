@@ -89,8 +89,8 @@ var allCountries = function (container_selector, service) {
 
     // Set initial positions
     data.forEach(function (d) {
-        d.x = x(d[xVar]);
-        d.y = y(height / 2);
+        d.x = d.px;
+        d.y = d.py;
         d.color = color(d.region);
         d.radius = radius;
     });
@@ -124,10 +124,10 @@ var allCountries = function (container_selector, service) {
         .attr("class", "dot")
         .attr("r", radius)
         .attr("cx", function (d) {
-            return x(d[xVar]);
+            return d.x;
         })
-        .attr("cy", function () {
-            return y(height / 2);
+        .attr("cy", function (d) {
+            return d.y;
         })
         .style("fill", function (d) {
             return d.color;
@@ -221,27 +221,27 @@ var allCountries = function (container_selector, service) {
 
     function tick(e) {
 
-        if (model.stop !== null) {
-            force.stop();
-        }
-
-
-        node.each(moveTowardDataPosition(e.alpha));
-
-        node.each(collide(e.alpha));
-
-        node.attr("cx", function (d) {
-                return d.x;
-            })
-            .attr("cy", function (d) {
-                if (model.city && model.city.city === d.city && model.city.country === d.country) {
-                    var x = d.x;
-                    var y = d.y;
-                    model.citydot.attr("cx", x).attr("cy", y);
-
-                }
-                return d.y;
-            });
+        //if (model.stop !== null) {
+        //    force.stop();
+        //}
+        //
+        //
+        //node.each(moveTowardDataPosition(e.alpha));
+        //
+        //node.each(collide(e.alpha));
+        //
+        //node.attr("cx", function (d) {
+        //        return d.x;
+        //    })
+        //    .attr("cy", function (d) {
+        //        if (model.city && model.city.city === d.city && model.city.country === d.country) {
+        //            var x = d.x;
+        //            var y = d.y;
+        //            model.citydot.attr("cx", x).attr("cy", y);
+        //
+        //        }
+        //        return d.y;
+        //    });
 
 
     }
@@ -549,6 +549,10 @@ var allCountries = function (container_selector, service) {
         model.update();
 
     }
+
+    setTimeout(function () {
+        console.log(JSON.stringify(data));
+    }, 5 * 60000);
 
 
 };
