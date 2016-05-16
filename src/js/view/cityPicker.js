@@ -64,11 +64,25 @@ var cityPicker = function (service) {
             var error = "";
 
 
+            /*
+
+
+
+
+             */
+            if (selectedCity["dataCoverageAlertPM10"].length > 0) {
+                error += selectedCity["dataCoverageAlertPM10"] + "<br><br>";
+            }
+            else if (selectedCity["dataCoverageAlertPM2.5"].length > 0) {
+                error += selectedCity["dataCoverageAlertPM2.5"] + "<br><br>";
+            }
+
+            if (selectedCity["pm10ConvertedAlert"].length > 0) {
+                error += selectedCity["pm10ConvertedAlert"] + "<br><br>";
+            }
+
             if (selectedCity["pm2.5ConvertedAlert"].length > 0) {
                 error += selectedCity["pm2.5ConvertedAlert"] + "<br><br>";
-            }
-            if (selectedCity.dataCoverageAlert.length > 0) {
-                error += selectedCity.dataCoverageAlert + "<br><br>";
             }
 
 
