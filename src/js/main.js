@@ -132,7 +132,7 @@ var initialDataLoad = function (error, cityPmData, mapTopoJson, deathData, beiji
     introCityPicker.render();
 
     // Load vis 1
-    var citiesToPrepopulate = ['Beijing', 'London', 'Delhi'];
+    var citiesToPrepopulate = ['Beijing', 'London', 'Delhi', 'Zabol'];
     service.addVisualization("vis1", new AirVisualization("#vis-1-container", service));
     service.getVisualization("vis1").prepopulateCities(citiesToPrepopulate);
 
