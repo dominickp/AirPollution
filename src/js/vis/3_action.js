@@ -173,9 +173,6 @@ var actionVisualization = function (container_selector, service) {
         cityString = (cityString.city + ", " + cityString.country);
 
 
-        console.log(cityString);
-
-
         model.points.selectAll(".pin").remove();
 
         var datapoints = [];
@@ -223,7 +220,6 @@ var actionVisualization = function (container_selector, service) {
 
         model.country = model.countryspot.append("path")
             .datum(function () {
-                console.log(select);
                 return select;
             })
             .attr("class", "pin selected");

@@ -320,7 +320,7 @@ var initialDataLoad = function (error, cityPmData, mapTopoJson, deathData, beiji
         if (service.getSelectedCity() !== null) {
 
             var text = allCitiesView.updateExternal();
-            console.log(text);
+            //console.log(text);
 
 
         }

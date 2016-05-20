@@ -550,9 +550,9 @@ var allCountries = function (container_selector, service) {
 
     }
 
-    setTimeout(function () {
-        console.log(JSON.stringify(data));
-    }, 5 * 60000);
+    //setTimeout(function () {
+    //    console.log(JSON.stringify(data));
+    //}, 5 * 60000);
 
 
 };
