@@ -467,7 +467,7 @@ var allCountries = function (container_selector, service) {
         model.cityline.append("text")
             .attr("class", "label")
             .attr("x", (highest + lowest) / 2)
-            .attr("y", height + 65)
+            .attr("y", height + 70)
             .style("text-anchor", "middle")
             .style("fill", "black")
             .text(model.city.country);
