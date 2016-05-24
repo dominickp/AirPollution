@@ -317,9 +317,9 @@ var dataProcessor = function (service) {
                     error += "This station has low data coverage (<75%), therefore the annual mean pollution level may not be an accurate representation of the annual conditions.  Caution is advised when interpreting this result.<br><br>";
                 }
 
-                if (city["pm10ConvertedAlert"].length > 0) {
+/*                if (city["pm10ConvertedAlert"].length > 0) {
                     error += city["pm10ConvertedAlert"] + "<br><br>";
-                }
+                }*/
 
                 if (city["pm2.5ConvertedAlert"].length > 0) {
                     error += city["pm2.5ConvertedAlert"] + "<br><br>";
